@@ -1,0 +1,54 @@
+﻿
+[
+    {
+        "file": "config/characterclasses.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "smith",
+            "traits": [],
+            "gear": [
+                {
+                    "type": "item",
+                    "code": "clothes-upperbody-great-steppe-shirt"
+                }
+            ]
+        }
+    },
+
+    {
+        "file": "config/characterclasses.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "miner",
+            "traits": [ "miner", "prospector", "myopic", "heavyhanded" ],
+            "gear": [
+                {
+                    "type": "item",
+                    "code": "clothes-upperbody-great-steppe-shirt"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-upperbodyover-clockmaker-tunic"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-lowerbody-workmans-gown"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-foot-worn-leather-boots"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-hand-hunter-gloves"
+                },
+                {
+                    "type": "item",
+                    "code": "clothes-waist-blackguard-belt"
+                }
+            ]
+        }
+    }
+]

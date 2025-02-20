@@ -1,0 +1,486 @@
+[
+
+	//=== RECIPE TRAITS ===//
+	/*Traits explicitly made for the purpose of restricting crafting recipes.*/
+	{ // SMITH
+		/*Armor repair kit*/
+		"code": "armorer",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	{ // SMITH, MINER
+		/*recipe Tool repair kit*/
+		"code": "toolkeepers",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // SMITH
+		/*recipe for Breaking down gears, metal scrap, metal parts, and ruined weapons for metals*/
+		"code": "recycler",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // CLOTHIER
+		/*Recipe for leather crafting*/
+		"code": "tallowtanner",
+		"type": "positive",
+		"attributes": {
+		}
+	},
+
+	{ // MINER
+		/*recipe Cheaper bombs, primitive blasting powder, metal pans, prospector pack, mining lantern*/
+		"code": "prospector",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	{ // MYSTIC
+		/*recipe for parchment*/
+		"code": "wise",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	{ // ALCHEMIST
+		/*recipe for sulfur and saltpeter*/
+		"code": "natphilo",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // ALCHEMIST
+		/*recipe Cheaper bombs, primitive blasting powder, metal pans, prospector pack, mining lantern*/
+		"code": "merciless",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	{ // ALCHEMIST
+		/*recipe for temporal gear dust and a class specific barrel for temporal solution*/
+		"code": "temporaltransmutation",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // HOMESTEADER
+		/*recipe for seeds to produce, craft high fert and cheaper terra pretta, soil boosters*/
+		"code": "pioneer",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // COOK
+		/*recipe for metal cooking pots, vintage beef*/
+		"code": "culinary",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // MERCHANT
+		/*recipe for better backpack*/
+		"code": "packmule",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // MASON
+		/*recipe for better mortar, plaster, refractory and other raw brick at lower cost*/
+		"code": "mason",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // LUMBERJACK
+		/*recipe sleek doors, wagon wheels, owl and golden treasure chests, cheaper firewood, board and sticks*/
+		"code": "carpenter",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // ARTISAN
+		/*Recipe for carpets, paintings, designer vessels, planters and flowerposts*/
+		"code": "artifice",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // FORLORN
+		/*Recipe for forlorn hope estoc, maybe something else*/
+		"code": "tenacious",
+		"type": "positive",
+		"attributes": {}
+	},
+
+
+	//=== VANILLA IMPLEMENTATION STAT TRAITS ===//
+	/*Traits that rely on stats present in vanilla character traits and base game code*/
+
+	{ // Defender
+		"code": "defender",
+		"type": "positive",
+		"attributes": {
+			"meleeWeaponsDamage": 0.1,
+			"armorDurabilityLoss": -0.2,
+			"armorWalkSpeedAffectedness": -0.20
+		}
+	},
+	{ // Heavy-footed
+		"code": "heavyfoot",
+		"type": "negative",
+		"attributes": {
+			"animalSeekingRange": 0.2
+		}
+	},
+	{ // Fasting
+		"code": "fasting",
+		"type": "positive",
+		"attributes": {
+			"hungerrate": -0.2
+		}
+	},
+	{ // Miner
+		/*this is probably too overpowered*/
+		"code": "miner",
+		"type": "positive",
+		"attributes": {
+			"oreDropRate": 0.5,
+			"miningSpeedMul": 1.0
+		}
+	},
+	{ // Sharpeye
+		/*No lie chief, this shit seems like it'd be very overpowered*/
+		"code": "sharpeye",
+		"type": "positive",
+		"attributes": {
+			"rangedWeaponsDamage": 1.0,
+			"bowDrawingStrength": 0.5,
+			"rangedWeaponsSpeed": -0.25
+		}
+	},
+	{ // Scavenger
+		"code": "scavenger",
+		"type": "positive",
+		"attributes": {
+			"forageDropRate": 0.30,
+			"wildCropDropRate": 0.20
+		}
+	},
+	{ // Sneaky
+		"code": "sneaky",
+		"type": "positive",
+		"attributes": {
+			"walkspeed": 0.1,
+			"animalSeekingRange": -0.60
+		}
+	},
+	{ // Careless & petraphobia
+		"code": "careless",
+		"type": "negative",
+		"attributes": {
+			"oreDropRate": -0.25,
+			"miningSpeedMul": -0.25
+		}
+	},
+	{ // Hungry
+		"code": "glutton",
+		"type": "negative",
+		"attributes": {
+			"hungerrate": 0.2
+		}
+	},
+	{ // Imprecise
+		"code": "imprecise",
+		"type": "negative",
+		"attributes": {
+			"mechanicalsDamage": -0.25
+		}
+	},
+	{ // Inaccurate
+		"code": "butterfingers",
+		"type": "negative",
+		"attributes": {
+			"rangedWeaponsDamage": -0.2,
+			"rangedWeaponsAcc": -0.1,
+			"bowDrawingStrength": -0.2,
+			"rangedWeaponsSpeed": 0.15
+		}
+	},
+	{ // Butcher
+		"code": "butcher",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.5,
+			"animalHarvestingTime": -0.75
+		}
+	},
+
+
+
+	//=== CUSTOM IMPLEMENTATION STAT TRAITS ===//
+	/*Traits that rely on custom implementation and checking of stats*/
+
+	{ // Burner
+		/*Patch charcoal piles from burning with similar code to ore code in the survival api*/
+		"code": "burner",
+		"type": "positive",
+		"attributes": {
+			"charcoalDropRate": 0.35
+		}
+	},
+	{ // Dragonskin
+		/*Will need more custom implemenatation, may be able to rework damage, but ignite immunity would be a bit different.*/
+		"code": "dragonskin",
+		"type": "positive",
+		"attributes": {
+			"fireResist": 0.5
+		}
+	},
+
+	{ // Fibrous Folly + Unlikely Harvest
+		/*Both require patch to grass block, similar to ore code*/
+		"code": "fibrousfolly",
+		"type": "positive",
+		"attributes": {
+			"randomSeedChance": 0.25,
+			"grassHarvestRate": 0.2
+		}
+	},
+	{ // Sheltered by stone and Agoraphobia
+		/*could be a sunlight check, and/or checking current temporal stability of the area, not familiar with code, so X-skills and x-lib source will be helpful*/
+		"code": "claustrophilic",
+		"type": "positive",
+		"attributes": {
+			"caveStabilityLoss": -1.0,
+			"outsideStabilityLoss": 0.2
+		}
+	},
+	{ // Dread
+		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
+		"code": "dread",
+		"type": "negative",
+		"attributes": {
+			"horrorsDamage": -0.15
+		}
+	},
+	{ // Dreadslayer
+		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
+		"code": "dreadslayer",
+		"type": "positive",
+		"attributes": {
+			"horrorsDamage": 0.25
+		}
+	},
+	{ // Clairvoyance
+		/*This would be a unique block implementation, I'll pop this in for now, but I'll need to figure out how the interaction will work, shouldn't be too difficult*/
+		"code": "clairvoyance",
+		"type": "positive",
+		"attributes": {
+			"crystalSkull": 1.0
+		}
+	},
+	{ // Clairvoyance
+		/*Crop blocks need to be patched with stat check similar to ore code*/
+		"code": "farmer",
+		"type": "positive",
+		"attributes": {
+			"cropDropRate": 0.3
+		}
+	},
+
+	// VANILLA TRAITS //
+	/*Vanilla trait codes, here for tweaking values and minimizing risk of nulled traits*/
+
+	{ // UNCHANGED
+		"code": "focused",
+		"type": "positive",
+		"attributes": {
+			"rangedWeaponsDamage": 0.2,
+			"rangedWeaponsAcc": 0.3,
+			"bowDrawingStrength": 0.2
+		}
+	},
+
+	{ // TWEAKED: Mega buff to animal loot (50% from 10%) and 75% animal harvest time from 25%
+		"code": "resourceful",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.5,
+			"animalHarvestingTime": -0.75
+		}
+	},
+	{ // UNCHANGED
+		"code": "fleetfooted",
+		"type": "positive",
+		"attributes": {
+			"walkspeed": 0.1
+		}
+	},
+	{ // UNCHANGED
+		"code": "bowyer",
+		"type": "positive",
+		"attributes": {
+		}
+	},
+	{ // UNCHANGED
+		"code": "forager",
+		"type": "positive",
+		"attributes": {
+			"forageDropRate": 0.1,
+			"wildCropDropRate": 0.2
+		}
+	},
+	{ // TWEAKED: Buffed drop rates
+		"code": "pilferer",
+		"type": "positive",
+		"attributes": {
+			"vesselContentsDropRate": 0.35,
+			"rustyGearDropRate": 1.0,
+			"wholeVesselLootChance": 0.12
+		}
+	},
+	{ // Potential TWEAK: Buff, added walkspeed buff of 15% (!)
+		"code": "furtive",
+		"type": "positive",
+		"attributes": {
+			//"walkspeed": 0.15,
+			"animalSeekingRange": -0.35
+		}
+	},
+	{ // UNCHANGED
+		"code": "precise",
+		"type": "positive",
+		"__comment": "Since mechanical and normal damage modifiers stack and the clock maker as a -15% normal dmg reduction, we set this to 1.25/0.85 so that the actual damage bonus is +25% against mechanicals",
+		"attributes": {
+			"mechanicalsDamage": 0.4705
+		}
+	},
+	{ // UNCHANGED
+		"code": "technical",
+		"type": "positive",
+		"attributes": {
+			"temporalGearTLRepairCost": -1
+		}
+	},
+	{ // UNCHANGED
+		"code": "soldier",
+		"type": "positive",
+		"attributes": {
+			"meleeWeaponsDamage": 0.3,
+			"armorDurabilityLoss": -0.15,
+			"armorWalkSpeedAffectedness": -0.25
+		}
+	},
+	{ // TWEAKED: Removed mining speed buff
+		"code": "hardy",
+		"type": "positive",
+		"attributes": {
+			"maxhealthExtraPoints": 5
+		}
+	},
+	{ // UNCHANGED
+		"code": "clothier",
+		"type": "positive",
+		"attributes": {
+		}
+	},
+	{ // UNCHANGED
+		"code": "mender",
+		"type": "positive",
+		"attributes": {
+			"armorDurabilityLoss": -0.1
+		}
+	},
+	{ // UNCHANGED
+		"code": "merciless",
+		"type": "positive",
+		"attributes": {
+		}
+	},
+	{ // TWEAKED: 20% melee debuff (from 15%) 
+		"code": "farsighted",
+		"type": "negative",
+		"attributes": {
+			"meleeWeaponsDamage": -0.20
+		}
+	},
+	{ // TWEAKED: Will need to rely on patches to temporal stability, removed mining debuffs
+		"code": "claustrophobic",
+		"type": "negative",
+		"attributes": {
+			"caveStabilityLoss": 0.25
+		}
+	},
+	{ // UNCHANGED
+		"code": "frail",
+		"type": "negative",
+		"attributes": {
+			"maxhealthExtraPoints": -2.5,
+			"bowDrawingStrength": -0.25
+		}
+	},
+	{ // UNCHANGED
+		"code": "nervous",
+		"type": "negative",
+		"attributes": {
+			"meleeWeaponsDamage": -0.15
+		}
+	},
+	{ // UNCHANGED
+		"code": "ravenous",
+		"type": "negative",
+		"attributes": {
+			"hungerrate": 0.3
+		}
+	},
+	{ // TWEAKED: More intense damage reduction, now decreases accuracy and draw strength
+		"code": "nearsighted",
+		"type": "negative",
+		"attributes": {
+			"rangedWeaponsDamage": -0.35,
+			"rangedWeaponsAcc": -0.2,
+			"bowDrawingStrength": -0.35
+		}
+	},
+	{ // UNCHANGED
+		"code": "heavyhanded",
+		"type": "negative",
+		"attributes": {
+			"vesselContentsDropRate": -0.1,
+			"forageDropRate": -0.15,
+			"wildCropDropRate": -0.2
+		}
+	},
+	{ // UNCHANGED
+		"code": "kind",
+		"type": "negative",
+		"attributes": {
+			"animalLootDropRate": -0.1,
+			"animalHarvestingTime": 0.25
+		}
+	},
+	{ // TWEAKED: removed mining debuff
+		"code": "weak",
+		"type": "negative",
+		"attributes": {
+			"maxhealthExtraPoints": -5
+		}
+	},
+	{ // TWEAKED: bigger debuff to forage drops, less animal harvesting and loot drop rate, less wild crops
+		"code": "civil",
+		"type": "negative",
+		"attributes": {
+			"forageDropRate": -0.15,
+			"animalLootDropRate": -0.25,
+			"animalHarvestingTime": 0.15,
+			"wildCropDropRate": -0.15
+		}
+	},
+	{ // UNCHANGED
+		"code": "improviser",
+		"type": "positive",
+		"attributes": {
+		}
+	},
+	{ // Recipe additions
+		"code": "tinkerer",
+		"type": "positive",
+		"attributes": {
+		}
+	}
+
+
+]

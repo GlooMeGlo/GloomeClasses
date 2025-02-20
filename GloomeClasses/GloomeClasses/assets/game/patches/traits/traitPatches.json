@@ -1,0 +1,41 @@
+﻿[
+    {
+        "file": "config/traits.json",
+        "op": "replace",
+        "path": "/1/attributes",
+        "value": {
+            "animalLootDropRate": 0.1,
+            "animalHarvestingTime": -0.25
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "replace",
+        "path": "/19/attributes",
+        "value": {
+            "rangedWeaponsDamage": -0.35,
+            "rangedWeaponsAcc": -0.2,
+            "bowDrawingStrength": -0.35,
+            "rangedWeaponsSpeed": -0.3
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "replace",
+        "path": "/5/attributes",
+        "value": {
+            "vesselContentsDropRate": 0.3,
+            "rustyGearDropRate": 1.0,
+            "wholeVesselLootChance": 0.12
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "replace",
+        "path": "/14/attributes",
+        "value": {
+            "meleeWeaponsDamage": -0.2
+        }
+    }
+
+]

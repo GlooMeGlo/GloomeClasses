@@ -1,0 +1,259 @@
+﻿[
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_recipe_armorer",
+            "type": "positive",
+            "attributes": {
+
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_dragonskin",
+            "type": "positive",
+            "attributes": {
+                "fireresist_UNIMPLEMENTED": 0.5
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_toolkeeper",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_recycler",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_heavyfoot",
+            "type": "negative",
+            "attributes": {
+                "animalSeekingRange": 0.20
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_spendthrift",
+            "type": "negative",
+            "attributes": {
+                "rustyGearDropRate": -0.1
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_spendthrift",
+            "type": "negative",
+            "attributes": {
+                "rustyGearDropRate": -0.1
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_fasting",
+            "type": "positive",
+            "attributes": {
+                "hungerrate": -0.2
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_luckyloom",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_fibrousfolly",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_tallowtanner",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_prospector",
+            "type": "positive",
+            "attributes": {
+                "hungerrate": -0.2
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_shelteredbystone",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_miner",
+            "type": "positive",
+            "attributes": {
+                "oreDropRate": 0.5,
+                "miningSpeedMul": 1.0
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_prospectorpack",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_agoraphobia",
+            "type": "negative",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_cataract",
+            "type": "negative",
+            "attributes": {
+                "rangedWeaponsDamage": -0.35,
+                "rangedWeaponsAcc": -0.2,
+                "bowDrawingStrength": -0.35,
+                "rangedWeaponsSpeed": -0.3
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_crafty",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_spearproficiency",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_transcription",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_clairvoyance",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_agoraphobia",
+            "type": "positive",
+            "attributes": {
+            }
+        }
+    }
+
+
+]

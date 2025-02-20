@@ -1,0 +1,79 @@
+﻿[
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_stats_burner",
+            "type": "positive",
+            "attributes": {
+                "charcoalCollectionMul": 0.10,
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_stats_unlikelyharvest",
+            "type": "positive",
+            "attributes": {
+                "flaxSeedDropChance": 0.25
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_stats_spendthrift",
+            "type": "negative",
+            "attributes": {
+                "rustyGearDropRate": -0.1
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_stats_fasting",
+            "type": "positive",
+            "attributes": {
+                "hungerrate": -0.2
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_stats_miner",
+            "type": "positive",
+            "attributes": {
+                "oreDropRate": 0.5,
+                "miningSpeedMul": 1.0
+            }
+        }
+    },
+    {
+        "file": "config/traits.json",
+        "op": "addmerge",
+        "path": "/-",
+        "value": {
+            "code": "ceb_stats_cataract",
+            "type": "negative",
+            "attributes": {
+                "rangedWeaponsDamage": -0.35,
+                "rangedWeaponsAcc": -0.2,
+                "bowDrawingStrength": -0.35,
+                "rangedWeaponsSpeed": -0.3
+            }
+        }
+    }
+
+]
