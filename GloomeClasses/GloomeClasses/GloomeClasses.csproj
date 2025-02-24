@@ -53,12 +53,10 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
-  <None Remove="assets\game\patches\newCharacterClasses.json" />
   <None Remove="assets\game\patches\newCharacterTraits - Copy.json" />
   <None Remove="assets\game\patches\newCharacterTraits.json" />
   <None Remove="assets\game\patches\newRecipeTraits - Copy.json" />
   <None Remove="assets\game\patches\newStatTraits.json" />
-  <None Remove="assets\game\patches\traits\newPatchStatTraits.json" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
@@ -71,9 +69,7 @@
 </ItemGroup>
 
 <ItemGroup>
-  <Content Update="assets\game\patches\traits\newPatchStatTraits.json">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </Content>
+  <Folder Include="assets\game\patches\traits\" />
 </ItemGroup>
 
 </Project>

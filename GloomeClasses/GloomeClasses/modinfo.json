@@ -3,10 +3,10 @@
     "modid": "gloomeclasses",
     "name": "GloomeClasses",
     "authors": [
-        "Unknown"
+        "Cantos"
     ],
     "description": "To be added",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
         "game": ""
     }
