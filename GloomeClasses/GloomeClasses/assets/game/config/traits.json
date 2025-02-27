@@ -284,7 +284,7 @@
 		"type": "positive",
 		"attributes": {
 			"randomSeedChance": 0.25,
-			"grassHarvestRate": 0.2
+			"grassDropRate": 0.2
 		}
 	},
 	{ // Lumberjack trait
@@ -295,7 +295,7 @@
 			"treelogDropRate": 0.15,
 			"saplingDropRate": 0.2,
 			"stickDropRate": 0.5,
-			"fruittreeSurvival": 0.4
+			"fruittreeSurvival": 1.0
 		}
 
 	},

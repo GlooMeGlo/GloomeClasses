@@ -1,0 +1,8 @@
+﻿[
+    {
+        "file": "game:itemtypes/resource/crop/gear",
+        "op": "addmerge",
+        "path": "/variantgroups/0/states-",
+        "value": "refurbished"
+    }
+]

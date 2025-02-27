@@ -53,23 +53,20 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
-  <None Remove="assets\game\patches\newCharacterTraits - Copy.json" />
-  <None Remove="assets\game\patches\newCharacterTraits.json" />
-  <None Remove="assets\game\patches\newRecipeTraits - Copy.json" />
-  <None Remove="assets\game\patches\newStatTraits.json" />
+  <None Remove="assets\gloomeclasses\patches\dropMultipliers\farming\crops.json" />
+  <None Remove="assets\gloomeclasses\patches\newCharacterTraits - Copy.json" />
+  <None Remove="assets\gloomeclasses\patches\newCharacterTraits.json" />
+  <None Remove="assets\gloomeclasses\patches\newRecipeTraits - Copy.json" />
+  <None Remove="assets\gloomeclasses\patches\newStatTraits.json" />
+  <None Remove="assets\gloomeclasses\patches\refurbishedgear\refurbishedGearPatch.json" />
+  <None Remove="assets\gloomeclasses\shapes\item\bag\Miners Pack.json" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
 </ItemGroup>
 
 <ItemGroup>
-  <Content Update="assets\game\patches\traits\newStatTraits.json">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </Content>
-</ItemGroup>
-
-<ItemGroup>
-  <Folder Include="assets\game\patches\traits\" />
+  <Folder Include="assets\gloomeclasses\itemtypes\jonas\" />
 </ItemGroup>
 
 </Project>
