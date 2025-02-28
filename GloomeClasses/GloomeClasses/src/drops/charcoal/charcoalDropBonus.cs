@@ -8,10 +8,10 @@ using Vintagestory.GameContent;
 
 namespace GloomeClasses
 {
-    public class CropBonusBehavior : GenericDropBonusBehavior
+    public class CharcoalBonusBehavior : GenericDropBonusBehavior
     {
-        public override string traitStat => "cropDropRate";
+        public override string traitStat => "charcoalDropRate";
 
-        public CropBonusBehavior(Block block) : base(block) { }
+        public CharcoalBonusBehavior(Block block) : base(block) { }
     }
 }

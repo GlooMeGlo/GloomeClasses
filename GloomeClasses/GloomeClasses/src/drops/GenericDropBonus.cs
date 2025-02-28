@@ -16,21 +16,25 @@ namespace GloomeClasses
 
         public virtual List<ItemStack> GetDropsList(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropChanceMultiplier, ref EnumHandling handling)
         {
+
+            world.Api.Logger.Debug("GC, GenericDrop, Start");
             if (byPlayer == null) return null;
             List<ItemStack> drops = new List<ItemStack>();
-            if (this.traitStat.Length <= 0) { return drops; }
-            if (block.Drops.Length == 0) { return drops; }
+            if (this.traitStat.Length <= 0) { world.Api.Logger.Debug("GC, GenericDrop, RETURN, no trait"); return drops; }
+            if (block.Drops.Length == 0) { world.Api.Logger.Debug("GC, GenericDrop, RETURN, no drops"); return drops; }
 
             float statMult = byPlayer.Entity.Stats.GetBlended(traitStat);
-            if (statMult <= 0) { return drops; }
+            if (statMult <= 0) { world.Api.Logger.Debug("GC, GenericDrop, No stat mult"); return drops; }
 
             handling = EnumHandling.PreventDefault;
             float dropMult = dropChanceMultiplier * statMult;
+            world.Api.Logger.Debug("GC, GenericDrop, dropMult: {0}, statMult{1}, dropChanceMultiplier {2}",dropMult, statMult, dropChanceMultiplier);
             for (int index = 0; index < block.Drops.Length; index++)
             {
                 ItemStack drop = block.Drops[index].GetNextItemStack(dropMult);
                 if (drop != null) drops.Add(drop);
             }
+            world.Api.Logger.Debug("GC, GenericDrop, Successful mult");
             return drops;
         }
 
@@ -41,6 +45,7 @@ namespace GloomeClasses
         
     }
 
+    /*
     public abstract class SpecialDropBonus : BlockBehavior
     {
         public abstract string traitStatItem { get; }
@@ -62,7 +67,7 @@ namespace GloomeClasses
 
             for (int index = 0; index < block.Drops.Length; index++)
             {
-                ItemStack drop = block.Drops[index].GetNextItemStack(dropChanceMultiplier); 
+                ItemStack drop = block.Drops[index].GetNextItemStack
 .
                 if (drop == null) drops.Add(drop);
             }
@@ -75,5 +80,5 @@ namespace GloomeClasses
             return this.GetDropsList(world, pos, byPlayer, dropChanceMultiplier, ref handling).ToArray();
         }
 
-    }
+    }*/
 }

@@ -53,7 +53,9 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
-  <None Remove="assets\gloomeclasses\patches\dropMultipliers\farming\crops.json" />
+  <None Remove="assets\gloomeclasses\patches\dropMultipliers\farming\charcoal.json" />
+  <None Remove="assets\gloomeclasses\patches\dropMultipliers\farming\leaves.json" />
+  <None Remove="assets\gloomeclasses\patches\dropMultipliers\farming\logs.json" />
   <None Remove="assets\gloomeclasses\patches\newCharacterTraits - Copy.json" />
   <None Remove="assets\gloomeclasses\patches\newCharacterTraits.json" />
   <None Remove="assets\gloomeclasses\patches\newRecipeTraits - Copy.json" />
@@ -66,6 +68,7 @@
 </ItemGroup>
 
 <ItemGroup>
+  <Folder Include="assets\game\patches\" />
   <Folder Include="assets\gloomeclasses\itemtypes\jonas\" />
 </ItemGroup>
 

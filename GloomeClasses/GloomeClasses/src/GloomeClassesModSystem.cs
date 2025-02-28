@@ -42,7 +42,11 @@ namespace GloomeClasses
         public override void Start(ICoreAPI api)
         {
             api.Logger.Notification("Hello from template mod: " + api.Side);
-            api.RegisterBlockBehaviorClass("CropDropBonus", typeof(CropDropBonus));
+
+            api.RegisterBlockBehaviorClass("CropDropBonus", typeof(CropBonusBehavior));
+            api.RegisterBlockBehaviorClass("LogDropBonus", typeof(TreelogBonusBehavior));
+            api.RegisterBlockBehaviorClass("LeavesBonusBehavior", typeof(LeavesBonusBehavior));
+            api.RegisterBlockBehaviorClass("charcoalDropRate", typeof(CharcoalBonusBehavior));
         }
 
         public override void StartServerSide(ICoreServerAPI api)
