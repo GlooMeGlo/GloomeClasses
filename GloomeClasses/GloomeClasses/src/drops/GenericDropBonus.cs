@@ -23,14 +23,16 @@ namespace GloomeClasses
             if (this.traitStat.Length <= 0) { world.Api.Logger.Debug("GC, GenericDrop, RETURN, no trait"); return drops; }
             if (block.Drops.Length == 0) { world.Api.Logger.Debug("GC, GenericDrop, RETURN, no drops"); return drops; }
 
+            world.Api.Logger.Debug("GC, GenericDrop, STAT: {0}", traitStat);
             float statMult = byPlayer.Entity.Stats.GetBlended(traitStat);
             if (statMult <= 0) { world.Api.Logger.Debug("GC, GenericDrop, No stat mult"); return drops; }
 
             handling = EnumHandling.PreventDefault;
             float dropMult = dropChanceMultiplier * statMult;
-            world.Api.Logger.Debug("GC, GenericDrop, dropMult: {0}, statMult{1}, dropChanceMultiplier {2}",dropMult, statMult, dropChanceMultiplier);
+            //if (dropMult <= 1) { world.Api.Logger.Debug("GC, GenericDrop, Dropmult = 1, no additional drops"); return drops; }
+            world.Api.Logger.Debug("GC, GenericDrop, dropMult: {0}, statMult: {1}, dropChanceMultiplier {2}",dropMult, statMult, dropChanceMultiplier);
             for (int index = 0; index < block.Drops.Length; index++)
-            {
+            { 
                 ItemStack drop = block.Drops[index].GetNextItemStack(dropMult);
                 if (drop != null) drops.Add(drop);
             }
@@ -40,7 +42,11 @@ namespace GloomeClasses
 
         public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, ref float dropChanceMultiplier, ref EnumHandling handling)
         {
-            return this.GetDropsList(world, pos, byPlayer, dropChanceMultiplier, ref handling).ToArray();
+            if (byPlayer == null) return null;
+            List<ItemStack> PotentialDrops = this.GetDropsList(world, pos, byPlayer, dropChanceMultiplier, ref handling);
+
+            if (PotentialDrops == null) { handling = EnumHandling.PassThrough; return null; }
+            return PotentialDrops.ToArray();
         }
         
     }

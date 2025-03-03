@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using GloomeClasses;
+using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -6,7 +7,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
-using Vintagestory.Client.NoObf;
+using Vintagestory.Client;
 using Vintagestory.Common;
 using Vintagestory.Server;
 
@@ -46,7 +47,13 @@ namespace GloomeClasses
             api.RegisterBlockBehaviorClass("CropDropBonus", typeof(CropBonusBehavior));
             api.RegisterBlockBehaviorClass("LogDropBonus", typeof(TreelogBonusBehavior));
             api.RegisterBlockBehaviorClass("LeavesBonusBehavior", typeof(LeavesBonusBehavior));
-            api.RegisterBlockBehaviorClass("charcoalDropRate", typeof(CharcoalBonusBehavior));
+            api.RegisterBlockBehaviorClass("CharcoalDropRate", typeof(CharcoalBonusBehavior));
+            api.RegisterBlockBehaviorClass("GrassDropRate", typeof(GrassBonusBehavior));
+
+            api.RegisterEntityBehaviorClass("GC_ClassesPlayerBehavior", typeof(ClassesPlayerBehavior));
+
+
+            
         }
 
         public override void StartServerSide(ICoreServerAPI api)
@@ -56,6 +63,15 @@ namespace GloomeClasses
 
             base.StartServerSide(api);
             ApplyHarmonyPatches(api);
+
+
+            api.Event.PlayerNowPlaying += (serverPlayer) =>
+            {
+                if (serverPlayer.Entity.GetBehavior("GC_ClassesPlayerBehavior") == null)
+                {
+                    serverPlayer.Entity.AddBehavior(new ClassesPlayerBehavior(serverPlayer.Entity));
+                }
+            };
         }
 
         public override void StartClientSide(ICoreClientAPI api)

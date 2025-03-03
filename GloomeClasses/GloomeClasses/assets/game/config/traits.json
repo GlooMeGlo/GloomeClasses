@@ -245,8 +245,8 @@
 
 
 	/* DEBUG AND ADMIN */
-	{ // Sharpeye
-		/*No lie chief, this shit seems like it'd be very overpowered*/
+	{ // For default classes
+	
 		"code": "changeyourclass",
 		"type": "negative",
 		"attributes": {
@@ -284,7 +284,7 @@
 		"type": "positive",
 		"attributes": {
 			"randomSeedChance": 0.25,
-			"grassDropRate": 0.2
+			"grassDropRate": 1.2
 		}
 	},
 	{ // Lumberjack trait
@@ -328,7 +328,6 @@
 		"type": "positive",
 		"attributes": {
 			"caveStabilityLoss": -1.0,
-			"outsideStabilityLoss": 0.2
 		}
 	},
 	{ // vanilla trait changed radically
