@@ -344,7 +344,7 @@
 		"code": "dread",
 		"type": "negative",
 		"attributes": {
-			"horrorsDamage": -0.15
+			"horrorsDamage": 0.75
 		}
 	},
 	{ // Dreadslayer
@@ -352,7 +352,7 @@
 		"code": "dreadslayer",
 		"type": "positive",
 		"attributes": {
-			"horrorsDamage": 0.25
+			"horrorsDamage": 100.0
 		}
 	},
 

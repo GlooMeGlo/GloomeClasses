@@ -1,0 +1,14 @@
+﻿[
+    {
+        "file": "game:entities/land/drifter",
+        "op": "addmerge",
+        "path": "/server/behaviors",
+        "value": [ { "code": "DreadBehaviorClass" } ]
+    },
+    {
+        "file": "game:entities/land/drifter",
+        "op": "addmerge",
+        "path": "/client/behaviors",
+        "value": [ { "code": "DreadBehaviorClass" } ]
+    }
+]

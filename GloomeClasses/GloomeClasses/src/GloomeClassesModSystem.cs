@@ -51,7 +51,7 @@ namespace GloomeClasses
             api.RegisterBlockBehaviorClass("GrassDropRate", typeof(GrassBonusBehavior));
 
             api.RegisterEntityBehaviorClass("GC_ClassesPlayerBehavior", typeof(ClassesPlayerBehavior));
-
+            api.RegisterEntityBehaviorClass("DreadBehaviorClass", typeof(DreadBehavior));
 
             
         }

@@ -53,6 +53,7 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
+  <None Remove="assets\gloomeclasses\patches\dread\dreadattributepatch.json" />
   <None Remove="assets\gloomeclasses\patches\dropMultipliers\grass.json" />
   <None Remove="assets\gloomeclasses\patches\newCharacterTraits - Copy.json" />
   <None Remove="assets\gloomeclasses\patches\newCharacterTraits.json" />

@@ -12,6 +12,7 @@ namespace GloomeClasses
     {
         private double oldStability;
         private float timeSinceUpdate;
+        private float agphobStabLoss = 0.005f;
         public override string PropertyName() => "GC_ClassesPlayerBehavior";
 
         protected EntityBehaviorTemporalStabilityAffected TemporalAffected => this.entity.GetBehavior<EntityBehaviorTemporalStabilityAffected>();
@@ -43,6 +44,7 @@ namespace GloomeClasses
 
         protected void TemporalEffects()
         {
+            if (TemporalAffected==null) return;
 
             double stability = TemporalAffected.OwnStability;
 
@@ -52,39 +54,33 @@ namespace GloomeClasses
 
             double change = oldStability - stability;
 
-            if (change != 0.0f || agoraphobia == 0)
+            if (agoraphobia == 0.0)
             {
 
                 // Stability gain case
                 if (change < 0.0) {
 
                     // Undo any increase occuring in sunlight for agoraphobia
-                    stabilityModifier -= change * (1.0 - agoraphobia) * (sunlightAffected ? 1.0d : 0.0d);
-
-
+                    stabilityModifier += (change + agphobStabLoss) *(sunlightAffected ? -1.0d : 1.0d);
 
                 }
                 // Stability loss case
                 else if (change > 0.0)
                 {
-                    // No loss if not in sunlight for agoraphobia
-                    stabilityModifier += change * (1.0 - agoraphobia) * (sunlightAffected?0.0d:1.0d);
-                    
-                
-
-
+                    // No loss if not in sunlight for agoraphobia 
+                    stabilityModifier += (sunlightAffected ? -1.0d : 1.0d)*(agphobStabLoss) + (sunlightAffected ? 0.0d : 1.0d)*change;
                 }
-                if (agoraphobia == 0)
+                else if (change == 0)
                 {
-                    stabilityModifier += sunlightAffected?-0.002:0.002;
+                    stabilityModifier += (sunlightAffected? -1.0d : 1.0d) * agphobStabLoss;
                 }
-
-               
-
             }
+
+
+
             TemporalAffected.OwnStability += stabilityModifier;
             oldStability = stability;
-            entity.Api.Logger.Debug("GC, Player, Temporal, stability: {0}, old stability: {1}, mod: {2}, agoraphobia: {3}, sunlight: {4}", stability, oldStability, stabilityModifier, agoraphobia, sunlightAffected);
+            //entity.Api.Logger.Debug("GC, Player, Temporal, stability: {0}, old stability: {1}, mod: {2}, agoraphobia: {3}, sunlight: {4}", stability, oldStability, stabilityModifier, agoraphobia, sunlightAffected);
 
         }
     }
