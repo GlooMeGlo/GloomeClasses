@@ -327,14 +327,14 @@
 		"code": "claustrophilic",
 		"type": "positive",
 		"attributes": {
-			"caveStabilityLoss": -1.0,
+			"caveStabilityLoss": -1.0
 		}
 	},
 	{ // vanilla trait changed radically
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": 0.25
+			"caveStabilityLoss": -0.25
 		}
 	},
 

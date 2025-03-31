@@ -14,6 +14,7 @@ namespace GloomeClasses
     public class DreadBehavior : EntityBehavior
     {
         public override string PropertyName() => "GC_ClassesPlayerBehavior";
+        EntityBehaviorHealth currentHealth;
         public DreadBehavior(Entity entity) : base(entity)
         {
 
@@ -25,6 +26,7 @@ namespace GloomeClasses
             EntityBehaviorHealth behaviorHealth = (this.entity.GetBehavior("health")) as EntityBehaviorHealth;
             if ( behaviorHealth != null)
             {
+                currentHealth = behaviorHealth;
                 behaviorHealth.onDamaged += onHorrorDamage;
                 base.entity.Api.Logger.Debug("DREADBEHAVIOR: SUCCESSFUL ADD");
             }
@@ -53,7 +55,7 @@ namespace GloomeClasses
 
         public override void OnEntityReceiveDamage(DamageSource damageSource, ref float damage)
         {
-            //base.OnEntityReceiveDamage(damageSource, ref damage);
+            
 
             if (damageSource.CauseEntity == null) {
             }
@@ -61,11 +63,11 @@ namespace GloomeClasses
                 damageSource.CauseEntity as EntityPlayer;
             if (byPlayer != null)
             {
-                damage = byPlayer.Stats.GetBlended("horrorsDamage") * damage;
-
-                byPlayer.Api.Logger.Debug("Horror_OnEntityReceivedDamagePrint, Damage: {0}", damage);
+                damage *= byPlayer.Stats.GetBlended("horrorsDamage");
+                byPlayer.Api.Logger.Debug("Horror_OnEntityReceivedDamagePrint, Damage: {0}, health:{1}", damage, currentHealth != null ? currentHealth.Health: "null");
                 
             }
+            base.OnEntityReceiveDamage(damageSource, ref damage);
             return;
         }
 

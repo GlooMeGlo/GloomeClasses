@@ -69,6 +69,7 @@
 <ItemGroup>
   <Folder Include="assets\game\patches\" />
   <Folder Include="assets\gloomeclasses\itemtypes\jonas\" />
+  <Folder Include="src\Alchemy\Recipe\" />
 </ItemGroup>
 
 </Project>
