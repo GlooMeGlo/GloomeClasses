@@ -11,11 +11,11 @@
 		"tin": [16,16]
 	},
 	"textures": {
-		"quartz": "block/glass/quartz",
-		"iron": "block/metal/lantern/iron",
-		"blackbronze2": "block/metal/sheet/blackbronze2",
-		"metal1": "block/metal/sheet/iron1",
-		"rusty-iron": "block/metal/tarnished/rusty-iron"
+		"quartz": "game:block/glass/quartz",
+		"iron": "game:block/metal/lantern/iron",
+		"blackbronze2": "game:block/metal/sheet/blackbronze2",
+		"metal1": "game:block/metal/sheet/iron1",
+		"rusty-iron": "game:block/metal/tarnished/rusty-iron"
 	},
 	"elements": [
 		{

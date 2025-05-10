@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"tinbronze": "block/metal/lantern/tinbronze",
-		"oak": "block/wood/debarked/oak"
+		"tinbronze": "game:block/metal/lantern/tinbronze",
+		"oak": "game:block/wood/debarked/oak"
 	},
 	"elements": [
 		{

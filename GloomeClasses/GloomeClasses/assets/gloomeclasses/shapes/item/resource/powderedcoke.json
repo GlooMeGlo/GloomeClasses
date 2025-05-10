@@ -9,7 +9,7 @@
 		"coke": [16,16]
 	},
 	"textures": {
-		"coke": "block/coal/coke"
+		"coke": "game:block/coal/coke"
 	},
 	"elements": [
 		{

@@ -8,7 +8,7 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"raw-onion": "block/wood/barrel/raw-onion"
+		"raw-onion": "game:block/wood/barrel/raw-onion"
 	},
 	"elements": [
 		{

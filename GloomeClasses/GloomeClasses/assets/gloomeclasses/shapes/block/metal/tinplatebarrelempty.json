@@ -10,8 +10,8 @@
 		"tin": [16,16]
 	},
 	"textures": {
-		"tin": "block/metal/ingot/tin",
-		"blackbronze2": "block/metal/sheet/blackbronze2"
+		"tin": "game:block/metal/ingot/tin",
+		"blackbronze2": "game:block/metal/sheet/blackbronze2"
 	},
 	"elements": [
 		{

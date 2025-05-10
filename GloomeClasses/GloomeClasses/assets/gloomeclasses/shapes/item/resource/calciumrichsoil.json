@@ -19,7 +19,7 @@
 		"ferthigh-dry": [16,16]
 	},
 	"textures": {
-		"ferthigh-dry": "block/soil/farmland/ferthigh-dry"
+		"ferthigh-dry": "game:block/soil/farmland/ferthigh-dry"
 	},
 	"elements": [
 		{

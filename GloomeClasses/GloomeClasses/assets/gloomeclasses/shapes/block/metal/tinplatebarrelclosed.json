@@ -15,10 +15,10 @@
 		"iron3": [16,16]
 	},
 	"textures": {
-		"stainlesssteel": "block/metal/ingot/stainlesssteel",
-		"tin": "block/metal/ingot/tin",
-		"blackbronze2": "block/metal/sheet/blackbronze2",
-		"iron3": "block/metal/tarnished/iron"
+		"stainlesssteel": "game:block/metal/ingot/stainlesssteel",
+		"tin": "game:block/metal/ingot/tin",
+		"blackbronze2": "game:block/metal/sheet/blackbronze2",
+		"iron3": "game:block/metal/tarnished/iron"
 	},
 	"elements": [
 		{

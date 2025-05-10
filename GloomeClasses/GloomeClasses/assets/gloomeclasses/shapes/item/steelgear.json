@@ -10,7 +10,7 @@
 		"steel": [16,16]
 	},
 	"textures": {
-		"steel": "block/metal/armor-generic/steel"
+		"steel": "game:block/metal/armor-generic/steel"
 	},
 	"elements": [
 		{

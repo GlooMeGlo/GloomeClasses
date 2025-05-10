@@ -9,7 +9,7 @@
 		"front1": [16,16]
 	},
 	"textures": {
-		"front1": "block/clay/refractory/tier3/front1"
+		"front1": "game:block/clay/refractory/tier3/front1"
 	},
 	"elements": [
 		{

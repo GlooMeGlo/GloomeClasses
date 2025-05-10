@@ -11,7 +11,7 @@
 		"temporalgear": [16,16]
 	},
 	"textures": {
-		"temporalgear": "item/resource/temporalgear"
+		"temporalgear": "game:item/resource/temporalgear"
 	},
 	"elements": [
 		{

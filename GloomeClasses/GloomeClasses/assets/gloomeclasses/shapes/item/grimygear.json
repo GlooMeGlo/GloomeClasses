@@ -9,7 +9,7 @@
 		"slate": [16,16]
 	},
 	"textures": {
-		"slate": "block/stone/gravel/slate"
+		"slate": "game:block/stone/gravel/slate"
 	},
 	"elements": [
 		{

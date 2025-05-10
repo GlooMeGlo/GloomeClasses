@@ -10,7 +10,7 @@
 		"molybdochalkos": [16,16]
 	},
 	"textures": {
-		"blue2": "legacy/clay/brick/blue2"
+		"blue2": "game:legacy/clay/brick/blue2"
 	},
 	"elements": [
 		{

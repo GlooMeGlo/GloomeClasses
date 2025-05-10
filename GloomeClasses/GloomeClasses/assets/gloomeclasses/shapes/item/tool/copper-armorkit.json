@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"copper": "block/metal/lantern/copper",
-		"oak": "block/wood/debarked/oak"
+		"copper": "game:block/metal/lantern/copper",
+		"oak": "game:block/wood/debarked/oak"
 	},
 	"elements": [
 		{
