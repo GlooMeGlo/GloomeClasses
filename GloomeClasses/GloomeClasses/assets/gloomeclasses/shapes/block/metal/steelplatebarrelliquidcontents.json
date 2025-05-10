@@ -1,0 +1,24 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"raw-onion": "block/wood/barrel/raw-onion"
+	},
+	"elements": [
+		{
+			"name": "food",
+			"from": [ 1.75, 1.0, 1.75 ],
+			"to": [ 14.25, 2.0, 14.25 ],
+			"renderPass": 4,
+			"rotationOrigin": [ -0.4, 0.0, -0.3 ],
+			"faces": {
+				"up": { "texture": "#raw-onion", "uv": [ 1.5, 0.0, 14.0, 12.5 ] }
+			}
+		}
+	]}

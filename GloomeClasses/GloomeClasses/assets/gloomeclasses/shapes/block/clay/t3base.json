@@ -1,0 +1,90 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"front3": [16,16],
+		"top": [16,16],
+		"front1": [16,16],
+		"front2": [16,16]
+	},
+	"textures": {
+		"front1": "block/clay/refractory/tier3/front1"
+	},
+	"elements": [
+		{
+			"name": "W",
+			"from": [ 0.0, 0.0, 0.0 ],
+			"to": [ 4.0, 16.0, 16.0 ],
+			"faces": {
+				"north": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] },
+				"east": { "texture": "#front1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"south": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] },
+				"west": { "texture": "#front1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"up": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] },
+				"down": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] }
+			}
+		},
+		{
+			"name": "E",
+			"from": [ 12.0, 0.0, 0.0 ],
+			"to": [ 16.0, 16.0, 16.0 ],
+			"faces": {
+				"north": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] },
+				"east": { "texture": "#front1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"south": { "texture": "#front1", "uv": [ 12.0, 0.0, 16.0, 16.0 ] },
+				"west": { "texture": "#front1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"up": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] },
+				"down": { "texture": "#front1", "uv": [ 0.0, 0.0, 4.0, 16.0 ] }
+			}
+		},
+		{
+			"name": "N",
+			"from": [ 4.0, 0.0, 0.0 ],
+			"to": [ 12.0, 16.0, 4.0 ],
+			"faces": {
+				"north": { "texture": "#front1", "uv": [ 4.0, 0.0, 12.0, 16.0 ] },
+				"south": { "texture": "#front1", "uv": [ 3.0, 0.0, 11.0, 16.0 ] },
+				"up": { "texture": "#front1", "uv": [ 0.0, 0.0, 8.0, 4.0 ] },
+				"down": { "texture": "#front1", "uv": [ 0.0, 0.0, 8.0, 4.0 ] }
+			}
+		},
+		{
+			"name": "S",
+			"from": [ 4.0, 4.0, 12.0 ],
+			"to": [ 12.0, 16.0, 16.0 ],
+			"faces": {
+				"north": { "texture": "#front1", "uv": [ 8.0, 2.0, 16.0, 14.0 ] },
+				"south": { "texture": "#front1", "uv": [ 4.0, 0.0, 12.0, 12.0 ] },
+				"up": { "texture": "#front1", "uv": [ 0.0, 0.0, 8.0, 4.0 ] },
+				"down": { "texture": "#front1", "uv": [ 4.0, 12.0, 12.0, 16.0 ] }
+			},
+			"children": [
+				{
+					"name": "firehole W",
+					"from": [ 0.0, -4.0, 0.0 ],
+					"to": [ 2.0, 0.0, 4.0 ],
+					"faces": {
+						"north": { "texture": "#front1", "uv": [ 11.0, 1.0, 13.0, 5.0 ] },
+						"east": { "texture": "#front1", "uv": [ 6.0, 12.0, 10.0, 16.0 ] },
+						"south": { "texture": "#front1", "uv": [ 4.0, 12.0, 6.0, 16.0 ] },
+						"down": { "texture": "#front1", "uv": [ 0.0, 0.0, 2.0, 4.0 ] }
+					}
+				},
+				{
+					"name": "firehole E",
+					"from": [ 6.0, -4.0, 0.0 ],
+					"to": [ 8.0, 0.0, 4.0 ],
+					"faces": {
+						"north": { "texture": "#front1", "uv": [ 5.0, 6.0, 7.0, 10.0 ] },
+						"south": { "texture": "#front1", "uv": [ 10.0, 12.0, 12.0, 16.0 ] },
+						"west": { "texture": "#front1", "uv": [ 6.0, 12.0, 10.0, 16.0 ] },
+						"down": { "texture": "#front1", "uv": [ 0.0, 0.0, 2.0, 4.0 ] }
+					}
+				}
+			]
+		}
+	]}
