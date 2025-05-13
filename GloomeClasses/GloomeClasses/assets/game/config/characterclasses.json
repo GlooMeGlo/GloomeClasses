@@ -1,7 +1,7 @@
 [
 	{
 		"code": "alchemist",
-		"traits": [ "temporaltransmutation", "natphilo", "forager", "fleetfooted", "fasting", "weak", "butterfingers" ],
+		"traits": [ "temporaltransmutation", "scrounger", "fleetfooted", "fasting", "weak", "imprecise" ],
 		"gear": [
 			{
 				"type": "Item",
@@ -31,7 +31,7 @@
 	},
 	{
 		"code": "artisan",
-		"traits": [ "artifice", "potter", "fasting", "scavenger", "squeamish" ],
+		"traits": [ "artisan", "frugalforming", "fasting", "scavenger", "squeamish" ],
 		"gear": [
 			{
 				"type": "item",
@@ -62,11 +62,36 @@
 				"code": "game:clothes-waist-linen-rope"
 			}
 		]
-
+	},
+	{
+		"code": "blackguard",
+		"traits": [ "merciless", "soldier", "hardy", "rockhound", "ravenous", "nearsighted", "heavyfooted", "heavyhanded" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "clothes-upperbody-blackguard-shirt"
+			},
+			{
+				"type": "item",
+				"code": "clothes-lowerbody-blackguard-leggings"
+			},
+			{
+				"type": "item",
+				"code": "clothes-foot-blackguard-shoes"
+			},
+			{
+				"type": "item",
+				"code": "clothes-emblem-blackguard-pin"
+			},
+			{
+				"type": "item",
+				"code": "clothes-waist-blackguard-belt"
+			}
+		]
 	},
 	{
 		"code": "chef",
-		"traits": [ "culinary", "fasting", "gourmand", "butcher", "clumsy", "butterfingers" ],
+		"traits": [ "culinary", "shelflifesavant", "fasting", "butcher", "clumsy", "imprecise" ],
 		"gear": [
 			{
 				"type": "item",
@@ -93,7 +118,36 @@
 				"code": "game:clothes-shoulder-minstrel-coat"
 			}
 		]
-
+	},
+	{
+		"code": "clockmaker",
+		"traits": [ "crafty", "locustlover", "technical", "fleetfooted", "furtive", "stickyfingers", "civil", "frail", "dread" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "clothes-shoulder-clockmaker-apron"
+			},
+			{
+				"type": "item",
+				"code": "clothes-upperbody-clockmaker-shirt"
+			},
+			{
+				"type": "item",
+				"code": "clothes-upperbodyover-clockmaker-tunic"
+			},
+			{
+				"type": "item",
+				"code": "clothes-lowerbody-clockmaker-pants"
+			},
+			{
+				"type": "item",
+				"code": "clothes-foot-clockmaker-shoes"
+			},
+			{
+				"type": "item",
+				"code": "clothes-waist-clockmaker-belt"
+			}
+		]
 	},
 	{
 		"code": "homesteader",
@@ -394,64 +448,8 @@
 		]
 	},
 	{
-		"code": "tinker",
-		"traits": [ "technical", "fleetfooted", "furtive", "pilferer", "frail", "dread", "civil" ],
-		"gear": [
-			{
-				"type": "item",
-				"code": "clothes-shoulder-clockmaker-apron"
-			},
-			{
-				"type": "item",
-				"code": "clothes-upperbody-clockmaker-shirt"
-			},
-			{
-				"type": "item",
-				"code": "clothes-upperbodyover-clockmaker-tunic"
-			},
-			{
-				"type": "item",
-				"code": "clothes-lowerbody-clockmaker-pants"
-			},
-			{
-				"type": "item",
-				"code": "clothes-foot-clockmaker-shoes"
-			},
-			{
-				"type": "item",
-				"code": "clothes-waist-clockmaker-belt"
-			}
-		]
-	},
-	{
-		"code": "blackguard",
-		"traits": [ "soldier", "hardy", "merciless", "ravenous", "nearsighted", "heavyfooted", "heavyhanded" ],
-		"gear": [
-			{
-				"type": "item",
-				"code": "clothes-upperbody-blackguard-shirt"
-			},
-			{
-				"type": "item",
-				"code": "clothes-lowerbody-blackguard-leggings"
-			},
-			{
-				"type": "item",
-				"code": "clothes-foot-blackguard-shoes"
-			},
-			{
-				"type": "item",
-				"code": "clothes-emblem-blackguard-pin"
-			},
-			{
-				"type": "item",
-				"code": "clothes-waist-blackguard-belt"
-			}
-		]
-	},
-	{
 		"code": "forlornknight",
-		"traits": [ "duelist","tenacious","fleetfooted","glutton","nearsighted","careless","frail" ],
+		"traits": [ "duelist", "tenacious", "fleetfooted", "glutton", "nearsighted", "careless", "frail" ],
 		"gear": [
 			{
 				"type": "item",
@@ -475,7 +473,4 @@
 			}
 		]
 	}
-
-
-
 ]

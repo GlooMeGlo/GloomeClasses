@@ -41,7 +41,7 @@ namespace GloomeClasses {
             }
         }
 
-        public BlockEntityBarrel()
+        public void BlockEntityBarrel()
         {
             inventory = new InventoryGeneric(2, null, null, (id, self) =>
             {
