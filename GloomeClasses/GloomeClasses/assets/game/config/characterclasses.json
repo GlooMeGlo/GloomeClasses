@@ -1,7 +1,7 @@
 [
 	{
 		"code": "alchemist",
-		"traits": [ "temporaltransmutation", "natphilo", "forager", "fleetfooted", "fasting", "weak", "butterfingers" ],
+		"traits": [ "temporaltransmutation", "scrounger", "fleetfooted", "fasting", "weak", "imprecise" ],
 		"gear": [
 			{
 				"type": "Item",
