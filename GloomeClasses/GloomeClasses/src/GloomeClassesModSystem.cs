@@ -1,3 +1,4 @@
+using GloomeClasses.EntityBehaviors;
 using HarmonyLib;
 using System.Reflection;
 using Vintagestory;
