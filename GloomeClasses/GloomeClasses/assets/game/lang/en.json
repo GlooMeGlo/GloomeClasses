@@ -12,6 +12,7 @@
 	"characterdesc-chef": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>The Chef is the master of the kitchen, they don't need to eat as much and are expert butchers and foragers. They know the art of crafting metal cookware and to preserve meat for long times, as well as how to best seal something for long-term storage. But they can be a little clumsy in armor and damage it easier, as well as being a poor shot with the bow.",
 	//"characterdesc-clockmaker": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Clockmakers are the masters of the old technologies, the ones who see how things tick. They know their mechanics as a whole to be able to craft all sorts of wonders, along with being able to hack and convert a Locust to their side. They know where to hit to deal more damage against mechanicals and how to be more efficient repairing the broken forgotten machinery. Otherwise they don't know life outside of the township and it can be harsh on them to survive, and they have trouble combatting against the rust creatures given what they have seen.",
 
+
 	"trait-temporaltransmutation": "<font color=\"#84ff84\">• Temporal Transmutation </font>",
 	"trait-scrounger": "<font color=\"#84ff84\">• Scrounger </font>",
 	//Fleetfooted is defined in Vanilla's Lang

@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using System.Reflection;
 using Vintagestory;
 using Vintagestory.API.Client;
@@ -16,10 +16,10 @@ namespace GloomeClasses {
         public static ILogger Logger;
 
         internal static void ApplyHarmonyPatches(ICoreAPI api) {
-            if (harmony == null) {
+            /*if (harmony == null) {
                 harmony = new Harmony("GloomeClassesPatch");
                 harmony.PatchAll(Assembly.GetExecutingAssembly());
-            }
+            }*/
         }
 
         public override void StartPre(ICoreAPI api) {
