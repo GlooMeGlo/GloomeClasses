@@ -91,7 +91,7 @@
 	},
 	{
 		"code": "chef",
-		"traits": [ "culinary", "fasting", "gourmand", "butcher", "clumsy", "butterfingers" ],
+		"traits": [ "culinary", "shelflifesavant", "fasting", "butcher", "clumsy", "imprecise" ],
 		"gear": [
 			{
 				"type": "item",

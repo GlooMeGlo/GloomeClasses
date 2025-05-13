@@ -68,6 +68,11 @@
 		"type": "positive",
 		"attributes": {}
 	},
+	{
+		"code": "shelflifesavant",
+		"type": "positive",
+		"attributes": {}
+	},
 	{ // MERCHANT
 		/*recipe for better backpack*/
 		"code": "packmule",
@@ -129,7 +134,7 @@
 			"walkspeed": 0.1
 		}
 	},
-	{ //Fasting - Also on Artisan!
+	{ //Fasting - Also on Artisan, Cook!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
@@ -232,6 +237,27 @@
 		}
 	},
 
+	// -- Chef --
+	//Fasting is up on Alchemist
+	{ // Butcher
+		"code": "butcher",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.25,
+			"animalHarvestingTime": -0.5,
+			"wildCropDropRate": 0.5,
+			"forageDropRate": 0.25
+		}
+	},
+	{ // Clumsy
+		"code": "clumsy",
+		"type": "negative",
+		"attributes": {
+			"armorDurabilityLoss": 0.25
+		}
+	},
+	//Imprecise is up on Alchemist
+
 	{ // Defender
 		"code": "defender",
 		"type": "positive",
@@ -301,14 +327,6 @@
 		"attributes": {
 			"animalLootDropRate": 0.25,
 			"animalHarvestingTime": -0.5
-		}
-	},
-
-	{ // Clumsy
-		"code": "clumsy",
-		"type": "negative",
-		"attributes": {
-			"armorDurabilityLoss": 0.25
 		}
 	},
 	{ // Duelist
