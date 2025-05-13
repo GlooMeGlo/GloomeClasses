@@ -118,7 +118,36 @@
 				"code": "game:clothes-shoulder-minstrel-coat"
 			}
 		]
-
+	},
+	{
+		"code": "clockmaker",
+		"traits": [ "crafty", "locustlover", "technical", "fleetfooted", "furtive", "stickyfingers", "civil", "frail", "dread" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "clothes-shoulder-clockmaker-apron"
+			},
+			{
+				"type": "item",
+				"code": "clothes-upperbody-clockmaker-shirt"
+			},
+			{
+				"type": "item",
+				"code": "clothes-upperbodyover-clockmaker-tunic"
+			},
+			{
+				"type": "item",
+				"code": "clothes-lowerbody-clockmaker-pants"
+			},
+			{
+				"type": "item",
+				"code": "clothes-foot-clockmaker-shoes"
+			},
+			{
+				"type": "item",
+				"code": "clothes-waist-clockmaker-belt"
+			}
+		]
 	},
 	{
 		"code": "homesteader",
@@ -419,36 +448,6 @@
 		]
 	},
 	{
-		"code": "tinker",
-		"traits": [ "technical", "fleetfooted", "furtive", "pilferer", "frail", "dread", "civil" ],
-		"gear": [
-			{
-				"type": "item",
-				"code": "clothes-shoulder-clockmaker-apron"
-			},
-			{
-				"type": "item",
-				"code": "clothes-upperbody-clockmaker-shirt"
-			},
-			{
-				"type": "item",
-				"code": "clothes-upperbodyover-clockmaker-tunic"
-			},
-			{
-				"type": "item",
-				"code": "clothes-lowerbody-clockmaker-pants"
-			},
-			{
-				"type": "item",
-				"code": "clothes-foot-clockmaker-shoes"
-			},
-			{
-				"type": "item",
-				"code": "clothes-waist-clockmaker-belt"
-			}
-		]
-	},
-	{
 		"code": "forlornknight",
 		"traits": [ "duelist", "tenacious", "fleetfooted", "glutton", "nearsighted", "careless", "frail" ],
 		"gear": [
@@ -474,7 +473,4 @@
 			}
 		]
 	}
-
-
-
 ]

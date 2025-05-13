@@ -1,113 +1,190 @@
 [
+	//=== Recipe and Unique Traits ===//
+	/*Traits for restricting recipes to certain classes, as well as other special actions or abilities to be limited by having said trait.*/
 
-	//=== RECIPE TRAITS ===//
-	/*Traits explicitly made for the purpose of restricting crafting recipes.*/
-	{ // SMITH
-		/*Armor repair kit*/
-		"code": "armorer",
-		"type": "positive",
-		"attributes": {}
-	},
-
-	{ // SMITH, MINER
-		/*recipe Tool repair kit*/
-		"code": "toolkeeper",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // SMITH
-		/*recipe for Breaking down gears, metal scrap, metal parts, and ruined weapons for metals*/
-		"code": "recycler",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // CLOTHIER
-		/*Recipe for leather crafting*/
-		"code": "tallowtanner",
-		"type": "positive",
-		"attributes": {
-		}
-	},
-
-	{ // MINER
-		/*recipe Cheaper bombs, primitive blasting powder, metal pans, prospector pack, mining lantern*/
-		"code": "prospector",
-		"type": "positive",
-		"attributes": {}
-	},
-
-	{ // MYSTIC
-		/*recipe for parchment*/
-		"code": "wise",
-		"type": "positive",
-		"attributes": {}
-	},
-
-	{ // ALCHEMIST
-		/*recipe Cheaper bombs, primitive blasting powder, metal pans, prospector pack, mining lantern*/
-		"code": "merciless",
-		"type": "positive",
-		"attributes": {}
-	},
-
-	{ // ALCHEMIST
-		/*recipe for temporal gear dust and a class specific barrel for temporal solution*/
+	// -- Alchemist --
+	{ // Temporal Transmutation
 		"code": "temporaltransmutation",
 		"type": "positive",
 		"attributes": {}
 	},
-	{ // HOMESTEADER
-		/*recipe for seeds to produce, craft high fert and cheaper terra pretta, soil boosters*/
-		"code": "pioneer",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // COOK
-		/*recipe for metal cooking pots, vintage beef*/
-		"code": "culinary",
-		"type": "positive",
-		"attributes": {}
-	},
-	{
-		"code": "shelflifesavant",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // MERCHANT
-		/*recipe for better backpack*/
-		"code": "packmule",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // MASON
-		/*recipe for better mortar, plaster, refractory and other raw brick at lower cost*/
-		"code": "mason",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // LUMBERJACK
-		/*recipe sleek doors, wagon wheels, owl and golden treasure chests, cheaper firewood, board and sticks*/
-		"code": "carpenter",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // ARTISAN
-		/*Recipe for carpets, paintings, designer vessels, planters and flowerposts*/
+
+	// -- Artisan --
+	{ // Artisan
 		"code": "artisan",
 		"type": "positive",
 		"attributes": {}
 	},
-	{
+	{ // Frugal Forming
 		"code": "frugalforming",
 		"type": "positive",
 		"attributes": {
 			"clayformingPoints": 10 // <-- This MIGHT work as is? But maybe it can be cleaned up, dunno, will have to check later. I see what the idea was though.
 		}
-
 	},
-	{ // FORLORN
-		/*Recipe for forlorn hope estoc, maybe something else*/
+
+	// -- Blackguard --
+	{ // Merciless
+		"code": "merciless",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Chef --
+	{ // Culinary
+		"code": "culinary",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Shelf-Life Savant
+		"code": "shelflifesavant",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Clockmaker --
+	{ // Crafty
+		"code": "crafty",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Locust Lover
+		"code": "locustlover",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Forlorn Hope Knight --
+	{ // Tenacious
 		"code": "tenacious",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Homesteader --
+	{ // Pioneer
+		"code": "pioneer",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Claustrophobic
+		"code": "claustrophobic",
+		"type": "negative",
+		"attributes": {
+			"caveStabilityLoss": -0.25 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
+		}
+	},
+
+	// -- Hunter --
+	// Also has Claustrophobic above
+
+	// -- Lumberjack --
+	{ // Carpenter
+		"code": "carpenter",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Mason --
+	{ // Mason
+		"code": "mason",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Merchant --
+	{ // Pack Mule
+		"code": "packmule",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Special Stock
+		"code": "specialstock",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Silver Tongue
+		"code": "silvertongue",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Miner --
+	{ // Prospector
+		"code": "prospector",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Sheltered By Stone
+		"code": "shelteredstone",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Toolkeeper's Touch
+		"code": "toolkeeper",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Prospector's Pack
+		"code": "prospectorpack",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Agoraphobia
+		"code": "agoraphobia",
+		"type": "negative", // Why was this originally a positive??? What? It's a Phobia!
+		"attributes": {
+			"caveStabilityLoss": -1.0 // <-- Shouldn't this be some OTHER attribute then Cave stability loss? It's functionally the opposite so... Will leave it until this is properly checked though.
+			//"surfaceStabilityLoss": -0.25 - Just my temp addition to how it might make more sense at a glance for how this could change. - Jon
+		}
+	},
+
+	// -- Mystic --
+	{ // Mystic
+		"code": "mystic",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Clairvoyance
+		"code": "clairvoyance",
+		"type": "positive",
+		"attributes": {
+			"crystalSkull": 1.0 // Leaving this for now, but why does it even have an attribute need? If it's just used as a tag, isn't the presence of the trait enough? Might need removing if actually not needed.
+		}
+	},
+
+	// -- Smith --
+	{ // Smith
+		"code": "smith",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Dragonskin -- This one will be a bit interesting to implement for sure.
+		"code": "dragonskin",
+		"type": "positive",
+		"attributes": {
+			"fireResist": 0.5
+		}
+	},
+	{ // Recycler
+		"code": "recycler",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Tailor --
+	{ // Clothier
+		"code": "clothier",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Mender
+		"code": "mender",
+		"type": "positive",
+		"attributes": {}
+	},
+	{ // Tallow Tanner
+		"code": "tallowtanner",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -127,14 +204,14 @@
 			"forageDropRate": 0.5
 		}
 	},
-	{ //Fleetfooted
+	{ //Fleetfooted - Also on Clockmaker!
 		"code": "fleetfooted",
 		"type": "positive",
 		"attributes": {
 			"walkspeed": 0.1
 		}
 	},
-	{ //Fasting - Also on Artisan, Cook!
+	{ //Fasting - Also on Artisan, Chef!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
@@ -148,7 +225,7 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	{ //Imprecise
+	{ //Imprecise - Also on Chef!
 		"code": "imprecise",
 		"type": "negative",
 		"attributes": {
@@ -258,6 +335,57 @@
 	},
 	//Imprecise is up on Alchemist
 
+	// -- Clockmaker --
+	{ // Technical
+		"code": "technical",
+		"type": "positive",
+		"attributes": {
+			"temporalGearTLRepairCost": -1,
+			"mechanicalsDamage": 0.25 //This might need a bit of testing to see if it actually works out. Also Vanilla has an interesting value for this one because Vanilla Clockworker also has a Melee Debuff and that balances it out.
+		}
+	},
+	//Fleetfooted is up on Alchemist!
+	{ // Furtive
+		"code": "furtive",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.25
+		}
+	},
+	{ // Sticky Fingers
+		"code": "stickyfingers",
+		"type": "positive",
+		"attributes": {
+			"vesselContentsDropRate": 0.35,
+			"rustyGearDropRate": 1.0
+		}
+	},
+	{ // Civil
+		"code": "civil",
+		"type": "negative",
+		"attributes": {
+			"animalLootDropRate": -0.25,
+			"animalHarvestingTime": 0.15,
+			"forageDropRate": -0.15,
+			"wildCropDropRate": -0.15
+		}
+	},
+	{ // Frail
+		"code": "frail",
+		"type": "negative",
+		"attributes": {
+			"maxhealthExtraPoints": -2.5,
+			"bowDrawingStrength": -0.25
+		}
+	},
+	{ // Dread -- Done and dusted it works fucking great and was incredibly easy to implement
+		"code": "dread",
+		"type": "negative",
+		"attributes": {
+			"rustedDamage": -0.1
+		}
+	},
+
 	{ // Defender
 		"code": "defender",
 		"type": "positive",
@@ -269,7 +397,6 @@
 	},
 
 	{ // Miner
-		/*this is probably too overpowered*/
 		"code": "miner",
 		"type": "positive",
 		"attributes": {
@@ -278,7 +405,6 @@
 		}
 	},
 	{ // Sharpeye
-		/*No lie chief, this shit seems like it'd be very overpowered*/
 		"code": "sharpeye",
 		"type": "positive",
 		"attributes": {
@@ -288,6 +414,15 @@
 		}
 	},
 
+	{ // Pilferer
+		"code": "pilferer",
+		"type": "positive",
+		"attributes": {
+			"vesselContentsDropRate": 0.15,
+			"rustyGearDropRate": 0.1,
+			"wholeVesselLootChance": 0.12
+		}
+	},
 	{ // Sneaky
 		"code": "sneaky",
 		"type": "positive",
@@ -321,14 +456,6 @@
 	//	}
 	//},
 
-	{ // Butcher
-		"code": "butcher",
-		"type": "positive",
-		"attributes": {
-			"animalLootDropRate": 0.25,
-			"animalHarvestingTime": -0.5
-		}
-	},
 	{ // Duelist
 		/*this is probably too overpowered*/
 		"code": "duelist",
@@ -340,8 +467,6 @@
 		}
 	},
 
-
-
 	/* DEBUG AND ADMIN */
 	{ // For default classes
 
@@ -351,9 +476,6 @@
 			"maxhealthExtraPoints": -10
 		}
 	},
-
-
-
 
 	//=== CUSTOM IMPLEMENTATION STAT TRAITS ===//
 	/*Traits that rely on custom implementation and checking of stats*/
@@ -395,45 +517,8 @@
 			"stickDropRate": 0.5,
 			"fruittreeSurvival": 1.0
 		}
-
 	},
 
-	/* FIRE DAMAGE TRAITS*/
-	{ // Dragonskin
-		/*Will need more custom implemenatation, may be able to rework damage, but ignite immunity would be a bit different.*/
-		"code": "dragonskin",
-		"type": "positive",
-		"attributes": {
-			"fireResist": 0.5
-		}
-	},
-
-	/*TEMPORAL STABILITY TRAITS */
-	{ // Sheltered by stone and Agoraphobia
-		/*could be a sunlight check, and/or checking current temporal stability of the area, not familiar with code, so X-skills and x-lib source will be helpful*/
-		"code": "claustrophilic",
-		"type": "positive",
-		"attributes": {
-			"caveStabilityLoss": -1.0
-		}
-	},
-	{ // vanilla trait changed radically
-		"code": "claustrophobic",
-		"type": "negative",
-		"attributes": {
-			"caveStabilityLoss": -0.25
-		}
-	},
-
-	/*DRIFTER, SHIVER, AND BOWTORN DAMAGE BUFF TRAITS*/
-	{ // Dread
-		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
-		"code": "dread",
-		"type": "negative",
-		"attributes": {
-			"horrorsDamage": 0.75
-		}
-	},
 	{ // Dreadslayer
 		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
 		"code": "dreadslayer",
@@ -453,20 +538,6 @@
 			"shelfLifeBuff": 0.3
 		}
 	},
-
-
-
-	/*Custom block traits*/
-	{ // Clairvoyance
-		/*This would be a unique block implementation, I'll pop this in for now, but I'll need to figure out how the interaction will work, shouldn't be too difficult*/
-		"code": "clairvoyance",
-		"type": "positive",
-		"attributes": {
-			"crystalSkull": 1.0
-		}
-	},
-
-
 
 	// VANILLA TRAITS //
 	/*Vanilla trait codes, here for tweaking values and minimizing risk of nulled traits*/
@@ -493,8 +564,7 @@
 	{ // UNCHANGED
 		"code": "bowyer",
 		"type": "positive",
-		"attributes": {
-		}
+		"attributes": {}
 	},
 	{ // UNCHANGED
 		"code": "forager",
@@ -504,49 +574,12 @@
 			"wildCropDropRate": 0.2
 		}
 	},
-	{ // TWEAKED: Buffed drop rates
-		"code": "pilferer",
-		"type": "positive",
-		"attributes": {
-			"vesselContentsDropRate": 0.35,
-			"rustyGearDropRate": 1.0,
-			"wholeVesselLootChance": 0.12
-		}
-	},
-	{ // Potential TWEAK: Buff, added walkspeed buff of 15% (!)
-		"code": "furtive",
-		"type": "positive",
-		"attributes": {
-			//"walkspeed": 0.15,
-			"animalSeekingRange": -0.35
-		}
-	},
 	{ // UNCHANGED
 		"code": "precise",
 		"type": "positive",
 		"__comment": "Since mechanical and normal damage modifiers stack and the clock maker as a -15% normal dmg reduction, we set this to 1.25/0.85 so that the actual damage bonus is +25% against mechanicals",
 		"attributes": {
 			"mechanicalsDamage": 0.4705
-		}
-	},
-	{ // UNCHANGED
-		"code": "technical",
-		"type": "positive",
-		"attributes": {
-			"temporalGearTLRepairCost": -1
-		}
-	},
-	{ // UNCHANGED
-		"code": "clothier",
-		"type": "positive",
-		"attributes": {
-		}
-	},
-	{ // UNCHANGED
-		"code": "mender",
-		"type": "positive",
-		"attributes": {
-			"armorDurabilityLoss": -0.1
 		}
 	},
 	{ // UNCHANGED
@@ -560,15 +593,6 @@
 		"type": "negative",
 		"attributes": {
 			"meleeWeaponsDamage": -0.20
-		}
-	},
-
-	{ // UNCHANGED
-		"code": "frail",
-		"type": "negative",
-		"attributes": {
-			"maxhealthExtraPoints": -2.5,
-			"bowDrawingStrength": -0.25
 		}
 	},
 	{ // UNCHANGED
@@ -586,29 +610,10 @@
 			"animalHarvestingTime": 0.25
 		}
 	},
-
-	{ // TWEAKED: bigger debuff to forage drops, less animal harvesting and loot drop rate, less wild crops
-		"code": "civil",
-		"type": "negative",
-		"attributes": {
-			"forageDropRate": -0.15,
-			"animalLootDropRate": -0.25,
-			"animalHarvestingTime": 0.15,
-			"wildCropDropRate": -0.15
-		}
-	},
 	{ // UNCHANGED
 		"code": "improviser",
 		"type": "positive",
 		"attributes": {
 		}
-	},
-	{ // Recipe additions
-		"code": "tinkerer",
-		"type": "positive",
-		"attributes": {
-		}
 	}
-
-
 ]
