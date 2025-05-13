@@ -1,14 +1,20 @@
 ﻿[
     {
-        "file": "game:entities/land/drifter",
-        "op": "addmerge",
-        "path": "/server/behaviors",
-        "value": [ { "code": "DreadBehaviorClass" } ]
+        "file": "game:entities/land/drifter.json",
+        "op": "addeach",
+        "path": "/server/behaviors/-",
+        "value": [ { "code": "EntityBehaviorDread" } ]
     },
-    {
-        "file": "game:entities/land/drifter",
-        "op": "addmerge",
-        "path": "/client/behaviors",
-        "value": [ { "code": "DreadBehaviorClass" } ]
+	{
+        "file": "game:entities/land/bowtorn.json",
+        "op": "addeach",
+        "path": "/server/behaviors/-",
+        "value": [ { "code": "EntityBehaviorDread" } ]
+    },
+	{
+        "file": "game:entities/land/shiver.json",
+        "op": "addeach",
+        "path": "/server/behaviors/-",
+        "value": [ { "code": "EntityBehaviorDread" } ]
     }
 ]
