@@ -42,7 +42,7 @@
 		"type": "positive",
 		"attributes": {}
 	},
-	
+
 	{ // ALCHEMIST
 		/*recipe Cheaper bombs, primitive blasting powder, metal pans, prospector pack, mining lantern*/
 		"code": "merciless",
@@ -88,9 +88,17 @@
 	},
 	{ // ARTISAN
 		/*Recipe for carpets, paintings, designer vessels, planters and flowerposts*/
-		"code": "artifice",
+		"code": "artisan",
 		"type": "positive",
 		"attributes": {}
+	},
+	{
+		"code": "frugalforming",
+		"type": "positive",
+		"attributes": {
+			"clayformingPoints": 10 // <-- This MIGHT work as is? But maybe it can be cleaned up, dunno, will have to check later. I see what the idea was though.
+		}
+
 	},
 	{ // FORLORN
 		/*Recipe for forlorn hope estoc, maybe something else*/
@@ -103,11 +111,9 @@
 	//=== Base Class Traits ===//
 	/*Traits that give simple generic stat boosts like vanilla
 	  Some might be utilized in multiple places, but their actual definition will be in the first class that uses them
-	  Classes that share traits will be marked on both ends!
-	  Just like vanilla, they will be sorted Positive Traits first, negative after, and more complex traits should go above this block
-	  So that it sorts them Recipes/Complex Traits first, then basic positives followed by negatives.*/
+	  Classes that share traits will be marked on both ends!*/
 
-	// -- Alchemist Base Trait Block --
+	// -- Alchemist --
 	{ //Scrounger
 		"code": "scrounger",
 		"type": "positive",
@@ -116,7 +122,7 @@
 			"forageDropRate": 0.5
 		}
 	},
-	
+
 	{ //Fleetfooted
 		"code": "fleetfooted",
 		"type": "positive",
@@ -124,15 +130,15 @@
 			"walkspeed": 0.1
 		}
 	},
-	
-	{ //Fasting
+
+	{ //Fasting - Also on Artisan!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
 			"hungerrate": -0.2
 		}
 	},
-	
+
 	{ //Weak
 		"code": "weak",
 		"type": "negative",
@@ -140,7 +146,7 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	
+
 	{ //Imprecise
 		"code": "imprecise",
 		"type": "negative",
@@ -151,6 +157,26 @@
 			"rangedWeaponsSpeed": 0.15
 		}
 	},
+
+	// -- Artisan --
+	// Fasting is up in Alchemist!
+	{ // Scavenger
+		"code": "scavenger",
+		"type": "positive",
+		"attributes": {
+			"wildCropDropRate": 0.20,
+			"forageDropRate": 0.30
+		}
+	},
+	{ // Squeamish
+		"code": "squeamish",
+		"type": "negative",
+		"attributes": {
+			"animalLootDropRate": -0.25,
+			"animalHarvestingTime": 0.1
+		}
+	},
+
 
 	{ // Defender
 		"code": "defender",
@@ -168,7 +194,7 @@
 			"animalSeekingRange": 0.2
 		}
 	},
-	
+
 	{ // Miner
 		/*this is probably too overpowered*/
 		"code": "miner",
@@ -188,14 +214,7 @@
 			"rangedWeaponsSpeed": -0.25
 		}
 	},
-	{ // Scavenger
-		"code": "scavenger",
-		"type": "positive",
-		"attributes": {
-			"forageDropRate": 0.30,
-			"wildCropDropRate": 0.20
-		}
-	},
+
 	{ // Sneaky
 		"code": "sneaky",
 		"type": "positive",
@@ -212,7 +231,7 @@
 			"miningSpeedMul": -0.25
 		}
 	},
-	
+
 	{ // Hungry
 		"code": "glutton",
 		"type": "negative",
@@ -220,7 +239,7 @@
 			"hungerrate": 0.2
 		}
 	},
-	
+
 	//{ //Imprecise
 	//	"code": "imprecise",
 	//	"type": "negative",
@@ -228,7 +247,7 @@
 	//		"mechanicalsDamage": -0.25
 	//	}
 	//},
-	
+
 	{ // Butcher
 		"code": "butcher",
 		"type": "positive",
@@ -237,20 +256,12 @@
 			"animalHarvestingTime": -0.5
 		}
 	},
-	
+
 	{ // Clumsy
 		"code": "clumsy",
 		"type": "negative",
 		"attributes": {
 			"armorDurabilityLoss": 0.25
-		}
-	},
-	{ // Squeamish
-		"code": "squeamish",
-		"type": "negative",
-		"attributes": {
-			"animalLootDropRate": -0.25,
-			"animalHarvestingTime": 0.10
 		}
 	},
 	{ // rockhound
@@ -277,7 +288,7 @@
 
 	/* DEBUG AND ADMIN */
 	{ // For default classes
-	
+
 		"code": "changeyourclass",
 		"type": "negative",
 		"attributes": {
@@ -327,17 +338,6 @@
 			"saplingDropRate": 0.2,
 			"stickDropRate": 0.5,
 			"fruittreeSurvival": 1.0
-		}
-
-	},
-
-	/* CLAY FORMING PATCH */
-	{ // Frugal Forming
-		/*Both require patch to grass block, similar to ore code*/
-		"code": "potter",
-		"type": "positive",
-		"attributes": {
-			"clayformingPoints": 10
 		}
 
 	},
@@ -433,7 +433,7 @@
 			"animalHarvestingTime": -0.75
 		}
 	},
-	
+
 	{ // UNCHANGED
 		"code": "bowyer",
 		"type": "positive",
@@ -571,7 +571,7 @@
 			"animalHarvestingTime": 0.25
 		}
 	},
-	
+
 	{ // TWEAKED: bigger debuff to forage drops, less animal harvesting and loot drop rate, less wild crops
 		"code": "civil",
 		"type": "negative",

@@ -31,7 +31,7 @@
 	},
 	{
 		"code": "artisan",
-		"traits": [ "artifice", "potter", "fasting", "scavenger", "squeamish" ],
+		"traits": [ "artisan", "frugalforming", "fasting", "scavenger", "squeamish" ],
 		"gear": [
 			{
 				"type": "item",

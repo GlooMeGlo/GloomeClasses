@@ -1,32 +1,45 @@
 {
-	
+
 	"characterclass-alchemist": "Alchemist",
-	
+	"characterclass-artisan": "Artisan",
+
 	"characterdesc-alchemist": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here - EX from Working Classes: They discovered that the purification of the metals had led to a purification of themselves.</i></font><br><br>Alchemists are adept at hunting down herbs and forage, are very quick on their feet as well, and thanks to their smaller build usually they don't get hungry as fast. But at the same time they are unable to take as much of a hit in battle, and their weaker arm strength make using a bow more difficult.",
-	
+	"characterdesc-artisan": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Artisans are masters of craft. Only they are able to craft works of art into their functional pottery and decorations, along with knowing how to get more out of each piece of clay when forming something. Thanks to their ability to stay more sedentary working on their craft, they can sustain on less food but if they have to head out to find clay, they still won't have trouble locating forage and food. But they have trouble harming animals, recieving less from harvesting them.",
+
 	"trait-temporaltransmutation": "<font color=\"#84ff84\">• Temporal Transmutation </font>",
 	"trait-scrounger": "<font color=\"#84ff84\">• Scrounger </font>",
 	//Fleetfooted is defined in Vanilla's Lang
 	"trait-fasting": "<font color=\"#84ff84\">• Fasting </font>",
 	//Weak is defined in Vanilla's Lang
 	"trait-imprecise": "<font color=\"#ff8484\">• Imprecise </font>",
-	
+
 	"traitname-temporaltransmutation": "Temporal Transmutation",
 	"traitname-scrounger": "Scrounger",
 	//Fleetfooted is defined in Vanilla's Lang
 	"traitname-fasting": "Fasting",
 	//Weak is defined in Vanilla's Lang
 	"traitname-imprecise": "Imprecise",
-	
+	"traitname-artisan": "Artisan",
+	"traitname-frugalforming": "Frugal Forming",
+	"traitname-scavenger": "Scavenger",
+	"traitname-squeamish": "Squeamish",
+
 	"traitdesc-temporaltransmutation": "Add description for Trait when it's finished pls!",
-	
+	"traitdesc-frugalforming": "Add description for Trait when it's finished pls!",
+
+	"charattribute-wildCropDropRate-0.2": "+20% wild crop drop rate",
 	"charattribute-wildCropDropRate-0.25": "+25% wild crop drop rate",
+	"charattribute-forageDropRate-0.3": "+30% loot from foraging",
 	"charattribute-forageDropRate-0.5": "+50% loot from foraging",
+	"charattribute-animalLootDropRate--0.25": "-25% animal loot",
+	"charattribute-animalHarvestingTime-0.1": "-10% animal harvesting speed",
 	"charattribute-hungerrate--0.2": "-20% hunger rate",
 	"charattribute-maxhealthExtraPoints--5": "-5 health points",
 	"charattribute-rangedWeaponsDamage--0.2": "-20% ranged damage",
 	"charattribute-bowDrawingStrength--0.2": "-20% ranged projectile velocity",
 	"charattribute-rangedWeaponsAcc--0.1": "-10% ranged accuracy",
-	"charattribute-rangedWeaponsSpeed-0.15": "+15% bow drawing time",
-	
+	"charattribute-rangedWeaponsSpeed-0.15": "-15% bow drawing speed",
+
+	"charattribute-clayformingPoints-10": "Define me after checking that this works!"
+
 }
