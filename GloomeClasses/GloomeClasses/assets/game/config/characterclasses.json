@@ -62,7 +62,32 @@
 				"code": "game:clothes-waist-linen-rope"
 			}
 		]
-
+	},
+	{
+		"code": "blackguard",
+		"traits": [ "merciless", "soldier", "hardy", "rockhound", "ravenous", "nearsighted", "heavyfooted", "heavyhanded" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "clothes-upperbody-blackguard-shirt"
+			},
+			{
+				"type": "item",
+				"code": "clothes-lowerbody-blackguard-leggings"
+			},
+			{
+				"type": "item",
+				"code": "clothes-foot-blackguard-shoes"
+			},
+			{
+				"type": "item",
+				"code": "clothes-emblem-blackguard-pin"
+			},
+			{
+				"type": "item",
+				"code": "clothes-waist-blackguard-belt"
+			}
+		]
 	},
 	{
 		"code": "chef",
@@ -424,34 +449,8 @@
 		]
 	},
 	{
-		"code": "blackguard",
-		"traits": [ "soldier", "hardy", "merciless", "ravenous", "nearsighted", "heavyfooted", "heavyhanded" ],
-		"gear": [
-			{
-				"type": "item",
-				"code": "clothes-upperbody-blackguard-shirt"
-			},
-			{
-				"type": "item",
-				"code": "clothes-lowerbody-blackguard-leggings"
-			},
-			{
-				"type": "item",
-				"code": "clothes-foot-blackguard-shoes"
-			},
-			{
-				"type": "item",
-				"code": "clothes-emblem-blackguard-pin"
-			},
-			{
-				"type": "item",
-				"code": "clothes-waist-blackguard-belt"
-			}
-		]
-	},
-	{
 		"code": "forlornknight",
-		"traits": [ "duelist","tenacious","fleetfooted","glutton","nearsighted","careless","frail" ],
+		"traits": [ "duelist", "tenacious", "fleetfooted", "glutton", "nearsighted", "careless", "frail" ],
 		"gear": [
 			{
 				"type": "item",

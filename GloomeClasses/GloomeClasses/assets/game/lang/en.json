@@ -2,9 +2,11 @@
 
 	"characterclass-alchemist": "Alchemist",
 	"characterclass-artisan": "Artisan",
+	"characterclass-blackguard": "Blackguard",
 
 	"characterdesc-alchemist": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here - EX from Working Classes: They discovered that the purification of the metals had led to a purification of themselves.</i></font><br><br>Alchemists are adept at hunting down herbs and forage, are very quick on their feet as well, and thanks to their smaller build usually they don't get hungry as fast. But at the same time they are unable to take as much of a hit in battle, and their weaker arm strength make using a bow more difficult.",
 	"characterdesc-artisan": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Artisans are masters of craft. Only they are able to craft works of art into their functional pottery and decorations, along with knowing how to get more out of each piece of clay when forming something. Thanks to their ability to stay more sedentary working on their craft, they can sustain on less food but if they have to head out to find clay, they still won't have trouble locating forage and food. But they have trouble harming animals, recieving less from harvesting them.",
+	"characterdesc-blackguard": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Blackguards are some of the strongest melee combattants. They can do more damage with melee weapons, and use armor more effectively for longer. On top of this, they are more healthy on average thanks to their training, and their strength lets them break rocks and ore faster and more efficiently. A Blackguard needs more food though to keep this up, and they are abysmal with bows. Being more accustom to the battlefield, they move with heavy steps that alert all animals around, and have trouble harvesting forage that's trampled.",
 
 	"trait-temporaltransmutation": "<font color=\"#84ff84\">• Temporal Transmutation </font>",
 	"trait-scrounger": "<font color=\"#84ff84\">• Scrounger </font>",
@@ -12,6 +14,18 @@
 	"trait-fasting": "<font color=\"#84ff84\">• Fasting </font>",
 	//Weak is defined in Vanilla's Lang
 	"trait-imprecise": "<font color=\"#ff8484\">• Imprecise </font>",
+	"trait-artisan": "<font color=\"#84ff84\">• Artisan </font>",
+	"trait-frugalforming": "<font color=\"#84ff84\">• Frugal Forming </font>",
+	"trait-scavenger": "<font color=\"#84ff84\">• Scavenger </font>",
+	"trait-squeamish": "<font color=\"#ff8484\">• Squeamish </font>",
+	//Merciless
+	//Soldier
+	//Hardy are all defined in Vanilla Lang
+	"trait-rockhound": "<font color=\"#84ff84\">• Rockhound </font>",
+	//Ravenous
+	//Nearsighted are in Vanilla Land
+	"trait-heavyfooted": "<font color=\"#ff8484\">• Heavy-Footed </font>",
+	//Heavyhanded is in Vanilla's Lang!
 
 	"traitname-temporaltransmutation": "Temporal Transmutation",
 	"traitname-scrounger": "Scrounger",
@@ -23,6 +37,14 @@
 	"traitname-frugalforming": "Frugal Forming",
 	"traitname-scavenger": "Scavenger",
 	"traitname-squeamish": "Squeamish",
+	//Merciless
+	//Soldier
+	//Hardy are all defined in Vanilla Lang
+	"traitname-rockhound": "Rockhound",
+	//Ravenous
+	//Nearsighted are in Vanilla Land
+	"traitname-heavyfooted": "Heavy-Footed",
+	//Heavyhanded is in Vanilla's Lang!
 
 	"traitdesc-temporaltransmutation": "Add description for Trait when it's finished pls!",
 	"traitdesc-frugalforming": "Add description for Trait when it's finished pls!",
@@ -33,12 +55,21 @@
 	"charattribute-forageDropRate-0.5": "+50% loot from foraging",
 	"charattribute-animalLootDropRate--0.25": "-25% animal loot",
 	"charattribute-animalHarvestingTime-0.1": "-10% animal harvesting speed",
+	"charattribute-animalSeekingRange-0.2": "+20% animal detection range",
+	"charattribute-oreDropRate-0.25": "+25% chance to get double ore",
+	"charattribute-miningSpeedMul-0.5": "+50% mining speed",
 	"charattribute-hungerrate--0.2": "-20% hunger rate",
+	"charattribute-maxhealthExtraPoints-5": "+5 health points",
 	"charattribute-maxhealthExtraPoints--5": "-5 health points",
 	"charattribute-rangedWeaponsDamage--0.2": "-20% ranged damage",
+	"charattribute-rangedWeaponsDamage--0.35": "-35% ranged damage",
 	"charattribute-bowDrawingStrength--0.2": "-20% ranged projectile velocity",
+	"charattribute-bowDrawingStrength--0.35": "-35% ranged projectile velocity",
 	"charattribute-rangedWeaponsAcc--0.1": "-10% ranged accuracy",
+	"charattribute-rangedWeaponsAcc--0.2": "-20% ranged accuracy",
 	"charattribute-rangedWeaponsSpeed-0.15": "-15% bow drawing speed",
+	"charattribute-rangedWeaponsSpeed-0.3": "-30% bow drawing speed",
+	"charattribute-armorDurabilityLoss--0.25": "+25% armor durability",
 
 	"charattribute-clayformingPoints-10": "Define me after checking that this works!"
 
