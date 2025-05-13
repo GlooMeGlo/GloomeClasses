@@ -1,0 +1,47 @@
+﻿[
+    {
+        "file": "game:itemtypes/resource/crop/gear",
+        "op": "addmerge",
+        "path": "/variantgroups/0/states-",
+        "value": "refurbished"
+    },
+    {
+        "file": "game:itemtypes/resource/crop/gear",
+        "op": "addmerge",
+        "path": "/attributesByType/*-refurbished",
+        "value": {
+            "displaycaseable": true,
+            "shelvable": true,
+            "onDisplayTransform": {
+                "translation": {
+                    "x": 0.1,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 2
+                },
+                "origin": {
+                    "x": 0.5,
+                    "y": 0,
+                    "z": 0.5
+                },
+                "scale": 0.85
+            }
+        }
+    },
+    {
+        "file": "game:itemtypes/resource/crop/gear",
+        "op": "addmerge",
+        "path": "/maxstacksizeByType/gear-refurbished",
+        "value": "64"
+    },
+    {
+        "file": "game:itemtypes/resource/crop/gear",
+        "op": "addmerge",
+        "path": "/guiTransformByType/*-refurbished",
+        "value": ""
+    }
+]
