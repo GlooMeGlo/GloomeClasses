@@ -25,6 +25,7 @@ namespace GloomeClasses.src.harmony_patches.Clayforming
                 if ((slot.Itemstack?.StackSize ?? 0) <= 0)
                 {
                     return;
+                    a = 0; // why i made this change
                 }
 
 
