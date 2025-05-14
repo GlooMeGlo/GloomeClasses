@@ -209,7 +209,7 @@
 			"forageDropRate": 0.5
 		}
 	},
-	{ //Fleetfooted - Also on Clockmaker, Forlorn Knight!
+	{ //Fleetfooted - Also on Clockmaker, Forlorn Knight, Merchant!
 		"code": "fleetfooted",
 		"type": "positive",
 		"attributes": {
@@ -251,7 +251,7 @@
 			"forageDropRate": 0.30
 		}
 	},
-	{ // Squeamish
+	{ // Squeamish - Also on Merchant!
 		"code": "squeamish",
 		"type": "negative",
 		"attributes": {
@@ -357,7 +357,7 @@
 			"animalSeekingRange": -0.25
 		}
 	},
-	{ // Sticky Fingers
+	{ // Sticky Fingers - Also on Merchant!
 		"code": "stickyfingers",
 		"type": "positive",
 		"attributes": {
@@ -375,7 +375,7 @@
 			"wildCropDropRate": -0.15
 		}
 	},
-	{ // Frail
+	{ // Frail - Also on Merchant!
 		"code": "frail",
 		"type": "negative",
 		"attributes": {
@@ -522,6 +522,12 @@
 	//Hardy is up on Blackguard!
 	//Rockhound is up on Blackguard as well!
 	//Heavy-Footed is up on Blackguard as well? That's a lot it shares, dang.
+
+	// -- Merchant --
+	//Fleetfooted is up on Alchemist!
+	//Stickyfingers is up on Clockmaker!
+	//Frail is up on Clockmaker!
+	//Squeamish is up on Artisan!
 
 	{ // Miner
 		"code": "miner",

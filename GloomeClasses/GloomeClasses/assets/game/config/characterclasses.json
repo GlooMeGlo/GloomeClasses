@@ -293,7 +293,7 @@
 	},
 	{
 		"code": "merchant",
-		"traits": [ "packmule", "fleetfooted", "pilferer", "careless", "frail", "squeamish" ],
+		"traits": [ "packmule", "specialstock", "silvertongue", "fleetfooted", "stickyfingers", "frail", "squeamish" ],
 		"gear": [
 			{
 				"type": "item",

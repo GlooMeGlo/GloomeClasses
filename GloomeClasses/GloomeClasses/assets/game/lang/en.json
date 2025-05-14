@@ -7,6 +7,7 @@
 	"characterclass-homesteader": "Homesteader",
 	"characterclass-lumberjack": "Lumberjack",
 	"characterclass-mason": "Mason",
+	"characterclass-merchant": "Merchant",
 
 	"characterdesc-alchemist": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here - EX from Working Classes: They discovered that the purification of the metals had led to a purification of themselves.</i></font><br><br>Alchemists are adept at hunting down herbs and forage, are very quick on their feet as well, and thanks to their smaller build usually they don't get hungry as fast. But at the same time they are unable to take as much of a hit in battle, and their weaker arm strength make using a bow more difficult.",
 	"characterdesc-artisan": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Artisans are masters of craft. Only they are able to craft works of art into their functional pottery and decorations, along with knowing how to get more out of each piece of clay when forming something. Thanks to their ability to stay more sedentary working on their craft, they can sustain on less food but if they have to head out to find clay, they still won't have trouble locating forage and food. But they have trouble harming animals, recieving less from harvesting them.",
@@ -18,6 +19,7 @@
 	//"characterdesc-hunter": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-lumberjack": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-mason": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
+	"characterdesc-merchant": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 
 
 	"trait-temporaltransmutation": "<font color=\"#84ff84\">• Temporal Transmutation </font>",
@@ -66,6 +68,9 @@
 	"trait-rugged": "<font color=\"#84ff84\">• Rugged </font>",
 	"trait-defender": "<font color=\"#84ff84\">• Defender </font>",
 	"trait-mason": "<font color=\"#84ff84\">• Mason </font>",
+	"trait-packmule": "<font color=\"#84ff84\">• Pack Mule </font>",
+	"trait-specialstock": "<font color=\"#84ff84\">• Special Stock </font>",
+	"trait-silvertongue": "<font color=\"#84ff84\">• Silver Tongue </font>",
 
 	"traitname-temporaltransmutation": "Temporal Transmutation",
 	"traitname-scrounger": "Scrounger",
@@ -113,6 +118,9 @@
 	"traitname-rugged": "Rugged",
 	"traitname-defender": "Defender",
 	"traitname-mason": "Mason",
+	"traitname-packmule": "Pack Mule",
+	"traitname-specialstock": "Special Stock",
+	"traitname-silvertongue": "Silver Tongue",
 
 	"traitdesc-temporaltransmutation": "Add description for Trait when it's finished pls!",
 	"traitdesc-frugalforming": "Add description for Trait when it's finished pls!",
@@ -126,6 +134,9 @@
 	"traitdesc-claustrophobic": "Add description for Trait when it's finished pls!",
 	"traitdesc-carpenter": "Add description for Trait when it's finished pls!",
 	"traitdesc-mason": "Add description for Trait when it's finished pls!",
+	"traitdesc-packmule": "Add description for Trait when it's finished pls!",
+	"traitdesc-specialstock": "Add description for Trait when it's finished pls!",
+	"traitdesc-silvertongue": "Add description for Trait when it's finished pls!",
 
 	"charattribute-logDropRate-0.15": "+15% chance for extra log",
 	"charattribute-saplingDropRate-3": "Triple sapling drop rate",
