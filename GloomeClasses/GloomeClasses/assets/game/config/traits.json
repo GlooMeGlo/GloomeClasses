@@ -270,14 +270,14 @@
 			"armorWalkSpeedAffectedness": -0.25
 		}
 	},
-	{ // Hardy - Also on Homesteader!
+	{ // Hardy - Also on Homesteader, Mason!
 		"code": "hardy",
 		"type": "positive",
 		"attributes": {
 			"maxhealthExtraPoints": 5
 		}
 	},
-	{ // Rockhound
+	{ // Rockhound - Also on Mason!
 		"code": "rockhound",
 		"type": "positive",
 		"attributes": {
@@ -503,7 +503,7 @@
 			"maxhealthExtraPoints": 2
 		}
 	},
-	{ // Defender
+	{ // Defender - Also on Mason!
 		"code": "defender",
 		"type": "positive",
 		"attributes": {
@@ -513,6 +513,15 @@
 		}
 	},
 	//Imprecise is up on Alchemist!
+
+	// -- Malefactor --
+
+
+	// -- Mason --
+	//Defender is on Lumberjack above!
+	//Hardy is up on Blackguard!
+	//Rockhound is up on Blackguard as well!
+	//Heavy-Footed is up on Blackguard as well? That's a lot it shares, dang.
 
 	{ // Miner
 		"code": "miner",

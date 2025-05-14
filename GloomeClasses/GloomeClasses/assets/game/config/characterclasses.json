@@ -263,7 +263,7 @@
 	},
 	{
 		"code": "mason",
-		"traits": [ "mason", "defender", "rockhound", "hardy", "heavyfooted", "heavyhanded", "civil" ],
+		"traits": [ "mason", "defender", "hardy", "rockhound", "heavyfooted" ],
 		"gear": [
 			{
 				"type": "item",
