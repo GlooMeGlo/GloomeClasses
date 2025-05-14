@@ -216,7 +216,7 @@
 			"walkspeed": 0.1
 		}
 	},
-	{ //Fasting - Also on Artisan, Chef, Hunter!
+	{ //Fasting - Also on Artisan, Chef, Hunter, Mystic!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
@@ -243,7 +243,7 @@
 
 	// -- Artisan --
 	// Fasting is up in Alchemist!
-	{ // Scavenger - Also on Hunter, Lumberjack!
+	{ // Scavenger - Also on Hunter, Lumberjack, Mystic!
 		"code": "scavenger",
 		"type": "positive",
 		"attributes": {
@@ -270,7 +270,7 @@
 			"armorWalkSpeedAffectedness": -0.25
 		}
 	},
-	{ // Hardy - Also on Homesteader, Mason!
+	{ // Hardy - Also on Homesteader, Mason, Miner!
 		"code": "hardy",
 		"type": "positive",
 		"attributes": {
@@ -292,7 +292,7 @@
 			"hungerrate": 0.3
 		}
 	},
-	{ // Nearsighted - Also on Forlorn Hope Knight!
+	{ // Nearsighted - Also on Forlorn Hope Knight, Miner!
 		"code": "nearsighted",
 		"type": "negative",
 		"attributes": {
@@ -302,14 +302,14 @@
 			"rangedWeaponsSpeed": 0.3
 		}
 	},
-	{ // Heavy-Footed
+	{ // Heavy-Footed - Also on Miner!
 		"code": "heavyfooted",
 		"type": "negative",
 		"attributes": {
 			"animalSeekingRange": 0.2
 		}
 	},
-	{ // Heavy-Handed
+	{ // Heavy-Handed - Also on Miner!
 		"code": "heavyhanded",
 		"type": "negative",
 		"attributes": {
@@ -346,7 +346,7 @@
 		"type": "positive",
 		"attributes": {
 			"temporalGearTLRepairCost": -1,
-			"mechanicalsDamage": 0.25 //This might need a bit of testing to see if it actually works out. Also Vanilla has an interesting value for this one because Vanilla Clockworker also has a Melee Debuff and that balances it out.
+			"mechanicalsDamage": 0.25
 		}
 	},
 	//Fleetfooted is up on Alchemist!
@@ -357,7 +357,7 @@
 			"animalSeekingRange": -0.25
 		}
 	},
-	{ // Sticky Fingers - Also on Merchant!
+	{ // Sticky Fingers - Also on Merchant, Mystic!
 		"code": "stickyfingers",
 		"type": "positive",
 		"attributes": {
@@ -418,7 +418,7 @@
 		}
 	},
 	//Nearsighted is on Blackguard!
-	{ // Careless - Also on Hunter!
+	{ // Careless - Also on Hunter, Mystic!
 		"code": "careless",
 		"type": "negative",
 		"attributes": {
@@ -503,7 +503,7 @@
 			"maxhealthExtraPoints": 2
 		}
 	},
-	{ // Defender - Also on Mason!
+	{ // Defender - Also on Mason, Miner!
 		"code": "defender",
 		"type": "positive",
 		"attributes": {
@@ -529,6 +529,7 @@
 	//Frail is up on Clockmaker!
 	//Squeamish is up on Artisan!
 
+	// -- Miner --
 	{ // Miner
 		"code": "miner",
 		"type": "positive",
@@ -537,6 +538,39 @@
 			"miningSpeedMul": 1.0
 		}
 	},
+	//Defender is up on Lumberjack!
+	//Hardy is up on Blackguard!
+	//Heavyfooted is up on Blackguard!
+	//Heavyhanded is up on Blackguard!
+	//Nearsighted is up on Blackguard!
+
+	// -- Mystic --
+	//Scavenger is up on Artisan!
+	{ // Shrewd
+		"code": "shrewd",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.30,
+			"walkspeed": 0.15
+		}
+	},
+	//Stickyfingers is up on Clockmaker!
+	{ // Dreadslayer
+		"code": "dreadslayer",
+		"type": "positive",
+		"attributes": {
+			"rustedDamage": 0.25
+		}
+	},
+	//Fasting is up on Alchemist!
+	{ //Clockwork Adverse
+		"code": "clockworkadverse",
+		"type": "negative",
+		"attributes": {
+			"mechanicalsDamage": -0.25
+		}
+	},
+	//Careless is up on Forlorn Hope Knight!
 
 	{ // Pilferer
 		"code": "pilferer",
@@ -548,13 +582,7 @@
 		}
 	},
 
-	//{ //Imprecise
-	//	"code": "imprecise",
-	//	"type": "negative",
-	//	"attributes": {
-	//		"mechanicalsDamage": -0.25
-	//	}
-	//},
+
 
 	/* DEBUG AND ADMIN */
 	{ // For default classes
@@ -586,15 +614,6 @@
 		"attributes": {
 			"randomSeedChance": 0.25,
 			"grassDropRate": 1.2
-		}
-	},
-
-	{ // Dreadslayer
-		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
-		"code": "dreadslayer",
-		"type": "positive",
-		"attributes": {
-			"horrorsDamage": 100.0
 		}
 	},
 

@@ -331,7 +331,7 @@
 	},
 	{
 		"code": "miner",
-		"traits": [ "prospector", "claustrophilic", "miner", "defender", "toolkeeper", "hardy", "fasting", "heavyfooted", "heavyhanded", "nearsighted" ],
+		"traits": [ "prospector", "shelteredstone", "toolkeeper", "prospectorpack", "miner", "defender", "hardy", "heavyfooted", "heavyhanded", "nearsighted", "agoraphobia" ],
 		"gear": [
 			{
 				"type": "Item",
@@ -365,7 +365,7 @@
 	},
 	{
 		"code": "mystic",
-		"traits": [ "wise", "clairvoyance", "scavenger", "furtive", "pilferer", "dreadslayer", "imprecise", "careless" ],
+		"traits": [ "mystic", "clairvoyance", "scavenger", "shrewd", "stickyfingers", "dreadslayer", "fasting", "clockworkadverse", "careless" ],
 		"gear": [
 			{
 				"type": "item",
