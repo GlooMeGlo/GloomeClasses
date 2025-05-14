@@ -415,7 +415,7 @@
 	},
 	{
 		"code": "smith",
-		"traits": [ "armorer", "defender", "burner", "dragonskin", "toolkeeper", "recycler", "heavyfooted", "heavyhanded" ],
+		"traits": [ "smith", "dragonskin", "recycler", "burner", "defender", "heavyfooted", "heavyhanded" ],
 		"gear": [
 			{
 				"type": "item",

@@ -168,7 +168,7 @@
 		"code": "dragonskin",
 		"type": "positive",
 		"attributes": {
-			"fireResist": 0.5
+			"fireDamage": -0.5
 		}
 	},
 	{ // Recycler
@@ -302,14 +302,14 @@
 			"rangedWeaponsSpeed": 0.3
 		}
 	},
-	{ // Heavy-Footed - Also on Miner!
+	{ // Heavy-Footed - Also on Miner, Smith!
 		"code": "heavyfooted",
 		"type": "negative",
 		"attributes": {
 			"animalSeekingRange": 0.2
 		}
 	},
-	{ // Heavy-Handed - Also on Miner!
+	{ // Heavy-Handed - Also on Miner, Smith!
 		"code": "heavyhanded",
 		"type": "negative",
 		"attributes": {
@@ -503,7 +503,7 @@
 			"maxhealthExtraPoints": 2
 		}
 	},
-	{ // Defender - Also on Mason, Miner!
+	{ // Defender - Also on Mason, Miner, Smith!
 		"code": "defender",
 		"type": "positive",
 		"attributes": {
@@ -572,6 +572,18 @@
 	},
 	//Careless is up on Forlorn Hope Knight!
 
+	// -- Smith --
+	{ // Burner
+		"code": "burner",
+		"type": "positive",
+		"attributes": {
+			"charcoalDropRate": 0.35
+		}
+	},
+	//Defender is up on Lumberjack!
+	//Heavyfooted is up on Blackguard!
+	//Heavyhanded is up on Blackguard!
+
 	{ // Pilferer
 		"code": "pilferer",
 		"type": "positive",
@@ -599,14 +611,6 @@
 
 
 	/*DROP RATE AND BLOCK PATCH TRAITS*/
-	{ // Burner
-		/*Patch charcoal piles from burning with similar code to ore code in the survival api*/
-		"code": "burner",
-		"type": "positive",
-		"attributes": {
-			"charcoalDropRate": 0.35
-		}
-	},
 	{ // Fibrous Folly + Unlikely Harvest
 		/*Both require patch to grass block, similar to ore code*/
 		"code": "fibrousfolly",
