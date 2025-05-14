@@ -230,7 +230,7 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	{ //Imprecise - Also on Chef!
+	{ //Imprecise - Also on Chef, Lumberjack!
 		"code": "imprecise",
 		"type": "negative",
 		"attributes": {
@@ -243,7 +243,7 @@
 
 	// -- Artisan --
 	// Fasting is up in Alchemist!
-	{ // Scavenger - Also on Hunter!
+	{ // Scavenger - Also on Hunter, Lumberjack!
 		"code": "scavenger",
 		"type": "positive",
 		"attributes": {
@@ -485,16 +485,34 @@
 	//Careless is up on Forlorn Hope Knight!
 
 	// -- Lumberjack --
-
+	{ // Forester
+		"code": "forester",
+		"type": "positive",
+		"attributes": {
+			"logDropRate": 0.15,
+			"saplingDropRate": 3,
+			"stickDropRate": 0.5,
+			"fruitTreeSurvival": 2.0 // This might need a patch.
+		}
+	},
+	//Scavenger is up on Artisan!
+	{ // Rugged
+		"code": "rugged",
+		"type": "positive",
+		"attributes": {
+			"maxhealthExtraPoints": 2
+		}
+	},
 	{ // Defender
 		"code": "defender",
 		"type": "positive",
 		"attributes": {
 			"meleeWeaponsDamage": 0.1,
 			"armorDurabilityLoss": -0.2,
-			"armorWalkSpeedAffectedness": -0.20
+			"armorWalkSpeedAffectedness": -0.2
 		}
 	},
+	//Imprecise is up on Alchemist!
 
 	{ // Miner
 		"code": "miner",
@@ -553,17 +571,6 @@
 		"attributes": {
 			"randomSeedChance": 0.25,
 			"grassDropRate": 1.2
-		}
-	},
-	{ // Lumberjack trait
-		/*Both require patch to grass block, similar to ore code*/
-		"code": "forester",
-		"type": "positive",
-		"attributes": {
-			"treelogDropRate": 0.15,
-			"saplingDropRate": 0.2,
-			"stickDropRate": 0.5,
-			"fruittreeSurvival": 1.0
 		}
 	},
 

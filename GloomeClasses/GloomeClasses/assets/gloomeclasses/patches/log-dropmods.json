@@ -2,7 +2,7 @@
   {
     "op": "add",
     "path": "/drops/0/dropModbyStat",
-    "value": "woodDropRate",
+    "value": "logDropRate",
     "file": "blocktypes/wood/woodtyped/log.json"
   }
 ]

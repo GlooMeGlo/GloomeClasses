@@ -233,7 +233,7 @@
 	},
 	{
 		"code": "lumberjack",
-		"traits": [ "carpenter", "scavenger", "hardy", "forester", "defender", "butterfingers" ],
+		"traits": [ "carpenter", "forester", "scavenger", "rugged", "defender", "imprecise" ],
 		"gear": [
 			{
 				"type": "item",
