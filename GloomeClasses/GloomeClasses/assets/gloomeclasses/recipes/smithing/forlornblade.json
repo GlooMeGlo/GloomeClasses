@@ -1,0 +1,10 @@
+{
+	"code": "forlornblade",
+	"ingredient": { "type": "item", "code": "game:ingot-meteoriciron" },
+	"pattern": [[
+		"________########",
+		"################",
+		"________########"
+		]],
+	"output": { "type": "item", "code": "gloomeclasses:forlornblade-meteoriciron" }
+}

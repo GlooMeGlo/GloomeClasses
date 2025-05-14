@@ -1,0 +1,14 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-4/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/turnip.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-5/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/turnip.json"
+  }
+]
