@@ -265,7 +265,7 @@
 			"armorWalkSpeedAffectedness": -0.25
 		}
 	},
-	{ // Hardy
+	{ // Hardy - Also on Homesteader!
 		"code": "hardy",
 		"type": "positive",
 		"attributes": {
@@ -422,6 +422,28 @@
 	},
 	//Frail is up on Clockmaker!
 
+	// -- Homesteader --
+	{ // Farmer Trait
+		"code": "farmer",
+		"type": "positive",
+		"attributes": {
+			"cropDropRate": 0.3
+		}
+	},
+	//Hardy is up on Blackguard!
+	//Butcher is up on Chef!
+	{ // Petraphobia
+		"code": "petraphobia",
+		"type": "positive",
+		"attributes": {
+			"oreDropRate": -0.25,
+			"miningSpeedMul": -0.25
+		}
+	},
+	//Clumsy is up on Chef!
+
+	// -- Lumberjack --
+
 	{ // Defender
 		"code": "defender",
 		"type": "positive",
@@ -497,14 +519,6 @@
 		"type": "positive",
 		"attributes": {
 			"charcoalDropRate": 0.35
-		}
-	},
-	{ // Farmer Trait
-		/*Crop blocks need to be patched with stat check similar to ore code*/
-		"code": "farmer",
-		"type": "positive",
-		"attributes": {
-			"cropDropRate": 0.3
 		}
 	},
 	{ // Fibrous Folly + Unlikely Harvest

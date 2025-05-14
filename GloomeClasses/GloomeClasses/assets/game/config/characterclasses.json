@@ -177,7 +177,7 @@
 	},
 	{
 		"code": "homesteader",
-		"traits": [ "pioneer", "hardy", "farmer", "butcher", "careless", "clumsy", "heavyhanded", "sneaky" ],
+		"traits": [ "pioneer", "farmer", "hardy", "butcher", "petraphobia", "clumsy", "claustrophobic" ],
 		"gear": [
 			{
 				"type": "item",
