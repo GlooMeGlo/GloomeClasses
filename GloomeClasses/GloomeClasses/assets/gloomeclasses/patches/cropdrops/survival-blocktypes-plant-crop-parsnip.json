@@ -1,0 +1,14 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-7/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/parsnip.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-8/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/parsnip.json"
+  }
+]

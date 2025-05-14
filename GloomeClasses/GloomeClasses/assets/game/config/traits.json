@@ -204,7 +204,7 @@
 			"forageDropRate": 0.5
 		}
 	},
-	{ //Fleetfooted - Also on Clockmaker!
+	{ //Fleetfooted - Also on Clockmaker, Forlorn Knight!
 		"code": "fleetfooted",
 		"type": "positive",
 		"attributes": {
@@ -287,7 +287,7 @@
 			"hungerrate": 0.3
 		}
 	},
-	{ // Nearsighted
+	{ // Nearsighted - Also on Forlorn Hope Knight!
 		"code": "nearsighted",
 		"type": "negative",
 		"attributes": {
@@ -386,6 +386,42 @@
 		}
 	},
 
+	// -- Forlorn Hope Knight --
+	{ // Duelist
+		"code": "duelist",
+		"type": "positive",
+		"attributes": {
+			"meleeWeaponsDamage": 0.4,
+			"armorDurabilityLoss": -0.15,
+			"armorWalkSpeedAffectedness": -0.15
+		}
+	},
+	{ // Pragmatic
+		"code": "pragmatic",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.2,
+			"animalHarvestingTime": -0.3
+		}
+	},
+	//Fleetfooted is on Alchemist!
+	{ // Glutton
+		"code": "glutton",
+		"type": "negative",
+		"attributes": {
+			"hungerrate": 0.2
+		}
+	},
+	//Nearsighted is on Blackguard!
+	{ // Careless
+		"code": "careless",
+		"type": "negative",
+		"attributes": {
+			"oreDropRate": -0.25
+		}
+	},
+	//Frail is up on Clockmaker!
+
 	{ // Defender
 		"code": "defender",
 		"type": "positive",
@@ -431,22 +467,6 @@
 			"animalSeekingRange": -0.60
 		}
 	},
-	{ // Careless & petraphobia
-		"code": "careless",
-		"type": "negative",
-		"attributes": {
-			"oreDropRate": -0.25,
-			"miningSpeedMul": -0.25
-		}
-	},
-
-	{ // Hungry
-		"code": "glutton",
-		"type": "negative",
-		"attributes": {
-			"hungerrate": 0.2
-		}
-	},
 
 	//{ //Imprecise
 	//	"code": "imprecise",
@@ -455,17 +475,6 @@
 	//		"mechanicalsDamage": -0.25
 	//	}
 	//},
-
-	{ // Duelist
-		/*this is probably too overpowered*/
-		"code": "duelist",
-		"type": "positive",
-		"attributes": {
-			"meleeWeaponsDamage": 0.4,
-			"armorDurabilityLoss": -0.15,
-			"armorWalkSpeedAffectedness": -0.35
-		}
-	},
 
 	/* DEBUG AND ADMIN */
 	{ // For default classes
