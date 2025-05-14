@@ -1,0 +1,11 @@
+[
+  {
+    "op": "addeach",
+    "path": "/dropsByType/*/-",
+    "value": [
+		{ "type": "item", "code": "game:seeds-flax", "quantity": { "avg": 0 }, "dropModbyStat": "flaxSeedChance" },
+		{ "type": "item", "code": "game:seeds-flax", "quantity": { "avg": 0 }, "dropModbyStat": "flaxSeedChance" }
+	],
+    "file": "game:blocktypes/plant/tallgrass.json"
+  }
+]

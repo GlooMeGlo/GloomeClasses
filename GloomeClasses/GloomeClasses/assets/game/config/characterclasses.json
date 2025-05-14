@@ -445,7 +445,7 @@
 	},
 	{
 		"code": "tailor",
-		"traits": [ "clothier", "mender", "fasting", "fibrousfolly", "tallowtanner", "frail" ],
+		"traits": [ "clothier", "mender", "tallowtanner", "fasting", "unlikelyharvest", "fibrousfolly", "frail" ],
 		"gear": [
 			{
 				"type": "item",

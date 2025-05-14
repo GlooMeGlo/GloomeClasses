@@ -216,7 +216,7 @@
 			"walkspeed": 0.1
 		}
 	},
-	{ //Fasting - Also on Artisan, Chef, Hunter, Mystic!
+	{ //Fasting - Also on Artisan, Chef, Hunter, Mystic, Tailor!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
@@ -375,7 +375,7 @@
 			"wildCropDropRate": -0.15
 		}
 	},
-	{ // Frail - Also on Merchant!
+	{ // Frail - Also on Merchant, Tailor!
 		"code": "frail",
 		"type": "negative",
 		"attributes": {
@@ -584,6 +584,24 @@
 	//Heavyfooted is up on Blackguard!
 	//Heavyhanded is up on Blackguard!
 
+	// -- Tailor --
+	//Fasting is up on Alchemist!
+	{ // Unlikely Harvest
+		"code": "unlikelyharvest",
+		"type": "positive",
+		"attributes": {
+			"flaxSeedChance": 0.25
+		}
+	},
+	{ // Fibrous Folly
+		"code": "fibrousfolly",
+		"type": "positive",
+		"attributes": {
+			"flaxDropRate": 0.2
+		}
+	},
+	//Frail is up on Clockmaker!
+
 	{ // Pilferer
 		"code": "pilferer",
 		"type": "positive",
@@ -594,32 +612,17 @@
 		}
 	},
 
-
-
 	/* DEBUG AND ADMIN */
 	{ // For default classes
-
 		"code": "changeyourclass",
 		"type": "negative",
 		"attributes": {
-			"maxhealthExtraPoints": -10
+			"maxhealthExtraPoints": -10 //???
 		}
 	},
 
 	//=== CUSTOM IMPLEMENTATION STAT TRAITS ===//
 	/*Traits that rely on custom implementation and checking of stats*/
-
-
-	/*DROP RATE AND BLOCK PATCH TRAITS*/
-	{ // Fibrous Folly + Unlikely Harvest
-		/*Both require patch to grass block, similar to ore code*/
-		"code": "fibrousfolly",
-		"type": "positive",
-		"attributes": {
-			"randomSeedChance": 0.25,
-			"grassDropRate": 1.2
-		}
-	},
 
 	/*Chef food traits*/
 	{ // Gourmand & Shelf life
@@ -664,8 +667,7 @@
 	{ // UNCHANGED
 		"code": "merciless",
 		"type": "positive",
-		"attributes": {
-		}
+		"attributes": {}
 	},
 	{ // UNCHANGED
 		"code": "nervous",
@@ -685,7 +687,6 @@
 	{ // UNCHANGED
 		"code": "improviser",
 		"type": "positive",
-		"attributes": {
-		}
+		"attributes": {}
 	}
 ]

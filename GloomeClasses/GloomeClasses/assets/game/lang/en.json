@@ -92,6 +92,11 @@
 	"trait-dragonskin": "<font color=\"#84ff84\">• Dragonskin </font>",
 	"trait-recycler": "<font color=\"#84ff84\">• Recycler </font>",
 	"trait-burner": "<font color=\"#84ff84\">• Burner </font>",
+	//Clothier
+	//Mender are defined in Vanilla's Lang
+	"trait-tallowtanner": "<font color=\"#84ff84\">• Tallow Tanner </font>",
+	"trait-unlikelyharvest": "<font color=\"#84ff84\">• Unlikely Harvest </font>",
+	"trait-fibrousfolly": "<font color=\"#84ff84\">• Fibrous Folly </font>",
 
 	"traitname-temporaltransmutation": "Temporal Transmutation",
 	"traitname-scrounger": "Scrounger",
@@ -157,6 +162,11 @@
 	"traitname-dragonskin": "Dragonskin",
 	"traitname-recycler": "Recycler",
 	"traitname-burner": "Burner",
+	//Clothier
+	//Mender are defined in Vanilla's Lang
+	"traitname-tallowtanner": "Tallow Tanner",
+	"traitname-unlikelyharvest": "Unlikely Harvest",
+	"traitname-fibrousfolly": "Fibrous Folly",
 
 	"traitdesc-temporaltransmutation": "Add description for Trait when it's finished pls!",
 	"traitdesc-frugalforming": "Add description for Trait when it's finished pls!",
@@ -183,7 +193,11 @@
 	"traitdesc-smith": "Add description for Trait when it's finished pls!",
 	"traitdesc-dragonskin": "Add description for Trait when it's finished pls!",
 	"traitdesc-recycler": "Add description for Trait when it's finished pls!",
+	"traitdesc-mender": "Add description for Trait when it's finished pls!",
+	"traitdesc-tallowtanner": "Add description for Trait when it's finished pls!",
 
+	"charattribute-flaxSeedChance-0.25": "+25% chance to get flax seeds from grass",
+	"charattribute-flaxDropRate-0.2": "+20% more flax fibers from flax crops",
 	"charattribute-charcoalDropRate-0.35": "+35% increased charcoal production",
 	"charattribute-logDropRate-0.15": "+15% chance for extra log",
 	"charattribute-saplingDropRate-3": "Triple sapling drop rate",
