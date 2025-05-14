@@ -206,6 +206,32 @@
 		]
 	},
 	{
+		"code": "hunter",
+		"traits": [ "bowyer", "sharpeye", "scavenger", "sneaky", "fasting", "resourceful", "farsighted", "careless", "claustrophobic" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "game:clothes-upperbody-hunter-shirt"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-upperbodyover-hunter-coat"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-lowerbody-hunter-leggings"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-foot-hunter-boots"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-hand-hunter-gloves"
+			}
+		]
+	},
+	{
 		"code": "lumberjack",
 		"traits": [ "carpenter", "scavenger", "hardy", "forester", "defender", "butterfingers" ],
 		"gear": [
@@ -384,32 +410,6 @@
 			{
 				"type": "item",
 				"code": "game:clothes-arm-merchant-bracelet"
-			}
-		]
-	},
-	{
-		"code": "ranger",
-		"traits": [ "bowyer", "sharpeye", "scavenger", "sneaky", "resourceful", "farsighted", "claustrophobic", "careless" ],
-		"gear": [
-			{
-				"type": "item",
-				"code": "game:clothes-upperbody-hunter-shirt"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-upperbodyover-hunter-coat"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-lowerbody-hunter-leggings"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-foot-hunter-boots"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-hand-hunter-gloves"
 			}
 		]
 	},

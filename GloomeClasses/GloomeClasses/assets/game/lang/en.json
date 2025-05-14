@@ -53,6 +53,11 @@
 	"trait-claustrophobic": "<font color=\"#ff8484\">• Claustrophobic </font>",
 	"trait-farmer": "<font color=\"#84ff84\">• Farmer </font>",
 	"trait-petraphobia": "<font color=\"#ff8484\">• Petraphobia </font>",
+	//Bowyer is defined in Vanilla's Lang
+	"trait-sharpeye": "<font color=\"#84ff84\">• Sharpeye </font>",
+	"trait-sneaky": "<font color=\"#84ff84\">• Sneaky </font>",
+	//Resourceful
+	//Farsighted are defined in Vanilla's Lang
 
 	"traitname-temporaltransmutation": "Temporal Transmutation",
 	"traitname-scrounger": "Scrounger",
@@ -90,6 +95,11 @@
 	"traitname-claustrophobic": "Claustrophobic",
 	"traitname-farmer": "Farmer",
 	"traitname-petraphobia": "Petraphobia",
+	//Bowyer is defined in Vanilla's Lang
+	"traitname-sharpeye": "Sharpeye",
+	"traitname-sneaky": "Sneaky",
+	//Resourceful
+	//Farsighted are defined in Vanilla's Lang
 
 	"traitdesc-temporaltransmutation": "Add description for Trait when it's finished pls!",
 	"traitdesc-frugalforming": "Add description for Trait when it's finished pls!",
@@ -113,12 +123,15 @@
 	"charattribute-forageDropRate--0.15": "-15% loot from foraging",
 	"charattribute-animalLootDropRate-0.2": "+20% animal loot",
 	"charattribute-animalLootDropRate-0.25": "+25% animal loot",
+	"charattribute-animalLootDropRate-0.5": "+50% animal loot",
 	"charattribute-animalLootDropRate--0.25": "-25% animal loot",
 	"charattribute-animalHarvestingTime--0.3": "+30% animal harvesting speed",
 	"charattribute-animalHarvestingTime--0.5": "+50% animal harvesting speed",
+	"charattribute-animalHarvestingTime--0.75": "+75% animal harvesting speed",
 	"charattribute-animalHarvestingTime-0.1": "-10% animal harvesting speed",
 	"charattribute-animalHarvestingTime-0.15": "-15% animal harvesting speed",
 	"charattribute-animalSeekingRange--0.25": "-25% animal detection range",
+	"charattribute-animalSeekingRange--0.6": "-60% animal detection range",
 	"charattribute-animalSeekingRange-0.2": "+20% animal detection range",
 	"charattribute-oreDropRate-0.25": "+25% chance to get double ore",
 	"charattribute-oreDropRate--0.25": "-25% ore drop rate",
@@ -129,12 +142,16 @@
 	"charattribute-maxhealthExtraPoints--5": "-5 health points",
 	"charattribute-armorWalkSpeedAffectedness--0.15": "walk speed penalty for wearing armor reduced by 15%",
 	"charattribute-meleeWeaponsDamage-0.4": "+40% melee damage",
+	"charattribute-meleeWeaponsDamage--0.2": "-20% melee damage",
+	"charattribute-rangedWeaponsDamage-0.7": "+70% ranged damage",
 	"charattribute-rangedWeaponsDamage--0.2": "-20% ranged damage",
 	"charattribute-rangedWeaponsDamage--0.35": "-35% ranged damage",
+	"charattribute-bowDrawingStrength-0.5": "+50% ranged projectile velocity",
 	"charattribute-bowDrawingStrength--0.2": "-20% ranged projectile velocity",
 	"charattribute-bowDrawingStrength--0.35": "-35% ranged projectile velocity",
 	"charattribute-rangedWeaponsAcc--0.1": "-10% ranged accuracy",
 	"charattribute-rangedWeaponsAcc--0.2": "-20% ranged accuracy",
+	"charattribute-rangedWeaponsSpeed--0.25": "+25% bow drawing speed",
 	"charattribute-rangedWeaponsSpeed-0.15": "-15% bow drawing speed",
 	"charattribute-rangedWeaponsSpeed-0.3": "-30% bow drawing speed",
 	"charattribute-armorDurabilityLoss--0.25": "+25% armor durability",

@@ -71,11 +71,16 @@
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": -0.25 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
+			"caveStabilityLoss": -0.15 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
 		}
 	},
 
 	// -- Hunter --
+	{ // Bowyer
+		"code": "bowyer",
+		"type": "positive",
+		"attributes": {}
+	},
 	// Also has Claustrophobic above
 
 	// -- Lumberjack --
@@ -211,7 +216,7 @@
 			"walkspeed": 0.1
 		}
 	},
-	{ //Fasting - Also on Artisan, Chef!
+	{ //Fasting - Also on Artisan, Chef, Hunter!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
@@ -238,7 +243,7 @@
 
 	// -- Artisan --
 	// Fasting is up in Alchemist!
-	{ // Scavenger
+	{ // Scavenger - Also on Hunter!
 		"code": "scavenger",
 		"type": "positive",
 		"attributes": {
@@ -413,7 +418,7 @@
 		}
 	},
 	//Nearsighted is on Blackguard!
-	{ // Careless
+	{ // Careless - Also on Hunter!
 		"code": "careless",
 		"type": "negative",
 		"attributes": {
@@ -442,6 +447,43 @@
 	},
 	//Clumsy is up on Chef!
 
+	// -- Hunter --
+	{ // Sharpeye
+		"code": "sharpeye",
+		"type": "positive",
+		"attributes": {
+			"rangedWeaponsDamage": 0.7,
+			"bowDrawingStrength": 0.5,
+			"rangedWeaponsSpeed": -0.25
+		}
+	},
+	//Scavenger is up on Artisan!
+	{ // Sneaky
+		"code": "sneaky",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.60,
+			"walkspeed": 0.1
+		}
+	},
+	//Fasting is up on Alchemist!
+	{ // Resourceful
+		"code": "resourceful",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.5,
+			"animalHarvestingTime": -0.75
+		}
+	},
+	{ // Farsighted
+		"code": "farsighted",
+		"type": "negative",
+		"attributes": {
+			"meleeWeaponsDamage": -0.20
+		}
+	},
+	//Careless is up on Forlorn Hope Knight!
+
 	// -- Lumberjack --
 
 	{ // Defender
@@ -462,15 +504,6 @@
 			"miningSpeedMul": 1.0
 		}
 	},
-	{ // Sharpeye
-		"code": "sharpeye",
-		"type": "positive",
-		"attributes": {
-			"rangedWeaponsDamage": 1.0,
-			"bowDrawingStrength": 0.5,
-			"rangedWeaponsSpeed": -0.25
-		}
-	},
 
 	{ // Pilferer
 		"code": "pilferer",
@@ -479,14 +512,6 @@
 			"vesselContentsDropRate": 0.15,
 			"rustyGearDropRate": 0.1,
 			"wholeVesselLootChance": 0.12
-		}
-	},
-	{ // Sneaky
-		"code": "sneaky",
-		"type": "positive",
-		"attributes": {
-			"walkspeed": 0.1,
-			"animalSeekingRange": -0.60
 		}
 	},
 
@@ -575,20 +600,6 @@
 		}
 	},
 
-	{ // TWEAKED: Mega buff to animal loot (50% from 10%) and 75% animal harvest time from 25%
-		"code": "resourceful",
-		"type": "positive",
-		"attributes": {
-			"animalLootDropRate": 0.5,
-			"animalHarvestingTime": -0.75
-		}
-	},
-
-	{ // UNCHANGED
-		"code": "bowyer",
-		"type": "positive",
-		"attributes": {}
-	},
 	{ // UNCHANGED
 		"code": "forager",
 		"type": "positive",
@@ -609,13 +620,6 @@
 		"code": "merciless",
 		"type": "positive",
 		"attributes": {
-		}
-	},
-	{ // TWEAKED: 20% melee debuff (from 15%) 
-		"code": "farsighted",
-		"type": "negative",
-		"attributes": {
-			"meleeWeaponsDamage": -0.20
 		}
 	},
 	{ // UNCHANGED
