@@ -19,7 +19,7 @@
 		"code": "frugalforming",
 		"type": "positive",
 		"attributes": {
-			"clayformingPoints": 10 // <-- This MIGHT work as is? But maybe it can be cleaned up, dunno, will have to check later. I see what the idea was though.
+			"clayformingPoints": 5
 		}
 	},
 
@@ -86,6 +86,13 @@
 	// -- Lumberjack --
 	{ // Carpenter
 		"code": "carpenter",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Malefactor --
+	{ // Improviser
+		"code": "improviser",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -350,7 +357,7 @@
 		}
 	},
 	//Fleetfooted is up on Alchemist!
-	{ // Furtive
+	{ // Furtive - Also on Malefactor
 		"code": "furtive",
 		"type": "positive",
 		"attributes": {
@@ -375,7 +382,7 @@
 			"wildCropDropRate": -0.15
 		}
 	},
-	{ // Frail - Also on Merchant, Tailor!
+	{ // Frail - Also on Merchant, Tailor, Malefactor!
 		"code": "frail",
 		"type": "negative",
 		"attributes": {
@@ -515,7 +522,32 @@
 	//Imprecise is up on Alchemist!
 
 	// -- Malefactor --
-
+	{ // Forager
+		"code": "forager",
+		"type": "positive",
+		"attributes": {
+			"forageDropRate": 0.1,
+			"wildCropDropRate": 0.2
+		}
+	},
+	{ // Pilferer
+		"code": "pilferer",
+		"type": "positive",
+		"attributes": {
+			"vesselContentsDropRate": 0.15,
+			"rustyGearDropRate": 0.1,
+			"wholeVesselLootChance": 0.12
+		}
+	},
+	//Furtive is up on Clockmaker
+	//Frail is up on Clockmaker
+	{ // Nervous
+		"code": "nervous",
+		"type": "negative",
+		"attributes": {
+			"meleeWeaponsDamage": -0.15
+		}
+	},
 
 	// -- Mason --
 	//Defender is on Lumberjack above!
@@ -602,36 +634,12 @@
 	},
 	//Frail is up on Clockmaker!
 
-	{ // Pilferer
-		"code": "pilferer",
-		"type": "positive",
-		"attributes": {
-			"vesselContentsDropRate": 0.15,
-			"rustyGearDropRate": 0.1,
-			"wholeVesselLootChance": 0.12
-		}
-	},
-
 	/* DEBUG AND ADMIN */
 	{ // For default classes
 		"code": "changeyourclass",
 		"type": "negative",
 		"attributes": {
 			"maxhealthExtraPoints": -10 //???
-		}
-	},
-
-	//=== CUSTOM IMPLEMENTATION STAT TRAITS ===//
-	/*Traits that rely on custom implementation and checking of stats*/
-
-	/*Chef food traits*/
-	{ // Gourmand & Shelf life
-		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
-		"code": "gourmand",
-		"type": "positive",
-		"attributes": {
-			"nutritionBuff": 0.5,
-			"shelfLifeBuff": 0.3
 		}
 	},
 
@@ -647,15 +655,6 @@
 			"bowDrawingStrength": 0.2
 		}
 	},
-
-	{ // UNCHANGED
-		"code": "forager",
-		"type": "positive",
-		"attributes": {
-			"forageDropRate": 0.1,
-			"wildCropDropRate": 0.2
-		}
-	},
 	{ // UNCHANGED
 		"code": "precise",
 		"type": "positive",
@@ -665,28 +664,11 @@
 		}
 	},
 	{ // UNCHANGED
-		"code": "merciless",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // UNCHANGED
-		"code": "nervous",
-		"type": "negative",
-		"attributes": {
-			"meleeWeaponsDamage": -0.15
-		}
-	},
-	{ // UNCHANGED
 		"code": "kind",
 		"type": "negative",
 		"attributes": {
 			"animalLootDropRate": -0.1,
 			"animalHarvestingTime": 0.25
 		}
-	},
-	{ // UNCHANGED
-		"code": "improviser",
-		"type": "positive",
-		"attributes": {}
 	}
 ]

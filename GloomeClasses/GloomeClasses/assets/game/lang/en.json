@@ -21,6 +21,7 @@
 	"characterdesc-homesteader": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	//"characterdesc-hunter": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-lumberjack": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
+	//"characterdesc-malefactor": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-mason": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-merchant": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-miner": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
@@ -264,7 +265,7 @@
 	"charattribute-rustyGearDropRate-1": "+100% rusty gear drop rate",
 	"charattribute-vesselContentsDropRate-0.35": "Vessels drop +35% more",
 
-	"charattribute-clayformingPoints-10": "Define me after checking that this works!",
+	"charattribute-clayformingPoints-5": "+5 voxels for each piece of clay used in clayforming",
 	"charattribute-caveStabilityLoss--0.15": "Define me after checking that this works!",
 	"charattribute-caveStabilityLoss--1": "Define me after checking that this works!",
 	"charattribute-surfaceStabilityLoss--0.25": "Define me after checking that this works!"
