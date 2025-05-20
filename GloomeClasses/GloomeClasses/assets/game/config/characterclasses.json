@@ -177,7 +177,7 @@
 	},
 	{
 		"code": "homesteader",
-		"traits": [ "pioneer", "hardy", "farmer", "butcher", "careless", "clumsy", "heavyhanded", "sneaky" ],
+		"traits": [ "pioneer", "farmer", "hardy", "butcher", "petraphobia", "clumsy", "claustrophobic" ],
 		"gear": [
 			{
 				"type": "item",
@@ -206,8 +206,34 @@
 		]
 	},
 	{
+		"code": "hunter",
+		"traits": [ "bowyer", "sharpeye", "scavenger", "sneaky", "fasting", "resourceful", "farsighted", "careless", "claustrophobic" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "game:clothes-upperbody-hunter-shirt"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-upperbodyover-hunter-coat"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-lowerbody-hunter-leggings"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-foot-hunter-boots"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-hand-hunter-gloves"
+			}
+		]
+	},
+	{
 		"code": "lumberjack",
-		"traits": [ "carpenter", "scavenger", "hardy", "forester", "defender", "butterfingers" ],
+		"traits": [ "carpenter", "forester", "scavenger", "rugged", "defender", "imprecise" ],
 		"gear": [
 			{
 				"type": "item",
@@ -236,8 +262,50 @@
 		]
 	},
 	{
+		"code": "malefactor",
+		"traits": [ "improviser", "forager", "pilferer", "furtive", "frail", "nervous" ],
+		"gear": [
+			{
+				"type": "item",
+				"code": "clothes-upperbody-malefactor-shirt"
+			},
+			{
+				"type": "item",
+				"code": "clothes-upperbodyover-malefactor-tunic"
+			},
+			{
+				"type": "item",
+				"code": "clothes-shoulder-malefactor-cloak"
+			},
+			{
+				"type": "item",
+				"code": "clothes-lowerbody-malefactor-trousers"
+			},
+			{
+				"type": "item",
+				"code": "clothes-foot-malefactor-boots"
+			},
+			{
+				"type": "item",
+				"code": "clothes-neck-malefactor-pendant"
+			},
+			{
+				"type": "item",
+				"code": "clothes-face-malefactor-mask"
+			},
+			{
+				"type": "item",
+				"code": "clothes-hand-malefactor-gloves"
+			},
+			{
+				"type": "item",
+				"code": "clothes-waist-malefactor-sash"
+			}
+		]
+	},
+	{
 		"code": "mason",
-		"traits": [ "mason", "defender", "rockhound", "hardy", "heavyfooted", "heavyhanded", "civil" ],
+		"traits": [ "mason", "defender", "hardy", "rockhound", "heavyfooted" ],
 		"gear": [
 			{
 				"type": "item",
@@ -267,7 +335,7 @@
 	},
 	{
 		"code": "merchant",
-		"traits": [ "packmule", "fleetfooted", "pilferer", "careless", "frail", "squeamish" ],
+		"traits": [ "packmule", "specialstock", "silvertongue", "fleetfooted", "stickyfingers", "frail", "squeamish" ],
 		"gear": [
 			{
 				"type": "item",
@@ -305,7 +373,7 @@
 	},
 	{
 		"code": "miner",
-		"traits": [ "prospector", "claustrophilic", "miner", "defender", "toolkeeper", "hardy", "fasting", "heavyfooted", "heavyhanded", "nearsighted" ],
+		"traits": [ "prospector", "shelteredstone", "toolkeeper", "prospectorpack", "miner", "defender", "hardy", "heavyfooted", "heavyhanded", "nearsighted", "agoraphobia" ],
 		"gear": [
 			{
 				"type": "Item",
@@ -339,7 +407,7 @@
 	},
 	{
 		"code": "mystic",
-		"traits": [ "wise", "clairvoyance", "scavenger", "furtive", "pilferer", "dreadslayer", "imprecise", "careless" ],
+		"traits": [ "mystic", "clairvoyance", "scavenger", "shrewd", "stickyfingers", "dreadslayer", "fasting", "clockworkadverse", "careless" ],
 		"gear": [
 			{
 				"type": "item",
@@ -388,34 +456,8 @@
 		]
 	},
 	{
-		"code": "ranger",
-		"traits": [ "bowyer", "sharpeye", "scavenger", "sneaky", "resourceful", "farsighted", "claustrophobic", "careless" ],
-		"gear": [
-			{
-				"type": "item",
-				"code": "game:clothes-upperbody-hunter-shirt"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-upperbodyover-hunter-coat"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-lowerbody-hunter-leggings"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-foot-hunter-boots"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-hand-hunter-gloves"
-			}
-		]
-	},
-	{
 		"code": "smith",
-		"traits": [ "armorer", "defender", "burner", "dragonskin", "toolkeeper", "recycler", "heavyfooted", "heavyhanded" ],
+		"traits": [ "smith", "dragonskin", "recycler", "burner", "defender", "heavyfooted", "heavyhanded" ],
 		"gear": [
 			{
 				"type": "item",
@@ -445,7 +487,7 @@
 	},
 	{
 		"code": "tailor",
-		"traits": [ "clothier", "mender", "fasting", "fibrousfolly", "tallowtanner", "frail" ],
+		"traits": [ "clothier", "mender", "tallowtanner", "fasting", "unlikelyharvest", "fibrousfolly", "frail" ],
 		"gear": [
 			{
 				"type": "item",

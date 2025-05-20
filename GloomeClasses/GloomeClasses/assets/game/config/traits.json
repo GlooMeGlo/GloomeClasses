@@ -19,7 +19,7 @@
 		"code": "frugalforming",
 		"type": "positive",
 		"attributes": {
-			"clayformingPoints": 10 // <-- This MIGHT work as is? But maybe it can be cleaned up, dunno, will have to check later. I see what the idea was though.
+			"clayformingPoints": 5
 		}
 	},
 
@@ -71,16 +71,28 @@
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": -0.25 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
+			"caveStabilityLoss": -0.15 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
 		}
 	},
 
 	// -- Hunter --
+	{ // Bowyer
+		"code": "bowyer",
+		"type": "positive",
+		"attributes": {}
+	},
 	// Also has Claustrophobic above
 
 	// -- Lumberjack --
 	{ // Carpenter
 		"code": "carpenter",
+		"type": "positive",
+		"attributes": {}
+	},
+
+	// -- Malefactor --
+	{ // Improviser
+		"code": "improviser",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -163,7 +175,7 @@
 		"code": "dragonskin",
 		"type": "positive",
 		"attributes": {
-			"fireResist": 0.5
+			"fireDamage": -0.5
 		}
 	},
 	{ // Recycler
@@ -204,14 +216,14 @@
 			"forageDropRate": 0.5
 		}
 	},
-	{ //Fleetfooted - Also on Clockmaker, Forlorn Knight!
+	{ //Fleetfooted - Also on Clockmaker, Forlorn Knight, Merchant!
 		"code": "fleetfooted",
 		"type": "positive",
 		"attributes": {
 			"walkspeed": 0.1
 		}
 	},
-	{ //Fasting - Also on Artisan, Chef!
+	{ //Fasting - Also on Artisan, Chef, Hunter, Mystic, Tailor!
 		"code": "fasting",
 		"type": "positive",
 		"attributes": {
@@ -225,7 +237,7 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	{ //Imprecise - Also on Chef!
+	{ //Imprecise - Also on Chef, Lumberjack!
 		"code": "imprecise",
 		"type": "negative",
 		"attributes": {
@@ -238,7 +250,7 @@
 
 	// -- Artisan --
 	// Fasting is up in Alchemist!
-	{ // Scavenger
+	{ // Scavenger - Also on Hunter, Lumberjack, Mystic!
 		"code": "scavenger",
 		"type": "positive",
 		"attributes": {
@@ -246,7 +258,7 @@
 			"forageDropRate": 0.30
 		}
 	},
-	{ // Squeamish
+	{ // Squeamish - Also on Merchant!
 		"code": "squeamish",
 		"type": "negative",
 		"attributes": {
@@ -265,14 +277,14 @@
 			"armorWalkSpeedAffectedness": -0.25
 		}
 	},
-	{ // Hardy
+	{ // Hardy - Also on Homesteader, Mason, Miner!
 		"code": "hardy",
 		"type": "positive",
 		"attributes": {
 			"maxhealthExtraPoints": 5
 		}
 	},
-	{ // Rockhound
+	{ // Rockhound - Also on Mason!
 		"code": "rockhound",
 		"type": "positive",
 		"attributes": {
@@ -287,7 +299,7 @@
 			"hungerrate": 0.3
 		}
 	},
-	{ // Nearsighted - Also on Forlorn Hope Knight!
+	{ // Nearsighted - Also on Forlorn Hope Knight, Miner!
 		"code": "nearsighted",
 		"type": "negative",
 		"attributes": {
@@ -297,14 +309,14 @@
 			"rangedWeaponsSpeed": 0.3
 		}
 	},
-	{ // Heavy-Footed
+	{ // Heavy-Footed - Also on Miner, Smith!
 		"code": "heavyfooted",
 		"type": "negative",
 		"attributes": {
 			"animalSeekingRange": 0.2
 		}
 	},
-	{ // Heavy-Handed
+	{ // Heavy-Handed - Also on Miner, Smith!
 		"code": "heavyhanded",
 		"type": "negative",
 		"attributes": {
@@ -341,18 +353,18 @@
 		"type": "positive",
 		"attributes": {
 			"temporalGearTLRepairCost": -1,
-			"mechanicalsDamage": 0.25 //This might need a bit of testing to see if it actually works out. Also Vanilla has an interesting value for this one because Vanilla Clockworker also has a Melee Debuff and that balances it out.
+			"mechanicalsDamage": 0.25
 		}
 	},
 	//Fleetfooted is up on Alchemist!
-	{ // Furtive
+	{ // Furtive - Also on Malefactor
 		"code": "furtive",
 		"type": "positive",
 		"attributes": {
 			"animalSeekingRange": -0.25
 		}
 	},
-	{ // Sticky Fingers
+	{ // Sticky Fingers - Also on Merchant, Mystic!
 		"code": "stickyfingers",
 		"type": "positive",
 		"attributes": {
@@ -370,7 +382,7 @@
 			"wildCropDropRate": -0.15
 		}
 	},
-	{ // Frail
+	{ // Frail - Also on Merchant, Tailor, Malefactor!
 		"code": "frail",
 		"type": "negative",
 		"attributes": {
@@ -413,7 +425,7 @@
 		}
 	},
 	//Nearsighted is on Blackguard!
-	{ // Careless
+	{ // Careless - Also on Hunter, Mystic!
 		"code": "careless",
 		"type": "negative",
 		"attributes": {
@@ -422,34 +434,102 @@
 	},
 	//Frail is up on Clockmaker!
 
-	{ // Defender
+	// -- Homesteader --
+	{ // Farmer Trait
+		"code": "farmer",
+		"type": "positive",
+		"attributes": {
+			"cropDropRate": 0.3
+		}
+	},
+	//Hardy is up on Blackguard!
+	//Butcher is up on Chef!
+	{ // Petraphobia
+		"code": "petraphobia",
+		"type": "positive",
+		"attributes": {
+			"oreDropRate": -0.25,
+			"miningSpeedMul": -0.25
+		}
+	},
+	//Clumsy is up on Chef!
+
+	// -- Hunter --
+	{ // Sharpeye
+		"code": "sharpeye",
+		"type": "positive",
+		"attributes": {
+			"rangedWeaponsDamage": 0.7,
+			"bowDrawingStrength": 0.5,
+			"rangedWeaponsSpeed": -0.25
+		}
+	},
+	//Scavenger is up on Artisan!
+	{ // Sneaky
+		"code": "sneaky",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.60,
+			"walkspeed": 0.1
+		}
+	},
+	//Fasting is up on Alchemist!
+	{ // Resourceful
+		"code": "resourceful",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.5,
+			"animalHarvestingTime": -0.75
+		}
+	},
+	{ // Farsighted
+		"code": "farsighted",
+		"type": "negative",
+		"attributes": {
+			"meleeWeaponsDamage": -0.20
+		}
+	},
+	//Careless is up on Forlorn Hope Knight!
+
+	// -- Lumberjack --
+	{ // Forester
+		"code": "forester",
+		"type": "positive",
+		"attributes": {
+			"logDropRate": 0.15,
+			"saplingDropRate": 3,
+			"stickDropRate": 0.5,
+			"fruitTreeSurvival": 2.0 // This might need a patch.
+		}
+	},
+	//Scavenger is up on Artisan!
+	{ // Rugged
+		"code": "rugged",
+		"type": "positive",
+		"attributes": {
+			"maxhealthExtraPoints": 2
+		}
+	},
+	{ // Defender - Also on Mason, Miner, Smith!
 		"code": "defender",
 		"type": "positive",
 		"attributes": {
 			"meleeWeaponsDamage": 0.1,
 			"armorDurabilityLoss": -0.2,
-			"armorWalkSpeedAffectedness": -0.20
+			"armorWalkSpeedAffectedness": -0.2
 		}
 	},
+	//Imprecise is up on Alchemist!
 
-	{ // Miner
-		"code": "miner",
+	// -- Malefactor --
+	{ // Forager
+		"code": "forager",
 		"type": "positive",
 		"attributes": {
-			"oreDropRate": 0.5,
-			"miningSpeedMul": 1.0
+			"forageDropRate": 0.1,
+			"wildCropDropRate": 0.2
 		}
 	},
-	{ // Sharpeye
-		"code": "sharpeye",
-		"type": "positive",
-		"attributes": {
-			"rangedWeaponsDamage": 1.0,
-			"bowDrawingStrength": 0.5,
-			"rangedWeaponsSpeed": -0.25
-		}
-	},
-
 	{ // Pilferer
 		"code": "pilferer",
 		"type": "positive",
@@ -459,92 +539,107 @@
 			"wholeVesselLootChance": 0.12
 		}
 	},
-	{ // Sneaky
-		"code": "sneaky",
-		"type": "positive",
-		"attributes": {
-			"walkspeed": 0.1,
-			"animalSeekingRange": -0.60
-		}
-	},
-
-	//{ //Imprecise
-	//	"code": "imprecise",
-	//	"type": "negative",
-	//	"attributes": {
-	//		"mechanicalsDamage": -0.25
-	//	}
-	//},
-
-	/* DEBUG AND ADMIN */
-	{ // For default classes
-
-		"code": "changeyourclass",
+	//Furtive is up on Clockmaker
+	//Frail is up on Clockmaker
+	{ // Nervous
+		"code": "nervous",
 		"type": "negative",
 		"attributes": {
-			"maxhealthExtraPoints": -10
+			"meleeWeaponsDamage": -0.15
 		}
 	},
 
-	//=== CUSTOM IMPLEMENTATION STAT TRAITS ===//
-	/*Traits that rely on custom implementation and checking of stats*/
+	// -- Mason --
+	//Defender is on Lumberjack above!
+	//Hardy is up on Blackguard!
+	//Rockhound is up on Blackguard as well!
+	//Heavy-Footed is up on Blackguard as well? That's a lot it shares, dang.
 
+	// -- Merchant --
+	//Fleetfooted is up on Alchemist!
+	//Stickyfingers is up on Clockmaker!
+	//Frail is up on Clockmaker!
+	//Squeamish is up on Artisan!
 
-	/*DROP RATE AND BLOCK PATCH TRAITS*/
+	// -- Miner --
+	{ // Miner
+		"code": "miner",
+		"type": "positive",
+		"attributes": {
+			"oreDropRate": 0.5,
+			"miningSpeedMul": 1.0
+		}
+	},
+	//Defender is up on Lumberjack!
+	//Hardy is up on Blackguard!
+	//Heavyfooted is up on Blackguard!
+	//Heavyhanded is up on Blackguard!
+	//Nearsighted is up on Blackguard!
+
+	// -- Mystic --
+	//Scavenger is up on Artisan!
+	{ // Shrewd
+		"code": "shrewd",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.30,
+			"walkspeed": 0.15
+		}
+	},
+	//Stickyfingers is up on Clockmaker!
+	{ // Dreadslayer
+		"code": "dreadslayer",
+		"type": "positive",
+		"attributes": {
+			"rustedDamage": 0.25
+		}
+	},
+	//Fasting is up on Alchemist!
+	{ //Clockwork Adverse
+		"code": "clockworkadverse",
+		"type": "negative",
+		"attributes": {
+			"mechanicalsDamage": -0.25
+		}
+	},
+	//Careless is up on Forlorn Hope Knight!
+
+	// -- Smith --
 	{ // Burner
-		/*Patch charcoal piles from burning with similar code to ore code in the survival api*/
 		"code": "burner",
 		"type": "positive",
 		"attributes": {
 			"charcoalDropRate": 0.35
 		}
 	},
-	{ // Farmer Trait
-		/*Crop blocks need to be patched with stat check similar to ore code*/
-		"code": "farmer",
+	//Defender is up on Lumberjack!
+	//Heavyfooted is up on Blackguard!
+	//Heavyhanded is up on Blackguard!
+
+	// -- Tailor --
+	//Fasting is up on Alchemist!
+	{ // Unlikely Harvest
+		"code": "unlikelyharvest",
 		"type": "positive",
 		"attributes": {
-			"cropDropRate": 0.3
+			"flaxSeedChance": 0.25
 		}
 	},
-	{ // Fibrous Folly + Unlikely Harvest
-		/*Both require patch to grass block, similar to ore code*/
+	{ // Fibrous Folly
 		"code": "fibrousfolly",
 		"type": "positive",
 		"attributes": {
-			"randomSeedChance": 0.25,
-			"grassDropRate": 1.2
+			"flaxDropRate": 0.2
 		}
 	},
-	{ // Lumberjack trait
-		/*Both require patch to grass block, similar to ore code*/
-		"code": "forester",
-		"type": "positive",
-		"attributes": {
-			"treelogDropRate": 0.15,
-			"saplingDropRate": 0.2,
-			"stickDropRate": 0.5,
-			"fruittreeSurvival": 1.0
-		}
-	},
+	//Frail is up on Clockmaker!
 
-	{ // Dreadslayer
-		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
-		"code": "dreadslayer",
-		"type": "positive",
+	/* DEBUG AND ADMIN */
+	{ // For default classes
+		"code": "changeyourclass",
+		"type": "negative",
 		"attributes": {
-			"horrorsDamage": 100.0
-		}
-	},
-
-	/*Chef food traits*/
-	{ // Gourmand & Shelf life
-		/*need to patch rot entity code similar to mechanicals damage, not familiar with that code*/
-		"code": "gourmand",
-		"type": "positive",
-		"attributes": {
-			"nutritionBuff": 0.5,
-			"shelfLifeBuff": 0.3
+			"maxhealthExtraPoints": -10 //???
 		}
 	},
 
@@ -560,29 +655,6 @@
 			"bowDrawingStrength": 0.2
 		}
 	},
-
-	{ // TWEAKED: Mega buff to animal loot (50% from 10%) and 75% animal harvest time from 25%
-		"code": "resourceful",
-		"type": "positive",
-		"attributes": {
-			"animalLootDropRate": 0.5,
-			"animalHarvestingTime": -0.75
-		}
-	},
-
-	{ // UNCHANGED
-		"code": "bowyer",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // UNCHANGED
-		"code": "forager",
-		"type": "positive",
-		"attributes": {
-			"forageDropRate": 0.1,
-			"wildCropDropRate": 0.2
-		}
-	},
 	{ // UNCHANGED
 		"code": "precise",
 		"type": "positive",
@@ -592,37 +664,11 @@
 		}
 	},
 	{ // UNCHANGED
-		"code": "merciless",
-		"type": "positive",
-		"attributes": {
-		}
-	},
-	{ // TWEAKED: 20% melee debuff (from 15%) 
-		"code": "farsighted",
-		"type": "negative",
-		"attributes": {
-			"meleeWeaponsDamage": -0.20
-		}
-	},
-	{ // UNCHANGED
-		"code": "nervous",
-		"type": "negative",
-		"attributes": {
-			"meleeWeaponsDamage": -0.15
-		}
-	},
-	{ // UNCHANGED
 		"code": "kind",
 		"type": "negative",
 		"attributes": {
 			"animalLootDropRate": -0.1,
 			"animalHarvestingTime": 0.25
-		}
-	},
-	{ // UNCHANGED
-		"code": "improviser",
-		"type": "positive",
-		"attributes": {
 		}
 	}
 ]

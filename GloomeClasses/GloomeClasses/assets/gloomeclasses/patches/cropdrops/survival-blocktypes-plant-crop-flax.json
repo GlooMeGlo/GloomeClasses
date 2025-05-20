@@ -8,7 +8,7 @@
   {
     "op": "addmerge",
     "path": "/dropsByType/*-9/2/dropModbyStat",
-    "value": "cropDropRate",
+    "value": "flaxDropRate",
     "file": "game:blocktypes/plant/crop/flax.json"
   }
 ]
