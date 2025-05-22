@@ -151,7 +151,7 @@
 				"type": "item",
 				"code": "game:clothes-hand-clockmaker-wristguard"
 			},
-			
+			{
 				"type": "item",
 				"code": "game:clothes-face-glasses-clockmaker"
 			}
@@ -189,7 +189,7 @@
 				"type": "item",
 				"code": "game:clothes-hand-forlorn-bracer"
 			},
-			
+			{
 				"type": "item",
 				"code": "game:clothes-face-forlorn-veil"
 			}
