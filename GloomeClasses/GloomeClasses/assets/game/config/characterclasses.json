@@ -35,11 +35,11 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "game:clothes-shoulder-shortsleeve-pearl-moonrobe"
+				"code": "game:clothes-shoulder-artisans-scarf"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-upperbody-earth-toned-robe"
+				"code": "game:clothes-upperbody-reindeer-herder-collared-shirt"
 			},
 			{
 				"type": "item",
@@ -55,7 +55,7 @@
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-upperbodyover-commoner-coat"
+				"code": "game:clothes-upperbodyover-great-steppe-mantle"
 			},
 			{
 				"type": "item",
@@ -69,23 +69,23 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-upperbody-blackguard-shirt"
+				"code": "game:clothes-upperbody-blackguard-shirt"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-blackguard-leggings"
+				"code": "game:clothes-lowerbody-blackguard-leggings"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-blackguard-shoes"
+				"code": "game:clothes-foot-blackguard-shoes"
 			},
 			{
 				"type": "item",
-				"code": "clothes-emblem-blackguard-pin"
+				"code": "game:clothes-emblem-blackguard-pin"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-blackguard-belt"
+				"code": "game:clothes-waist-blackguard-belt"
 			}
 		]
 	},
@@ -99,23 +99,23 @@
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-upperbody-tattered-linen-shirt"
+				"code": "game:clothes-upperbody-azure-embroidered-shirt"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-waist-sturdy-leather-belt"
+				"code": "game:clothes-waist-heavy-tool-belt"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-foot-aristocrat-shoes"
+				"code": "game:clothes-foot-worn-leather-boots"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-lowerbody-aristocrat-leggings"
+				"code": "game:clothes-upperbodyover-surgeon"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-shoulder-minstrel-coat"
+				"code": "game:clothes-head-jailors-hat"
 			}
 		]
 	},
@@ -125,27 +125,35 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-shoulder-clockmaker-apron"
+				"code": "game:clothes-shoulder-clockmaker-apron"
 			},
 			{
 				"type": "item",
-				"code": "clothes-upperbody-clockmaker-shirt"
+				"code": "game:clothes-upperbody-clockmaker-shirt"
 			},
 			{
 				"type": "item",
-				"code": "clothes-upperbodyover-clockmaker-tunic"
+				"code": "game:clothes-upperbodyover-clockmaker-tunic"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-clockmaker-pants"
+				"code": "game:clothes-lowerbody-clockmaker-pants"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-clockmaker-shoes"
+				"code": "game:clothes-foot-clockmaker-shoes"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-clockmaker-belt"
+				"code": "game:clothes-waist-clockmaker-belt"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-hand-clockmaker-wristguard"
+			},
+			
+				"type": "item",
+				"code": "game:clothes-face-glasses-clockmaker"
 			}
 		]
 	},
@@ -155,23 +163,35 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-upperbody-blackguard-shirt"
+				"code": "game:clothes-shoulder-forlorn-sash"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-blackguard-leggings"
+				"code": "game:clothes-upperbody-forlorn-tunic"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-blackguard-shoes"
+				"code": "game:clothes-lowerbody-forlorn-pants"
 			},
 			{
 				"type": "item",
-				"code": "clothes-emblem-blackguard-pin"
+				"code": "game:clothes-foot-forlorn-shoes"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-blackguard-belt"
+				"code": "game:clothes-neck-forlorn-talisman"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-waist-forlorn-belt"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-hand-forlorn-bracer"
+			},
+			
+				"type": "item",
+				"code": "game:clothes-face-forlorn-veil"
 			}
 		]
 	},
@@ -181,27 +201,35 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-head-straw-hat"
+				"code": "game:clothes-head-straw-hat"
 			},
 			{
 				"type": "item",
-				"code": "clothes-upperbody-commoner-shirt"
+				"code": "game:clothes-upperbody-commoner-shirt"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-workmans-gown"
+				"code": "game:clothes-lowerbody-workmans-gown"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-worn-leather-boots"
+				"code": "game:clothes-foot-worn-leather-boots"
 			},
 			{
 				"type": "item",
-				"code": "clothes-hand-heavy-leather-gloves"
+				"code": "game:clothes-hand-heavy-leather-gloves"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-linen-rope"
+				"code": "game:clothes-waist-linen-rope"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-nadiya-face-grain"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-upperbodyover-commoner-coat"
 			}
 		]
 	},
@@ -209,6 +237,14 @@
 		"code": "hunter",
 		"traits": [ "bowyer", "sharpeye", "scavenger", "sneaky", "fasting", "resourceful", "farsighted", "careless", "claustrophobic" ],
 		"gear": [
+			{
+				"type": "item",
+				"code": "game:clothes-head-hunter-cape"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-shoulder-hunter-poncho"
+			},
 			{
 				"type": "item",
 				"code": "game:clothes-upperbody-hunter-shirt"
@@ -227,7 +263,15 @@
 			},
 			{
 				"type": "item",
+				"code": "game:clothes-face-hunter-mask"
+			},
+			{
+				"type": "item",
 				"code": "game:clothes-hand-hunter-gloves"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-waist-peasant-strap"
 			}
 		]
 	},
@@ -237,27 +281,27 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-upperbody-marketeer"
+				"code": "game:clothes-upperbody-clockmaker-shirt"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-commoner-trousers"
+				"code": "game:clothes-lowerbody-commoner-trousers"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-metalcap-boots"
+				"code": "game:clothes-foot-worn-leather-boots"
 			},
 			{
 				"type": "item",
-				"code": "clothes-neck-acorn-amulet"
+				"code": "game:clothes-neck-acorn-amulet"
 			},
 			{
 				"type": "item",
-				"code": "clothes-hand-hunter-gloves"
+				"code": "game:clothes-hand-hunter-gloves"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-peasant-strap"
+				"code": "game:clothes-waist-peasant-strap"
 			}
 		]
 	},
@@ -267,39 +311,39 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-upperbody-malefactor-shirt"
+				"code": "game:clothes-upperbody-malefactor-shirt"
 			},
 			{
 				"type": "item",
-				"code": "clothes-upperbodyover-malefactor-tunic"
+				"code": "game:clothes-upperbodyover-malefactor-tunic"
 			},
 			{
 				"type": "item",
-				"code": "clothes-shoulder-malefactor-cloak"
+				"code": "game:clothes-shoulder-malefactor-cloak"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-malefactor-trousers"
+				"code": "game:clothes-lowerbody-malefactor-trousers"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-malefactor-boots"
+				"code": "game:clothes-foot-malefactor-boots"
 			},
 			{
 				"type": "item",
-				"code": "clothes-neck-malefactor-pendant"
+				"code": "game:clothes-neck-malefactor-pendant"
 			},
 			{
 				"type": "item",
-				"code": "clothes-face-malefactor-mask"
+				"code": "game:clothes-face-malefactor-mask"
 			},
 			{
 				"type": "item",
-				"code": "clothes-hand-malefactor-gloves"
+				"code": "game:clothes-hand-malefactor-gloves"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-malefactor-sash"
+				"code": "game:clothes-waist-malefactor-sash"
 			}
 		]
 	},
@@ -309,27 +353,31 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-upperbody-linen-tunic"
+				"code": "game:clothes-shoulder-jord-robe"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-workmans-gown"
+				"code": "game:clothes-upperbody-shepherd-tunic"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-survivor"
+				"code": "game:clothes-lowerbody-shepherd-pants"
 			},
 			{
 				"type": "item",
-				"code": "clothes-hand-malefactor-gloves"
+				"code": "game:clothes-foot-soldier-boots"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-sturdy-belt"
+				"code": "game:clothes-face-survivor"
 			},
 			{
 				"type": "item",
-				"code": "clothes-upperbodyover-travelers-earthrobe"
+				"code": "game:clothes-hand-survivor"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-waist-sturdy-belt"
 			}
 		]
 	},
@@ -377,31 +425,35 @@
 		"gear": [
 			{
 				"type": "Item",
-				"code": "game:clothes-head-jailors-hat"
+				"code": "game:clothes-shoulder-miner"
 			},
 			{
 				"type": "Item",
-				"code": "game:clothes-upperbody-clockmaker-shirt"
+				"code": "game:clothes-upperbody-miner"
 			},
 			{
 				"type": "Item",
-				"code": "game:clothes-lowerbody-malefactor-trousers"
+				"code": "game:clothes-upperbodyover-miner"
 			},
 			{
 				"type": "Item",
-				"code": "game:clothes-hand-heavy-leather-gloves"
+				"code": "game:clothes-lowerbody-miner"
 			},
 			{
 				"type": "Item",
-				"code": "game:clothes-waist-heavy-belt"
+				"code": "game:clothes-foot-miner"
 			},
 			{
 				"type": "Item",
-				"code": "game:clothes-face-leather-reinforced-mask"
+				"code": "game:clothes-face-miner"
 			},
 			{
 				"type": "Item",
-				"code": "game:clothes-foot-blackguard-shoes"
+				"code": "game:clothes-hand-miner"
+			},
+			{
+				"type": "Item",
+				"code": "game:clothes-waist-miner"
 			}
 		]
 	},
@@ -411,7 +463,7 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "game:clothes-head-fortune-tellers-scarf"
+				"code": "game:clothes-head-hunter-cape"
 			},
 			{
 				"type": "item",
@@ -419,23 +471,19 @@
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-upperbody-scarlet-ornate-linen-tunic"
+				"code": "game:clothes-upperbody-temptress-velvet-shirt"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-upperbodyover-forgotten"
+				"code": "game:clothes-lowerbody-fine-trousers"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-lowerbody-nomad-trousers"
+				"code": "game:clothes-foot-temptress-velvet-shoes"
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-foot-tigh-high-boots"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-neck-forlorn-talisman"
+				"code": "game:clothes-neck-gear-amulet-temporal"
 			},
 			{
 				"type": "item",
@@ -447,11 +495,7 @@
 			},
 			{
 				"type": "item",
-				"code": "game:clothes-waist-forlorn-belt"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-arm-merchant-bracelet"
+				"code": "game:clothes-waist-jailor-belt"
 			}
 		]
 	},
@@ -461,27 +505,31 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-shoulder-blacksmith-apron"
+				"code": "game:clothes-shoulder-blacksmith-apron"
 			},
 			{
 				"type": "item",
-				"code": "clothes-upperbodyover-clockmaker-tunic"
+				"code": "game:clothes-upperbodyover-clockmaker-tunic"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-raw-hide-trousers"
+				"code": "game:clothes-lowerbody-malefactor-trousers"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-soldier-boots"
+				"code": "game:clothes-foot-soldier-boots"
 			},
 			{
 				"type": "item",
-				"code": "clothes-hand-heavy-leather-gloves"
+				"code": "game:clothes-hand-heavy-leather-gloves"
 			},
 			{
 				"type": "item",
-				"code": "clothes-arm-leather-bracers"
+				"code": "game:clothes-arm-leather-bracers"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-waist-sturdy-leather-belt"
 			}
 		]
 	},
@@ -491,27 +539,35 @@
 		"gear": [
 			{
 				"type": "item",
-				"code": "clothes-upperbody-shepherd-tunic"
+				"code": "game:clothes-upperbody-tailor-blouse"
 			},
 			{
 				"type": "item",
-				"code": "clothes-lowerbody-shepherd-pants"
+				"code": "game:clothes-lowerbody-tailor-trousers"
 			},
 			{
 				"type": "item",
-				"code": "clothes-foot-scribe"
+				"code": "game:clothes-foot-tailor-shoes"
 			},
 			{
 				"type": "item",
-				"code": "clothes-hand-tailor-gloves"
+				"code": "game:clothes-hand-tailor-gloves"
 			},
 			{
 				"type": "item",
-				"code": "clothes-waist-tailor-belt"
+				"code": "game:clothes-waist-tailor-belt"
 			},
 			{
 				"type": "item",
-				"code": "clothes-arm-tailor-needlepuff"
+				"code": "game:clothes-arm-tailor-needlepuff"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-face-tailor-mask"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-upperbodyover-tailor-jacket"
 			}
 		]
 	}
