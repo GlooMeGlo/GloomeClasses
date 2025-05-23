@@ -1,7 +1,14 @@
 [
 	{
 		"code": "alchemist",
-		"traits": [ "temporaltransmutation", "scrounger", "fleetfooted", "fasting", "weak", "imprecise" ],
+		"traits": [
+			"temporaltransmutation",
+			"scrounger",
+			"fleetfooted",
+			"fasting",
+			"weak",
+			"imprecise"
+		],
 		"gear": [
 			{
 				"type": "Item",
@@ -31,7 +38,13 @@
 	},
 	{
 		"code": "artisan",
-		"traits": [ "artisan", "frugalforming", "fasting", "scavenger", "squeamish" ],
+		"traits": [
+			"artisan",
+			"frugalforming",
+			"fasting",
+			"scavenger",
+			"squeamish"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -65,7 +78,16 @@
 	},
 	{
 		"code": "blackguard",
-		"traits": [ "merciless", "soldier", "hardy", "rockhound", "ravenous", "nearsighted", "heavyfooted", "heavyhanded" ],
+		"traits": [
+			"merciless",
+			"soldier",
+			"hardy",
+			"rockhound",
+			"ravenous",
+			"nearsighted",
+			"heavyfooted",
+			"heavyhanded"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -91,7 +113,14 @@
 	},
 	{
 		"code": "chef",
-		"traits": [ "culinary", "shelflifesavant", "fasting", "butcher", "clumsy", "imprecise" ],
+		"traits": [
+			"culinary",
+			"shelflifesavant",
+			"fasting",
+			"butcher",
+			"clumsy",
+			"imprecise"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -121,7 +150,17 @@
 	},
 	{
 		"code": "clockmaker",
-		"traits": [ "crafty", "locustlover", "technical", "fleetfooted", "furtive", "stickyfingers", "civil", "frail", "dread" ],
+		"traits": [
+			"crafty",
+			"locustlover",
+			"technical",
+			"fleetfooted",
+			"furtive",
+			"stickyfingers",
+			"civil",
+			"frail",
+			"dread"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -159,7 +198,16 @@
 	},
 	{
 		"code": "forlornknight",
-		"traits": [ "tenacious", "duelist", "pragmatic", "fleetfooted", "glutton", "nearsighted", "careless", "frail" ],
+		"traits": [
+			"tenacious",
+			"duelist",
+			"pragmatic",
+			"fleetfooted",
+			"glutton",
+			"nearsighted",
+			"careless",
+			"frail"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -197,7 +245,15 @@
 	},
 	{
 		"code": "homesteader",
-		"traits": [ "pioneer", "farmer", "hardy", "butcher", "petraphobia", "clumsy", "claustrophobic" ],
+		"traits": [
+			"pioneer",
+			"farmer",
+			"hardy",
+			"butcher",
+			"petraphobia",
+			"clumsy",
+			"claustrophobic"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -235,7 +291,17 @@
 	},
 	{
 		"code": "hunter",
-		"traits": [ "bowyer", "sharpeye", "scavenger", "sneaky", "fasting", "resourceful", "farsighted", "careless", "claustrophobic" ],
+		"traits": [
+			"bowyer",
+			"sharpeye",
+			"scavenger",
+			"sneaky",
+			"fasting",
+			"resourceful",
+			"farsighted",
+			"careless",
+			"claustrophobic"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -277,11 +343,22 @@
 	},
 	{
 		"code": "lumberjack",
-		"traits": [ "carpenter", "forester", "scavenger", "rugged", "defender", "imprecise" ],
+		"traits": [
+			"carpenter",
+			"forester",
+			"scavenger",
+			"rugged",
+			"defender",
+			"imprecise"
+		],
 		"gear": [
 			{
 				"type": "item",
-				"code": "game:clothes-upperbody-clockmaker-shirt"
+				"code": "game:clothes-upperbody-reindeer-herder-collared-shirt"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-upperbodyover-clockmaker-tunic"
 			},
 			{
 				"type": "item",
@@ -307,7 +384,14 @@
 	},
 	{
 		"code": "malefactor",
-		"traits": [ "improviser", "forager", "pilferer", "furtive", "frail", "nervous" ],
+		"traits": [
+			"improviser",
+			"forager",
+			"pilferer",
+			"furtive",
+			"frail",
+			"nervous"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -349,7 +433,13 @@
 	},
 	{
 		"code": "mason",
-		"traits": [ "mason", "defender", "hardy", "rockhound", "heavyfooted" ],
+		"traits": [
+			"mason",
+			"defender",
+			"hardy",
+			"rockhound",
+			"heavyfooted"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -383,7 +473,15 @@
 	},
 	{
 		"code": "merchant",
-		"traits": [ "packmule", "specialstock", "silvertongue", "fleetfooted", "stickyfingers", "frail", "squeamish" ],
+		"traits": [
+			"packmule",
+			"specialstock",
+			"silvertongue",
+			"fleetfooted",
+			"stickyfingers",
+			"frail",
+			"squeamish"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -421,7 +519,19 @@
 	},
 	{
 		"code": "miner",
-		"traits": [ "prospector", "shelteredstone", "toolkeeper", "prospectorpack", "miner", "defender", "hardy", "heavyfooted", "heavyhanded", "nearsighted", "agoraphobia" ],
+		"traits": [
+			"prospector",
+			"shelteredstone",
+			"toolkeeper",
+			"prospectorpack",
+			"miner",
+			"defender",
+			"hardy",
+			"heavyfooted",
+			"heavyhanded",
+			"nearsighted",
+			"agoraphobia"
+		],
 		"gear": [
 			{
 				"type": "Item",
@@ -459,7 +569,17 @@
 	},
 	{
 		"code": "mystic",
-		"traits": [ "mystic", "clairvoyance", "scavenger", "shrewd", "stickyfingers", "dreadslayer", "fasting", "clockworkadverse", "careless" ],
+		"traits": [
+			"mystic",
+			"clairvoyance",
+			"scavenger",
+			"shrewd",
+			"stickyfingers",
+			"dreadslayer",
+			"fasting",
+			"clockworkadverse",
+			"careless"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -501,7 +621,15 @@
 	},
 	{
 		"code": "smith",
-		"traits": [ "smith", "dragonskin", "recycler", "burner", "defender", "heavyfooted", "heavyhanded" ],
+		"traits": [
+			"smith",
+			"dragonskin",
+			"recycler",
+			"burner",
+			"defender",
+			"heavyfooted",
+			"heavyhanded"
+		],
 		"gear": [
 			{
 				"type": "item",
@@ -535,7 +663,15 @@
 	},
 	{
 		"code": "tailor",
-		"traits": [ "clothier", "mender", "tallowtanner", "fasting", "unlikelyharvest", "fibrousfolly", "frail" ],
+		"traits": [
+			"clothier",
+			"mender",
+			"tallowtanner",
+			"fasting",
+			"unlikelyharvest",
+			"fibrousfolly",
+			"frail"
+		],
 		"gear": [
 			{
 				"type": "item",
