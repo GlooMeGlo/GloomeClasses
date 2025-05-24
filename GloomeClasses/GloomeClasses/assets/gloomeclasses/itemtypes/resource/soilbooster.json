@@ -1,0 +1,120 @@
+{
+	"code": "basicbooster",
+	"behaviors": [
+		{
+			"name": "GroundStorable",
+			"properties": {
+				"layout": "Quadrants"
+			}
+		}
+	],
+	"attributes": {
+		"fertilizerProps": {
+			"n": 30,
+			"p": 30,
+			"k": 30,
+			"permaboost": {
+				"n": 20,
+				"p": 20,
+				"k": 20,
+				"code": "potash"
+			}
+		},
+		"dissolveInWater": true,
+		"displaycaseable": true,
+		"shelvable": true,
+		"onDisplayTransform": {
+			"translation": {
+				"x": 0.05,
+				"y": 0,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"scale": 0.65
+		}
+	},
+	"shape": {
+		"base": "item/resource/basicbooster"
+	},
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"items": [
+			"*"
+		]
+	},
+	"maxstacksize": 64,
+	"materialDensity": 900,
+	"guiTransform": {
+		"translation": {
+			"x": 3,
+			"y": -1,
+			"z": 0
+		},
+		"rotation": {
+			"x": -20,
+			"y": 21,
+			"z": 180
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.22,
+			"z": 0.5
+		},
+		"scale": 3.3
+	},
+	"fpHandTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0.3,
+			"z": 0.2
+		},
+		"rotation": {
+			"x": 20,
+			"y": -55,
+			"z": 10
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 2
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.6,
+			"y": -0.3,
+			"z": -0.5
+		},
+		"rotation": {
+			"x": -14,
+			"y": 51,
+			"z": -21
+		},
+		"scale": 1.07
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 180,
+			"y": 33,
+			"z": -180
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 4.4
+	}
+}
