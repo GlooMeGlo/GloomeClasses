@@ -8,7 +8,7 @@ using Vintagestory.GameContent;
 namespace GloomeClasses.Patches {
 
     [HarmonyPatch(typeof(ItemClay))]
-    [HarmonyPatchCategory(GloomeClassesModSystem.ClayformingPatchesCatagory)]
+    [HarmonyPatchCategory(GloomeClassesModSystem.ClayformingPatchesCategory)]
     public class ClayformPatch {
 
         [HarmonyPrefix]
