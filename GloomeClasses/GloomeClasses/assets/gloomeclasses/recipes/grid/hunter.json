@@ -1,0 +1,78 @@
+[
+	{
+		"ingredientPattern": "_R_,SPS,_R_",
+		"requiresTrait": "sentry",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:stick"
+			},
+			"P": {
+				"type": "item",
+				"code": "game:hide-raw-large"
+			},
+			"R": {
+				"type": "item",
+				"code": "game:rope"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:quiver",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_R_,SPS,_R_",
+		"requiresTrait": "sentry",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:stick"
+			},
+			"P": {
+				"type": "item",
+				"code": "game:hide-raw-medium"
+			},
+			"R": {
+				"type": "item",
+				"code": "game:rope"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:quiver",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_R_,SPS,_R_",
+		"requiresTrait": "sentry",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:stick"
+			},
+			"P": {
+				"type": "item",
+				"code": "game:hide-raw-small",
+				"quantity": 2
+			},
+			"R": {
+				"type": "item",
+				"code": "game:rope"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:quiver",
+			"quantity": 1
+		}
+	}
+]

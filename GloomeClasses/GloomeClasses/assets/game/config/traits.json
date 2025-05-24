@@ -43,8 +43,8 @@
 	},
 
 	// -- Clockmaker --
-	{ // Crafty
-		"code": "crafty",
+	{ // Tinkerer
+		"code": "tinkerer",
 		"type": "positive",
 		"attributes": {}
 	},
