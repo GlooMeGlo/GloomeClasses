@@ -7,7 +7,7 @@
 			"fleetfooted",
 			"fasting",
 			"weak",
-			"imprecise"
+			"inaccurate"
 		],
 		"gear": [
 			{
@@ -115,7 +115,7 @@
 			"fasting",
 			"butcher",
 			"clumsy",
-			"imprecise"
+			"inaccurate"
 		],
 		"gear": [
 			{
@@ -353,7 +353,7 @@
 			"scavenger",
 			"rugged",
 			"defender",
-			"imprecise"
+			"inaccurate"
 		],
 		"gear": [
 			{
@@ -526,13 +526,10 @@
 		"traits": [
 			"prospector",
 			"shelteredstone",
-			"toolkeeper",
-			"prospectorpack",
 			"miner",
 			"defender",
 			"hardy",
 			"heavyfooted",
-			"heavyhanded",
 			"nearsighted",
 			"agoraphobia"
 		],
@@ -669,7 +666,6 @@
 		"code": "tailor",
 		"traits": [
 			"clothier",
-			"mender",
 			"tallowtanner",
 			"fasting",
 			"unlikelyharvest",

@@ -132,16 +132,6 @@
 		"type": "positive",
 		"attributes": {}
 	},
-	{ // Toolkeeper's Touch
-		"code": "toolkeeper",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // Prospector's Pack
-		"code": "prospectorpack",
-		"type": "positive",
-		"attributes": {}
-	},
 	{ // Agoraphobia
 		"code": "agoraphobia",
 		"type": "negative", // Why was this originally a positive??? What? It's a Phobia!
@@ -160,9 +150,7 @@
 	{ // Clairvoyance
 		"code": "clairvoyance",
 		"type": "positive",
-		"attributes": {
-			"crystalSkull": 1.0 // Leaving this for now, but why does it even have an attribute need? If it's just used as a tag, isn't the presence of the trait enough? Might need removing if actually not needed.
-		}
+		"attributes": {}
 	},
 
 	// -- Smith --
@@ -187,11 +175,6 @@
 	// -- Tailor --
 	{ // Clothier
 		"code": "clothier",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // Mender
-		"code": "mender",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -237,11 +220,10 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	{ //Imprecise - Also on Chef, Lumberjack!
-		"code": "imprecise",
+	{ //Inaccurate - Also on Chef, Lumberjack!
+		"code": "inaccurate",
 		"type": "negative",
 		"attributes": {
-			"rangedWeaponsDamage": -0.2,
 			"bowDrawingStrength": -0.2,
 			"rangedWeaponsAcc": -0.1,
 			"rangedWeaponsSpeed": 0.15
@@ -345,7 +327,7 @@
 			"armorDurabilityLoss": 0.25
 		}
 	},
-	//Imprecise is up on Alchemist
+	//inaccurate is up on Alchemist
 
 	// -- Clockmaker --
 	{ // Technical
@@ -519,7 +501,7 @@
 			"armorWalkSpeedAffectedness": -0.2
 		}
 	},
-	//Imprecise is up on Alchemist!
+	//Inaccurate is up on Alchemist!
 
 	// -- Malefactor --
 	{ // Forager
