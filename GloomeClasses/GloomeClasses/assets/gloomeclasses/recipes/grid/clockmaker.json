@@ -28,31 +28,6 @@
 		}
 	},
 	{
-		"ingredientPattern": "ABC",
-		"requiresTrait": "tinkerer",
-		"ingredients": {
-			"A": {
-				"type": "item",
-				"code": "game:rope"
-			},
-			"B": {
-				"type": "item",
-				"code": "game:stick"
-			},
-			"C": {
-				"type": "block",
-				"code": "game:metal-scraps"
-			}
-		},
-		"width": 3,
-		"height": 1,
-		"shapeless": true,
-		"output": {
-			"type": "item",
-			"code": "game:scrapweaponkit"
-		}
-	},
-	{
 		"ingredientPattern": "H_,SF",
 		"requiresTrait": "tinkerer",
 		"ingredients": {

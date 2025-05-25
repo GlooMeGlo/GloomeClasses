@@ -40,6 +40,26 @@
 		}
 	},
 	{
+		"ingredientPattern": "CC",
+		"requiresTrait": "mason",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:clay-red",
+				"quantity": 1
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "game:rawbrick-red",
+			"quantity": 1
+		}
+	},
+	{
 		"ingredientPattern": "SSS,SLS,SSS",
 		"requiresTrait": "mason",
 		"ingredients": {
@@ -238,122 +258,6 @@
 		}
 	},
 	{
-		"ingredientPattern": "SSS,SLS,SSS",
-		"requiresTrait": "mason",
-		"ingredients": {
-			"S": {
-				"type": "item",
-				"code": "game:burnedbrick-black",
-				"quantity": 1
-			},
-			"L": {
-				"type": "block",
-				"code": "game:sand-bauxite"
-			}
-		},
-		"width": 3,
-		"height": 3,
-		"shapeless": false,
-		"output": {
-			"type": "item",
-			"code": "game:burnedbrick-red",
-			"quantity": 8
-		}
-	},
-	{
-		"ingredientPattern": "SSS,SLS,SSS",
-		"requiresTrait": "mason",
-		"ingredients": {
-			"S": {
-				"type": "item",
-				"code": "game:shingle-burned-black",
-				"quantity": 1
-			},
-			"L": {
-				"type": "block",
-				"code": "game:sand-bauxite"
-			}
-		},
-		"width": 3,
-		"height": 3,
-		"shapeless": false,
-		"output": {
-			"type": "item",
-			"code": "game:shingle-burned-red",
-			"quantity": 8
-		}
-	},
-	{
-		"ingredientPattern": "SSS,SLS,SSS",
-		"requiresTrait": "mason",
-		"ingredients": {
-			"S": {
-				"type": "item",
-				"code": "game:burnedbrick-black",
-				"quantity": 1
-			},
-			"L": {
-				"type": "block",
-				"code": "game:sand-claystone"
-			}
-		},
-		"width": 3,
-		"height": 3,
-		"shapeless": false,
-		"output": {
-			"type": "item",
-			"code": "game:burnedbrick-brown",
-			"quantity": 8
-		}
-	},
-	{
-		"ingredientPattern": "SSS,SLS,SSS",
-		"requiresTrait": "mason",
-		"ingredients": {
-			"S": {
-				"type": "item",
-				"code": "game:shingle-burned-black",
-				"quantity": 1
-			},
-			"L": {
-				"type": "block",
-				"code": "game:muddygravel"
-			}
-		},
-		"width": 3,
-		"height": 3,
-		"shapeless": false,
-		"output": {
-			"type": "item",
-			"code": "game:shingle-burned-brown",
-			"quantity": 8
-		}
-	},
-	{
-		"ingredientPattern": "SL",
-		"requiresTrait": "mason",
-		"ingredients": {
-			"S": {
-				"type": "block",
-				"code": "game:hardenedclay-blue",
-				"quantity": 1
-			},
-			"L": {
-				"type": "block",
-				"code": "game:muddygravel",
-				"quantity": 2
-			}
-		},
-		"width": 2,
-		"height": 1,
-		"shapeless": true,
-		"output": {
-			"type": "block",
-			"code": "game:hardenedclay-brown",
-			"quantity": 1
-		}
-	},
-	{
 		"ingredientPattern": "SL",
 		"requiresTrait": "mason",
 		"ingredients": {
@@ -423,6 +327,30 @@
 			"type": "block",
 			"code": "game:hardenedclay-blue",
 			"quantity": 3
+		}
+	},
+	{
+		"ingredientPattern": "SL",
+		"requiresTrait": "mason",
+		"ingredients": {
+			"S": {
+				"type": "block",
+				"code": "game:hardenedclay-blue",
+				"quantity": 1
+			},
+			"L": {
+				"type": "block",
+				"code": "game:muddygravel",
+				"quantity": 1
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:hardenedclay-brown",
+			"quantity": 1
 		}
 	}
 ]
