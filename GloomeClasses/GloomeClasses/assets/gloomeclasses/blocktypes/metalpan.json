@@ -182,50 +182,6 @@
 				},
 				{
 					"type": "item",
-					"code": "game:lore-book-*",
-					"attributes": {
-						"category": "tobias"
-					},
-					"chance": {
-						"avg": 0.005,
-						"var": 0
-					}
-				},
-				{
-					"type": "item",
-					"code": "game:lore-book-*",
-					"attributes": {
-						"category": "research"
-					},
-					"chance": {
-						"avg": 0.005,
-						"var": 0
-					}
-				},
-				{
-					"type": "item",
-					"code": "game:lore-book-*",
-					"attributes": {
-						"category": "diaries"
-					},
-					"chance": {
-						"avg": 0.005,
-						"var": 0
-					}
-				},
-				{
-					"type": "item",
-					"code": "game:lore-book-*",
-					"attributes": {
-						"category": "jonas"
-					},
-					"chance": {
-						"avg": 0.005,
-						"var": 0
-					}
-				},
-				{
-					"type": "item",
 					"code": "game:gear-temporal",
 					"chance": {
 						"avg": 0.002,

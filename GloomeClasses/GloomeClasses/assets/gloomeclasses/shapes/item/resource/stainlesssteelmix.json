@@ -450,18 +450,6 @@
 						"west": { "texture": "#blue2", "uv": [ 7.5, 9.0, 8.0, 9.5 ] },
 						"up": { "texture": "#blue2", "uv": [ 10.0, 8.5, 10.5, 9.0 ] }
 					}
-				},
-				{
-					"name": "base",
-					"from": [ -5.0, 0.1, -5.0 ],
-					"to": [ 4.0, 0.1, 4.0 ],
-					"renderInEditor": false,
-					"rotationOrigin": [ -3.0, 0.1, 0.0 ],
-					"rotationX": 0.1,
-					"rotationZ": 0.1,
-					"faces": {
-						"up": { "texture": "#blue2", "uv": [ 3.5, 3.5, 12.5, 12.5 ] }
-					}
 				}
 			]
 		}

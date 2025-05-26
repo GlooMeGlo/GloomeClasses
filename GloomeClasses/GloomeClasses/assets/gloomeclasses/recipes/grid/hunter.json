@@ -1,7 +1,7 @@
 [
 	{
 		"ingredientPattern": "_R_,SPS,_R_",
-		"requiresTrait": "sentry",
+		"requiresTrait": "bowyer",
 		"ingredients": {
 			"S": {
 				"type": "item",
@@ -26,7 +26,7 @@
 	},
 	{
 		"ingredientPattern": "_R_,SPS,_R_",
-		"requiresTrait": "sentry",
+		"requiresTrait": "bowyer",
 		"ingredients": {
 			"S": {
 				"type": "item",
@@ -51,7 +51,7 @@
 	},
 	{
 		"ingredientPattern": "_R_,SPS,_R_",
-		"requiresTrait": "sentry",
+		"requiresTrait": "bowyer",
 		"ingredients": {
 			"S": {
 				"type": "item",

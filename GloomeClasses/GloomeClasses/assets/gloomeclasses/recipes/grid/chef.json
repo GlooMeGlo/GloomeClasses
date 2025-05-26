@@ -1,74 +1,138 @@
 [
-  {
-    "ingredientPattern": "H,P,C",
-    "requiresTrait": "culinary",
-    "shapeless": true,
-    "ingredients": {
-      "P": {
-        "type": "item",
-        "code": "game:metalplate-copper",
-        "quantity": 1
-      },
-      "H": {
-        "type": "item",
-        "code": "game:hammer-*",
-        "isTool": true
-      },
-      "C": {
-        "type": "block",
-        "code": "game:claypot-burned"
-      }
-    },
-    "width": 1,
-    "height": 3,
-    "averageDurability": false,
-    "output": {
-      "type": "block",
-      "code": "coppercookingpot-burned",
-      "quantity": 1
-    }
-  },
-  {
-    "ingredientPattern": "H,P",
-    "requiresTrait": "culinary",
-    "shapeless": true,
-    "ingredients": {
-      "P": {
-        "type": "item",
-        "code": "game:metalplate-copper",
-        "quantity": 2
-      },
-      "H": {
-        "type": "item",
-        "code": "game:hammer-*",
-        "isTool": true
-      }
-    },
-    "width": 1,
-    "height": 2,
-    "averageDurability": false,
-    "output": {
-      "type": "block",
-      "code": "copperfryingpan-burned",
-      "quantity": 1
-    }
-  },
- 	{
-  "ingredientPattern": "SRS",
-  "requiresTrait": "culinary",
-  "ingredients": {
-	"R": {
-      "type": "item", 
-	  "code": "game:redmeat-raw", "quantity": 1
-    },
-	"S": {
-      "type": "item", 
-	  "code": "game:salt", "quantity": 1
-    }
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-copper",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "coppercookingpot-burned",
+			"quantity": 1
+		}
 	},
-  "width": 3,
-  "height": 1,
-  "shapeless": false,
-  "output": { "type": "item", "code": "game:redmeat-vintage", "quantity": 1  }
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-copper",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "copperfryingpan-burned",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "SRW",
+		"requiresTrait": "culinary",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:redmeat-raw",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:salt",
+				"quantity": 3
+			},
+			"W": { 
+				"type": "block", 
+				"code": "game:woodbucket"
+			},
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": { "type": "item", "code": "honeyportion" },
+				"requiresLitres": 1
+			}
+		},
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:redmeat-vintage",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "SR",
+		"requiresTrait": "culinary",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:resin",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:beeswax",
+				"quantity": 2
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:rosin",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "SR",
+		"requiresTrait": "culinary",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:resin",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:fat",
+				"quantity": 2
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:rosin",
+			"quantity": 1
+		}
 	}
 ]

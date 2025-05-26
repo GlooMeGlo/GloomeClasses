@@ -352,5 +352,48 @@
 			"code": "game:hardenedclay-brown",
 			"quantity": 1
 		}
+	},
+	{
+		"ingredientPattern": "RRR,RRR,RIR",
+		"requiresTrait": "mason",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:refractorybrick-fired-tier3",
+				"quantity": 1
+			},
+			"I": {
+				"type": "block",
+				"code": "game:ingotmold-burned",
+				"quantity": 6
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:bloomerybaseadvanced-north",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_R_,RRR",
+		"requiresTrait": "mason",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:refractorybrick-fired-tier3",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:bloomerychimneyadvanced",
+			"quantity": 1
+		}
 	}
 ]

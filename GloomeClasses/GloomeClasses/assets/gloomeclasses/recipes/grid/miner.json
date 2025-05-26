@@ -483,5 +483,50 @@
 			"code": "game:bomb-scrap",
 			"quantity": 8
 		}
+	},
+	{
+		"ingredientPattern": "_FC,RMR,NPN",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:rod-iron",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-iron",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"code": "game:miningbagsturdy",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "game:candle",
+				"quantity": 3
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-tinbronze",
+				"quantity": 2
+			},
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:miningbag-sturdy-reinforced",
+			"quantity": 1
+		}
 	}
 ]
