@@ -54,7 +54,7 @@
 		}
 	},
 	{
-		"ingredientPattern": "SRS",
+		"ingredientPattern": "SRW",
 		"requiresTrait": "culinary",
 		"ingredients": {
 			"R": {
@@ -65,12 +65,22 @@
 			"S": {
 				"type": "item",
 				"code": "game:salt",
-				"quantity": 1
-			}
+				"quantity": 3
+			},
+			"W": { 
+				"type": "block", 
+				"code": "game:woodbucket"
+			},
 		},
 		"width": 3,
 		"height": 1,
-		"shapeless": false,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": { "type": "item", "code": "honeyportion" },
+				"requiresLitres": 1
+			}
+		},
+		"shapeless": true,
 		"output": {
 			"type": "item",
 			"code": "game:redmeat-vintage",
