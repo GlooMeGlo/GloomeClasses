@@ -1,0 +1,106 @@
+[
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "tallowtanner",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:hide-pelt-small",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:knife-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:hide-scraped-small",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "tallowtanner",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:hide-pelt-medium",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:knife-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:hide-scraped-medium",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "tallowtanner",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:hide-pelt-large",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:knife-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:hide-scraped-large",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "tallowtanner",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:hide-pelt-huge",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:knife-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:hide-scraped-huge",
+			"quantity": 1
+		}
+	}
+]

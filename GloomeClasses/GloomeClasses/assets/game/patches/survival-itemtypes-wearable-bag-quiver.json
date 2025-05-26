@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/attributes/handbook/exclude",
+    "value": false,
+    "file": "game:itemtypes/wearable/bag/quiver.json",
+    "side": "Server"
+  }
+]

@@ -243,5 +243,137 @@
 			"code": "tools-advanced",
 			"quantity": 1
 		}
+	},
+	{
+		"ingredientPattern": "H,G",
+		"requiresTrait": "recycler",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:gear-rusty"
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:powder-iron-oxide",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,G",
+		"requiresTrait": "recycler",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "game:metal-scraps"
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:powder-iron-oxide",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "H,G",
+		"requiresTrait": "recycler",
+		"ingredients": {
+			"G": {
+				"type": "block",
+				"code": "game:metal-parts"
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:metalbit-cupronickel",
+			"quantity": 5
+		}
+	},
+	{
+		"ingredientPattern": "SNR,CLP,QIB",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:metalbit-steel",
+				"quantity": 52
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalbit-nickel",
+				"quantity": 28
+			},
+			"R": {
+				"type": "item",
+				"code": "game:nugget-rhodochrosite",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:metalbit-copper",
+				"quantity": 2
+			},
+			"L": {
+				"type": "item",
+				"code": "game:saltpeter",
+				"quantity": 1
+			},
+			"P": {
+				"type": "item",
+				"code": "game:powder-sulfur",
+				"quantity": 1
+			},
+			"Q": {
+				"type": "item",
+				"code": "game:crushed-quartz",
+				"quantity": 1
+			},
+			"I": {
+				"type": "item",
+				"code": "game:crushed-chromite",
+				"quantity": 22
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-borax",
+				"quantity": 11
+			},
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "stainless-steel-mix",
+			"quantity": 120
+		}
 	}
 ]

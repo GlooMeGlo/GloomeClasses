@@ -6,16 +6,19 @@
 			"H": {
 				"type": "item",
 				"code": "game:hammer-*",
-				"isTool": true
+				"isTool": true,
+				"toolDurabilityCost": 4
 			},
 			"S": {
 				"type": "item",
 				"code": "game:shears-*",
-				"isTool": true
+				"isTool": true,
+				"toolDurabilityCost": 4
 			},
 			"R": {
-				"type": "block",
-				"code": "game:metal-scraps"
+				"type": "item",
+				"code": "game:metalbit-cupronickel",
+				"quantity": 5
 			}
 		},
 		"width": 2,
