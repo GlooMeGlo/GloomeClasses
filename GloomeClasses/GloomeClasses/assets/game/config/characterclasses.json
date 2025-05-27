@@ -7,7 +7,7 @@
 			"fleetfooted",
 			"fasting",
 			"weak",
-			"inaccurate"
+			"erroneousaim"
 		],
 		"gear": [
 			{
@@ -114,8 +114,8 @@
 			"shelflifesavant",
 			"fasting",
 			"butcher",
-			"clumsy",
-			"inaccurate"
+			"sluggish",
+			"erroneousaim"
 		],
 		"gear": [
 			{
@@ -201,53 +201,6 @@
 		]
 	},
 	{
-		"code": "forlornknight",
-		"traits": [
-			"tenacious",
-			"duelist",
-			"pragmatic",
-			"fleetfooted",
-			"glutton",
-			"nearsighted",
-			"careless",
-			"frail"
-		],
-		"gear": [
-			{
-				"type": "item",
-				"code": "game:clothes-shoulder-forlorn-sash"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-upperbody-forlorn-tunic"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-lowerbody-forlorn-pants"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-foot-forlorn-shoes"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-neck-forlorn-talisman"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-waist-forlorn-belt"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-hand-forlorn-bracer"
-			},
-			{
-				"type": "item",
-				"code": "game:clothes-face-forlorn-veil"
-			}
-		]
-	},
-	{
 		"code": "homesteader",
 		"traits": [
 			"pioneer",
@@ -255,7 +208,6 @@
 			"hardy",
 			"butcher",
 			"petraphobia",
-			"clumsy",
 			"claustrophobic"
 		],
 		"gear": [
@@ -353,7 +305,8 @@
 			"scavenger",
 			"rugged",
 			"defender",
-			"inaccurate"
+			"careless",
+			"clockworkadverse"
 		],
 		"gear": [
 			{
@@ -617,6 +570,53 @@
 			{
 				"type": "item",
 				"code": "game:clothes-waist-scribe"
+			}
+		]
+	},
+	{
+		"code": "oathkeeper",
+		"traits": [
+			"tenacious",
+			"duelist",
+			"pragmatic",
+			"fleetfooted",
+			"stickyfingers",
+			"glutton",
+			"nearsighted",
+			"careless"
+		],
+		"gear": [
+			{
+				"type": "item",
+				"code": "game:clothes-shoulder-forlorn-sash"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-upperbody-forlorn-tunic"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-lowerbody-forlorn-pants"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-foot-forlorn-shoes"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-neck-forlorn-talisman"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-waist-forlorn-belt"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-hand-forlorn-bracer"
+			},
+			{
+				"type": "item",
+				"code": "game:clothes-face-forlorn-veil"
 			}
 		]
 	},
