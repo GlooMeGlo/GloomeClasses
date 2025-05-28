@@ -13,4 +13,29 @@
 	"height": 3,
 	"output": { "type": "item", "code": "game:blade-forlorn-iron", "quantity": 1 }
 	}
+	{
+		"ingredientPattern": "H__,G__,___",
+		"requiresTrait": "tenacious",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:gear-temporal",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:primamateria",
+			"quantity": 9
+		}
+	},
 ]
