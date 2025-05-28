@@ -1,0 +1,397 @@
+[
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:vegetable-carrot"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-carrot",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:grain-flax"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-flax",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:vegetable-onion"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-onion",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:grain-spelt"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-spelt",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:vegetable-turnip"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-turnip",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:vegetable-parsnip"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-parsnip",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:grain-rice"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-rice",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:grain-rye"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-rye",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:legume-soybean"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-soybean",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:vegetable-cabbage"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-cabbage",
+			"quantity": 2
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "block",
+				"code": "game:pineapple"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-pineapple",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:rawcassava-raw"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-cassava",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:grain-amaranth"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-amaranth",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:legume-peanut"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-peanut",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "S",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:grain-sunflower"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-sunflower",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "SW",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "block",
+				"code": "game:pumpkin-fruit-4"
+			},
+			"W": {
+				"type": "item",
+				"code": "game:saw-*",
+				"isTool": true
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "game:seeds-pumpkin",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "SWB,X__",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"S": {
+				"type": "block",
+				"code": "game:soil-compost-none",
+				"quantity": 1
+			},
+			"W": {
+				"type": "item",
+				"code": "game:compost"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bonemeal"
+			},
+			"X": {
+				"type": "item",
+				"code": "game:saltpeter"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:soil-high-none",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "BGB,GCG,SGS",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:compost",
+				"quantity": 2
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bonemeal"
+			},
+			"G": {
+				"type": "item",
+				"code": "game:drygrass"
+			},
+			"S": {
+				"type": "item",
+				"code": "game:saltpeter"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "basicbooster",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "SGP,GCG,BGX",
+		"requiresTrait": "pioneer",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:compost",
+				"quantity": 2
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bonemeal"
+			},
+			"P": {
+				"type": "item",
+				"code": "game:ore-phosphorite"
+			},
+			"G": {
+				"type": "item",
+				"code": "game:drygrass"
+			},
+			"X": {
+				"type": "item",
+				"code": "game:powder-sulfur"
+			},
+			"S": {
+				"type": "item",
+				"code": "game:potash"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "qualitybooster",
+			"quantity": 4
+		}
+	}
+]

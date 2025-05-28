@@ -1,0 +1,214 @@
+[
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-blue"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-blue4",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-green"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-green1",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-gray"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-grey1",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-brown"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-brown",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-orange"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-walnut",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-purple"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-darkpurple",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-yellow"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-yellow",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "_Y_,YTY,_Y_",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:paper-parchment"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-pink"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-pink",
+			"quantity": 64
+		}
+	},
+	{
+		"ingredientPattern": "Y",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "block",
+				"code": "game:wallpaper-green1"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-lightgreen",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "Y",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"Y": {
+				"type": "block",
+				"code": "game:wallpaper-lightgreen"
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:wallpaper-green1",
+			"quantity": 1
+		}
+	}
+]

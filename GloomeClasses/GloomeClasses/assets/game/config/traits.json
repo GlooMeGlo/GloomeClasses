@@ -43,8 +43,8 @@
 	},
 
 	// -- Clockmaker --
-	{ // Crafty
-		"code": "crafty",
+	{ // Tinkerer
+		"code": "tinkerer",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -132,16 +132,6 @@
 		"type": "positive",
 		"attributes": {}
 	},
-	{ // Toolkeeper's Touch
-		"code": "toolkeeper",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // Prospector's Pack
-		"code": "prospectorpack",
-		"type": "positive",
-		"attributes": {}
-	},
 	{ // Agoraphobia
 		"code": "agoraphobia",
 		"type": "negative", // Why was this originally a positive??? What? It's a Phobia!
@@ -159,9 +149,7 @@
 	{ // Clairvoyance
 		"code": "clairvoyance",
 		"type": "positive",
-		"attributes": {
-			"crystalSkull": 1.0 // Leaving this for now, but why does it even have an attribute need? If it's just used as a tag, isn't the presence of the trait enough? Might need removing if actually not needed.
-		}
+		"attributes": {}
 	},
 
 	// -- Smith --
@@ -186,11 +174,6 @@
 	// -- Tailor --
 	{ // Clothier
 		"code": "clothier",
-		"type": "positive",
-		"attributes": {}
-	},
-	{ // Mender
-		"code": "mender",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -236,11 +219,10 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	{ //Imprecise - Also on Chef, Lumberjack!
-		"code": "imprecise",
+	{ //erroneousaim - Also on Chef, Lumberjack!
+		"code": "erroneousaim",
 		"type": "negative",
 		"attributes": {
-			"rangedWeaponsDamage": -0.2,
 			"bowDrawingStrength": -0.2,
 			"rangedWeaponsAcc": -0.1,
 			"rangedWeaponsSpeed": 0.15
@@ -298,7 +280,7 @@
 			"hungerrate": 0.3
 		}
 	},
-	{ // Nearsighted - Also on Forlorn Hope Knight, Miner!
+	{ // Nearsighted - Also on Oathkeeper, Miner!
 		"code": "nearsighted",
 		"type": "negative",
 		"attributes": {
@@ -337,14 +319,14 @@
 			"forageDropRate": 0.25
 		}
 	},
-	{ // Clumsy
-		"code": "clumsy",
+	{ // Sluggish
+		"code": "sluggish",
 		"type": "negative",
 		"attributes": {
-			"armorDurabilityLoss": 0.25
+			"armorWalkSpeedAffectedness": 0.25
 		}
 	},
-	//Imprecise is up on Alchemist
+	//erroneousaim is up on Alchemist
 
 	// -- Clockmaker --
 	{ // Technical
@@ -363,7 +345,7 @@
 			"animalSeekingRange": -0.25
 		}
 	},
-	{ // Sticky Fingers - Also on Merchant, Mystic!
+	{ // Sticky Fingers - Also on Merchant, Mystic, Oathkeeper!
 		"code": "stickyfingers",
 		"type": "positive",
 		"attributes": {
@@ -397,7 +379,7 @@
 		}
 	},
 
-	// -- Forlorn Hope Knight --
+	// -- Oathkeeper --
 	{ // Duelist
 		"code": "duelist",
 		"type": "positive",
@@ -451,7 +433,7 @@
 			"miningSpeedMul": -0.25
 		}
 	},
-	//Clumsy is up on Chef!
+	//Sluggish is up on Chef!
 
 	// -- Hunter --
 	{ // Sharpeye
@@ -518,7 +500,7 @@
 			"armorWalkSpeedAffectedness": -0.2
 		}
 	},
-	//Imprecise is up on Alchemist!
+	//erroneousaim is up on Alchemist!
 
 	// -- Malefactor --
 	{ // Forager

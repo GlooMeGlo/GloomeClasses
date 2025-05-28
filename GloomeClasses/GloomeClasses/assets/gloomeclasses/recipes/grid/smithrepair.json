@@ -1,0 +1,418 @@
+[
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-head-lamellar-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-head-lamellar-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-body-lamellar-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-body-lamellar-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-legs-lamellar-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-legs-lamellar-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-head-brigandine-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 10
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-head-brigandine-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-body-brigandine-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 10
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-body-brigandine-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-legs-brigandine-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 10
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-legs-brigandine-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-head-chain-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 15
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-head-chain-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-body-chain-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 15
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-body-chain-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-legs-chain-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 15
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-legs-chain-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-head-scale-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 30
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-head-scale-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-body-scale-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 30
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-body-scale-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-legs-scale-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 30
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-legs-scale-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-head-plate-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 60
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-head-plate-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-body-plate-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 60
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-body-plate-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:armor-legs-plate-*",
+				"name": "metal"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 60
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:armor-legs-plate-{metal}"
+		}
+	},
+	{
+		"ingredientPattern": "AR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:shield-*",
+				"name": "type"
+			},
+			"R": {
+				"type": "item",
+				"code": "tools-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "game:shield-{type}"
+		}
+	}
+]
