@@ -266,6 +266,6 @@
 	"charattribute-vesselContentsDropRate-0.35": "Vessels drop +35% more",
 
 	"charattribute-clayformingPoints-5": "+5 voxels for each piece of clay used in clayforming",
-	"charattribute-caveStabilityLoss--0.1": "lose 10% more temporal stability when underground",
-	"charattribute-surfaceStabilityLoss--0.02": "slowly lose temporal stability when on the surface"
+	"charattribute-caveStabilityLoss-0.1": "lose 10% more temporal stability when underground",
+	"charattribute-surfaceStabilityLoss--0.008": "slowly lose temporal stability when on the surface"
 }

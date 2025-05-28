@@ -16,7 +16,7 @@ namespace GloomeClasses.src.Patches {
 
     [HarmonyPatch(typeof(EntityBehaviorTemporalStabilityAffected))]
     [HarmonyPatchCategory(GloomeClassesModSystem.TemporalStabilityAffectedPatchesCategory)]
-    public class TemporalStabilityAffectedPatches {
+    public class TemporalStabilityAffectedPatches { //This class is not needed currently and is slated to be wiped. Just keeping it around for now just incase I need to reference it for another Transpiler... But at the same time, since it was functioning weirdly, it might not be a good idea? Though I think that's more the behavior patching instead of anything.
 
         [HarmonyTranspiler]
         [HarmonyPatch(nameof(EntityBehaviorTemporalStabilityAffected.OnGameTick))]
@@ -67,10 +67,10 @@ namespace GloomeClasses.src.Patches {
         }
 
         public static double CheckForAndCallTemporalStabilityBehavior(EntityAgent entity, double hereStability) {
-            if (entity.Properties.Server != null) { //entity.HasBehavior<TemporalStabilityTraitBehavior>()
-                var tempStabTraits = entity.Properties.Server.Behaviors.Where(i => i.GetType() == typeof(TemporalStabilityTraitBehavior)) as TemporalStabilityTraitBehavior;//entity.GetBehavior<TemporalStabilityTraitBehavior>();
-                return tempStabTraits.HandleTraits(hereStability);
-            }
+            //if (entity.Properties.Server != null) { //entity.HasBehavior<TemporalStabilityTraitBehavior>()
+                //var tempStabTraits = entity.Properties.Server.Behaviors.Where(i => i.GetType() == typeof(TemporalStabilityTraitBehavior)) as TemporalStabilityTraitBehavior;//entity.GetBehavior<TemporalStabilityTraitBehavior>();
+                //return tempStabTraits.HandleTraits(hereStability);
+            //}
 
             return hereStability;
         }

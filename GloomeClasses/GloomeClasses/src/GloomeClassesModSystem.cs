@@ -52,9 +52,6 @@ namespace GloomeClasses {
 
         public override void StartServerSide(ICoreServerAPI api) {
             SApi = api;
-
-            api.Event.PlayerNowPlaying += OnPlayerNowPlayingAddTemporalTraitBehaviors;
-            api.Event.PlayerDisconnect += OnPlayerDisconnectRemoveTemporalTraitBehaviors;
         }
 
         public override void StartClientSide(ICoreClientAPI api) {
@@ -69,7 +66,6 @@ namespace GloomeClasses {
             harmony = new Harmony(ModID);
             Logger.VerboseDebug("Harmony is starting Patches!");
             harmony.PatchCategory(ClayformingPatchesCategory);
-            harmony.PatchCategory(TemporalStabilityAffectedPatchesCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 
@@ -85,20 +81,6 @@ namespace GloomeClasses {
             ModID = null;
             Api = null;
             base.Dispose();
-        }
-
-        private static void OnPlayerNowPlayingAddTemporalTraitBehaviors(IServerPlayer player) {
-            if (!player.Entity.HasBehavior<TemporalStabilityTraitBehavior>()) {
-                var behavior = (TemporalStabilityTraitBehavior)Activator.CreateInstance(typeof(TemporalStabilityTraitBehavior), player.Entity);
-                player.Entity.AddBehavior(behavior);
-            }
-        }
-
-        private static void OnPlayerDisconnectRemoveTemporalTraitBehaviors(IServerPlayer player) {
-            if (player.Entity.HasBehavior<TemporalStabilityTraitBehavior>()) {
-                var behavior = player.Entity.GetBehavior<TemporalStabilityTraitBehavior>();
-                player.Entity.RemoveBehavior(behavior);
-            }
         }
     }
 }

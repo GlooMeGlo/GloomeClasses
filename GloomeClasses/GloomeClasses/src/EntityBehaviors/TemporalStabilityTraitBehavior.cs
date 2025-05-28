@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Vintagestory;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
@@ -19,6 +21,10 @@ namespace GloomeClasses.src.EntityBehaviors {
         public bool hasAgoraphobia = false;
         public bool hasShelteredStone = false;
         public bool hasNone = true;
+        public bool enabled;
+
+        protected const double ShelteredByStoneGainVelocity = 0.002;
+        protected const int SunLightLevelForInCave = 5;
 
         public const string ClaustrophobicCode = "claustrophobic";
         public const string AgoraphobiaCode = "agoraphobia";
@@ -32,27 +38,35 @@ namespace GloomeClasses.src.EntityBehaviors {
 
         }
 
+        public override void Initialize(EntityProperties properties, JsonObject attributes) {
+            base.Initialize(properties, attributes);
+
+            enabled = entity.Api.World.Config.GetBool("temporalStability", true);
+        }
+
         public override void OnGameTick(float deltaTime) {
-            if (entity == null || entity is not EntityPlayer) {
+            if (!enabled || entity == null || entity is not EntityPlayer) {
                 return;
             }
 
-            //var tempStab = entity.WatchedAttributes.GetDouble("temporalStability");
-            //GloomeClassesModSystem.Logger.Warning("Player's TempStab is " + tempStab);
-            timeSinceLastUpdate += deltaTime;
+            if (entity.World.PlayerByUid(((EntityPlayer)entity).PlayerUID) is IServerPlayer serverPlayer && serverPlayer.ConnectionState != EnumClientState.Playing) {
+                return;
+            }
+
+            if (!hasNone) {
+                HandleTraits(deltaTime);
+            }
 
             if (hasLocatedClass) {
-                if (timeSinceLastUpdate > 1.0f) {
-                    timeSinceLastUpdate = 0.0f;
-                    entity.WatchedAttributes.SetDouble("temporalStability", 0.8);
-                }
                 return;
             }
+
+            timeSinceLastUpdate += deltaTime;
 
             if (timeSinceLastUpdate > 1.0f) { //Only tick once a second or so, this doesn't need to run EVERY tick, that would be incredibly excessive.
                 timeSinceLastUpdate = 0.0f;
 
-                if (hasLocatedClass) {
+                if (!hasLocatedClass) {
                     string classcode = entity.WatchedAttributes.GetString("characterClass");
                     CharacterClass charclass = entity.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
                     if (charclass != null) {
@@ -75,58 +89,42 @@ namespace GloomeClasses.src.EntityBehaviors {
             }
         }
 
-        public double HandleTraits(double hereStability) {
-            if (hasNone) {
-                return hereStability;
-            }
-
-            GloomeClassesModSystem.Logger.Warning("HereStability is " + hereStability);
+        public void HandleTraits(float deltaTime) {
             BlockPos pos = entity.Pos.AsBlockPos;
+            var tempStabVelocity = TemporalAffected.TempStabChangeVelocity;
+
             if (hasShelteredStone) {
-                if (entity.World.BlockAccessor.GetLightLevel(pos, EnumLightLevelType.OnlySunLight) < 5) {
-                    var tempStab = entity.WatchedAttributes.GetDouble("temporalStability");
-                    GloomeClassesModSystem.Logger.Warning("TempStab is " + tempStab);
-                    if (hereStability > 1.05f) {
-                        GloomeClassesModSystem.Logger.Warning("HereStability is " + hereStability);
-                        return hereStability;
+                if (entity.World.BlockAccessor.GetLightLevel(pos, EnumLightLevelType.OnlySunLight) < SunLightLevelForInCave) {
+                    if (tempStabVelocity > ShelteredByStoneGainVelocity) {
+                        return;
                     } else {
-                        GloomeClassesModSystem.Logger.Warning("Ticking Sheltered Stone! Returning 1.05f.");
-                        return 1.05f;
+                        TemporalAffected.TempStabChangeVelocity = ShelteredByStoneGainVelocity;
+                        return;
                     }
                 }
             }
 
             if (hasAgoraphobia) {
                 var room = entity.Api.ModLoader.GetModSystem<RoomRegistry>().GetRoomForPosition(pos);
-                if (room != null) {
-                    var tempStab = entity.WatchedAttributes.GetDouble("temporalStability");
-                    if (timeSinceLastUpdate > 0.1) {
-                        timeSinceLastUpdate = 0.0f;
-                        tempStab = tempStab - 0.01;
-                        entity.WatchedAttributes.SetDouble("temporalStability", tempStab);
+                
+                if (room == null || !(room.ExitCount == 0 || room.SkylightCount < room.NonSkylightCount)) {
+                    var surfaceLoss = (double)entity.Stats.GetBlended("surfaceStabilityLoss") - 1; //The -1 should return the raw value.
+                    if (tempStabVelocity < surfaceLoss) {
+                        surfaceLoss = tempStabVelocity;
                     }
-                    var surfaceLoss = entity.Stats.GetBlended("surfaceStabilityLoss");
-                    var ret = surfaceLoss;
-                    if (hereStability < ret) {
-                        ret = (float)hereStability;
-                    }
-                    
-                    GloomeClassesModSystem.Logger.Warning("Ticking Agoraphobia! Surfaceloss is " + surfaceLoss + ". Stability is " + hereStability + ". Player temp stab is " + tempStab);
-                    return ret;
+
+                    TemporalAffected.TempStabChangeVelocity = surfaceLoss;
+                    return;
                 }
             }
 
             if (hasClaustrophobia) {
-                if (entity.World.BlockAccessor.GetLightLevel(pos, EnumLightLevelType.OnlySunLight) < 5 && hereStability < 1) {
+                if (entity.World.BlockAccessor.GetLightLevel(pos, EnumLightLevelType.OnlySunLight) < SunLightLevelForInCave && tempStabVelocity < 0) {
                     var caveLoss = entity.Stats.GetBlended("caveStabilityLoss");
-                    var ret = (hereStability * caveLoss);
-                    //GloomeClassesModSystem.Logger.Warning("Ticking Claustrophobia! Caveloss is " + caveLoss + ". Stability is " + hereStability + ". Ret is " + ret);
-                    return ret;
+                    TemporalAffected.TempStabChangeVelocity = (tempStabVelocity * caveLoss);
+                    return;
                 }
             }
-
-            //GloomeClassesModSystem.Logger.Warning("Something is returning nothing!");
-            return hereStability;
         }
     }
 }
