@@ -220,8 +220,8 @@
 			"maxhealthExtraPoints": -5
 		}
 	},
-	{ //Inaccurate - Also on Chef, Lumberjack!
-		"code": "inaccurate",
+	{ //erroneousaim - Also on Chef, Lumberjack!
+		"code": "erroneousaim",
 		"type": "negative",
 		"attributes": {
 			"bowDrawingStrength": -0.2,
@@ -281,7 +281,7 @@
 			"hungerrate": 0.3
 		}
 	},
-	{ // Nearsighted - Also on Forlorn Hope Knight, Miner!
+	{ // Nearsighted - Also on Oathkeeper, Miner!
 		"code": "nearsighted",
 		"type": "negative",
 		"attributes": {
@@ -320,14 +320,14 @@
 			"forageDropRate": 0.25
 		}
 	},
-	{ // Clumsy
-		"code": "clumsy",
+	{ // Sluggish
+		"code": "sluggish",
 		"type": "negative",
 		"attributes": {
-			"armorDurabilityLoss": 0.25
+			"armorWalkSpeedAffectedness": 0.25
 		}
 	},
-	//inaccurate is up on Alchemist
+	//erroneousaim is up on Alchemist
 
 	// -- Clockmaker --
 	{ // Technical
@@ -346,7 +346,7 @@
 			"animalSeekingRange": -0.25
 		}
 	},
-	{ // Sticky Fingers - Also on Merchant, Mystic!
+	{ // Sticky Fingers - Also on Merchant, Mystic, Oathkeeper!
 		"code": "stickyfingers",
 		"type": "positive",
 		"attributes": {
@@ -380,7 +380,7 @@
 		}
 	},
 
-	// -- Forlorn Hope Knight --
+	// -- Oathkeeper --
 	{ // Duelist
 		"code": "duelist",
 		"type": "positive",
@@ -434,7 +434,7 @@
 			"miningSpeedMul": -0.25
 		}
 	},
-	//Clumsy is up on Chef!
+	//Sluggish is up on Chef!
 
 	// -- Hunter --
 	{ // Sharpeye
@@ -501,7 +501,7 @@
 			"armorWalkSpeedAffectedness": -0.2
 		}
 	},
-	//Inaccurate is up on Alchemist!
+	//erroneousaim is up on Alchemist!
 
 	// -- Malefactor --
 	{ // Forager
