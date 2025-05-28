@@ -29,6 +29,7 @@ namespace GloomeClasses {
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
+        public static ICoreServerAPI SApi;
         public static ILogger Logger;
         public static string ModID;
 
@@ -50,13 +51,14 @@ namespace GloomeClasses {
         }
 
         public override void StartServerSide(ICoreServerAPI api) {
+            SApi = api;
+
             api.Event.PlayerNowPlaying += OnPlayerNowPlayingAddTemporalTraitBehaviors;
             api.Event.PlayerDisconnect += OnPlayerDisconnectRemoveTemporalTraitBehaviors;
         }
 
         public override void StartClientSide(ICoreClientAPI api) {
             CApi = api;
-            api.Event.LevelFinalize += OnLevelFinalizeAddTemporalBehaviors;
         }
 
         private static void ApplyPatches() {
@@ -83,14 +85,6 @@ namespace GloomeClasses {
             ModID = null;
             Api = null;
             base.Dispose();
-        }
-
-        private static void OnLevelFinalizeAddTemporalBehaviors() {
-            var player = CApi.World.Player;
-            if (!player.Entity.HasBehavior<TemporalStabilityTraitBehavior>()) {
-                var temporalBehavior = (TemporalStabilityTraitBehavior)Activator.CreateInstance(typeof(TemporalStabilityTraitBehavior), player.Entity);
-                player.Entity.AddBehavior(temporalBehavior);
-            }
         }
 
         private static void OnPlayerNowPlayingAddTemporalTraitBehaviors(IServerPlayer player) {

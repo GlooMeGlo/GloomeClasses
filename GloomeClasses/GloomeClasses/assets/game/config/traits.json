@@ -71,7 +71,7 @@
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": -0.02 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
+			"caveStabilityLoss": -0.1
 		}
 	},
 

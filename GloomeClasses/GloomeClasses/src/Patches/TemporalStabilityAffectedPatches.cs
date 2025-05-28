@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
 namespace GloomeClasses.src.Patches {
@@ -66,11 +67,9 @@ namespace GloomeClasses.src.Patches {
         }
 
         public static double CheckForAndCallTemporalStabilityBehavior(EntityAgent entity, double hereStability) {
-            if (entity is EntityPlayer) {
-                if (entity.HasBehavior<TemporalStabilityTraitBehavior>()) {
-                    var tempStabTraits = entity.GetBehavior<TemporalStabilityTraitBehavior>();
-                    return tempStabTraits.HandleTraits(hereStability);
-                }
+            if (entity.Properties.Server != null) { //entity.HasBehavior<TemporalStabilityTraitBehavior>()
+                var tempStabTraits = entity.Properties.Server.Behaviors.Where(i => i.GetType() == typeof(TemporalStabilityTraitBehavior)) as TemporalStabilityTraitBehavior;//entity.GetBehavior<TemporalStabilityTraitBehavior>();
+                return tempStabTraits.HandleTraits(hereStability);
             }
 
             return hereStability;

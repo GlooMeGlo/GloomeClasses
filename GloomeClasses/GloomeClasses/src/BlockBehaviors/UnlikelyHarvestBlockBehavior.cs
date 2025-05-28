@@ -20,7 +20,7 @@ namespace GloomeClasses.BlockBehaviors {
                     var firstRate = flaxDropRateStats.First().Value;
                     if (world.Rand.NextDouble() <= (firstRate.GetBlended() - 1)) {
                         handling = EnumHandling.Handled;
-                        return new ItemStack[1] { new ItemStack(world.GetItem(new AssetLocation("game:seeds-flax"))) };
+                        return new ItemStack[1] { new ItemStack(world.GetItem(new AssetLocation("game:flaxfibers"))) };
                     }
                 }
             }
