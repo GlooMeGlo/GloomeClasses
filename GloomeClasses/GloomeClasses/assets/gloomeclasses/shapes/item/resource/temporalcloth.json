@@ -1,0 +1,129 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"forlorn1": [16,16],
+		"forlorn2": [16,16]
+	},
+	"textures": {
+		"forlorn1": "game:block/cloth/tapestry/forlorn1",
+		"oak": "game:block/wood/oak"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 8.0, 0.0, 8.0 ],
+			"to": [ 8.0, 0.0, 8.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "plank",
+					"from": [ -7.0, 1.0, -1.5 ],
+					"to": [ 7.0, 1.5, 1.5 ],
+					"rotationOrigin": [ 0.0, 1.0, 0.0 ],
+					"faces": {
+						"north": { "texture": "#oak", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "rotation": 90 },
+						"east": { "texture": "#oak", "uv": [ 2.5, 12.5, 3.0, 15.5 ], "rotation": 90 },
+						"south": { "texture": "#oak", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "rotation": 90 },
+						"west": { "texture": "#oak", "uv": [ 0.0, 0.0, 3.0, 0.5 ] },
+						"up": { "texture": "#oak", "uv": [ 0.0, 0.0, 3.0, 14.0 ], "rotation": 90 },
+						"down": { "texture": "#oak", "uv": [ 0.0, 0.0, 3.0, 14.0 ], "rotation": 90 }
+					},
+					"children": [
+						{
+							"name": "Cloth-bolt",
+							"from": [ 0.7, -0.5, -1.0 ],
+							"to": [ 13.3, 1.0, 4.0 ],
+							"rotationOrigin": [ 6.7, -0.5, 1.5 ],
+							"faces": {
+								"north": { "texture": "#forlorn1", "uv": [ 1.5, 9.5, 14.0, 11.0 ] },
+								"east": { "texture": "#forlorn1", "uv": [ 3.5, 7.5, 8.5, 9.0 ] },
+								"south": { "texture": "#forlorn1", "uv": [ 2.0, 14.5, 14.5, 16.0 ], "rotation": 180 },
+								"west": { "texture": "#forlorn1", "uv": [ 5.5, 7.0, 10.5, 8.5 ] },
+								"up": { "texture": "#forlorn1", "uv": [ 5.5, 3.5, 10.5, 16.0 ], "rotation": 90 },
+								"down": { "texture": "#forlorn1", "uv": [ 5.5, 1.0, 10.5, 13.5 ], "rotation": 90 }
+							},
+							"children": [
+								{
+									"name": "bolt-up",
+									"from": [ 0.3, 1.5, 0.5 ],
+									"to": [ 12.3, 2.0, 4.5 ],
+									"rotationOrigin": [ 0.3, 1.5, 0.5 ],
+									"faces": {
+										"north": { "texture": "#forlorn1", "uv": [ 2.0, 4.5, 14.0, 5.0 ] },
+										"east": { "texture": "#forlorn1", "uv": [ 6.0, 5.5, 10.0, 6.0 ] },
+										"south": { "texture": "#forlorn1", "uv": [ 2.5, 6.5, 14.5, 7.0 ] },
+										"west": { "texture": "#forlorn1", "uv": [ 6.0, 8.5, 10.0, 9.0 ] },
+										"up": { "texture": "#forlorn1", "uv": [ 6.0, 4.0, 10.0, 16.0 ], "rotation": 90 }
+									}
+								},
+								{
+									"name": "bolt-down",
+									"from": [ 0.3, -0.5, 0.5 ],
+									"to": [ 12.3, 0.0, 4.5 ],
+									"rotationOrigin": [ 0.3, -0.5, 0.5 ],
+									"faces": {
+										"north": { "texture": "#forlorn1", "uv": [ 2.0, 4.5, 14.0, 5.0 ] },
+										"east": { "texture": "#forlorn1", "uv": [ 6.0, 5.5, 10.0, 6.0 ] },
+										"south": { "texture": "#forlorn1", "uv": [ 2.0, 6.5, 14.0, 7.0 ] },
+										"west": { "texture": "#forlorn1", "uv": [ 6.0, 8.5, 10.0, 9.0 ] },
+										"down": { "texture": "#forlorn1", "uv": [ 6.0, 4.0, 10.0, 16.0 ], "rotation": 90 }
+									}
+								}
+							]
+						},
+						{
+							"name": "Cloth-extended1",
+							"from": [ 1.1, -0.6, 3.8 ],
+							"to": [ 12.9, -0.1, 5.8 ],
+							"rotationOrigin": [ 7.0, -0.6, 3.8 ],
+							"rotationX": 10.0,
+							"faces": {
+								"east": { "texture": "#forlorn1", "uv": [ 7.0, 7.5, 9.0, 8.0 ] },
+								"south": { "texture": "#forlorn1", "uv": [ 2.0, 4.5, 13.5, 5.0 ] },
+								"west": { "texture": "#forlorn1", "uv": [ 7.0, 5.5, 9.0, 6.0 ] },
+								"up": { "texture": "#forlorn1", "uv": [ 2.0, 4.0, 13.5, 6.0 ] },
+								"down": { "texture": "#forlorn1", "uv": [ 2.5, 4.0, 14.0, 6.0 ] }
+							},
+							"children": [
+								{
+									"name": "cloth-edge1",
+									"from": [ 0.0, 0.0, 2.0 ],
+									"to": [ 11.0, 0.5, 3.0 ],
+									"rotationOrigin": [ 5.0, 0.0, 2.0 ],
+									"rotationX": -7.0,
+									"faces": {
+										"east": { "texture": "#forlorn1", "uv": [ 7.5, 8.0, 8.5, 8.5 ] },
+										"south": { "texture": "#forlorn1", "uv": [ 2.5, 4.0, 13.5, 4.5 ] },
+										"west": { "texture": "#forlorn1", "uv": [ 7.5, 4.5, 8.5, 5.0 ] },
+										"up": { "texture": "#forlorn1", "uv": [ 2.5, 12.5, 13.5, 13.5 ] },
+										"down": { "texture": "#forlorn1", "uv": [ 2.5, 4.5, 13.5, 5.5 ] }
+									}
+								},
+								{
+									"name": "cloth-edge2",
+									"from": [ 0.0, 0.1, 3.0 ],
+									"to": [ 7.0, 0.6, 4.0 ],
+									"rotationOrigin": [ 4.0, 0.1, 3.0 ],
+									"rotationX": -10.0,
+									"faces": {
+										"east": { "texture": "#forlorn1", "uv": [ 3.5, 5.0, 4.5, 5.5 ] },
+										"south": { "texture": "#forlorn1", "uv": [ 3.0, 7.0, 10.0, 7.5 ] },
+										"west": { "texture": "#forlorn1", "uv": [ 3.5, 4.0, 4.5, 4.5 ] },
+										"up": { "texture": "#forlorn1", "uv": [ 5.5, 4.0, 12.5, 5.0 ] },
+										"down": { "texture": "#forlorn1", "uv": [ 3.5, 5.0, 10.5, 6.0 ] }
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]}

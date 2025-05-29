@@ -1,17 +1,13 @@
 {
-	"code": "forlornblade-meteoriciron",
+	"code": "forlornhilt",
 	"heldTpUseAnimation": "interactstatic", "maxstacksize": 4,
-	"shape": { "base": "gloomeclasses:item/tool/forlornblade" },
-	"textures": {
-		"blade": {"base": "game:block/metal/armor-generic/meteoriciron"},
-		"swordforlorn": {"base": "game:block/transparent"}
-	},
+	"shape": { "base": "gloomeclasses:item/tool/forlornhilt" },
 	"creativeinventory": { "general": ["*"], "items": ["*"] },
 	"guiTransform": {
 		"translation": { "x": 0, "y": 0, "z": 0 },
 		"rotation": { "x": -89, "y": 47, "z": 34 },
-		"origin": { "x": 1.07, "y": 0, "z": 0.43 },
-		"scale": 1.53
+		"origin": { "x": 0.4, "y": -0.2, "z": 0.459 },
+		"scale": 3
 	},
 	"fpHandTransform": {
 		"translation": { "x": -0.2, "y": -0.3, "z": 0.4 },

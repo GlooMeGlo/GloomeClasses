@@ -54,9 +54,9 @@
 		"attributes": {}
 	},
 
-	// -- Forlorn Hope Knight --
-	{ // Tenacious
-		"code": "tenacious",
+	// -- Oathkeeper --
+	{ // Zealot
+		"code": "zealot",
 		"type": "positive",
 		"attributes": {}
 	},
@@ -71,7 +71,7 @@
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": 0.1
+			"caveStabilityLoss": -0.15 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
 		}
 	},
 
@@ -136,7 +136,8 @@
 		"code": "agoraphobia",
 		"type": "negative", // Why was this originally a positive??? What? It's a Phobia!
 		"attributes": {
-			"surfaceStabilityLoss": -0.008 // - Just my temp addition to how it might make more sense at a glance for how this could change. - Jon
+			"caveStabilityLoss": -1.0 // <-- Shouldn't this be some OTHER attribute then Cave stability loss? It's functionally the opposite so... Will leave it until this is properly checked though.
+			//"surfaceStabilityLoss": -0.25 - Just my temp addition to how it might make more sense at a glance for how this could change. - Jon
 		}
 	},
 
@@ -195,7 +196,7 @@
 		"type": "positive",
 		"attributes": {
 			"wildCropDropRate": 0.25,
-			"forageDropRate": 0.5
+			"forageDropRate": 0.35
 		}
 	},
 	{ //Fleetfooted - Also on Clockmaker, Forlorn Knight, Merchant!
@@ -235,8 +236,8 @@
 		"code": "scavenger",
 		"type": "positive",
 		"attributes": {
-			"wildCropDropRate": 0.20,
-			"forageDropRate": 0.30
+			"wildCropDropRate": 0.2,
+			"forageDropRate": 0.3
 		}
 	},
 	{ // Squeamish - Also on Merchant!
@@ -253,7 +254,7 @@
 		"code": "soldier",
 		"type": "positive",
 		"attributes": {
-			"meleeWeaponsDamage": 0.3,
+			"meleeWeaponsDamage": 0.20,
 			"armorDurabilityLoss": -0.25,
 			"armorWalkSpeedAffectedness": -0.25
 		}
@@ -280,7 +281,7 @@
 			"hungerrate": 0.3
 		}
 	},
-	{ // Nearsighted - Also on Oathkeeper, Miner!
+	{ // Nearsighted - Also on Miner!
 		"code": "nearsighted",
 		"type": "negative",
 		"attributes": {
@@ -315,15 +316,14 @@
 		"attributes": {
 			"animalLootDropRate": 0.25,
 			"animalHarvestingTime": -0.5,
-			"wildCropDropRate": 0.5,
-			"forageDropRate": 0.25
+			"animalSeekingRange": -0.3
 		}
 	},
 	{ // Sluggish
 		"code": "sluggish",
 		"type": "negative",
 		"attributes": {
-			"armorWalkSpeedAffectedness": 0.25
+			"armorWalkSpeedAffectedness": 0.05
 		}
 	},
 	//erroneousaim is up on Alchemist
@@ -345,7 +345,7 @@
 			"animalSeekingRange": -0.25
 		}
 	},
-	{ // Sticky Fingers - Also on Merchant, Mystic, Oathkeeper!
+	{ // Sticky Fingers - Also on Merchant!
 		"code": "stickyfingers",
 		"type": "positive",
 		"attributes": {
@@ -380,22 +380,34 @@
 	},
 
 	// -- Oathkeeper --
-	{ // Duelist
-		"code": "duelist",
+	{ // Dreadslayer
+		"code": "dreadslayer",
 		"type": "positive",
 		"attributes": {
-			"meleeWeaponsDamage": 0.4,
+			"rustedDamage": 0.35,
 			"armorDurabilityLoss": -0.15,
 			"armorWalkSpeedAffectedness": -0.15
-		}
+		},
 	},
-	{ // Pragmatic
-		"code": "pragmatic",
+	{ // Greenshadow  
+		"code": "greenshadow",
 		"type": "positive",
 		"attributes": {
-			"animalLootDropRate": 0.2,
-			"animalHarvestingTime": -0.3
+			"forageDropRate": 0.2,
+			"animalSeekingRange": -0.25
+		},
+	},
+	{ //Servo-Sympathy
+		"code": "servosympathy",
+		"type": "negative",
+		"attributes": {
+			"mechanicalsDamage": -0.20
 		}
+	},
+	{ // Fanatic
+		"code": "fanatic",
+		"type": "positive",
+		"attributes": {	}
 	},
 	//Fleetfooted is on Alchemist!
 	{ // Glutton
@@ -420,7 +432,8 @@
 		"code": "farmer",
 		"type": "positive",
 		"attributes": {
-			"cropDropRate": 0.3
+			"cropDropRate": 0.3,
+			"wildCropDropRate": 0.5
 		}
 	},
 	//Hardy is up on Blackguard!
@@ -480,6 +493,7 @@
 			"logDropRate": 0.15,
 			"saplingDropRate": 3,
 			"stickDropRate": 0.5,
+			"forageDropRate": 0.5,
 			"fruitTreeSurvival": 2.0 // This might need a patch.
 		}
 	},
@@ -568,16 +582,16 @@
 		}
 	},
 	//Stickyfingers is up on Clockmaker!
-	{ // Dreadslayer
-		"code": "dreadslayer",
+	{ // Rustbane
+		"code": "rustbane",
 		"type": "positive",
 		"attributes": {
-			"rustedDamage": 0.25
+			"rustedDamage": 0.15
 		}
 	},
 	//Fasting is up on Alchemist!
-	{ //Clockwork Adverse
-		"code": "clockworkadverse",
+	{ //Bellshocked
+		"code": "bellshocked",
 		"type": "negative",
 		"attributes": {
 			"mechanicalsDamage": -0.25

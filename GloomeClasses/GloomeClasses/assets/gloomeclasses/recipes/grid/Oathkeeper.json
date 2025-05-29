@@ -1,0 +1,147 @@
+[
+	{
+		"code": "forlornassembly",
+		"ingredientPattern": "B_,SI,F_",
+		"requiresTrait": "zealot",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "gloomeclasses:forlornblade-meteoriciron"
+			},
+			"S": {
+				"type": "item",
+				"code": "game:solderbar-silver"
+			},
+			"I": {
+				"type": "item",
+				"code": "game:solderingiron",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:forlornhilt"
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "game:blade-forlorn-iron",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "R,F,G",
+		"requiresTrait": "zealot",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "gloomeclasses:gem-temporal"
+			},
+			"R": {
+				"type": "item",
+				"code": "game:rod-gold"
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:forlornhilt",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H__,G__,___",
+		"requiresTrait": "zealot",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:gear-temporal",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:primamateria",
+			"quantity": 9
+		}
+	},
+	{
+		"ingredientPattern": "CPW",
+		"requiresTrait": "zealot",
+		"ingredients": {
+			"C": {
+				"type": "item",
+				"code": "game:cloth-purple",
+				"quantity": 1
+			},
+			"P": {
+				"type": "item",
+				"code": "gloomeclasses:primamateria",
+				"quantity": 16
+			},
+			"W": {
+				"type": "block",
+				"code": "game:woodbucket"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "dye-woad"
+				},
+				"requiresLitres": 1
+			}
+		},
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:cloth-forlorn",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "PW",
+		"requiresTrait": "zealot",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "gloomeclasses:primamateria",
+				"quantity": 6
+			},
+			"W": {
+				"type": "item",
+				"code": "game:glueportion-pitch-hot",
+				"quantity": 2
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:gem-temporal",
+			"quantity": 1
+		}
+	}
+]
