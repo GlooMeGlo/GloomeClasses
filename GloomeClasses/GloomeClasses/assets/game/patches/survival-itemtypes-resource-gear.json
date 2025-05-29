@@ -1,0 +1,8 @@
+[
+  {
+    "op": "replace",
+    "path": "/maxstacksizeByType/gear-temporal",
+    "value": 32,
+    "file": "game:itemtypes/resource/gear.json"
+  }
+]

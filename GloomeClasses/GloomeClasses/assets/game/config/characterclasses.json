@@ -42,7 +42,6 @@
 			"artisan",
 			"frugalforming",
 			"fasting",
-			"scavenger",
 			"squeamish"
 		],
 		"gear": [
@@ -80,7 +79,6 @@
 			"hardy",
 			"rockhound",
 			"ravenous",
-			"nearsighted",
 			"heavyfooted",
 			"heavyhanded"
 		],
@@ -250,7 +248,6 @@
 		"traits": [
 			"bowyer",
 			"sharpeye",
-			"scavenger",
 			"sneaky",
 			"fasting",
 			"resourceful",
@@ -302,11 +299,10 @@
 		"traits": [
 			"carpenter",
 			"forester",
-			"scavenger",
 			"rugged",
 			"defender",
 			"careless",
-			"clockworkadverse"
+			"bellshocked"
 		],
 		"gear": [
 			{
@@ -528,10 +524,9 @@
 			"clairvoyance",
 			"scavenger",
 			"shrewd",
-			"stickyfingers",
-			"dreadslayer",
+			"rustbane",
 			"fasting",
-			"clockworkadverse",
+			"bellshocked",
 			"careless"
 		],
 		"gear": [
@@ -576,14 +571,13 @@
 	{
 		"code": "oathkeeper",
 		"traits": [
-			"tenacious",
-			"duelist",
-			"pragmatic",
-			"fleetfooted",
-			"stickyfingers",
+			"zealot",
+			"dreadslayer",
+			"greenshadow",
+			"fanatic",
 			"glutton",
-			"nearsighted",
-			"careless"
+			"careless",
+			"servosympathy"
 		],
 		"gear": [
 			{
