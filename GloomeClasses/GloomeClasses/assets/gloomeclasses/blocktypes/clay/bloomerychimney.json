@@ -31,6 +31,10 @@
 		all: false
 	},
 	drops: [
-		{ type: "item", code: "game:refractorybrick-fired-tier3",  quantity: 4  }
+		{
+			type: "item",
+			code: "game:refractorybrick-fired-tier3",
+			quantity: { "avg" : 4, "var": 0 }
+		}
 	]
 }

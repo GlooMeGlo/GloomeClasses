@@ -173,12 +173,18 @@
 		{
 			"type": "item",
 			"code": "game:refractorybrick-fired-tier3",
-			"quantity": 8
+			"quantity": {
+				"avg": 8,
+				"var": 0
+			}
 		},
 		{
 			"type": "block",
 			"code": "game:ingotmold-burned",
-			"quantity": 4
+			"quantity": {
+				"avg": 4,
+				"var": 0
+			}
 		}
 	],
 	"guiTransform": {
