@@ -48,6 +48,7 @@ namespace GloomeClasses {
             api.RegisterBlockBehaviorClass("UnlikelyHarvestBehavior", typeof(UnlikelyHarvestBlockBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorDread", typeof(DreadBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorTemporalTraits", typeof(TemporalStabilityTraitBehavior));
+            api.RegisterEntityBehaviorClass("EntityBehaviorDragonskin", typeof(DragonskinTraitBehavior));
 
             ApplyPatches();
         }
