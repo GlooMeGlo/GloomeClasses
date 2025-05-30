@@ -16,6 +16,7 @@ using System.Linq;
 using Vintagestory.API.Util;
 using Vintagestory.API.Common.Entities;
 using System.Numerics;
+using GloomeClasses.src.CollectibleBehaviors;
 
 
 namespace GloomeClasses {
@@ -43,6 +44,7 @@ namespace GloomeClasses {
         }
 
         public override void Start(ICoreAPI api) {
+            api.RegisterCollectibleBehaviorClass("HealHackedBehavior", typeof(HealHackedLocustsBehavior));
             api.RegisterBlockBehaviorClass("UnlikelyHarvestBehavior", typeof(UnlikelyHarvestBlockBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorDread", typeof(DreadBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorTemporalTraits", typeof(TemporalStabilityTraitBehavior));

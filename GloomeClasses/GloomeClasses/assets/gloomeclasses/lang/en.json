@@ -1,5 +1,5 @@
 {
-	"item-forlorn-meteoriciron": "Meteoric Iron Estoc ",
+	"item-forlorn-meteoriciron": "Meteoric Iron Estoc",
 	"item-stainless-steel-mix": "Stainless steel mix",
 	"item-miningbag-sturdy-reinforced": "Prospector's Pack",
 	"item-primamateria": "Prima Materia",
@@ -25,5 +25,7 @@
 	"block-copperfryingpan-burned": "Copper Frying Pan",
 	"blockdesc-metalpan-copper": "A proper prospectors pan, can find minerals and has a increased chance to find nuggets",
 	"block-bloomerybaseadvanced-north": "Advanced bloomery base",
-	"block-bloomerychimneyadvanced": "Advanced bloomery chimney"
+	"block-bloomerychimneyadvanced": "Advanced bloomery chimney",
+	
+	"game:item-creature-locust-corrupt-sawblade-hacked": "Hacked Sawblade Locust"
 }
