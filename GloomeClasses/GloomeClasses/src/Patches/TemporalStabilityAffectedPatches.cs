@@ -15,7 +15,7 @@ using Vintagestory.GameContent;
 namespace GloomeClasses.src.Patches {
 
     [HarmonyPatch(typeof(EntityBehaviorTemporalStabilityAffected))]
-    [HarmonyPatchCategory(GloomeClassesModSystem.TemporalStabilityAffectedPatchesCategory)]
+    //[HarmonyPatchCategory(GloomeClassesModSystem.TemporalStabilityAffectedPatchesCategory)]
     public class TemporalStabilityAffectedPatches { //This class is not needed currently and is slated to be wiped. Just keeping it around for now just incase I need to reference it for another Transpiler... But at the same time, since it was functioning weirdly, it might not be a good idea? Though I think that's more the behavior patching instead of anything.
 
         [HarmonyTranspiler]

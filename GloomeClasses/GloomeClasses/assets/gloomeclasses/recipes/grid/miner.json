@@ -525,7 +525,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "item",
-			"code": "gloomeclasses:miningbag-sturdy-reinforced",
+			"code": "gloomeclasses:miningbagsturdyreinforced",
 			"quantity": 1
 		}
 	}

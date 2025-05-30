@@ -26,7 +26,7 @@ namespace GloomeClasses {
         public static Harmony harmony;
 
         public const string ClayformingPatchesCategory = "GloomeClassesClayformingPatchesCatagory";
-        public const string TemporalStabilityAffectedPatchesCategory = "GloomeClassesTemporalStabilityAffectedPatchesCategory";
+        public const string WearableLightsPatchesCategory = "GloomeClassesWearableLightsPatchesCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -68,6 +68,7 @@ namespace GloomeClasses {
             harmony = new Harmony(ModID);
             Logger.VerboseDebug("Harmony is starting Patches!");
             harmony.PatchCategory(ClayformingPatchesCategory);
+            harmony.PatchCategory(WearableLightsPatchesCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 
