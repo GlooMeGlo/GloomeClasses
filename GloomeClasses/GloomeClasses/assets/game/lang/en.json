@@ -189,7 +189,7 @@
 	"traitdesc-tallowtanner": "Can recycle unused pelts into <a href=\"handbooksearch://scraped hide\">scraped hides</a>",
 	"traitdesc-zealot": "Exclusive craftable <a href=\"handbooksearch://temporal cloth\">Temporal cloth</a>, <a href=\"handbooksearch://forlorn hope estoc\">Forlorn Hope estoc</a>and a cheaper recipe for <a href=\"handbooksearch://prima materia\">prima materia</a>",
 
-	"charattribute-flaxSeedChance-0.25": "+25% chance to get flax seeds from grass",
+	"charattribute-flaxFiberChance-0.1": "+10% chance to get flax fibers from grass",
 	"charattribute-flaxDropRate-0.2": "+20% more flax fibers from flax crops",
 	"charattribute-charcoalDropRate-0.35": "+35% increased charcoal production",
 	"charattribute-logDropRate-0.15": "+15% chance for extra log",

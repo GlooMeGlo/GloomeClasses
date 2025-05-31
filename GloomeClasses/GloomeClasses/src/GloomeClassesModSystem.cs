@@ -34,7 +34,7 @@ namespace GloomeClasses {
         public static ILogger Logger;
         public static string ModID;
 
-        public const string FlaxRateStat = "flaxSeedChance";
+        public const string FlaxRateStat = "flaxFiberChance";
         public const string BonusClayVoxelsStat = "clayformingPoints";
 
         public override void StartPre(ICoreAPI api) {

@@ -617,7 +617,7 @@
 		"code": "unlikelyharvest",
 		"type": "positive",
 		"attributes": {
-			"flaxSeedChance": 0.25
+			"flaxFiberChance": 0.1
 		}
 	},
 	{ // Fibrous Folly
