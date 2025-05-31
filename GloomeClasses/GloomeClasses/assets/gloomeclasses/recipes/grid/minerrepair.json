@@ -1,0 +1,14 @@
+[
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:knife-generic-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:knife-generic-{metal}" }
+	}
+]

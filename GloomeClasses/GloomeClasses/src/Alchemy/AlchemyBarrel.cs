@@ -10,7 +10,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace GloomeClasses {
+namespace GloomeClasses.src.Alchemy {
 
   public class AlchemyBarrel : BlockEntityLiquidContainer
     {
@@ -78,7 +78,7 @@ namespace GloomeClasses {
             }
 
             // normal behavior
-            return (isMerge ? (inventory.BaseWeight + 3) : (inventory.BaseWeight + 1)) + (sourceSlot.Inventory is InventoryBasePlayer ? 1 : 0);
+            return (isMerge ? inventory.BaseWeight + 3 : inventory.BaseWeight + 1) + (sourceSlot.Inventory is InventoryBasePlayer ? 1 : 0);
         }
 
 

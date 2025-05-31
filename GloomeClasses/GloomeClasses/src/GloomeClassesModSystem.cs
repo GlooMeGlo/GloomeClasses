@@ -1,6 +1,4 @@
 using HarmonyLib;
-using GloomeClasses.BlockBehaviors;
-using GloomeClasses.EntityBehaviors;
 using System.Reflection;
 using Vintagestory;
 using Vintagestory.API.Client;
@@ -17,16 +15,18 @@ using Vintagestory.API.Util;
 using Vintagestory.API.Common.Entities;
 using System.Numerics;
 using GloomeClasses.src.CollectibleBehaviors;
+using GloomeClasses.src.BlockBehaviors;
 
 
-namespace GloomeClasses {
+namespace GloomeClasses.src {
 
     public class GloomeClassesModSystem : ModSystem {
 
         public static Harmony harmony;
 
-        public const string ClayformingPatchesCategory = "GloomeClassesClayformingPatchesCatagory";
-        public const string WearableLightsPatchesCategory = "GloomeClassesWearableLightsPatchesCategory";
+        public const string ClayformingPatchesCategory = "gloomeClassesClayformingPatchesCatagory";
+        public const string WearableLightsPatchesCategory = "gloomeClassesWearableLightsPatchesCategory";
+        public const string ToolkitPatchesCategory = "gloomeClassesToolkitFunctionalityCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -36,6 +36,10 @@ namespace GloomeClasses {
 
         public const string FlaxRateStat = "flaxFiberChance";
         public const string BonusClayVoxelsStat = "clayformingPoints";
+
+        public const string ToolkitRepairedAttribute = "toolkitRepairedLoss";
+
+        public const float lossPerToolkitRepair = 0.1f;
 
         public override void StartPre(ICoreAPI api) {
             Api = api;
@@ -70,6 +74,7 @@ namespace GloomeClasses {
             Logger.VerboseDebug("Harmony is starting Patches!");
             harmony.PatchCategory(ClayformingPatchesCategory);
             harmony.PatchCategory(WearableLightsPatchesCategory);
+            harmony.PatchCategory(ToolkitPatchesCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 

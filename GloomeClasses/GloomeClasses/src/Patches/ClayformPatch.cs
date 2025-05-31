@@ -5,7 +5,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace GloomeClasses.Patches {
+namespace GloomeClasses.src.Patches {
 
     [HarmonyPatch(typeof(ItemClay))]
     [HarmonyPatchCategory(GloomeClassesModSystem.ClayformingPatchesCategory)]
@@ -33,7 +33,7 @@ namespace GloomeClasses.Patches {
                 if (blockEntityClayForm.AvailableVoxels <= 0) {
                     slot.TakeOut(1);
                     slot.MarkDirty();
-                    blockEntityClayForm.AvailableVoxels += (25 + (int)(bonusPoints.GetBlended() - 1));
+                    blockEntityClayForm.AvailableVoxels += 25 + (int)(bonusPoints.GetBlended() - 1);
                 }
             }
 

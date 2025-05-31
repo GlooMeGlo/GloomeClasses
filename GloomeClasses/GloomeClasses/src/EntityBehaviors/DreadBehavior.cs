@@ -1,7 +1,7 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 
-namespace GloomeClasses.EntityBehaviors {
+namespace GloomeClasses.src.EntityBehaviors {
     public class DreadBehavior : EntityBehavior {
 
         public override string PropertyName() => "gcDreadTraitBehavior";

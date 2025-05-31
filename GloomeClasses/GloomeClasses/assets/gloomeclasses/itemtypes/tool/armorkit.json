@@ -1,93 +1,49 @@
 {
-	"code": "tools-standard",
+	"code": "tools",
+	"variantgroups": [
+		{ "code": "type", "states": [ "basic", "simple", "standard", "advanced" ] }
+	],
 	"behaviors": [
-		{
-			"name": "GroundStorable",
-			"properties": {
-				"layout": "Quadrants"
-			}
-		}
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
 	],
 	"attributes": {
 		"groundStorageTransform": {
-			"translation": {
-				"x": 0,
-				"y": -0.25,
-				"z": 0.05
-			}
+			"translation": { "x": 0, "y": -0.25, "z": 0.05 }
 		}
 	},
-	"shape": {
-		"base": "item/tool/iron-armorkit"
+	"shapeByType": {
+		"*-basic": { "base": "item/tool/iron-armorkit" },
+		"*-simple": { "base": "item/tool/bronze-armorkit" },
+		"*-standard": { "base": "item/tool/iron-armorkit" },
+		"*": { "base": "item/tool/steel-armorkit" }
 	},
-	"creativeinventory": {
-		"general": [
-			"*"
-		],
-		"items": [
-			"*"
-		],
-		"tools": [
-			"*"
-		]
-	},
+	"creativeinventory": { "general": [ "*" ], "items": [ "*" ], "tools": [ "*" ] },
 	"maxstacksize": 1,
-	"durability": 120,
+	"durabilityByType": {
+		"*-basic": 30,
+		"*-simple": 60,
+		"*-standard": 120,
+		"*": 180
+	},
 	"fpHandTransform": {
-		"translation": {
-			"x": 0.15,
-			"y": -0.2,
-			"z": 0
-		},
-		"rotation": {
-			"x": -180,
-			"y": -130,
-			"z": -180
-		},
+		"translation": { "x": 0.15, "y": -0.2, "z": 0 },
+		"rotation": { "x": -180, "y": -130, "z": -180 },
 		"scale": 2
 	},
 	"guiTransform": {
-		"rotation": {
-			"x": -20,
-			"y": -19,
-			"z": -180
-		},
-		"origin": {
-			"x": 0.6,
-			"y": 0.5,
-			"z": 0
-		},
+		"rotation": { "x": -20, "y": -19, "z": -180 },
+		"origin": { "x": 0.6, "y": 0.5, "z": 0 },
 		"scale": 2.9
 	},
 	"tpHandTransform": {
-		"rotation": {
-			"x": 0,
-			"y": 84,
-			"z": -1
-		},
-		"origin": {
-			"x": 0.5,
-			"y": 2.7,
-			"z": 1
-		},
+		"rotation": { "x": 0, "y": 84, "z": -1 },
+		"origin": { "x": 0.5, "y": 2.7, "z": 1 },
 		"scale": 0.72
 	},
 	"groundTransform": {
-		"translation": {
-			"x": 0,
-			"y": 0,
-			"z": 0
-		},
-		"rotation": {
-			"x": 0,
-			"y": 0,
-			"z": 0
-		},
-		"origin": {
-			"x": 0.5,
-			"y": 0.5,
-			"z": 0.5299
-		},
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": 0, "y": 0, "z": 0 },
+		"origin": { "x": 0.5, "y": 0.5, "z": 0.5299 },
 		"scale": 4.5
 	}
 }
