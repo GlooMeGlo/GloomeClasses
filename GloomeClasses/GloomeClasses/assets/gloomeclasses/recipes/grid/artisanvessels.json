@@ -1,0 +1,944 @@
+[
+	{
+		"ingredientPattern": "DP",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "rawdecovessel-*"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:waterportion"
+				},
+				"requiresLitres": 2,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:storagevessel-raw"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-blue"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-ashforest"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-yellow"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-beehive"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-caveaurora"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-charcoal"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedcassiteriteportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-chthonic"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:crushed-olivine"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-cloisonne"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-collonade"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-copper"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-green"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-cornflower"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:crushed-bauxite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-cowrie"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:crushed-bauxite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-earthen"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:crushed-peridotite"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-harvest"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:honeycomb"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-green"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-honeydew"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:strongtanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-loam"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-cinnabar"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedcassiteriteportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-oxblood"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:nugget-malachite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-rain"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-rattlesnake"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-rime"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:nugget-malachite"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-rutile"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:nugget-malachite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-seasalt"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-cinnabar"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-green"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-springflowers"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:strongtanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-talik"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-green"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-undergrowth"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-cinnabar"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:crushed-peridotite"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-gray"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-volcanic"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-waves"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:storagevessel-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecovessel-wintersea"
+		}
+	}
+]
