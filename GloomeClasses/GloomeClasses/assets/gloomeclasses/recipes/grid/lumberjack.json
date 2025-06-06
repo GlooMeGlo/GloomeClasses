@@ -340,5 +340,166 @@
 			"code": "game:woodenpath-ns",
 			"quantity": 2
 		}
+	},
+	{
+		"ingredientPattern": "SRW,L__",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:resin",
+				"quantity": 3
+			},
+			"S": {
+				"type": "item",
+				"code": "game:salt",
+				"quantity": 6
+			},
+			"L": {
+				"type": "block",
+				"code": "game:log-placed-*-ud",
+				"allowedVariants": [
+					"aged",
+					"birch",
+					"oak",
+					"maple",
+					"pine",
+					"acacia",
+					"kapok",
+					"redwood",
+					"larch",
+					"baldcypress",
+					"walnut",
+					"ebony",
+					"purpleheart"
+				],
+				"quantity": 4
+			},
+			"W": {
+				"type": "block",
+				"code": "game:woodbucket"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "saltwaterportion"
+				},
+				"requiresLitres": 1
+			}
+		},
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:log-placed-aged-ud",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "SPG",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:saw-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			},
+			"P": {
+				"type": "item",
+				"code": "game:plank-aged",
+				"quantity": 5
+			},
+			"G": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-gold",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:chest-east",
+			"attributes": {
+				"type": "golden"
+			},
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "SP",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:saw-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			},
+			"P": {
+				"type": "item",
+				"code": "game:plank-aged",
+				"quantity": 5
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": true,
+		"output": {
+			"type": "block",
+			"code": "game:chest-east",
+			"attributes": {
+				"type": "owl"
+			},
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "PP_,PP_,PPS",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:saw-*",
+				"isTool": true,
+				"toolDurabilityCost": 5
+			},
+			"P": {
+				"type": "item",
+				"code": "game:plank-*",
+				"allowedVariants": [
+					"aged",
+					"birch",
+					"oak",
+					"maple",
+					"pine",
+					"acacia",
+					"kapok",
+					"redwood",
+					"larch",
+					"baldcypress",
+					"walnut",
+					"ebony",
+					"purpleheart"
+				],
+				"name": "wood"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:door-sleek-windowed-{wood}",
+			"quantity": 1
+		}
 	}
 ]
