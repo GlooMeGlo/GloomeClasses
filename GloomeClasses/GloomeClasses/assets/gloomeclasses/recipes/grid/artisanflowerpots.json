@@ -1,0 +1,399 @@
+[
+	{
+		"ingredientPattern": "DP",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "rawdecoflowerpot-*"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:waterportion"
+				},
+				"requiresLitres": 2,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:flowerpot-raw"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-amber"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedcassiteriteportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-boneash"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-celadon"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-copper"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:crushed-bauxite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-earthern"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:crushed-peridotite"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-moss"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedcassiteriteportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-ochre"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-lapislazuli"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:nugget-malachite"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-rutile"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:nugget-malachite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-seasalt"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-cinnabar"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoflowerpot-tenmoku"
+		}
+	}
+]
