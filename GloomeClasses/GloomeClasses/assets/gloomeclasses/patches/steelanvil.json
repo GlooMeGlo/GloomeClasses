@@ -1,0 +1,20 @@
+[
+  {
+    "op": "add",
+    "file": "game:recipes/smithing/anvilbase.json",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "steel"
+  },
+  {
+    "op": "add",
+    "file": "game:recipes/smithing/anviltop.json",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "steel"
+  },
+  {
+    "op": "add",
+    "file": "game:blocktypes/metal/anvilpart.json",
+    "path": "/variantgroups/1/states/-",
+    "value": "steel"
+  }
+]
