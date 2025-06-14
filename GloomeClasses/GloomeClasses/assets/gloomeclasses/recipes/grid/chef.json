@@ -24,32 +24,268 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "coppercookingpot-burned",
+			"code": "metalcookingpot-copper-empty",
 			"quantity": 1
 		}
 	},
 	{
-		"ingredientPattern": "H,P",
+		"ingredientPattern": "H,P,C",
 		"requiresTrait": "culinary",
 		"shapeless": true,
 		"ingredients": {
 			"P": {
 				"type": "item",
-				"code": "game:metalplate-copper",
-				"quantity": 2
+				"code": "game:metalplate-tinbronze",
+				"quantity": 1
 			},
 			"H": {
 				"type": "item",
 				"code": "game:hammer-*",
 				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
 			}
 		},
 		"width": 1,
-		"height": 2,
+		"height": 3,
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "copperfryingpan-burned",
+			"code": "metalcookingpot-tinbronze-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-blackbronze",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-blackbronze-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-iron",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-iron-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-meteoriciron",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-iron-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-gold",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-gold-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-silver",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-silver-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-electrum",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-electrum-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-steel",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-steel-empty",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P,C",
+		"requiresTrait": "culinary",
+		"shapeless": true,
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-stainlesssteel",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			}
+		},
+		"width": 1,
+		"height": 3,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "metalcookingpot-stainlesssteel-empty",
 			"quantity": 1
 		}
 	},
