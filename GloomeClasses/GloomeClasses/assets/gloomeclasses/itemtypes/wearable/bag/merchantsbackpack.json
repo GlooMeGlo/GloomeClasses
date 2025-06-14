@@ -1,7 +1,7 @@
 {
 	"code": "merchantsbackpack",
 	"maxstacksize": 1,
-	"shape": { "base": "item/bag/merchantsbackpack" },
+	"shape": { "base": "gloomeclasses:item/bag/merchantsbackpack" },
 	"behaviors": [
 		{ "name": "GroundStorable", "properties": { "layout": "SingleCenter", "collisionBox": { "x1": 0.25, "y1": 0, "z1": 0.25, "x2": 0.75, "y2": 0.375, "z2": 0.75 }}},
 		{ "name": "HeldBag" }
@@ -12,9 +12,9 @@
 	"lightAbsorption": 0,
 	"guiTransform": {
 		"translation": { "x": 0, "y": 0, "z": 0 },
-		"rotation": { "x": -25, "y": 138, "z": 180 },
-		"origin": { "x": 0.4299, "y": 0.27, "z": 0.5 },
-		"scale": 1.87,
+		"rotation": { "x": -20, "y": 21, "z": 180 },
+		"origin": { "x": 0.5299, "y": 0.35, "z": 0.5 },
+		"scale": 1.83,
 		"rotate": true
 	},
 	"fpHandTransform": {
@@ -34,6 +34,11 @@
 		"scale": 2.5
 	},
 	"attributes": {
+		"wearableAttachment": true,
+		"attachableToEntity":{
+			"categoryCode": "backpack",
+			"attachedShape": {"base": "item/bag/merchantsbackpack-attached"}
+		},
 		"backpack": {
 			"quantitySlots": 10
 		}

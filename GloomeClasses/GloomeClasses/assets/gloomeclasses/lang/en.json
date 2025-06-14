@@ -2,7 +2,7 @@
 	"item-forlorn-meteoriciron": "Meteoric Iron Estoc",
 	"item-stainless-steel-mix": "Stainless steel mix",
 	"item-miningbagsturdyreinforced": "Prospector's Pack",
-	"item-merchantsbackpack": "Merchant's Pack",
+	"item-merchantsbackpack": "Peddler's Pack",
 	"item-primamateria": "Prima Materia",
 	"item-forlornblade-meteoriciron": "Meteoric Iron Estoc blade",
 	"item-tools-basic": "Basic armor kit",
@@ -19,11 +19,17 @@
 	"item-cloth-forlorn": "Temporal cloth",
 	"item-gem-temporal": "Temporal Gem",
 	"item-forlornhilt": "Forlorn Hope Hilt",
+	"item-gear-grimy": "Grimy Gear",
+	"item-gear-steel": "Restored steel Gear",
+	"item-gear-preptempgear": "Prepared temporal Gear",
 	
 	"itemdesc-primamateria": "<font color=\"#99c9f9\"><i>The gear was merely a vessel. This is the truth it contained.</i></font><br>",
 	"itemdesc-tools-basic": "<font color=\"#ff0000\">Too weak to repair plate armors</font>",
 	"itemdesc-basicbooster": "Permanently increases all max soil nutrient values by 20%",
 	"itemdesc-qualitybooster": "Permanently increases all max soil nutrient values by 40%",
+	"itemdesc-gear-grimy": "<font color=\"#99c9f9\"><i>Rust and grime flake across the surface, slightly detached from the metal below.</i></font>",
+	"itemdesc-gear-steel": "<font color=\"#99c9f9\"><i>A restored steel gear, all rust and grime removed from its surface.</i></font>",
+	"itemdesc-gear-preptempgear": "<font color=\"#99c9f9\"><i>A steel gear, coated in Prima materia. Ready for the final step.</i></font>",
 	
 	"block-metalpan-copper": "Copper pan",
 	"block-metalmininglantern-*": "Mining lantern",
@@ -84,5 +90,7 @@
     "block-rawdecoflowerpot-amber": "Raw flowerpot (Amber)",
     "block-rawdecoflowerpot-rutile": "Raw flowerpot (Rutile)",
 	
-	"game:item-creature-locust-corrupt-sawblade-hacked": "Hacked Sawblade Locust"
+	"game:item-creature-locust-corrupt-sawblade-hacked": "Hacked Sawblade Locust",
+	"game:block-anvilpart-base-steel": "Anvil base (Steel)",
+	"game:block-anvilpart-top-steel": "Anvil top (Steel)"
 }
