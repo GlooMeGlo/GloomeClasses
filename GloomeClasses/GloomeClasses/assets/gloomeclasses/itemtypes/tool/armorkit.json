@@ -12,7 +12,7 @@
 		}
 	},
 	"shapeByType": {
-		"*-basic": { "base": "item/tool/iron-armorkit" },
+		"*-basic": { "base": "item/tool/copper-armorkit" },
 		"*-simple": { "base": "item/tool/bronze-armorkit" },
 		"*-standard": { "base": "item/tool/iron-armorkit" },
 		"*": { "base": "item/tool/steel-armorkit" }
