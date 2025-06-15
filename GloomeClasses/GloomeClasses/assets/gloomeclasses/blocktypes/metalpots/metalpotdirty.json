@@ -1,0 +1,224 @@
+{
+	"code": "metalpotdirty",
+	"variantgroups": [
+		{ "code": "metal", "states": ["copper", "tinbronze", "blackbronze", "iron", "meteoriciron", "gold", "silver", "electrum", "steel", "stainlesssteel"] },
+		{ "code": "type", "states": ["empty", "cooked"] }
+	],
+	"behaviors": [
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants", "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.4375, "z2": 1 } } },
+		{ "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" }
+	],
+	"classByType": {
+		"metalpotdirty-*-empty": "BlockCookingContainer",
+		"metalpotdirty-*-cooked": "BlockCookedContainer"
+	},
+	"heldTpIdleAnimation": "holdbothhands",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"attributes": {
+		"shelvable": true,
+		"cookingContainerSlots": 4,
+		"storageType": 1,
+		"maxTemperature": 600,
+		"mealContainer": true,
+		"isDirtyPot": true,
+		"attachmentArea": { "x1": 4, "y1": 0, "z1": 4, "x2": 11, "y2": 0, "z2": 11 },
+		"inFirePitProps": {
+			"transform": {
+				"translation": { "x": 0, "y": 0.125, "z": 0 }
+			},
+			"useFirepitModel": "Wide"
+		},
+	},
+	"attributesByType": {
+		"*-copper-*": {
+			"maxContainerSlotStackSize": 7,
+			"servingCapacity": 7,
+			"mealBlockCode": "metalpotdirty-copper-cooked",
+			"dirtiedBlockCode": "metalpotdirty-copper-cooked",
+			"emptiedBlockCode": "metalpotdirty-copper-empty"
+		},
+		"*-tinbronze-*": {
+			"maxContainerSlotStackSize": 8,
+			"servingCapacity": 8,
+			"mealBlockCode": "metalpotdirty-tinbronze-cooked",
+			"dirtiedBlockCode": "metalpotdirty-tinbronze-cooked",
+			"emptiedBlockCode": "metalpotdirty-tinbronze-empty"
+		},
+		"*-blackbronze-*": {
+			"maxContainerSlotStackSize": 9,
+			"servingCapacity": 9,
+			"mealBlockCode": "metalpotdirty-blackbronze-cooked",
+			"dirtiedBlockCode": "metalpotdirty-blackbronze-cooked",
+			"emptiedBlockCode": "metalpotdirty-blackbronze-empty"
+		},
+		"*-iron-*": {
+			"maxContainerSlotStackSize": 10,
+			"servingCapacity": 10,
+			"mealBlockCode": "metalpotdirty-iron-cooked",
+			"dirtiedBlockCode": "metalpotdirty-iron-cooked",
+			"emptiedBlockCode": "metalpotdirty-iron-empty"
+		},
+		"*-meteoriciron-*": {
+			"maxContainerSlotStackSize": 11,
+			"servingCapacity": 11,
+			"mealBlockCode": "metalpotdirty-meteoriciron-cooked",
+			"dirtiedBlockCode": "metalpotdirty-meteoriciron-cooked",
+			"emptiedBlockCode": "metalpotdirty-meteoriciron-empty"
+		},
+		"*-gold-*": {
+			"maxContainerSlotStackSize": 12,
+			"servingCapacity": 12,
+			"mealBlockCode": "metalpotdirty-gold-cooked",
+			"dirtiedBlockCode": "metalpotdirty-gold-cooked",
+			"emptiedBlockCode": "metalpotdirty-gold-empty"
+		},
+		"*-silver-*": {
+			"maxContainerSlotStackSize": 12,
+			"servingCapacity": 12,
+			"mealBlockCode": "metalpotdirty-silver-cooked",
+			"dirtiedBlockCode": "metalpotdirty-silver-cooked",
+			"emptiedBlockCode": "metalpotdirty-silver-empty"
+		},
+		"*-electrum-*": {
+			"maxContainerSlotStackSize": 12,
+			"servingCapacity": 12,
+			"mealBlockCode": "metalpotdirty-electrum-cooked",
+			"dirtiedBlockCode": "metalpotdirty-electrum-cooked",
+			"emptiedBlockCode": "metalpotdirty-electrum-empty"
+		},
+		"*-steel-*": {
+			"maxContainerSlotStackSize": 13,
+			"servingCapacity": 13,
+			"mealBlockCode": "metalpotdirty-steel-cooked",
+			"dirtiedBlockCode": "metalpotdirty-steel-cooked",
+			"emptiedBlockCode": "metalpotdirty-steel-empty"
+		},
+		"*-stainlesssteel-*": {
+			"maxContainerSlotStackSize": 14,
+			"servingCapacity": 14,
+			"mealBlockCode": "metalpotdirty-stainlesssteel-cooked",
+			"dirtiedBlockCode": "metalpotdirty-stainlesssteel-cooked",
+			"emptiedBlockCode": "metalpotdirty-stainlesssteel-empty"
+		}
+	},
+	"entityclassByType": {
+		"*-cooked-*": "CookedContainer"
+	},
+	"shape": {
+		"base": "game:block/clay/pot-dirty-opened-empty"
+	},
+	"doNotRenderAtLod2": true,
+	"blockmaterial": "Metal",
+	"creativeinventory": {
+		"general": ["metalpotdirty-*-empty"],
+		"decorative": ["metalpotdirty-*-empty"]
+	},
+	"replaceable": 400,
+	"resistance": 1.5,
+	"maxStackSize": 1,
+	"lightAbsorption": 0,
+	"texturesByType": {
+		"*-copper-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/copper" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/copper" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-tinbronze-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/tinbronze" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/tinbronze" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-blackbronze-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/blackbronze" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/blackbronze" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-iron-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/iron" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/iron" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-meteoriciron-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/meteoriciron" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/meteoriciron" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-gold-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/gold" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/gold" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-silver-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/silver" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/silver" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-electrum-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/electrum" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/electrum" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-steel-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/steel" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/steel" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		},
+		"*-stainlesssteel-*": {
+			"transparent": { "base": "game:block/transparent" },
+			"ceramic-dark": { "base": "game:block/metal/tarnished/tarnished-lead" },
+			"ceramic-dirty2": { "base": "game:block/metal/tarnished/tarnished-lead" },
+			"lid": { "base": "game:block/clay/lid-dirty" },
+			"lid-dirty2": { "base": "game:block/clay/lid-dirty" },
+			"liquid": { "base": "game:block/liquid/glue-cold" }
+		}
+	},
+	"sounds": { "walk": "walk/stone" },
+	"sideopaque": { "all": false },
+	"sidesolid": { "all": false },
+	"collisionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.35, "z2": 0.72 },
+	"selectionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.35, "z2": 0.72 },
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
+		"scale": 2
+	},
+	"groundTransform": {
+		"scale": 3
+	},
+	"fpHandTransform": {
+		"translation": { "x": 0, "y": 0.1, "z": 0.5 },
+		"scale": 2
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.7, "y": 0.06, "z": -0.47 },
+		"rotation": { "x": -52, "y": 20, "z": -110 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 0.76
+	}
+}

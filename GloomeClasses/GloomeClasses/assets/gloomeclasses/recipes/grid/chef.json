@@ -24,7 +24,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-copper-empty",
+			"code": "metalpot-copper-empty",
 			"quantity": 1
 		}
 	},
@@ -53,7 +53,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-tinbronze-empty",
+			"code": "metalpot-tinbronze-empty",
 			"quantity": 1
 		}
 	},
@@ -82,7 +82,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-blackbronze-empty",
+			"code": "metalpot-blackbronze-empty",
 			"quantity": 1
 		}
 	},
@@ -111,7 +111,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-iron-empty",
+			"code": "metalpot-iron-empty",
 			"quantity": 1
 		}
 	},
@@ -140,7 +140,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-iron-empty",
+			"code": "metalpot-iron-empty",
 			"quantity": 1
 		}
 	},
@@ -169,7 +169,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-gold-empty",
+			"code": "metalpot-gold-empty",
 			"quantity": 1
 		}
 	},
@@ -198,7 +198,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-silver-empty",
+			"code": "metalpot-silver-empty",
 			"quantity": 1
 		}
 	},
@@ -227,7 +227,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-electrum-empty",
+			"code": "metalpot-electrum-empty",
 			"quantity": 1
 		}
 	},
@@ -256,7 +256,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-steel-empty",
+			"code": "metalpot-steel-empty",
 			"quantity": 1
 		}
 	},
@@ -285,7 +285,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalcookingpot-stainlesssteel-empty",
+			"code": "metalpot-stainlesssteel-empty",
 			"quantity": 1
 		}
 	},
