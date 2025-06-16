@@ -54,7 +54,7 @@ namespace GloomeClasses.src {
             api.RegisterEntityBehaviorClass("EntityBehaviorDread", typeof(DreadBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorTemporalTraits", typeof(TemporalStabilityTraitBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorDragonskin", typeof(DragonskinTraitBehavior));
-
+            
             ApplyPatches();
         }
 

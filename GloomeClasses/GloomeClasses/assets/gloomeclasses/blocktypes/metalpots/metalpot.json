@@ -1,7 +1,7 @@
 {
 	"code": "metalpot",
 	"variantgroups": [
-		{ "code": "metal", "states": ["copper", "tinbronze", "blackbronze", "iron", "meteoriciron", "gold", "silver", "electrum", "steel", "stainlesssteel"] },
+		{ "code": "metal", "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "gold", "silver", "electrum", "steel", "stainlesssteel"] },
 		{ "code": "type", "states": ["empty", "cooked"] }
 	],
 	"behaviors": [
@@ -9,13 +9,12 @@
 		{ "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" }
 	],
 	"classByType": {
-		"metalpot-copper-empty": "BlockCookingContainer",
-		"metalpot-copper-cooked": "BlockCookedContainer"
+		"metalpot-*-empty": "BlockCookingContainer",
+		"metalpot-*-cooked": "BlockCookedContainer"
 	},
 	"heldTpIdleAnimation": "holdbothhands",
 	"heldTpUseAnimation": "twohandplaceblock",
 	"attributes": {
-		"tempGlowMode": 1,
 		"shelvable": true,
 		"cookingContainerSlots": 4,
 		"storageType": 1,
@@ -163,6 +162,21 @@
 		"*-tinbronze-cooked": {
 			"mealBlockcode": "gloomeclasses:metalpot-tinbronze-cooked",
 			"emptiedBlockcode": "gloomeclasses:metalpot-tinbronze-empty",
+			"servingCapacity": 8,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true,
+		},
+		"*-bismuthbronze-empty": {
+			"maxContainerSlotStackSize": 8,
+			"cookingSlotCapacityLitres": 8,
+			"servingCapacity": 8,
+			"maxServingSize": 8,
+			"mealBlockcode": "gloomeclasses:metalpot-bismuthbronze-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-bismuthbronze-cooked"
+		},
+		"*-bismuthbronze-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-bismuthbronze-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-bismuthbronze-empty",
 			"servingCapacity": 8,
 			"allowHeating": true,
 			"handleCookingContainerInteract": true,
@@ -353,6 +367,9 @@
 		},
 		"*-tinbronze-*": {
 			"ceramic": { "base": "game:block/metal/ingot/tinbronze" }
+		},
+		"*-bismuthbronze-*": {
+			"ceramic": { "base": "game:block/metal/ingot/bismuthbronze" }
 		},
 		"*-blackbronze-*": {
 			"ceramic": { "base": "game:block/metal/ingot/blackbronze" }
