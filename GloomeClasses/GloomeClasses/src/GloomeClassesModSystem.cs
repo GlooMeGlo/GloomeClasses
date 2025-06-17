@@ -28,6 +28,7 @@ namespace GloomeClasses.src {
         public const string WearableLightsPatchesCategory = "gloomeClassesWearableLightsPatchesCategory";
         public const string ToolkitPatchesCategory = "gloomeClassesToolkitFunctionalityCategory";
         public const string SilverTonguePatchesCategory = "gloomeClassesSilverTonguePatchCategory";
+        public const string SpecialStockPatchesCategory = "gloomeClassesSpecialStockPatchesCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -77,6 +78,7 @@ namespace GloomeClasses.src {
             harmony.PatchCategory(WearableLightsPatchesCategory);
             harmony.PatchCategory(ToolkitPatchesCategory);
             harmony.PatchCategory(SilverTonguePatchesCategory);
+            harmony.PatchCategory(SpecialStockPatchesCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 

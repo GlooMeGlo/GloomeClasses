@@ -1,0 +1,34 @@
+[
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/trader.json",
+		"path": "/components/20/text/-",
+		"value": { "value": "Ah! A fellow merchant, I can share my finest goods with someone who also appreciates a good deal.", "jumpTo": "opensilvertonguetrade", "condition": { "variable": "player.characterclass", "isValue": "merchant" } }
+	},
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/trader.json",
+		"path": "/components/-",
+		"value": {
+			"code": "opensilvertonguetrade",
+			"owner": "trader",
+			"trigger": "opensilvertonguetrade"
+		}
+	},
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/treasurehunter.json",
+		"path": "/components/20/text/-",
+		"value": { "value": "Ah! A fellow merchant, I can share my finest goods with someone who also appreciates a good deal.", "jumpTo": "opensilvertonguetrade", "condition": { "variable": "player.characterclass", "isValue": "merchant" } }
+	},
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/treasurehunter.json",
+		"path": "/components/-",
+		"value": {
+			"code": "opensilvertonguetrade",
+			"owner": "trader",
+			"trigger": "opensilvertonguetrade"
+		}
+	}
+]
