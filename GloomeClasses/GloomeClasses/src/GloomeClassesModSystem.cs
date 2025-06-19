@@ -29,6 +29,7 @@ namespace GloomeClasses.src {
         public const string ToolkitPatchesCategory = "gloomeClassesToolkitFunctionalityCategory";
         public const string SilverTonguePatchesCategory = "gloomeClassesSilverTonguePatchCategory";
         public const string SpecialStockPatchesCategory = "gloomeClassesSpecialStockPatchesCategory";
+        public const string ChefRosinPatchCategory = "gloomeClassesChefRosinPatchCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -79,6 +80,7 @@ namespace GloomeClasses.src {
             harmony.PatchCategory(ToolkitPatchesCategory);
             harmony.PatchCategory(SilverTonguePatchesCategory);
             harmony.PatchCategory(SpecialStockPatchesCategory);
+            harmony.PatchCategory(ChefRosinPatchCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 
