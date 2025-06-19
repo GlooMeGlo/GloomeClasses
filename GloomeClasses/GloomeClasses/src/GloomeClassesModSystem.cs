@@ -16,6 +16,7 @@ using Vintagestory.API.Common.Entities;
 using System.Numerics;
 using GloomeClasses.src.CollectibleBehaviors;
 using GloomeClasses.src.BlockBehaviors;
+using GloomeClasses.src.Smith;
 
 
 namespace GloomeClasses.src {
@@ -56,6 +57,9 @@ namespace GloomeClasses.src {
             api.RegisterEntityBehaviorClass("EntityBehaviorDread", typeof(DreadBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorTemporalTraits", typeof(TemporalStabilityTraitBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorDragonskin", typeof(DragonskinTraitBehavior));
+
+            api.RegisterBlockClass("BlockAdvBloomery", typeof(BlockAdvancedBloomery));
+            api.RegisterBlockEntityClass("BlockEntityAdvBloomery", typeof(BlockEntityAdvancedBloomery));
             
             ApplyPatches();
         }

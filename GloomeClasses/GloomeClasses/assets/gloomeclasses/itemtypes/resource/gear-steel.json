@@ -4,6 +4,9 @@
 	"shape": {
 		"base": "item/resource/steelgear"
 	},
+	"behaviors": [
+		{ "name": "HealHackedBehavior", "properties": { "healthRestored": 4, "corruptedHealer": false }}
+	],
 	"creativeinventory": {
 		"general": ["*"],
 		"items": ["*"]
