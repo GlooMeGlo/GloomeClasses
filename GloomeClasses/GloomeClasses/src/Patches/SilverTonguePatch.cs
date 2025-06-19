@@ -77,4 +77,60 @@ namespace GloomeClasses.src.Patches {
             return totalGain;
         }
     }
+
+    [HarmonyPatch(typeof(GuiDialogTrader))]
+    [HarmonyPatchCategory(GloomeClassesModSystem.SilverTonguePatchesCategory)]
+    public class SilverTongueGuiPatch {
+
+        [HarmonyTranspiler]
+        [HarmonyPatch("TraderInventory_SlotModified")]
+        public static IEnumerable<CodeInstruction> SilverTongueGuiTraderTranspiler(IEnumerable<CodeInstruction> instructions) {
+            var codes = new List<CodeInstruction>(instructions);
+
+            var adjustCostMethod = AccessTools.Method(typeof(SilverTongueGuiPatch), "AdjustSilverTongueCost", new Type[1] { typeof(int) });
+            var adjustGainMethod = AccessTools.Method(typeof(SilverTongueGuiPatch), "AdjustSilverTongueGain", new Type[1] { typeof(int) });
+            var handleSilverTongueVisuals = new List<CodeInstruction> {
+                CodeInstruction.LoadLocal(0),
+                new CodeInstruction(OpCodes.Call, adjustCostMethod),
+                CodeInstruction.StoreLocal(0),
+                CodeInstruction.LoadLocal(1),
+                new CodeInstruction(OpCodes.Call, adjustGainMethod),
+                CodeInstruction.StoreLocal(1)
+            };
+
+            codes.InsertRange(8, handleSilverTongueVisuals);
+
+            return codes.AsEnumerable();
+        }
+
+        private static int AdjustSilverTongueCost(int totalCost) {
+            if (GloomeClassesModSystem.CApi != null && GloomeClassesModSystem.CApi.Side.IsClient()) {
+                var player = GloomeClassesModSystem.CApi.World.PlayerByUid(GloomeClassesModSystem.CApi.World.Player.PlayerUID);
+                string classcode = player.Entity.WatchedAttributes.GetString("characterClass");
+                CharacterClass charclass = player.Entity.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
+                if (charclass != null && charclass.Traits.Contains("silvertongue")) {
+                    if (totalCost > 0) {
+                        totalCost -= (int)MathF.Round(totalCost * 0.25f);
+                    }
+                }
+            }
+
+            return totalCost;
+        }
+
+        private static int AdjustSilverTongueGain(int totalGain) {
+            if (GloomeClassesModSystem.CApi != null && GloomeClassesModSystem.CApi.Side.IsClient()) {
+                var player = GloomeClassesModSystem.CApi.World.PlayerByUid(GloomeClassesModSystem.CApi.World.Player.PlayerUID);
+                string classcode = player.Entity.WatchedAttributes.GetString("characterClass");
+                CharacterClass charclass = player.Entity.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
+                if (charclass != null && charclass.Traits.Contains("silvertongue")) {
+                    if (totalGain > 0) {
+                        totalGain += (int)MathF.Round(totalGain * 0.25f);
+                    }
+                }
+            }
+
+            return totalGain;
+        }
+    }
 }
