@@ -493,8 +493,7 @@
 			"logDropRate": 0.15,
 			"saplingDropRate": 3,
 			"stickDropRate": 0.5,
-			"forageDropRate": 0.5,
-			"fruitTreeSurvival": 2.0 // This might need a patch.
+			"forageDropRate": 0.5
 		}
 	},
 	//Scavenger is up on Artisan!
@@ -599,7 +598,7 @@
 	},
 	//Careless is up on Forlorn Hope Knight!
 
-	// -- Smith --
+	// -- Smith, Lumberjack --
 	{ // Burner
 		"code": "burner",
 		"type": "positive",
