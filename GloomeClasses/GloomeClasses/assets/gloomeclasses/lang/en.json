@@ -66,6 +66,8 @@
 	"block-metalpotdirty-stainlesssteel-empty": "Dirty Stainless Steel Cooking Pot",
 	"block-bloomerybaseadvanced-north": "Advanced bloomery base",
 	"block-bloomerychimneyadvanced": "Advanced bloomery chimney",
+	"block-metalbarrel-stainlesssteel": "Stainless Steel-plated Metal Barrel",
+	"block-metalbarrel-tin": "Tin-plated Metal Barrel",
 
 	"blockdesc-metalpan-copper": "A proper prospectors pan, can find minerals and has an increased chance to find nuggets",
 	"blockdesc-metalpot-copper-empty": "<font color=\"#99c9f9\"><i>Can hold 7 servings</i></font>",
