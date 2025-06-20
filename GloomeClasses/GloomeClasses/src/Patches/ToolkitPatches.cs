@@ -44,7 +44,32 @@ namespace GloomeClasses.src.Patches {
             if (repairedToolSlot.Itemstack.Attributes.HasAttribute(GloomeClassesModSystem.ToolkitRepairedAttribute)) {
                 toolMaxDurPenalty = repairedToolSlot.Itemstack.Attributes.GetFloat(GloomeClassesModSystem.ToolkitRepairedAttribute);
             }
-            toolMaxDurPenalty -= GloomeClassesModSystem.lossPerToolkitRepair;
+
+            var toolkitType = toolkitSlot.Itemstack.Collectible.Variant["type"];
+            if (toolkitType != null) {
+                switch (toolkitType) {
+                    case "basic":
+                        toolMaxDurPenalty -= GloomeClassesModSystem.lossPerBasicTkRepair;
+                        break;
+                    case "simple":
+                        toolMaxDurPenalty -= GloomeClassesModSystem.lossPerSimpleTkRepair;
+                        break;
+                    case "standard":
+                        toolMaxDurPenalty -= GloomeClassesModSystem.lossPerStandardTkRepair;
+                        break;
+                    case "advanced":
+                        toolMaxDurPenalty -= GloomeClassesModSystem.lossPerAdvancedTkRepair;
+                        break;
+                    default:
+                        GloomeClassesModSystem.Logger.Warning("Toolkit has a Type variant, but not a known one. Will default to the largest penalty.");
+                        toolMaxDurPenalty -= GloomeClassesModSystem.lossPerBasicTkRepair;
+                        break;
+                }
+            } else {
+                GloomeClassesModSystem.Logger.Error("Somehow a Toolkit lacks a 'type' variant? Could not retreive one, so defaulting to the largest durability penalty.");
+                toolMaxDurPenalty -= GloomeClassesModSystem.lossPerBasicTkRepair;
+            }
+
             outputSlot.Itemstack.Attributes.SetFloat(GloomeClassesModSystem.ToolkitRepairedAttribute, toolMaxDurPenalty);
 
             return true;

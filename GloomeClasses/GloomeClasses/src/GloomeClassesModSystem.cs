@@ -43,7 +43,10 @@ namespace GloomeClasses.src {
 
         public const string ToolkitRepairedAttribute = "toolkitRepairedLoss";
 
-        public const float lossPerToolkitRepair = 0.1f;
+        public const float lossPerBasicTkRepair = 0.2f;
+        public const float lossPerSimpleTkRepair = 0.15f;
+        public const float lossPerStandardTkRepair = 0.1f;
+        public const float lossPerAdvancedTkRepair = 0.05f;
 
         public override void StartPre(ICoreAPI api) {
             Api = api;
