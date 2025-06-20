@@ -1,22 +1,25 @@
+using GloomeClasses.src.Alchemist;
+using GloomeClasses.src.BlockBehaviors;
+using GloomeClasses.src.CollectibleBehaviors;
+using GloomeClasses.src.EntityBehaviors;
+using GloomeClasses.src.Smith;
 using HarmonyLib;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using Vintagestory;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Config;
-using Vintagestory.API.Server;
-using Vintagestory.Client.NoObf;
-using GloomeClasses.src.EntityBehaviors;
-using System;
-using Vintagestory.GameContent;
-using Vintagestory.API.MathTools;
-using System.Linq;
-using Vintagestory.API.Util;
 using Vintagestory.API.Common.Entities;
-using System.Numerics;
-using GloomeClasses.src.CollectibleBehaviors;
-using GloomeClasses.src.BlockBehaviors;
-using GloomeClasses.src.Smith;
+using Vintagestory.API.Config;
+using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
+using Vintagestory.API.Util;
+using Vintagestory.Client.NoObf;
+using Vintagestory.GameContent;
+using Vintagestory.ServerMods;
 
 
 namespace GloomeClasses.src {
@@ -63,6 +66,8 @@ namespace GloomeClasses.src {
 
             api.RegisterBlockClass("BlockAdvBloomery", typeof(BlockAdvancedBloomery));
             api.RegisterBlockEntityClass("BlockEntityAdvBloomery", typeof(BlockEntityAdvancedBloomery));
+            api.RegisterBlockClass("BlockMetalBarrel", typeof(BlockMetalBarrel));
+            api.RegisterBlockEntityClass("BlockEntityMetalBarrel", typeof(BlockEntityMetalBarrel));
             
             ApplyPatches();
         }
@@ -73,6 +78,10 @@ namespace GloomeClasses.src {
 
         public override void StartClientSide(ICoreClientAPI api) {
             CApi = api;
+        }
+
+        public override void AssetsLoaded(ICoreAPI api) {
+            
         }
 
         private static void ApplyPatches() {
