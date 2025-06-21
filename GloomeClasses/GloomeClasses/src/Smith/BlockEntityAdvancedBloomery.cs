@@ -154,13 +154,25 @@ namespace GloomeClasses.src.Smith {
                     OutStack.StackSize = 1;
                     float num2 = (float)OreStack.StackSize / (float)combustibleProps.SmeltedRatio;
                     OutStack.Attributes.SetFloat("units", num2 * 100f);
-                } else if (OreStack.Collectible.Code.Path == "stainless-steel-mix") {
-                    OutSlot.Itemstack = new ItemStack(Api.World.GetItem(new AssetLocation("ingot-stainlesssteel")));
-                    OutStack.StackSize *= num;
                 } else {
                     OutSlot.Itemstack = combustibleProps.SmeltedStack.ResolvedItemstack.Clone();
                     OutStack.StackSize *= num;
                 }
+
+                OutStack.Collectible.SetTemperature(Api.World, OutSlot.Itemstack, 900f);
+                FuelSlot.Itemstack = null;
+                OreStack.StackSize -= num * combustibleProps.SmeltedRatio;
+                if (OreSlot.StackSize == 0) {
+                    OreSlot.Itemstack = null;
+                }
+
+                burning = false;
+                burningUntilTotalDays = 0.0;
+                MarkDirty();
+            } else if (OreStack.Collectible.Code.Path == "stainless-steel-mix") {
+                int num = OreStack.StackSize / combustibleProps.SmeltedRatio;
+                OutSlot.Itemstack = new ItemStack(Api.World.GetItem(new AssetLocation("ingot-stainlesssteel")));
+                OutStack.StackSize *= num;
 
                 OutStack.Collectible.SetTemperature(Api.World, OutSlot.Itemstack, 900f);
                 FuelSlot.Itemstack = null;
