@@ -32,7 +32,7 @@
 			"*"
 		]
 	},
-	"maxstacksize": 128,
+	"maxstacksize": 160,
 	"materialDensity": 500,
 	"guiTransform": {
 		"rotate": true,

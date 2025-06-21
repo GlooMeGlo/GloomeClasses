@@ -1,0 +1,9 @@
+{
+	"code": "boraxbathgrimygear",
+	"sealHours": 24,
+	"ingredients": [
+		{ "type": "item", "code": "game:dilutedboraxportion", "litres": 1, "consumeLitres": 1 },
+		{ "type": "item", "code": "gloomeclasses:gear-grimy", "quantity": 1 }
+	],
+	"output": { "type": "item", "code": "gloomeclasses:gear-steel", "stackSize": 1 }
+}

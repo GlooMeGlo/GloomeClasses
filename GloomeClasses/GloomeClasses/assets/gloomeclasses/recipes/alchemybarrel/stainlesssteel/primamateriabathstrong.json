@@ -1,0 +1,9 @@
+{
+	"code": "primamateriabathstrong",
+	"sealHours": 19,
+	"ingredients": [
+		{ "type": "item", "code": "gloomeclasses:solutionportion-weaktemporal", "litres": 10, "consumeLitres": 10 },
+		{ "type": "item", "code": "gloomeclasses:primamateria", "quantity": 8 }
+	],
+	"output": { "type": "item", "code": "gloomeclasses:solutionportion-strongtemporal", "litres": 10 }
+}

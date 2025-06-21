@@ -1,0 +1,9 @@
+{
+	"code": "temporalbathsteelgear",
+	"sealHours": 72,
+	"ingredients": [
+		{ "type": "item", "code": "gloomeclasses:solutionportion-strongtemporal", "litres": 10, "consumeLitres": 10 },
+		{ "type": "item", "code": "gloomeclasses:gear-preptempgear", "quantity": 5 }
+	],
+	"output": { "type": "item", "code": "game:gear-temporal", "stackSize": 5 }
+}

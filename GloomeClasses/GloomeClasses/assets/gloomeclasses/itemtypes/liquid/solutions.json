@@ -1,0 +1,125 @@
+{
+	"code": "solutionportion",
+	"class": "ItemLiquidPortion",
+	"matterState": "liquid",
+	"variantgroups": [
+		{
+			"code": "solutiontype",
+			"states": [
+				"weaktemporal",
+				"strongtemporal",
+				"nitraterich",
+				"potassiumnitrate"
+			]
+		}
+	],
+	"attributes": {
+		"handbook": {
+			"ignoreCreativeInvStacks": true
+		},
+		"waterTightContainerProps": {
+			"containable": true,
+			"itemsPerLitre": 100,
+			"textureByType": {
+				"*-weaktemporal": {
+					"base": "gloomeclasses:block/liquid/weaktemporalsolution"
+				},
+				"*-strongtemporal": {
+					"base": "gloomeclasses:block/liquid/strongtemporalsolution"
+				},
+				"*-nitraterich": {
+					"base": "gloomeclasses:block/liquid/nitraterichsolution"
+				},
+				"*-potassiumnitrate": {
+					"base": "gloomeclasses:block/liquid/potassiumnitratesolution"
+				}
+			},
+			"whenSpilled": {
+				"action": "DropContents",
+				"stack": {
+					"type": "item",
+					"code": "gloomeclasses:solutionportion-{solutiontype}"
+				}
+			}
+		}
+	},
+	"shape": {
+		"base": "game:item/liquid"
+	},
+	"textureByType": {
+		"*-weaktemporal": {
+			"base": "gloomeclasses:block/liquid/weaktemporalsolution"
+		},
+		"*-strongtemporal": {
+			"base": "gloomeclasses:block/liquid/strongtemporalsolution"
+		},
+		"*-nitraterich": {
+			"base": "gloomeclasses:block/liquid/nitraterichsolution"
+		},
+		"*-potassiumnitrate": {
+			"base": "gloomeclasses:block/liquid/potassiumnitratesolution"
+		}
+	},
+	"creativeinventoryStacks": [
+		{
+			"tabs": [
+				"general",
+				"liquids"
+			],
+			"stacks": [
+				{
+					"type": "block",
+					"code": "game:woodbucket",
+					"attributes": {
+						"ucontents": [
+							{
+								"type": "item",
+								"code": "gloomeclasses:solutionportion-{solutiontype}",
+								"makefull": true
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"maxstacksize": 5000,
+	"materialDensity": 200,
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 1,
+			"z": 0
+		},
+		"rotation": {
+			"x": 123,
+			"y": -33,
+			"z": -13
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 1.4
+	},
+	"fpHandTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 25,
+			"y": 157,
+			"z": -5
+		}
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.5,
+			"y": -1,
+			"z": -1.4
+		}
+	}
+}
