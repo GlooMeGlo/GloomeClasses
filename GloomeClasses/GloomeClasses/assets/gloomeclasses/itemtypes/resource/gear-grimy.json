@@ -5,8 +5,12 @@
 		"base": "item/resource/grimygear"
 	},
 	"creativeinventory": {
-		"general": ["*"],
-		"items": ["*"]
+		"general": [
+			"*"
+		],
+		"items": [
+			"*"
+		]
 	},
 	"attributes": {
 		"displaycaseable": true,

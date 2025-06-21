@@ -22,6 +22,8 @@
 	"item-gear-grimy": "Grimy Gear",
 	"item-gear-steel": "Restored steel Gear",
 	"item-gear-preptempgear": "Prepared temporal Gear",
+	"item-nitraterichsoil": "Nitrate-rich soil",
+	"item-calciumrichsoil": "Calcium-rich soil",
 
 	"itemdesc-primamateria": "<font color=\"#99c9f9\"><i>The gear was merely a vessel. This is the truth it contained.</i></font><br>",
 	"itemdesc-tools-basic": "<font color=\"#ff0000\">Too weak to repair plate armors</font>",
