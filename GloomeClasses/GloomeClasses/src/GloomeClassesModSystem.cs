@@ -34,6 +34,7 @@ namespace GloomeClasses.src {
         public const string SilverTonguePatchesCategory = "gloomeClassesSilverTonguePatchCategory";
         public const string SpecialStockPatchesCategory = "gloomeClassesSpecialStockPatchesCategory";
         public const string ChefRosinPatchCategory = "gloomeClassesChefRosinPatchCategory";
+        public const string BlockSchematicPatchCategory = "gloomeClassesBlockSchematicPatchCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -59,7 +60,10 @@ namespace GloomeClasses.src {
 
         public override void Start(ICoreAPI api) {
             api.RegisterCollectibleBehaviorClass("HealHackedBehavior", typeof(HealHackedLocustsBehavior));
+            api.RegisterCollectibleBehaviorClass("ClairvoyanceBehavior", typeof(ClairvoyanceBehavior));
             api.RegisterBlockBehaviorClass("UnlikelyHarvestBehavior", typeof(UnlikelyHarvestBlockBehavior));
+            api.RegisterBlockEntityBehaviorClass("TranslocatorPOIBehavior", typeof(TranslocatorTrackerBlockEntityBehavior));
+
             api.RegisterEntityBehaviorClass("EntityBehaviorDread", typeof(DreadBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorTemporalTraits", typeof(TemporalStabilityTraitBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorDragonskin", typeof(DragonskinTraitBehavior));
@@ -68,7 +72,8 @@ namespace GloomeClasses.src {
             api.RegisterBlockEntityClass("BlockEntityAdvBloomery", typeof(BlockEntityAdvancedBloomery));
             api.RegisterBlockClass("BlockMetalBarrel", typeof(BlockMetalBarrel));
             api.RegisterBlockEntityClass("BlockEntityMetalBarrel", typeof(BlockEntityMetalBarrel));
-            
+            api.RegisterBlockEntityClass("POITrackerDummyBlockEntity", typeof(POITrackerDummyBlockEntity));
+
             ApplyPatches();
         }
 
@@ -97,6 +102,7 @@ namespace GloomeClasses.src {
             harmony.PatchCategory(SilverTonguePatchesCategory);
             harmony.PatchCategory(SpecialStockPatchesCategory);
             harmony.PatchCategory(ChefRosinPatchCategory);
+            harmony.PatchCategory(BlockSchematicPatchCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 

@@ -132,5 +132,12 @@
 
 	"game:item-creature-locust-corrupt-sawblade-hacked": "Hacked Sawblade Locust",
 	"game:block-anvilpart-base-steel": "Anvil base (Steel)",
-	"game:block-anvilpart-top-steel": "Anvil top (Steel)"
+	"game:block-anvilpart-top-steel": "Anvil top (Steel)",
+
+	"game:divinationlongresult": "There is a Translocator nearing the edge of your divination...",
+	"game:divinationmidresult": "The divination seems a little clear, a Translocator is around but still a way off.",
+	"game:divinationcloseresult": "The vision is pretty clear, a Translocator is close!",
+	"game:divinationnearresult": "You feel it resonating very close, a Translocator has to be nearby!",
+	"game:divinationnoresult": "You cannot divine any Translocator around here.",
+	"game:divinationnocharge": "This skull is lacking enough temporal charge for a divination right now."
 }
