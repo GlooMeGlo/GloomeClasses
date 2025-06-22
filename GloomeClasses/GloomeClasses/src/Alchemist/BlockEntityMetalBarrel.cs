@@ -26,7 +26,7 @@ namespace GloomeClasses.src.Alchemist {
         private bool OpenedByTT;
         protected string Type;
 
-        public int CapacityLitres { get; set; } = 50;
+        public int CapacityLitres { get; set; } = 60;
 
 
         public override string InventoryClassName => "metalbarrel";
