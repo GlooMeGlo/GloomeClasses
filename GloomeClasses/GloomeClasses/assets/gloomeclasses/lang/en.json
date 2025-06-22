@@ -166,6 +166,6 @@
 	"game:divinationnoresult": "You cannot divine any Translocator around here.",
 	"game:divinationnocharge": "This skull is lacking enough temporal charge for a divination right now.",
 	
-	"game:craftinginfo-temptransmutation-title": "GlooMeClasses: Temporal Transmutation",
-	"game:craftinginfo-transmutation-text": "<strong>Temporal Transmutation</strong><br><br>Temporal transmutation is a fairly lengthy process only meant to be started after one has acquired a means of reliable steel production. Once you have done so, make at least one <a href=\"handbook://block-gloomeclasses:metalbarrel-stainlesssteel\">Stainless Steel-plated Metal Barrel</a>. More will be exceedingly helpful, but aren't necessary for starting out. You will need more materials as stated below, that are highly recommended to be prepared ahead of time.<br><br><strong>Step 1</strong> - "
+	"craftinginfo-temptransmutation-title": "GlooMeClasses: Temporal Transmutation",
+	"craftinginfo-temptransmutation-text": "<strong>Temporal Transmutation</strong><br><br>Temporal transmutation is a fairly lengthy process only meant to be started after one has acquired a means of reliable steel production. Once you have done so, make at least one <a href=\"handbook://block-gloomeclasses:metalbarrel-stainlesssteel\">Stainless Steel-plated Metal Barrel</a>. More will be exceedingly helpful, but aren't necessary for starting out. You will need more materials as stated below, that are highly recommended to be prepared ahead of time.<br><br><strong>Step 1</strong> - "
 }
