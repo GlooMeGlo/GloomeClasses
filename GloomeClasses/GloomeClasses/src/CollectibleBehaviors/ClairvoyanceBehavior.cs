@@ -69,9 +69,9 @@ namespace GloomeClasses.src.CollectibleBehaviors {
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandling handling) {
             if (divining && secondsUsed >= timeToDivine - 0.1) { //If they were crafting, verify that the countdown is up, and if so, craft it (if there still is a valid offhand handle!)
                 handling = EnumHandling.PreventDefault;
-                if (byEntity.World.Side.IsServer()) {
+                //if (byEntity.World.Side.IsServer()) {
                     DivineTranslocator(slot, byEntity);
-                }
+                //}
                 divining = false;
                 return;
             } else if (!divining && secondsUsed >= timeToDivine - 0.1 && !byEntity.LeftHandItemSlot.Empty && byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path == "gear-temporal") {
@@ -90,9 +90,9 @@ namespace GloomeClasses.src.CollectibleBehaviors {
         public override bool OnHeldInteractCancel(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, EnumItemUseCancelReason cancelReason, ref EnumHandling handled) {
             if (divining && secondsUsed >= timeToDivine - 0.1) {
                 handled = EnumHandling.PreventSubsequent;
-                if (byEntity.World.Side.IsServer()) {
+                //if (byEntity.World.Side.IsServer()) {
                     DivineTranslocator(slot, byEntity);
-                }
+                //}
             } else if (!divining && secondsUsed >= timeToDivine - 0.1 && !byEntity.LeftHandItemSlot.Empty && byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path == "gear-temporal") {
                 handled = EnumHandling.PreventDefault;
                 if (byEntity.World.Side.IsServer()) {

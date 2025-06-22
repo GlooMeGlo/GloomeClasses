@@ -23,7 +23,7 @@ namespace GloomeClasses.src.BlockBehaviors {
         public override void Initialize(ICoreAPI api, JsonObject properties) {
             base.Initialize(api, properties);
 
-            GloomeClassesModSystem.Logger.Warning("Translocator initialized with Tracking behavior! Loc: " + Pos);
+            //GloomeClassesModSystem.Logger.Warning("Translocator initialized with Tracking behavior! Loc: " + Pos);
             if (poi == null) {
                 poi = new GenericPOI(Pos.ToVec3d(), "translocator");
                 api.ModLoader.GetModSystem<POIRegistry>().AddPOI(poi);
@@ -31,7 +31,7 @@ namespace GloomeClasses.src.BlockBehaviors {
         }
 
         public override void OnPlacementBySchematic(ICoreServerAPI api, IBlockAccessor blockAccessor, BlockPos pos, Dictionary<int, Dictionary<int, int>> replaceBlocks, int centerrockblockid, Block layerBlock, bool resolveImports) {
-            GloomeClassesModSystem.Logger.Warning("Translocator initialized with Tracking behavior! Loc: " + Pos);
+            //GloomeClassesModSystem.Logger.Warning("Translocator initialized with Tracking behavior! Loc: " + Pos);
             if (poi == null) {
                 poi = new GenericPOI(Pos.ToVec3d(), "translocator");
                 api.ModLoader.GetModSystem<POIRegistry>().AddPOI(poi);
@@ -39,7 +39,7 @@ namespace GloomeClasses.src.BlockBehaviors {
         }
 
         public override void OnBlockPlaced(ItemStack byItemStack = null) {
-            GloomeClassesModSystem.Logger.Warning("Translocator initialized with Tracking behavior! Loc: " + Pos);
+            //GloomeClassesModSystem.Logger.Warning("Translocator initialized with Tracking behavior! Loc: " + Pos);
             if (poi == null) {
                 poi = new GenericPOI(Pos.ToVec3d(), "translocator");
                 Api.ModLoader.GetModSystem<POIRegistry>().AddPOI(poi);

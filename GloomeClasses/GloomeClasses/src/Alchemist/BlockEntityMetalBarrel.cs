@@ -38,9 +38,6 @@ namespace GloomeClasses.src.Alchemist {
                 if (CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) {
                     return true;
                 }
-                if (CurrentAlcRecipe != null && CurrentAlcRecipe.SealHours > 0.0) {
-                    return true;
-                }
 
                 return false;
             }
@@ -55,7 +52,7 @@ namespace GloomeClasses.src.Alchemist {
         }
 
         private float Inventory_OnAcquireTransitionSpeed1(EnumTransitionType transType, ItemStack stack, float mul) {
-            if (Sealed && ((CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) || (CurrentAlcRecipe != null && CurrentAlcRecipe.SealHours > 0.0))) {
+            if (Sealed && CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) {
                 return 0f;
             }
 
@@ -174,6 +171,7 @@ namespace GloomeClasses.src.Alchemist {
                     ignoreChange = true;
                     if (recipe.SealHours > 0.0) {
                         CurrentAlcRecipe = recipe;
+                        CurrentRecipe = recipe;
                         CurrentOutSize = outputStackSize;
                     } else {
                         ICoreAPI api = Api;
@@ -202,7 +200,7 @@ namespace GloomeClasses.src.Alchemist {
                 FindMatchingRecipe();
             }
 
-            if (CurrentRecipe != null) {
+            if (CurrentRecipe != null && CurrentAlcRecipe == null) {
                 if (Sealed && CurrentRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
                 {
                 inventory[0],

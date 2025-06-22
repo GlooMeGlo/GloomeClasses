@@ -2,18 +2,18 @@
 	{
 		"op": "addmerge",
 		"path": "/entityClassByType/*-broken-*",
-		"value": "StaticTranslocator",
+		"value": "POITrackerDummyBlockEntity",
 		"file": "game:blocktypes/machine/statictranslocator.json"
 	},
 	{
 		"op": "addmerge",
-		"path": "/entityBehaviorsByType/*",
+		"path": "/entityBehaviorsByType/*-broken-*",
 		"value": [],
 		"file": "game:blocktypes/machine/statictranslocator.json"
 	},
 	{
 		"op": "addmerge",
-		"path": "/entityBehaviorsByType/*/-",
+		"path": "/entityBehaviorsByType/*-broken-*/-",
 		"value": { "name": "TranslocatorPOIBehavior" },
 		"file": "game:blocktypes/machine/statictranslocator.json"
 	},

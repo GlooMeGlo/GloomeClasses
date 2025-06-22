@@ -10,7 +10,7 @@ namespace GloomeClasses.src.BlockBehaviors {
     public class POITrackerDummyBlockEntity : BlockEntity {
 
         public override void Initialize(ICoreAPI api) {
-            GloomeClassesModSystem.Logger.Warning("A POITrackerDummyBlockEntity has been Initialized! Hello!");
+            //GloomeClassesModSystem.Logger.Warning("A POITrackerDummyBlockEntity has been Initialized! Hello!");
             base.Initialize(api);
         }
     }

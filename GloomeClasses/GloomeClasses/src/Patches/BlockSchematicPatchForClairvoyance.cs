@@ -59,15 +59,15 @@ namespace GloomeClasses.src.Patches {
         }
 
         public static void TestAndInitTranslocatorBE(IBlockAccessor blockAccess, IWorldAccessor world, BlockPos curPos, AssetLocation blockCode) {
-            GloomeClassesModSystem.Logger.Warning("Spawning a " + blockCode);
+            //GloomeClassesModSystem.Logger.Warning("Spawning a " + blockCode);
             if (blockAccess is IWorldGenBlockAccessor && blockCode.Path.Contains("statictranslocator-broken-")) {
-                GloomeClassesModSystem.Logger.Warning("Found a broken translocator being placed in a Schematic!");
+                //GloomeClassesModSystem.Logger.Warning("Found a broken translocator being placed in a Schematic!");
                 var block = blockAccess.GetBlock(curPos);
                 if (block != null && block.EntityClass != null) {
-                    GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + block.EntityClass);
+                    //GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + block.EntityClass);
                     blockAccess.SpawnBlockEntity(block.EntityClass, curPos);
                     var be = blockAccess.GetBlockEntity(curPos);
-                    be.Initialize(world.Api);
+                    be.OnPlacementBySchematic(world.Api as ICoreServerAPI, blockAccess, curPos, new Dictionary<int, Dictionary<int, int>>(), 0, null, true);
                 }
             }
         }
@@ -146,15 +146,15 @@ namespace GloomeClasses.src.Patches {
         }
 
         public static void TestAndInitTranslocatorBEFromBlock(IBlockAccessor blockAccess, IWorldAccessor world, BlockPos curPos, Block block) {
-            GloomeClassesModSystem.Logger.Warning("Spawning a " + block.Code);
+            //GloomeClassesModSystem.Logger.Warning("Spawning a " + block.Code);
             if (blockAccess is IWorldGenBlockAccessor && block.Code.Path.Contains("statictranslocator-broken-")) {
-                GloomeClassesModSystem.Logger.Warning("Found a broken translocator being placed in a Schematic!");
+                //GloomeClassesModSystem.Logger.Warning("Found a broken translocator being placed in a Schematic!");
                 var existingBlock = blockAccess.GetBlock(curPos);
                 if (existingBlock != null && existingBlock.EntityClass != null) {
-                    GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + existingBlock.EntityClass);
+                    //GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + existingBlock.EntityClass);
                     blockAccess.SpawnBlockEntity(existingBlock.EntityClass, curPos);
                     var be = blockAccess.GetBlockEntity(curPos);
-                    be.Initialize(world.Api);
+                    be.OnPlacementBySchematic(world.Api as ICoreServerAPI, blockAccess, curPos, new Dictionary<int, Dictionary<int, int>>(), 0, null, true);
                 }
             }
         }
