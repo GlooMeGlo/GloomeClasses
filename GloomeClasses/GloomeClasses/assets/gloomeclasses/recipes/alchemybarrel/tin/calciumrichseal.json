@@ -1,0 +1,8 @@
+{
+	"code": "calciumrichseal",
+	"sealHours": 168,
+	"ingredients": [
+		{ "type": "item", "code": "gloomeclasses:calciumrichsoil", "quantity": 1 }
+	],
+	"output": { "type": "item", "code": "gloomeclasses:nitraterichsoil", "stackSize": 1 }
+}
