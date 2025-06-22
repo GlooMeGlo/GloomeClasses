@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GloomeClasses.src.Alchemist;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,18 +13,18 @@ namespace GloomeClasses.src {
 
     public class GloomeClassesRecipeRegistry : ModSystem {
 
-        public List<BarrelRecipe> AlchemistSteelBarrelRecipes = new List<BarrelRecipe>();
-        public List<BarrelRecipe> AlchemistTinBarrelRecipes = new List<BarrelRecipe>();
-        public List<BarrelRecipe> AlchemistBarrelRecipes = new List<BarrelRecipe>();
+        public List<BarrelRecipeWithAdditionalLiquidOut> AlchemistSteelBarrelRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
+        public List<BarrelRecipeWithAdditionalLiquidOut> AlchemistTinBarrelRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
+        public List<BarrelRecipeWithAdditionalLiquidOut> AlchemistBarrelRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
 
         public override double ExecuteOrder() {
             return 0.6;
         }
 
         public override void Start(ICoreAPI api) {
-            AlchemistSteelBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipe>>("alcsteelbarrelrecipes").Recipes;
-            AlchemistTinBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipe>>("alctinbarrelrecipes").Recipes;
-            AlchemistBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipe>>("alcbarrelrecipes").Recipes;
+            AlchemistSteelBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipeWithAdditionalLiquidOut>>("alcsteelbarrelrecipes").Recipes;
+            AlchemistTinBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipeWithAdditionalLiquidOut>>("alctinbarrelrecipes").Recipes;
+            AlchemistBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipeWithAdditionalLiquidOut>>("alcbarrelrecipes").Recipes;
         }
 
         public override void AssetsLoaded(ICoreAPI api) {
@@ -33,8 +34,8 @@ namespace GloomeClasses.src {
 
             ICoreServerAPI sapi = api as ICoreServerAPI;
             if (sapi != null) {
-                Dictionary<AssetLocation, BarrelRecipe> many = sapi.Assets.GetMany<BarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/stainlesssteel");
-                foreach (KeyValuePair<AssetLocation, BarrelRecipe> item in many) {
+                Dictionary<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> many = sapi.Assets.GetMany<BarrelRecipeWithAdditionalLiquidOut>(sapi.Server.Logger, "recipes/alchemybarrel/stainlesssteel");
+                foreach (KeyValuePair<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> item in many) {
                     if (item.Value.Enabled) {
                         item.Value.Resolve(api.World, "stainlesssteel barrel recipe " + item.Key);
                         RegisterStainlessSteelBarrelRecipe(item.Value);
@@ -42,8 +43,8 @@ namespace GloomeClasses.src {
                 }
 
                 many.Clear();
-                many = sapi.Assets.GetMany<BarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/tin");
-                foreach (KeyValuePair<AssetLocation, BarrelRecipe> item in many) {
+                many = sapi.Assets.GetMany<BarrelRecipeWithAdditionalLiquidOut>(sapi.Server.Logger, "recipes/alchemybarrel/tin");
+                foreach (KeyValuePair<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> item in many) {
                     if (item.Value.Enabled) {
                         item.Value.Resolve(api.World, "tin barrel recipe " + item.Key);
                         RegisterTinBarrelRecipe(item.Value);
@@ -51,8 +52,8 @@ namespace GloomeClasses.src {
                 }
 
                 many.Clear();
-                many = sapi.Assets.GetMany<BarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/any");
-                foreach (KeyValuePair<AssetLocation, BarrelRecipe> item in many) {
+                many = sapi.Assets.GetMany<BarrelRecipeWithAdditionalLiquidOut>(sapi.Server.Logger, "recipes/alchemybarrel/any");
+                foreach (KeyValuePair<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> item in many) {
                     if (item.Value.Enabled) {
                         item.Value.Resolve(api.World, "any alchemist barrel recipe " + item.Key);
                         RegisterAlchemistBarrelRecipe(item.Value);
@@ -61,7 +62,7 @@ namespace GloomeClasses.src {
             }
         }
 
-        protected void RegisterStainlessSteelBarrelRecipe(BarrelRecipe recipe) {
+        protected void RegisterStainlessSteelBarrelRecipe(BarrelRecipeWithAdditionalLiquidOut recipe) {
             if (recipe.Code == null) {
                 throw new ArgumentException("Barrel recipes must have a non-null code! (choose freely)");
             }
@@ -76,7 +77,7 @@ namespace GloomeClasses.src {
             AlchemistSteelBarrelRecipes.Add(recipe);
         }
 
-        protected void RegisterTinBarrelRecipe(BarrelRecipe recipe) {
+        protected void RegisterTinBarrelRecipe(BarrelRecipeWithAdditionalLiquidOut recipe) {
             if (recipe.Code == null) {
                 throw new ArgumentException("Barrel recipes must have a non-null code! (choose freely)");
             }
@@ -91,7 +92,7 @@ namespace GloomeClasses.src {
             AlchemistTinBarrelRecipes.Add(recipe);
         }
 
-        protected void RegisterAlchemistBarrelRecipe(BarrelRecipe recipe) {
+        protected void RegisterAlchemistBarrelRecipe(BarrelRecipeWithAdditionalLiquidOut recipe) {
             if (recipe.Code == null) {
                 throw new ArgumentException("Barrel recipes must have a non-null code! (choose freely)");
             }

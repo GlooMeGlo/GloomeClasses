@@ -28,10 +28,16 @@ namespace GloomeClasses.src.Patches {
             var codes = new List<CodeInstruction>(instructions);
 
             int indexOfPlaceIncrement = -1;
+            int stloc1Count = 0;
 
             for (int i = 0; i < codes.Count; i++) {
                 if (codes[i].opcode == OpCodes.Stloc_1) {
-                    indexOfPlaceIncrement = i + 1;
+                    if (stloc1Count < 1) {
+                        stloc1Count++;
+                    } else if (stloc1Count >= 1) {
+                        indexOfPlaceIncrement = i + 1;
+                        break;
+                    }
                 }
             }
 
@@ -64,6 +70,45 @@ namespace GloomeClasses.src.Patches {
                     be.Initialize(world.Api);
                 }
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(BlockSchematicStructure))]
+    [HarmonyPatchCategory(GloomeClassesModSystem.BlockSchematicPatchCategory)]
+    public class BlockSchematicStructurePatchesForClairvoyance {
+
+        [HarmonyTranspiler]
+        [HarmonyPatch(nameof(BlockSchematicStructure.PlaceReplacingBlocks))]
+        public static IEnumerable<CodeInstruction> PlaceReplacingBlocksTranspiler(IEnumerable<CodeInstruction> instructions) {
+            var codes = new List<CodeInstruction>(instructions);
+
+            int indexOfPlaceIncrement = -1;
+            int stloc1Count = 0;
+
+            for (int i = 0; i < codes.Count; i++) {
+                if (codes[i].opcode == OpCodes.Stloc_1) {
+                    if (stloc1Count < 1) {
+                        stloc1Count++;
+                    } else if (stloc1Count >= 2) {
+                        indexOfPlaceIncrement = i + 1;
+                        break;
+                    }
+                }
+            }
+
+
+
+            return codes.AsEnumerable();
+        }
+
+        [HarmonyTranspiler]
+        [HarmonyPatch(nameof(BlockSchematicStructure.PlaceRespectingBlockLayers))]
+        public static IEnumerable<CodeInstruction> PlaceRespectingBlockLayersTranspiler(IEnumerable<CodeInstruction> instructions) {
+            var codes = new List<CodeInstruction>(instructions);
+
+
+
+            return codes.AsEnumerable();
         }
     }
 }

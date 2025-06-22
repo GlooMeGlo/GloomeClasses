@@ -26,7 +26,7 @@
 	"attributes": {
 		"reinforcable": true,
 		"partialAttachable": true,
-		"capacityLitres": 50,
+		"capacityLitres": 60,
 		"emptyShape": "gloomeclasses:block/metal/barrel/empty",
 		"sealedShape": "gloomeclasses:block/metal/barrel/closed",
 		"contentsShape": "gloomeclasses:block/metal/barrel/contents",

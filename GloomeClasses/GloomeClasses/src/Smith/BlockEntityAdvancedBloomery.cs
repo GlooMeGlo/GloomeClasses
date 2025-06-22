@@ -170,13 +170,13 @@ namespace GloomeClasses.src.Smith {
                 burningUntilTotalDays = 0.0;
                 MarkDirty();
             } else if (OreStack.Collectible.Code.Path == "stainless-steel-mix") {
-                int num = OreStack.StackSize / combustibleProps.SmeltedRatio;
+                int num = OreStack.StackSize / Ore2FuelRatio;
                 OutSlot.Itemstack = new ItemStack(Api.World.GetItem(new AssetLocation("ingot-stainlesssteel")));
                 OutStack.StackSize *= num;
 
                 OutStack.Collectible.SetTemperature(Api.World, OutSlot.Itemstack, 900f);
                 FuelSlot.Itemstack = null;
-                OreStack.StackSize -= num * combustibleProps.SmeltedRatio;
+                OreStack.StackSize -= num * Ore2FuelRatio;
                 if (OreSlot.StackSize == 0) {
                     OreSlot.Itemstack = null;
                 }
