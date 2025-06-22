@@ -107,8 +107,8 @@ namespace GloomeClasses.src {
             AlchemistBarrelRecipes.Add(recipe);
         }
 
-        public List<BarrelRecipe> GetAlchemistBarrelRecipes(string type) {
-            var retList = new List<BarrelRecipe>();
+        public List<BarrelRecipeWithAdditionalLiquidOut> GetAlchemistBarrelRecipes(string type) {
+            var retList = new List<BarrelRecipeWithAdditionalLiquidOut>();
             retList.AddRange(AlchemistBarrelRecipes);
 
             if (type == "stainlesssteel") {

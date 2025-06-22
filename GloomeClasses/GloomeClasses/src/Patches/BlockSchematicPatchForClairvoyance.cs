@@ -52,7 +52,7 @@ namespace GloomeClasses.src.Patches {
             if (indexOfPlaceIncrement > -1) {
                 codes.InsertRange(indexOfPlaceIncrement, injectCallToTestForAndInitTranslocatorBE);
             } else {
-                GloomeClassesModSystem.Logger.Error("Could not locate the incrementing of 'placed' in BlockSchematic to inject after. Translocators placed by Schematics will not have BEs, and Clairvoyant will not function.");
+                GloomeClassesModSystem.Logger.Error("Could not locate the incrementing of 'placed' in BlockSchematic.Place to inject after. Some Translocators placed by Schematics will not have BEs, and Clairvoyant will not fully function.");
             }
 
             return codes.AsEnumerable();
@@ -89,14 +89,26 @@ namespace GloomeClasses.src.Patches {
                 if (codes[i].opcode == OpCodes.Stloc_1) {
                     if (stloc1Count < 1) {
                         stloc1Count++;
-                    } else if (stloc1Count >= 2) {
+                    } else if (stloc1Count >= 1) {
                         indexOfPlaceIncrement = i + 1;
                         break;
                     }
                 }
             }
 
+            var injectCallToTestForAndInitTranslocatorBE = new List<CodeInstruction> {
+                CodeInstruction.LoadArgument(1),
+                CodeInstruction.LoadArgument(2),
+                CodeInstruction.LoadLocal(0),
+                CodeInstruction.LoadLocal(13),
+                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicPatchForClairvoyance), "TestAndInitTranslocatorBE", new Type[4] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(AssetLocation) }))
+            };
 
+            if (indexOfPlaceIncrement > -1) {
+                codes.InsertRange(indexOfPlaceIncrement, injectCallToTestForAndInitTranslocatorBE);
+            } else {
+                GloomeClassesModSystem.Logger.Error("Could not locate the incrementing of 'placed' in BlockSchematicStructure.PlaceReplacingBlocks to inject after. Some Translocators placed by Schematics will not have BEs, and Clairvoyant will not fully function.");
+            }
 
             return codes.AsEnumerable();
         }
