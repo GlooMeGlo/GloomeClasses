@@ -118,9 +118,45 @@ namespace GloomeClasses.src.Patches {
         public static IEnumerable<CodeInstruction> PlaceRespectingBlockLayersTranspiler(IEnumerable<CodeInstruction> instructions) {
             var codes = new List<CodeInstruction>(instructions);
 
+            int indexOfPlaceIncrement = -1;
+            var field = CodeInstruction.LoadField(typeof(BlockSchematicStructure), "handler");
 
+            for (int i = 0; i < codes.Count; i++) {
+                if (codes[i].opcode == OpCodes.Ldfld && codes[i].operand == field.operand) {
+                    indexOfPlaceIncrement = i + 7;
+                    break;
+                }
+            }
+
+            var injectCallToTestForAndInitTranslocatorBE = new List<CodeInstruction> {
+                CodeInstruction.LoadArgument(1),
+                CodeInstruction.LoadArgument(2),
+                CodeInstruction.LoadLocal(0),
+                CodeInstruction.LoadLocal(20),
+                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicStructurePatchesForClairvoyance), "TestAndInitTranslocatorBEFromBlock", new Type[4] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(Block) }))
+            };
+
+            if (indexOfPlaceIncrement > -1) {
+                codes.InsertRange(indexOfPlaceIncrement, injectCallToTestForAndInitTranslocatorBE);
+            } else {
+                GloomeClassesModSystem.Logger.Error("Could not locate the creation of 'p' in BlockSchematicStructure.PlaceRespectingBlockLayers to inject after. Some Translocators placed by Schematics will not have BEs, and Clairvoyant will not fully function.");
+            }
 
             return codes.AsEnumerable();
+        }
+
+        public static void TestAndInitTranslocatorBEFromBlock(IBlockAccessor blockAccess, IWorldAccessor world, BlockPos curPos, Block block) {
+            GloomeClassesModSystem.Logger.Warning("Spawning a " + block.Code);
+            if (blockAccess is IWorldGenBlockAccessor && block.Code.Path.Contains("statictranslocator-broken-")) {
+                GloomeClassesModSystem.Logger.Warning("Found a broken translocator being placed in a Schematic!");
+                var existingBlock = blockAccess.GetBlock(curPos);
+                if (existingBlock != null && existingBlock.EntityClass != null) {
+                    GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + existingBlock.EntityClass);
+                    blockAccess.SpawnBlockEntity(existingBlock.EntityClass, curPos);
+                    var be = blockAccess.GetBlockEntity(curPos);
+                    be.Initialize(world.Api);
+                }
+            }
         }
     }
 }

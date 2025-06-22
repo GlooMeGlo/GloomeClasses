@@ -21,6 +21,7 @@ namespace GloomeClasses.src.Alchemist {
         private bool SealedByTT;
         public double SealedSinceTotalHours;
         public BarrelRecipe CurrentRecipe;
+        public BarrelRecipeWithAdditionalLiquidOut CurrentAlcRecipe;
         public int CurrentOutSize;
         private bool ignoreChange;
         private bool OpenedByTT;
@@ -37,6 +38,9 @@ namespace GloomeClasses.src.Alchemist {
                 if (CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) {
                     return true;
                 }
+                if (CurrentAlcRecipe != null && CurrentAlcRecipe.SealHours > 0.0) {
+                    return true;
+                }
 
                 return false;
             }
@@ -51,7 +55,7 @@ namespace GloomeClasses.src.Alchemist {
         }
 
         private float Inventory_OnAcquireTransitionSpeed1(EnumTransitionType transType, ItemStack stack, float mul) {
-            if (Sealed && CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) {
+            if (Sealed && ((CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) || (CurrentAlcRecipe != null && CurrentAlcRecipe.SealHours > 0.0))) {
                 return 0f;
             }
 
@@ -119,23 +123,20 @@ namespace GloomeClasses.src.Alchemist {
                 inventory[1]
             };
             CurrentRecipe = null;
+            CurrentAlcRecipe = null;
 
             var recipes = new List<BarrelRecipe>();
+            var alcRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
             recipes.Clear();
             recipes.AddRange(Api.GetBarrelRecipes());
             if (OpenedByTT || SealedByTT) {
                 var glooRecipeLoader = Api.ModLoader.GetModSystem<GloomeClassesRecipeRegistry>();
                 if (glooRecipeLoader != null) {
-                    recipes.AddRange(glooRecipeLoader.GetAlchemistBarrelRecipes(Type));
+                    alcRecipes.AddRange(glooRecipeLoader.GetAlchemistBarrelRecipes(Type));
                 }
             }
 
-            foreach (BarrelRecipe rec in recipes) {
-                var recipe = rec;
-                if (rec is BarrelRecipeWithAdditionalLiquidOut) {
-                    recipe = rec as BarrelRecipeWithAdditionalLiquidOut;
-                }
-
+            foreach (BarrelRecipe recipe in recipes) {
                 if (!recipe.Matches(array, out var outputStackSize)) {
                     continue;
                 }
@@ -163,19 +164,57 @@ namespace GloomeClasses.src.Alchemist {
                 ignoreChange = false;
                 break;
             }
+
+            if (CurrentRecipe == null && alcRecipes.Count > 0) {
+                foreach (BarrelRecipeWithAdditionalLiquidOut recipe in alcRecipes) {
+                    if (!recipe.Matches(array, out var outputStackSize)) {
+                        continue;
+                    }
+
+                    ignoreChange = true;
+                    if (recipe.SealHours > 0.0) {
+                        CurrentAlcRecipe = recipe;
+                        CurrentOutSize = outputStackSize;
+                    } else {
+                        ICoreAPI api = Api;
+                        if (api != null && api.Side == EnumAppSide.Server) {
+                            recipe.TryCraftNow(Api, 0.0, array);
+                            MarkDirty(redrawOnClient: true);
+                            Api.World.BlockAccessor.MarkBlockEntityDirty(Pos);
+                        }
+                    }
+
+                    invDialog?.UpdateContents();
+                    ICoreAPI api2 = Api;
+                    if (api2 != null && api2.Side == EnumAppSide.Client) {
+                        currentMesh = GenMesh();
+                        MarkDirty(redrawOnClient: true);
+                    }
+
+                    ignoreChange = false;
+                    break;
+                }
+            }
         }
 
         private void OnEvery3Second(float dt) {
-            if (!inventory[0].Empty && CurrentRecipe == null) {
+            if (!inventory[0].Empty && CurrentRecipe == null && CurrentAlcRecipe == null) {
                 FindMatchingRecipe();
             }
 
             if (CurrentRecipe != null) {
-                var recipe = CurrentRecipe;
-                if (CurrentRecipe is BarrelRecipeWithAdditionalLiquidOut) {
-                    recipe = CurrentRecipe as BarrelRecipeWithAdditionalLiquidOut;
+                if (Sealed && CurrentRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
+                {
+                inventory[0],
+                inventory[1]
+                })) {
+                    MarkDirty(redrawOnClient: true);
+                    Api.World.BlockAccessor.MarkBlockEntityDirty(Pos);
+                    Sealed = false;
+                    SealedByTT = false;
                 }
-                if (Sealed && recipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
+            } else if (CurrentAlcRecipe != null) {
+                if (Sealed && CurrentAlcRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
                 {
                 inventory[0],
                 inventory[1]
