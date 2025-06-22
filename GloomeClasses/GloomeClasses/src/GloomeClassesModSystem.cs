@@ -1,5 +1,6 @@
 using GloomeClasses.src.Alchemist;
 using GloomeClasses.src.BlockBehaviors;
+using GloomeClasses.src.Chef;
 using GloomeClasses.src.CollectibleBehaviors;
 using GloomeClasses.src.EntityBehaviors;
 using GloomeClasses.src.Smith;
@@ -74,6 +75,7 @@ namespace GloomeClasses.src {
             api.RegisterBlockClass("BlockMetalBarrel", typeof(BlockMetalBarrel));
             api.RegisterBlockEntityClass("BlockEntityMetalBarrel", typeof(BlockEntityMetalBarrel));
             api.RegisterBlockEntityClass("POITrackerDummyBlockEntity", typeof(POITrackerDummyBlockEntity));
+            api.RegisterBlockClass("BlockRefurbishedCrock", typeof(BlockRefurbishedCrock));
 
             ApplyPatches();
         }
