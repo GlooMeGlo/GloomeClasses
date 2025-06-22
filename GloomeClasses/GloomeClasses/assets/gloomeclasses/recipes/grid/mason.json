@@ -365,7 +365,7 @@
 			"I": {
 				"type": "block",
 				"code": "game:ingotmold-burned",
-				"quantity": 6
+				"quantity": 8
 			}
 		},
 		"width": 3,

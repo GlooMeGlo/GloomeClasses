@@ -1,6 +1,6 @@
 {
 	"code": "gear-steel",
-	"maxstacksize": 32,
+	"maxstacksize": 64,
 	"shape": {
 		"base": "item/resource/steelgear"
 	},
