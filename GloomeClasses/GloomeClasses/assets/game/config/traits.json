@@ -370,7 +370,7 @@
 			"bowDrawingStrength": -0.25
 		}
 	},
-	{ // Dread -- Done and dusted it works fucking great and was incredibly easy to implement
+	{ // Dread
 		"code": "dread",
 		"type": "negative",
 		"attributes": {
@@ -406,7 +406,9 @@
 	{ // Fanatic
 		"code": "fanatic",
 		"type": "positive",
-		"attributes": {	}
+		"attributes": {
+			"damageFromMechanicals": -0.05
+		}
 	},
 	//Fleetfooted is on Alchemist!
 	{ // Glutton

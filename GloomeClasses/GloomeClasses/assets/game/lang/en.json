@@ -256,6 +256,7 @@
 	"charattribute-rustedDamage-0.15": "+15% damage against rusted creatures",
 	"charattribute-rustedDamage-0.35": "+35% damage against rusted creatures",
 	"charattribute-rustedDamage--0.1": "-10% damage against rusted creatures",
+	"charattribute-damageFromMechanicals--0.05": "-5% damage from mechanical enemies",
 	"charattribute-fireDamage--0.5": "-50% damage from fire",
 	"charattribute-rustyGearDropRate-1": "+100% rusty gear drop rate",
 	"charattribute-vesselContentsDropRate-0.35": "Vessels drop +35% more",

@@ -65,6 +65,7 @@ namespace GloomeClasses.src {
             api.RegisterBlockEntityBehaviorClass("TranslocatorPOIBehavior", typeof(TranslocatorTrackerBlockEntityBehavior));
 
             api.RegisterEntityBehaviorClass("EntityBehaviorDread", typeof(DreadBehavior));
+            api.RegisterEntityBehaviorClass("EntityBehaviorFanatic", typeof(FanaticBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorTemporalTraits", typeof(TemporalStabilityTraitBehavior));
             api.RegisterEntityBehaviorClass("EntityBehaviorDragonskin", typeof(DragonskinTraitBehavior));
 
