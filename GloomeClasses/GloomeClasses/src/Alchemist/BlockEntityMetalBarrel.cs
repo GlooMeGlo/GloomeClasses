@@ -130,7 +130,12 @@ namespace GloomeClasses.src.Alchemist {
                 }
             }
 
-            foreach (BarrelRecipe recipe in recipes) {
+            foreach (BarrelRecipe rec in recipes) {
+                var recipe = rec;
+                if (rec is BarrelRecipeWithAdditionalLiquidOut) {
+                    recipe = rec as BarrelRecipeWithAdditionalLiquidOut;
+                }
+
                 if (!recipe.Matches(array, out var outputStackSize)) {
                     continue;
                 }
@@ -166,7 +171,11 @@ namespace GloomeClasses.src.Alchemist {
             }
 
             if (CurrentRecipe != null) {
-                if (Sealed && CurrentRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
+                var recipe = CurrentRecipe;
+                if (CurrentRecipe is BarrelRecipeWithAdditionalLiquidOut) {
+                    recipe = CurrentRecipe as BarrelRecipeWithAdditionalLiquidOut;
+                }
+                if (Sealed && recipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
                 {
                 inventory[0],
                 inventory[1]
