@@ -71,7 +71,7 @@
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": -0.15 // <-- Similar to above, this needs to be verified it even works. Maybe cleaned up? It supposedly does but, since things couldn't compile to start and no class actually HAD this... I beg to differ?
+			"caveStabilityLoss": -0.15
 		}
 	},
 
@@ -134,10 +134,9 @@
 	},
 	{ // Agoraphobia
 		"code": "agoraphobia",
-		"type": "negative", // Why was this originally a positive??? What? It's a Phobia!
+		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": -1.0 // <-- Shouldn't this be some OTHER attribute then Cave stability loss? It's functionally the opposite so... Will leave it until this is properly checked though.
-			//"surfaceStabilityLoss": -0.25 - Just my temp addition to how it might make more sense at a glance for how this could change. - Jon
+			"surfaceStabilityLoss": -0.25
 		}
 	},
 
@@ -159,7 +158,7 @@
 		"type": "positive",
 		"attributes": {}
 	},
-	{ // Dragonskin -- This one will be a bit interesting to implement for sure.
+	{ // Dragonskin
 		"code": "dragonskin",
 		"type": "positive",
 		"attributes": {
@@ -371,7 +370,7 @@
 			"bowDrawingStrength": -0.25
 		}
 	},
-	{ // Dread -- Done and dusted it works fucking great and was incredibly easy to implement
+	{ // Dread
 		"code": "dread",
 		"type": "negative",
 		"attributes": {
@@ -387,7 +386,7 @@
 			"rustedDamage": 0.35,
 			"armorDurabilityLoss": -0.15,
 			"armorWalkSpeedAffectedness": -0.15
-		},
+		}
 	},
 	{ // Greenshadow  
 		"code": "greenshadow",
@@ -407,7 +406,9 @@
 	{ // Fanatic
 		"code": "fanatic",
 		"type": "positive",
-		"attributes": {	}
+		"attributes": {
+			"damageFromMechanicals": -0.05
+		}
 	},
 	//Fleetfooted is on Alchemist!
 	{ // Glutton

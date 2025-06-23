@@ -370,5 +370,16 @@
 			"code": "gloomeclasses:rosin",
 			"quantity": 1
 		}
+	},
+	{
+		"ingredientPattern": "C,F",
+		"ingredients": {
+			"C": { "type": "block", "code": "refurbishedcrock-east" },
+			"F": { "type": "item", "code": "gloomeclasses:rosin" }
+		},
+		"width": 1,
+		"height": 2,
+		"shapeless": true,
+		"output": { "type": "block", "code": "refurbishedcrock-east", "quantity": 1  }
 	}
 ]
