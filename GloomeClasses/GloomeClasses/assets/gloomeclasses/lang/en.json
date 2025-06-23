@@ -44,6 +44,7 @@
 	"itemdesc-toolkit-simple": "<font color=\"#99c9f9\"><i>Fully repairs tools, reducing the max hp by 15% per repair</i></font>",
 	"itemdesc-toolkit-standard": "<font color=\"#99c9f9\"><i>Fully repairs tools, reducing the max hp by 10% per repair</i></font>",
 	"itemdesc-toolkit-advanced": "<font color=\"#99c9f9\"><i>Fully repairs tools, reducing the max hp by 5% per repair</i></font>",
+	"itemdesc-rosin": "<font color=\"#99c9f9\"><i>When used, increases the shelf life of the refurbished crock by 50% more than the base crock's sealing</i></font>",
 
 	"block-metalpan-copper": "Copper pan",
 	"block-metalmininglantern-*": "Mining lantern",
@@ -160,6 +161,7 @@
 	"block-rawdecoflowerpot-rutile": "Raw flowerpot (Rutile)",
 
 	"block-refurbishedcrock-east": "Refurbished Crock",
+	"blockdesc-refurbishedcrock-east": "<font color=\"#99c9f9\"><i>Can hold 6 servings</i></font>",
 
 	"game:item-creature-locust-corrupt-sawblade-hacked": "Hacked Sawblade Locust",
 	"game:block-anvilpart-base-steel": "Anvil base (Steel)",
