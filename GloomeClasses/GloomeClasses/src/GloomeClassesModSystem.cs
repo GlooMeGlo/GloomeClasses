@@ -34,7 +34,7 @@ namespace GloomeClasses.src {
         public const string ToolkitPatchesCategory = "gloomeClassesToolkitFunctionalityCategory";
         public const string SilverTonguePatchesCategory = "gloomeClassesSilverTonguePatchCategory";
         public const string SpecialStockPatchesCategory = "gloomeClassesSpecialStockPatchesCategory";
-        public const string ChefRosinPatchCategory = "gloomeClassesChefRosinPatchCategory";
+        //public const string ChefRosinPatchCategory = "gloomeClassesChefRosinPatchCategory";
         public const string BlockSchematicPatchCategory = "gloomeClassesBlockSchematicPatchCategory";
 
         public static ICoreAPI Api;
@@ -76,6 +76,8 @@ namespace GloomeClasses.src {
             api.RegisterBlockEntityClass("BlockEntityMetalBarrel", typeof(BlockEntityMetalBarrel));
             api.RegisterBlockEntityClass("POITrackerDummyBlockEntity", typeof(POITrackerDummyBlockEntity));
             api.RegisterBlockClass("BlockRefurbishedCrock", typeof(BlockRefurbishedCrock));
+            api.RegisterBlockClass("BlockGassifier", typeof(BlockGassifier));
+            api.RegisterBlockEntityClass("BlockEntityGassifier", typeof(BlockEntityGassifier));
 
             ApplyPatches();
         }
@@ -104,7 +106,7 @@ namespace GloomeClasses.src {
             harmony.PatchCategory(ToolkitPatchesCategory);
             harmony.PatchCategory(SilverTonguePatchesCategory);
             harmony.PatchCategory(SpecialStockPatchesCategory);
-            harmony.PatchCategory(ChefRosinPatchCategory);
+            //harmony.PatchCategory(ChefRosinPatchCategory);
             harmony.PatchCategory(BlockSchematicPatchCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }

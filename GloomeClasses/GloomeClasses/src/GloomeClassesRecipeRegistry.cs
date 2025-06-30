@@ -13,18 +13,18 @@ namespace GloomeClasses.src {
 
     public class GloomeClassesRecipeRegistry : ModSystem {
 
-        public List<BarrelRecipeWithAdditionalLiquidOut> AlchemistSteelBarrelRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
-        public List<BarrelRecipeWithAdditionalLiquidOut> AlchemistTinBarrelRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
-        public List<BarrelRecipeWithAdditionalLiquidOut> AlchemistBarrelRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
+        public List<AlchemyBarrelRecipe> AlchemistSteelBarrelRecipes = new List<AlchemyBarrelRecipe>();
+        public List<AlchemyBarrelRecipe> AlchemistTinBarrelRecipes = new List<AlchemyBarrelRecipe>();
+        public List<AlchemyBarrelRecipe> AlchemistBarrelRecipes = new List<AlchemyBarrelRecipe>();
 
         public override double ExecuteOrder() {
             return 0.6;
         }
 
         public override void Start(ICoreAPI api) {
-            AlchemistSteelBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipeWithAdditionalLiquidOut>>("alcsteelbarrelrecipes").Recipes;
-            AlchemistTinBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipeWithAdditionalLiquidOut>>("alctinbarrelrecipes").Recipes;
-            AlchemistBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<BarrelRecipeWithAdditionalLiquidOut>>("alcbarrelrecipes").Recipes;
+            AlchemistSteelBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<AlchemyBarrelRecipe>>("alcsteelbarrelrecipes").Recipes;
+            AlchemistTinBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<AlchemyBarrelRecipe>>("alctinbarrelrecipes").Recipes;
+            AlchemistBarrelRecipes = api.RegisterRecipeRegistry<RecipeRegistryGeneric<AlchemyBarrelRecipe>>("alcbarrelrecipes").Recipes;
         }
 
         public override void AssetsLoaded(ICoreAPI api) {
@@ -34,8 +34,8 @@ namespace GloomeClasses.src {
 
             ICoreServerAPI sapi = api as ICoreServerAPI;
             if (sapi != null) {
-                Dictionary<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> many = sapi.Assets.GetMany<BarrelRecipeWithAdditionalLiquidOut>(sapi.Server.Logger, "recipes/alchemybarrel/stainlesssteel");
-                foreach (KeyValuePair<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> item in many) {
+                Dictionary<AssetLocation, AlchemyBarrelRecipe> many = sapi.Assets.GetMany<AlchemyBarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/stainlesssteel");
+                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many) {
                     if (item.Value.Enabled) {
                         item.Value.Resolve(api.World, "stainlesssteel barrel recipe " + item.Key);
                         RegisterStainlessSteelBarrelRecipe(item.Value);
@@ -43,8 +43,8 @@ namespace GloomeClasses.src {
                 }
 
                 many.Clear();
-                many = sapi.Assets.GetMany<BarrelRecipeWithAdditionalLiquidOut>(sapi.Server.Logger, "recipes/alchemybarrel/tin");
-                foreach (KeyValuePair<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> item in many) {
+                many = sapi.Assets.GetMany<AlchemyBarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/tin");
+                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many) {
                     if (item.Value.Enabled) {
                         item.Value.Resolve(api.World, "tin barrel recipe " + item.Key);
                         RegisterTinBarrelRecipe(item.Value);
@@ -52,8 +52,8 @@ namespace GloomeClasses.src {
                 }
 
                 many.Clear();
-                many = sapi.Assets.GetMany<BarrelRecipeWithAdditionalLiquidOut>(sapi.Server.Logger, "recipes/alchemybarrel/any");
-                foreach (KeyValuePair<AssetLocation, BarrelRecipeWithAdditionalLiquidOut> item in many) {
+                many = sapi.Assets.GetMany<AlchemyBarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/any");
+                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many) {
                     if (item.Value.Enabled) {
                         item.Value.Resolve(api.World, "any alchemist barrel recipe " + item.Key);
                         RegisterAlchemistBarrelRecipe(item.Value);
@@ -62,7 +62,7 @@ namespace GloomeClasses.src {
             }
         }
 
-        protected void RegisterStainlessSteelBarrelRecipe(BarrelRecipeWithAdditionalLiquidOut recipe) {
+        protected void RegisterStainlessSteelBarrelRecipe(AlchemyBarrelRecipe recipe) {
             if (recipe.Code == null) {
                 throw new ArgumentException("Barrel recipes must have a non-null code! (choose freely)");
             }
@@ -77,7 +77,7 @@ namespace GloomeClasses.src {
             AlchemistSteelBarrelRecipes.Add(recipe);
         }
 
-        protected void RegisterTinBarrelRecipe(BarrelRecipeWithAdditionalLiquidOut recipe) {
+        protected void RegisterTinBarrelRecipe(AlchemyBarrelRecipe recipe) {
             if (recipe.Code == null) {
                 throw new ArgumentException("Barrel recipes must have a non-null code! (choose freely)");
             }
@@ -92,7 +92,7 @@ namespace GloomeClasses.src {
             AlchemistTinBarrelRecipes.Add(recipe);
         }
 
-        protected void RegisterAlchemistBarrelRecipe(BarrelRecipeWithAdditionalLiquidOut recipe) {
+        protected void RegisterAlchemistBarrelRecipe(AlchemyBarrelRecipe recipe) {
             if (recipe.Code == null) {
                 throw new ArgumentException("Barrel recipes must have a non-null code! (choose freely)");
             }
@@ -107,8 +107,8 @@ namespace GloomeClasses.src {
             AlchemistBarrelRecipes.Add(recipe);
         }
 
-        public List<BarrelRecipeWithAdditionalLiquidOut> GetAlchemistBarrelRecipes(string type) {
-            var retList = new List<BarrelRecipeWithAdditionalLiquidOut>();
+        public List<AlchemyBarrelRecipe> GetAlchemistBarrelRecipes(string type) {
+            var retList = new List<AlchemyBarrelRecipe>();
             retList.AddRange(AlchemistBarrelRecipes);
 
             if (type == "stainlesssteel") {

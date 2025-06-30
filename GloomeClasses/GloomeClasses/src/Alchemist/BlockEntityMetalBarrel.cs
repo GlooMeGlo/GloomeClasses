@@ -17,14 +17,16 @@ namespace GloomeClasses.src.Alchemist {
         private GuiDialogMetalBarrel invDialog;
         private MeshData currentMesh;
         private BlockMetalBarrel ownBlock;
+        public bool Heated;
         public bool Sealed;
         private bool SealedByTT;
         public double SealedSinceTotalHours;
         public BarrelRecipe CurrentRecipe;
-        public BarrelRecipeWithAdditionalLiquidOut CurrentAlcRecipe;
+        public AlchemyBarrelRecipe CurrentAlcRecipe;
         public int CurrentOutSize;
         private bool ignoreChange;
         private bool OpenedByTT;
+        private float heatedTemp = 20;
         protected string Type;
 
         public int CapacityLitres { get; set; } = 60;
@@ -123,7 +125,7 @@ namespace GloomeClasses.src.Alchemist {
             CurrentAlcRecipe = null;
 
             var recipes = new List<BarrelRecipe>();
-            var alcRecipes = new List<BarrelRecipeWithAdditionalLiquidOut>();
+            var alcRecipes = new List<AlchemyBarrelRecipe>();
             recipes.Clear();
             recipes.AddRange(Api.GetBarrelRecipes());
             if (OpenedByTT || SealedByTT) {
@@ -163,7 +165,7 @@ namespace GloomeClasses.src.Alchemist {
             }
 
             if (CurrentRecipe == null && alcRecipes.Count > 0) {
-                foreach (BarrelRecipeWithAdditionalLiquidOut recipe in alcRecipes) {
+                foreach (AlchemyBarrelRecipe recipe in alcRecipes) {
                     if (!recipe.Matches(array, out var outputStackSize)) {
                         continue;
                     }
@@ -200,6 +202,10 @@ namespace GloomeClasses.src.Alchemist {
                 FindMatchingRecipe();
             }
 
+            if (heatedTemp < 20) {
+                Heated = false;
+            }
+
             if (CurrentRecipe != null && CurrentAlcRecipe == null) {
                 if (Sealed && CurrentRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
                 {
@@ -211,7 +217,7 @@ namespace GloomeClasses.src.Alchemist {
                     Sealed = false;
                     SealedByTT = false;
                 }
-            } else if (CurrentAlcRecipe != null) {
+            } else if (CurrentAlcRecipe != null && CurrentAlcRecipe.TempRequired < 0) {
                 if (Sealed && CurrentAlcRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
                 {
                 inventory[0],
@@ -222,11 +228,31 @@ namespace GloomeClasses.src.Alchemist {
                     Sealed = false;
                     SealedByTT = false;
                 }
+            } else if (CurrentAlcRecipe != null && CurrentAlcRecipe.TempRequired > 0) {
+                if (!Heated && heatedTemp > 0) {
+                    Heated = true;
+                    SealedSinceTotalHours = Api.World.Calendar.TotalHours;
+                }
+                if (Heated && CurrentAlcRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
+                {
+                inventory[0],
+                inventory[1]
+                })) {
+                    MarkDirty(redrawOnClient: true);
+                    Api.World.BlockAccessor.MarkBlockEntityDirty(Pos);
+                    Sealed = false;
+                    SealedByTT = false;
+                    Heated = false;
+                }
             } else if (Sealed) {
                 Sealed = false;
                 SealedByTT = false;
                 MarkDirty(redrawOnClient: true);
             }
+        }
+
+        public void GassifierUpdateTemp(float temp) {
+            heatedTemp = temp;
         }
 
         public override void OnBlockPlaced(ItemStack byItemStack = null) {

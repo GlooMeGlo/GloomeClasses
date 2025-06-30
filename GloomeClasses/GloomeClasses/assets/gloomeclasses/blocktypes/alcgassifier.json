@@ -1,0 +1,83 @@
+{
+	"code": "gassifier",
+	"class": "BlockGassifier",
+	"entityClass": "BlockEntityGassifier",
+	"entityBehaviors": [
+		{ "name": "TemperatureSensitive" }
+	],
+	"behaviors": [
+		{ "name": "HorizontalOrientable" },
+		{ "name": "Ignitable" },
+		{ "name": "HeatSource" }
+	],
+	"variantgroups": [
+		{ "code": "type", "states": [ "open", "closed", "lit" ] },
+		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+	],
+	"maxstacksize": 1,
+	"heldTpUseAnimation": "twohandplaceblock",
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"creativeinventory": {
+		"general": [ "*-closed-north" ],
+		"decorative": [ "*-closed-north" ]
+	},
+	"drops": [
+		{ "type": "block", "code": "gloomeclasses:gassifier-closed-north", "quantity": { "avg": 1 } }
+	],
+	"shapebytype": {
+		"*-open-north": {
+			"base": "block/metal/gasifieropen",
+			"rotateY": 90
+		},
+		"*-open-east": {
+			"base": "block/metal/gasifieropen",
+			"rotateY": 0
+		},
+		"*-open-south": {
+			"base": "block/metal/gasifieropen",
+			"rotateY": 270
+		},
+		"*-open-west": {
+			"base": "block/metal/gasifieropen",
+			"rotateY": 180
+		},
+		"*-north": {
+			"base": "block/metal/gasifierclosed",
+			"rotateY": 90
+		},
+		"*-east": {
+			"base": "block/metal/gasifierclosed",
+			"rotateY": 0
+		},
+		"*-south": {
+			"base": "block/metal/gasifierclosed",
+			"rotateY": 270
+		},
+		"*-west": {
+			"base": "block/metal/gasifierclosed",
+			"rotateY": 180
+		}
+	},
+	"sidesolid": {
+		"up": true,
+		"down": true,
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"blockmaterial": "Metal",
+	"replaceable": 550,
+	"resistance": 2,
+	"lightAbsorption": 0,
+	"lightHsvByType": {
+		"*-lit-*": [7, 7, 16],
+	},
+	"sounds": {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/stone"
+	},
+	"materialDensity": 400
+}
