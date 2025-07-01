@@ -187,7 +187,7 @@
 	"traitdesc-smith": "Exclusive craftable <a href=\"handbooksearch://armor kit\">armor kits</a>, <a href=\"handbooksearch://metal barrel\">metal barrels</a> for the alchemist, <a href=\"handbooksearch://stainless steel mix\">stainless steel mix</a> to be used in the advanced bloomery",
 	"traitdesc-recycler": "Can break down <a href=\"handbooksearch://rusty gear\">rusty gears</a>, <a href=\"handbooksearch://metal scraps\">metal scraps</a>, and <a href=\"handbooksearch://metal parts\">metal parts</a> for metals of that type",
 	"traitdesc-tallowtanner": "Can recycle unused pelts into <a href=\"handbooksearch://scraped hide\">scraped hides</a>",
-	"traitdesc-zealot": "Exclusive craftable <a href=\"handbooksearch://temporal cloth\">Temporal cloth</a>, <a href=\"handbooksearch://forlorn hope estoc\">Forlorn Hope estoc</a>and a cheaper recipe for <a href=\"handbooksearch://prima materia\">prima materia</a>",
+	"traitdesc-zealot": "Exclusive craftable <a href=\"handbooksearch://temporal cloth\">Temporal cloth</a>, <a href=\"handbooksearch://forlorn hope estoc\">Forlorn Hope estoc</a> and a cheaper recipe for <a href=\"handbooksearch://prima materia\">prima materia</a>",
 
 	"charattribute-flaxFiberChance-0.1": "+10% chance to get flax fibers from grass",
 	"charattribute-flaxDropRate-0.2": "+20% more flax fibers from flax crops",
