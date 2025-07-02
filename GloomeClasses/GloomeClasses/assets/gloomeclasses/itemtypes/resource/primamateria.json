@@ -5,6 +5,7 @@
 	"shape": {
 		"base": "gloomeclasses:item/resource/primamateria"
 	},
+	"storageflags": 257,
 	"attributes": {
 		"dissolveInWater": true,
 		"displaycaseable": true,

@@ -84,6 +84,14 @@
 			scale: 1.99
 		}
 	},
+	tpHandTransformByType: {
+		"clutter-skull/human-crystal": {
+			translation: { x: -0.1, y: -0, z: 0.15 },
+			rotation: { x: 9, y: 90, z: -170 },
+			origin: { x: 0.5, y: 0, z: -0.1 },
+			scale: 0.75
+		}
+	},
 	fpHandTransform: {
 		rotation: { x: 21, y: -67, z: 9 },
 		origin: { x: 0.5, y: 0.3, z: 0.5 }

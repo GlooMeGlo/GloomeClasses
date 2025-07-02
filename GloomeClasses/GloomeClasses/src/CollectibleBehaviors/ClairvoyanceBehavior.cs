@@ -16,16 +16,33 @@ namespace GloomeClasses.src.CollectibleBehaviors {
 
         private bool divining = false;
         private const float timeToDivine = 2.0f;
-        private const float maxRange = 150.0f;
-        private const float midRange = 90.0f;
-        private const float closeRange = 50.0f;
-        private const float nearby = 20.0f;
+        private const float maxRange = 80.0f;
+        private const float midRange = 60.0f;
+        private const float closeRange = 30.0f;
+        private const float nearby = 15.0f;
         private const int softCapCharges = 30;
         private const int chargesPerGear = 10;
         private const string chargesAttribute = "skullCharges";
-
+        
         public ClairvoyanceBehavior(CollectibleObject collObj) : base(collObj) {
 
+        }
+
+        public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo) {
+            base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
+
+            var chargesInSkull = inSlot.Itemstack.Attributes.GetInt(chargesAttribute);
+            if (chargesInSkull > 25) {
+                dsc.AppendLine(Lang.Get("fullSkullCharge"));
+            } else if (chargesInSkull > 15) {
+                dsc.AppendLine(Lang.Get("midSkullCharge"));
+            } else if (chargesInSkull > 5) {
+                dsc.AppendLine(Lang.Get("lowSkullCharge"));
+            } else if (chargesInSkull > 0) {
+                dsc.AppendLine(Lang.Get("minimalSkullCharge"));
+            } else {
+                dsc.AppendLine(Lang.Get("noSkullCharge"));
+            }
         }
 
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling) {
@@ -33,7 +50,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
             TestSkullChargesAndInit(slot);
 
             if (player != null && firstEvent) {
-                if (!player.LeftHandItemSlot.Empty && player.LeftHandItemSlot.Itemstack.Collectible.Code.Path == "gear-temporal") {
+                if (!player.LeftHandItemSlot.Empty && CheckForRechargeMaterial(player.LeftHandItemSlot.Itemstack.Collectible.Code.Path)) {
                     handHandling = EnumHandHandling.PreventDefault;
                     handling = EnumHandling.PreventSubsequent;
                     return;
@@ -58,7 +75,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
             if (divining) {
                 handling = EnumHandling.PreventSubsequent;
                 return divining && secondsUsed < timeToDivine;
-            } else if (!divining && !byEntity.LeftHandItemSlot.Empty && byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path == "gear-temporal") {
+            } else if (!divining && !byEntity.LeftHandItemSlot.Empty && CheckForRechargeMaterial(byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path)) {
                 handling = EnumHandling.PreventSubsequent;
                 return secondsUsed < timeToDivine;
             }
@@ -74,7 +91,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
                 //}
                 divining = false;
                 return;
-            } else if (!divining && secondsUsed >= timeToDivine - 0.1 && !byEntity.LeftHandItemSlot.Empty && byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path == "gear-temporal") {
+            } else if (!divining && secondsUsed >= timeToDivine - 0.1 && !byEntity.LeftHandItemSlot.Empty && CheckForRechargeMaterial(byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path)) {
                 handling = EnumHandling.PreventDefault;
                 if (byEntity.World.Side.IsServer()) {
                     RechargeSkullWithGear(slot, byEntity.LeftHandItemSlot, byEntity);
@@ -93,7 +110,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
                 //if (byEntity.World.Side.IsServer()) {
                     DivineTranslocator(slot, byEntity);
                 //}
-            } else if (!divining && secondsUsed >= timeToDivine - 0.1 && !byEntity.LeftHandItemSlot.Empty && byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path == "gear-temporal") {
+            } else if (!divining && secondsUsed >= timeToDivine - 0.1 && !byEntity.LeftHandItemSlot.Empty && CheckForRechargeMaterial(byEntity.LeftHandItemSlot.Itemstack.Collectible.Code.Path)) {
                 handled = EnumHandling.PreventDefault;
                 if (byEntity.World.Side.IsServer()) {
                     RechargeSkullWithGear(slot, byEntity.LeftHandItemSlot, byEntity);
@@ -147,11 +164,26 @@ namespace GloomeClasses.src.CollectibleBehaviors {
             }
         }
 
+        public static bool CheckForRechargeMaterial(string itemPath) {
+            if (itemPath == "gear-temporal" || itemPath == "primamateria" || itemPath == "gem-temporal") {
+                return true;
+            }
+
+            return false;
+        }
+
         public void RechargeSkullWithGear(ItemSlot skullSlot, ItemSlot gearSlot, EntityAgent byEntity) {
             if (skullSlot != null && !skullSlot.Empty && gearSlot != null && !gearSlot.Empty) {
                 var curCharge = skullSlot.Itemstack.Attributes.GetInt(chargesAttribute);
                 if (curCharge < softCapCharges) {
-                    skullSlot.Itemstack.Attributes.SetInt(chargesAttribute, curCharge + chargesPerGear);
+                    var toChargeAmount = chargesPerGear;
+                    if (gearSlot.Itemstack.Collectible.Code.Path == "primamateria") {
+                        toChargeAmount = (int)MathF.Round((float)toChargeAmount * 0.25f);
+                    } else if (gearSlot.Itemstack.Collectible.Code.Path == "gem-temporal") {
+                        toChargeAmount = (int)MathF.Round((float)toChargeAmount * 1.5f);
+                    }
+
+                    skullSlot.Itemstack.Attributes.SetInt(chargesAttribute, curCharge + toChargeAmount);
                     gearSlot.TakeOut(1);
                     skullSlot.MarkDirty();
                     gearSlot.MarkDirty();
