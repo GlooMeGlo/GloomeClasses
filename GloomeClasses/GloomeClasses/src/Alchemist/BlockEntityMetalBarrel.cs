@@ -233,7 +233,7 @@ namespace GloomeClasses.src.Alchemist {
                     Heated = true;
                     SealedSinceTotalHours = Api.World.Calendar.TotalHours;
                 }
-                if (Heated && CurrentAlcRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, new ItemSlot[2]
+                if (Heated && CurrentAlcRecipe.TryCraftNow(Api, Api.World.Calendar.TotalHours - SealedSinceTotalHours, heatedTemp, new ItemSlot[2]
                 {
                 inventory[0],
                 inventory[1]

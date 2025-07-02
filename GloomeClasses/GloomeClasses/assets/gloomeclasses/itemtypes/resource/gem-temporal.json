@@ -9,7 +9,7 @@
 		displaycaseable: true, 
 		shelvable: true
 	},
-	storageFlags: 5,
+	storageFlags: 261,
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	guiTransform: {
 		rotate: true,

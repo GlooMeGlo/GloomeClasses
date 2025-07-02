@@ -59,10 +59,10 @@ namespace GloomeClasses.src.Alchemist {
             return baseRet;
         }
 
-        public new bool TryCraftNow(ICoreAPI api, double nowSealedHours, ItemSlot[] inputslots) {
+        public bool TryCraftNow(ICoreAPI api, double nowSealedHours, float heatedTemp, ItemSlot[] inputslots) {
             var baseRet = base.TryCraftNow(api, nowSealedHours, inputslots);
 
-            if (LiquidOutput == null && TempRequired > 0 && !baseRet) {
+            if (LiquidOutput == null && TempRequired > 0 && heatedTemp > TempRequired && !baseRet) {
                 if (!inputslots[0].Empty && inputslots[0].Itemstack.Collectible.Code != Output.ResolvedItemstack.Collectible.Code) {
                     return false;
                 }
