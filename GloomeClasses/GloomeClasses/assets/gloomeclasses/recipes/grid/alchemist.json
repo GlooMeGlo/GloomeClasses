@@ -29,7 +29,7 @@
 		"ingredients": {
 			"F": {
 				"type": "item",
-				"code": "game:powder-flint"
+				"code": "game:quicklime"
 			},
 			"C": {
 				"type": "item",
