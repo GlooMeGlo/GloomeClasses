@@ -364,7 +364,7 @@
 				"type": "item",
 				"code": "game:powder-borax",
 				"quantity": 11
-			},
+			}
 		},
 		"width": 3,
 		"height": 3,
@@ -374,6 +374,95 @@
 			"type": "item",
 			"code": "stainless-steel-mix",
 			"quantity": 120
+		}
+	},
+	{
+		"ingredientPattern": "RIR,ISI,RIR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:rod-iron"
+			},
+			"I": {
+				"type": "item",
+				"code": "game:metalplate-iron",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:metalplate-stainlesssteel",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:metalbarrel-stainlesssteel",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "RIR,ITI,RIR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:rod-iron"
+			},
+			"I": {
+				"type": "item",
+				"code": "game:metalplate-iron",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:metalplate-tin",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:metalbarrel-tin",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "RSR,IQI,RIR",
+		"requiresTrait": "smith",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:rod-iron"
+			},
+			"I": {
+				"type": "item",
+				"code": "game:metalplate-iron",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:metalplate-steel",
+				"quantity": 2
+			},
+			"Q": {
+				"type": "item",
+				"code": "game:clearquartz",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:gassifier-closed-north",
+			"quantity": 1
 		}
 	}
 ]

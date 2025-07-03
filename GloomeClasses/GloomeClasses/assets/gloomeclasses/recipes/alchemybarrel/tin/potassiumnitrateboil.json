@@ -1,0 +1,9 @@
+{
+	"code": "potassiumnitrateboil",
+	"sealHours": 1,
+	"ingredients": [
+		{ "type": "item", "code": "gloomeclasses:solutionportion-potassiumnitrate", "litres": 1, "consumeLitres": 1 }
+	],
+	"tempRequired": 200,
+	"output": { "type": "item", "code": "game:saltpeter", "stackSize": 1 }
+}

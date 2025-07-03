@@ -1,0 +1,116 @@
+[
+	{
+		"op": "addmerge",
+		"path": "/server/behaviors/-",
+		"value": { "code": "EntityBehaviorDragonskin" },
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/server/behaviors/4",
+		"path": "/temp",
+		"file": "game:entities/humanoid/player.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/server/behaviors/-",
+		"file": "game:entities/humanoid/player.json"
+	}
+]

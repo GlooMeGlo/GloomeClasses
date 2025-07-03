@@ -1,0 +1,26 @@
+[
+	{
+		"op": "addmerge",
+		"path": "/entityClassByType/*-broken-*",
+		"value": "POITrackerDummyBlockEntity",
+		"file": "game:blocktypes/machine/statictranslocator.json"
+	},
+	{
+		"op": "addmerge",
+		"path": "/entityBehaviorsByType/*-broken-*",
+		"value": [],
+		"file": "game:blocktypes/machine/statictranslocator.json"
+	},
+	{
+		"op": "addmerge",
+		"path": "/entityBehaviorsByType/*-broken-*/-",
+		"value": { "name": "TranslocatorPOIBehavior" },
+		"file": "game:blocktypes/machine/statictranslocator.json"
+	},
+	{
+		"op": "addmerge",
+		"path": "/entityBehaviorsByType/*-normal-*/-",
+		"value": { "name": "TranslocatorPOIBehavior" },
+		"file": "game:blocktypes/machine/statictranslocator.json"
+	}
+]

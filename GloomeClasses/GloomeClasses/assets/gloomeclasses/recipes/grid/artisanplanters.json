@@ -1,0 +1,426 @@
+[
+	{
+		"ingredientPattern": "DP",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "rawdecoplanter-*"
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:waterportion"
+				},
+				"requiresLitres": 2,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:clayplanter-raw"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-amber"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-blue"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-ashforest"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-iron-oxide"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-orange"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-copper"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-charcoal"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedcassiteriteportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-cthonic"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:crushed-bauxite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-earthern"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:strongtanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-loam"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedcassiteriteportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-ochre"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-rime"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:nugget-malachite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-flint"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dilutedalumportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-seasalt"
+		}
+	},
+	{
+		"ingredientPattern": "DP,AB",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:powder-flint"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:powder-cinnabar"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:weaktanninportion"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-tenmoku"
+		}
+	},
+	{
+		"ingredientPattern": "DPA",
+		"requiresTrait": "artisan",
+		"ingredients": {
+			"D": {
+				"type": "block",
+				"code": "game:woodbucket"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:clayplanter-raw"
+			},
+			"A": {
+				"type": "item",
+				"code": "game:ore-lignite"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "game:dye-green"
+				},
+				"requiresLitres": 1,
+				"consumeContainer": false
+			}
+		},
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "rawdecoplanter-undergrowth"
+		}
+	}
+]

@@ -1,0 +1,1199 @@
+[
+	{
+		"ingredientPattern": "PS_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:cloth-pink",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-hunter-mask"
+		}
+	},
+	{
+		"ingredientPattern": "CSC,NTN",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-hunter-boots"
+		}
+	},
+	{
+		"ingredientPattern": "_FS,NFN",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			},
+			"F": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-hand-hunter-gloves"
+		}
+	},
+	{
+		"ingredientPattern": "NNS,_N_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			},
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-head-hunter-cape"
+		}
+	},
+	{
+		"ingredientPattern": "NNN,NSN",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			},
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-hunter-leggings"
+		}
+	},
+	{
+		"ingredientPattern": "BNB,SB_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbodyover-hunter-coat"
+		}
+	},
+	{
+		"ingredientPattern": "NNN,_S_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-hunter-poncho"
+		}
+	},
+	{
+		"ingredientPattern": "B_B,BBB,SB_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-black",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-hunter-shirt"
+		}
+	},
+	{
+		"ingredientPattern": "US_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"U": {
+				"type": "item",
+				"code": "game:cloth-blue",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-tailor-mask"
+		}
+	},
+	{
+		"ingredientPattern": "OTO,PSP",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"O": {
+				"type": "item",
+				"code": "game:leather-normal-orange",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"P": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-tailor-shoes"
+		}
+	},
+	{
+		"ingredientPattern": "WSW",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "game:cloth-white",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-hand-tailor-gloves"
+		}
+	},
+	{
+		"ingredientPattern": "BSB,N_N",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-black",
+				"quantity": 1
+			},
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-tailor-trousers"
+		}
+	},
+	{
+		"ingredientPattern": "GNG,SG_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:cloth-green",
+				"quantity": 1
+			},
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbodyover-tailor-jacket"
+		}
+	},
+	{
+		"ingredientPattern": "P_P,PPP,SP_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-tailor-blouse"
+		}
+	},
+	{
+		"ingredientPattern": "OOO,_S_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"O": {
+				"type": "item",
+				"code": "game:cloth-orange",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-waist-tailor-belt"
+		}
+	},
+	{
+		"ingredientPattern": "BS_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-black",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-miner"
+		}
+	},
+	{
+		"ingredientPattern": "BTB,GSG",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:leather-normal-black",
+				"quantity": 2
+			},
+			"G": {
+				"type": "item",
+				"code": "game:leather-normal-gray",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-miner"
+		}
+	},
+	{
+		"ingredientPattern": "BFB,S__",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:leather-normal-black",
+				"quantity": 3
+			},
+			"F": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-hand-miner"
+		}
+	},
+	{
+		"ingredientPattern": "BSB,B_B",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-miner"
+		}
+	},
+	{
+		"ingredientPattern": "GSG,GGG",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:cloth-gray",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbodyover-miner"
+		}
+	},
+	{
+		"ingredientPattern": "BBS,_B_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-black",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-miner"
+		}
+	},
+	{
+		"ingredientPattern": "B_B,BBB,SB_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-miner"
+		}
+	},
+	{
+		"ingredientPattern": "LLL,SB_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"L": {
+				"type": "item",
+				"code": "game:leather-normal-black",
+				"quantity": 2
+			},
+			"B": {
+				"type": "item",
+				"code": "game:metalbit-tinbronze",
+				"quantity": 4
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-waist-miner"
+		}
+	},
+	{
+		"ingredientPattern": "NS_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-survivor"
+		}
+	},
+	{
+		"ingredientPattern": "BTB,BSB",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:leather-normal-black",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-survivor"
+		}
+	},
+	{
+		"ingredientPattern": "NFU,S__",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 3
+			},
+			"U": {
+				"type": "item",
+				"code": "game:leather-normal-blue",
+				"quantity": 2
+			},
+			"F": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-hand-survivor"
+		}
+	},
+	{
+		"ingredientPattern": "BSB,W_W",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"W": {
+				"type": "item",
+				"code": "game:cloth-white",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-survivor"
+		}
+	},
+	{
+		"ingredientPattern": "SG_,GGG",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:cloth-gray",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-survivor"
+		}
+	},
+	{
+		"ingredientPattern": "W_W,WBW,SB_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"W": {
+				"type": "item",
+				"code": "game:cloth-white",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-survivor"
+		}
+	},
+	{
+		"ingredientPattern": "NFS",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-forlorn-veil"
+		}
+	},
+	{
+		"ingredientPattern": "FFF,LTL,LSL",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"L": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-forlorn-shoes"
+		}
+	},
+	{
+		"ingredientPattern": "FSN,_M_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 2
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			},
+			"M": {
+				"type": "item",
+				"code": "game:metalbit-bismuthbronze",
+				"quantity": 4
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-hand-forlorn-bracer"
+		}
+	},
+	{
+		"ingredientPattern": "FPF,PSP",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:cloth-purple",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-forlorn-pants"
+		}
+	},
+	{
+		"ingredientPattern": "_FW,SW_,W__",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"W": {
+				"type": "item",
+				"code": "game:cloth-white",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-forlorn-sash"
+		}
+	},
+	{
+		"ingredientPattern": "F_F,PFP,SF_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-forlorn-tunic"
+		}
+	},
+	{
+		"ingredientPattern": "NFN,SKG",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "gloomeclasses:cloth-forlorn",
+				"quantity": 1
+			},
+			"G": {
+				"type": "item",
+				"code": "game:metalbit-gold",
+				"quantity": 8
+			},
+			"K": {
+				"type": "item",
+				"code": "game:knife-*",
+				"isTool": true
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-waist-forlorn-belt"
+		}
+	},
+	{
+		"ingredientPattern": "OTO,S__",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"O": {
+				"type": "item",
+				"code": "game:cloth-orange",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-clockmaker-shoes"
+		}
+	},
+	{
+		"ingredientPattern": "NCS",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			},
+			"C": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-hand-clockmaker-wristguard"
+		}
+	},
+	{
+		"ingredientPattern": "BSB,C_C",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "game:cloth-blue",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-clockmaker-pants"
+		}
+	},
+	{
+		"ingredientPattern": "UBU,USU",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"U": {
+				"type": "item",
+				"code": "game:cloth-blue",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbodyover-clockmaker-tunic"
+		}
+	},
+	{
+		"ingredientPattern": "SR_,_R_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:cloth-red",
+				"quantity": 2
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-clockmaker-apron"
+		}
+	},
+	{
+		"ingredientPattern": "YBY,_S_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"Y": {
+				"type": "item",
+				"code": "game:cloth-yellow",
+				"quantity": 1
+			},
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-clockmaker-shirt"
+		}
+	},
+	{
+		"ingredientPattern": "NNN,_TS",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:leather-normal-plain",
+				"quantity": 1
+			},
+			"T": {
+				"type": "item",
+				"code": "game:metalbit-tin",
+				"quantity": 4
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-waist-clockmaker-belt"
+		}
+	},
+	{
+		"ingredientPattern": "CSC,PTP",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:leather-normal-purple",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:cloth-white",
+				"quantity": 1
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-wool-lined-knee-high-boots"
+		}
+	},
+	{
+		"ingredientPattern": "BBB,OSO",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"O": {
+				"type": "item",
+				"code": "game:cloth-orange",
+				"quantity": 1
+			},
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-warm-woolen-pants"
+		}
+	},
+	{
+		"ingredientPattern": "NNN,NSN",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-woolen-leggings"
+		}
+	},
+	{
+		"ingredientPattern": "MBS",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"code": "game:clothes-upperbody-miner",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-woolen-shirt"
+		}
+	},
+	{
+		"ingredientPattern": "GGG,_S_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:cloth-green",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-woolen-scarf"
+		}
+	}
+]

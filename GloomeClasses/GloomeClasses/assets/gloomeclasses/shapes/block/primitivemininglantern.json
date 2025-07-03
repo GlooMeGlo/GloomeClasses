@@ -10,7 +10,7 @@
 		"ebony": "game:block/wood/debarked/ebony",
 		"fire-yellow": "game:block/fire-yellow",
 		"ceramic-dark": "game:block/clay/ceramic-dark",
-		"bone": "game:block/bone"
+		"bone": "game:block/creature/bone"
 	},
 	"elements": [
 		{

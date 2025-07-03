@@ -1,0 +1,99 @@
+{
+	code: "clutter",
+	maxstacksize: 8,
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'Quadrants', placeRemoveSound: 'sounds/player/build',	collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.3125, z2: 1 } } },
+	],
+	behaviorsByType: {
+		"clutter-skull/human-crystal": [{ "name": "ClairvoyanceBehavior" }]
+	},
+	attributes: {
+		groundStorageTransform: {
+			rotation: { x: 0, y: 35, z: 0 },
+		},
+		onDisplayTransform: { scale: 1.33 },
+		displaycaseable: true,
+		displaycase: {
+			minHeight: 0.8
+		}
+	},
+	variantgroups: [
+		{ code: "type", states: ["army-tool", "art/bottle", "art/bronze-tablet", "art/statuette-horus", "art/statuette-boddhisatva", "art/statuette-monkey", "art/statuette-ife-head", "art/zoolite1", "art/zoolite2", "device1", "deviceproto", "gunbai", "hourglass", "art/gear1", "art/gear2", "art/gear3", "skull/humanoid", "skull/human-crystal", "skull/mummified-head", "skull/humanoid-deformed", "sabretooth", "amber-insect", "art/natufian-stone" ] },
+	],
+	shape: { base: "item/clutter/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	guiTransformByType: {
+		"clutter-army-tool*": {
+			rotation: { x: 116, y: -118, z: -3 },
+			origin: { x: 0.44, y: 0.05, z: 0.6 },
+			scale: 2.54
+		},
+		"clutter-art/bottle": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.44, y: 0.35, z: 0.5 },
+			scale: 2.21
+		},
+		"clutter-art/statuette-horus": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.44, y: 0.45, z: 0.5 },
+			scale: 1.7
+		},
+		"clutter-art/zoolite*": {
+			rotation: { x: 158, y: -135, z: 21 },
+			origin: { x: 0.5, y: 0.15, z: 0.5 },
+			scale: 1.97
+		},
+		"clutter-device1": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.44, y: 0.3, z: 0.5 },
+			scale: 2.37
+		},
+		"clutter-deviceproto": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.54, y: 0.25, z: 0.5 },
+			scale: 1.72
+		},
+		"clutter-gunbai": {
+			rotation: { x: 146, y: -135, z: 37 },
+			origin: { x: 0.44, y: 0.5, z: 0.8 },
+			scale: 1.66
+		},
+		"clutter-hourglass": {
+			rotation: { x: 162, y: -153, z: -3 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.35
+		},
+		"clutter-skull/humanoid*": {
+			rotation: { x: 162, y: -135, z: -3 },
+			origin: { x: 0.54, y: 0.2, z: 0.5 },
+			scale: 3.17
+		},
+		"clutter-skull/human-crystal": {
+			rotation: { x: 180, y: 143, z: -3 },
+			origin: { x: 0.54, y: 0.25, z: 0.5 },
+			scale: 2.88
+		},
+		"clutter-sabretooth": {
+			rotation: { x: 156, y: -135, z: -3 },
+			origin: { x: 0.5, y: 0.15, z: 0.5 },
+			scale: 2.88
+		},
+		"*": {
+			rotation: { x: 137, y: 33, z: -3 },
+			origin: { x: 0.44, y: 0.15, z: 0.6 },
+			scale: 1.99
+		}
+	},
+	tpHandTransformByType: {
+		"clutter-skull/human-crystal": {
+			translation: { x: -0.1, y: -0, z: 0.15 },
+			rotation: { x: 9, y: 90, z: -170 },
+			origin: { x: 0.5, y: 0, z: -0.1 },
+			scale: 0.75
+		}
+	},
+	fpHandTransform: {
+		rotation: { x: 21, y: -67, z: 9 },
+		origin: { x: 0.5, y: 0.3, z: 0.5 }
+	}
+}

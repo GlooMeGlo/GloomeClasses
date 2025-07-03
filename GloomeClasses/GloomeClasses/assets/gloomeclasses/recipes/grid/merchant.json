@@ -1,0 +1,50 @@
+{
+	"ingredientPattern": "SHS,NBN,PLC",
+	"requiresTrait": "packmule",
+	"ingredients": {
+		"S": {
+			"type": "item",
+			"code": "game:stick",
+			"quantity": 2
+		},
+		"H": {
+			"type": "block",
+			"code": "game:bed-hay-head-north"
+		},
+		"N": {
+			"type": "item",
+			"code": "game:metalnailsandstrips-gold"
+		},
+		"L": {
+			"type": "item",
+			"code": "game:leather-sturdy-plain",
+			"quantity": 4
+		},
+		"C": {
+			"type": "block",
+			"code": "game:claypot-burned"
+		},
+		"B": {
+			"type": "item",
+			"code": "game:backpack-sturdy"
+		},
+		"P": {
+			"type": "block",
+			"code": "game:lantern-up",
+			"attributes": {
+				"material": "brass",
+				"lining": "plain",
+				"glass": "quartz"
+			},
+			"quantity": 1
+		}
+	},
+	"width": 3,
+	"height": 3,
+	"shapeless": false,
+	"output": {
+		"type": "item",
+		"code": "gloomeclasses:merchantsbackpack",
+		"quantity": 1
+	}
+}

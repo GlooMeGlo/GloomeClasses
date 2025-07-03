@@ -1,0 +1,10 @@
+{
+	"code": "nitraterichbath",
+	"sealHours": 1,
+	"ingredients": [
+		{ "type": "item", "code": "game:waterportion", "litres": 10, "consumeLitres": 10 },
+		{ "type": "item", "code": "gloomeclasses:nitraterichsoil", "quantity": 10 }
+	],
+	"liquidoutput": { "type": "item", "code": "gloomeclasses:solutionportion-nitraterich", "litres": 10 },
+	"output": {"type": "block", "code": "game:soil-compost-none", "stackSize": 1}
+}

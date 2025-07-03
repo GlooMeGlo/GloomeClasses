@@ -22,5 +22,27 @@
 			"code": "gloomeclasses:primamateria",
 			"quantity": 4
 		}
+	},
+	{
+		"ingredientPattern": "CCC,CFC,CCC",
+		"requiresTrait": "temporaltransmutation",
+		"ingredients": {
+			"F": {
+				"type": "item",
+				"code": "game:quicklime"
+			},
+			"C": {
+				"type": "item",
+				"code": "game:compost"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:calciumrichsoil",
+			"quantity": 8
+		}
 	}
 ]

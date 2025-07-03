@@ -1,0 +1,206 @@
+[
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:axe-felling-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:axe-felling-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:blade-falx-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:blade-falx-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:blade-blackguard-iron", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:blade-blackguard-iron" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:blade-forlorn-iron" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:blade-forlorn-iron" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:chisel-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:chisel-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:cleaver-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:cleaver-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hammer-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:hammer-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoe-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:hoe-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:knife-generic-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:knife-generic-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:pickaxe-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:pickaxe-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:prospectingpick-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:prospectingpick-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:saw-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:saw-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:scythe-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:scythe-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:shears-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:shears-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:shovel-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:shovel-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:spear-generic-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:spear-generic-{metal}" }
+	},
+	{
+		"ingredientPattern": "KT",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:wrench-*", "name": "metal" },
+			"K": { "type": "item", "code": "toolkit-*", "isTool": true, "toolDurabilityCost": 5 }
+		},
+		"width": 2,
+		"height": 1,
+		"averageDurability": false,
+		"output": { "type": "item", "code": "game:wrench-{metal}" }
+	}
+]

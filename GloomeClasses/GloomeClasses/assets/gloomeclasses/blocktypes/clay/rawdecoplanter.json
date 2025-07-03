@@ -1,0 +1,82 @@
+{
+	"code": "rawdecoplanter",
+	"classByType": {
+		"*": "Block",
+	},
+	"heldTpIdleAnimation": "holdunderarm",
+	"behaviorsByType": {
+		"*": [
+			{ "name": "GroundStorable" },
+			{ "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" },
+			{ "name": "RightClickPickup"} 
+		]
+	},
+	"attributes": {
+		"tempGlowMode": 1,
+		"sitHeight": 0.75
+	},
+	"variantgroups": [
+		{ "code": "type", "states": ["amber", "ashforest", "copper", "cthonic", "earthern", "loam", "ochre", "rime", "seasalt", "tenmoku", "undergrowth"] }
+	],
+	"creativeinventory": { "general": ["*"], "decorative": ["*"] },
+	"shapeByType": {
+		"*": { "base": "game:block/clay/planter/empty" }
+	},
+	"texturesByType": {
+		"*": { 
+			"ceramic": {  "base": "game:block/clay/blueclay" },
+			"sides": {  "base": "gloomeclasses:block/clay/planterraw/{type}" },
+			"soil": { "base": "game:block/clay/planter/soil" }
+		},
+	},
+	"blockmaterial": "Ceramic",
+	"replaceable": 900,
+	"resistance": 1.5,
+	"lightAbsorption": 1,
+	"maxStackSize": 8,
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"emitsideao": {
+		"all": false
+	},
+	"sounds": {
+		"walk": "game:walk/stone",
+		"break": "game:block/ceramicplace",
+		"hit": "game:block/ceramichit",
+		"place": "game:block/ceramicplace"
+	},
+	"combustiblePropsByType": {
+		"rawdecoplanter-*": {
+			"meltingPoint": 600,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltingType": "fire",
+			"smeltedStack": {
+				"type": "block",
+				"code": "game:clayplanter-{type}"
+			},
+			"requiresContainer": false
+		}
+	},
+	"collisionbox": {
+		"x1": 0.125, "y1": 0, "z1": 0.125,
+		"x2": 0.875, "y2": 0.5625, "z2": 0.875
+	},
+	"selectionbox": {
+		"x1": 0.125, "y1": 0, "z1": 0.125,
+		"x2": 0.875, "y2": 0.5625, "z2": 0.875
+	},
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 0.4, "z": 0.5 },
+		"scale": 1.42
+	},
+	"tpHandTransform": {
+		"translation": { "x": -1.1, "y": -0.5, "z": -1 },
+		"rotation": { "x": 0, "y": -86, "z": -84 },
+		"scale": 0.47
+	}
+}
