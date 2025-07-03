@@ -1070,5 +1070,130 @@
 			"type": "item",
 			"code": "game:clothes-waist-clockmaker-belt"
 		}
+	},
+	{
+		"ingredientPattern": "CSC,PTP",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:leather-normal-purple",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:cloth-white",
+				"quantity": 1
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-foot-wool-lined-knee-high-boots"
+		}
+	},
+	{
+		"ingredientPattern": "BBB,OSO",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"O": {
+				"type": "item",
+				"code": "game:cloth-orange",
+				"quantity": 1
+			},
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-warm-woolen-pants"
+		}
+	},
+	{
+		"ingredientPattern": "NNN,NSN",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"N": {
+				"type": "item",
+				"code": "game:cloth-plain",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-lowerbody-woolen-leggings"
+		}
+	},
+	{
+		"ingredientPattern": "MBS",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"code": "game:clothes-upperbody-miner",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-upperbody-woolen-shirt"
+		}
+	},
+	{
+		"ingredientPattern": "GGG,_S_",
+		"requiresTrait": "clothier",
+		"ingredients": {
+			"G": {
+				"type": "item",
+				"code": "game:cloth-green",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:sewingkit"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-shoulder-woolen-scarf"
+		}
 	}
 ]

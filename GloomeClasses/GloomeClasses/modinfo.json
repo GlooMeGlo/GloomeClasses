@@ -3,11 +3,11 @@
     "modid": "gloomeclasses",
     "name": "GloomeClasses",
     "authors": [
-        "Gloomeglo", "Jon"
+        "Gloomeglo", "JonR"
     ],
-    "description": "To be added",
-    "version": "1.0.1",
+    "description": "A class mod focused on making each class desireable in their own right, with unique appeals for each.",
+    "version": "1.0.0",
     "dependencies": {
-        "game": ""
+        "game": "1.20.12"
     }
 }
