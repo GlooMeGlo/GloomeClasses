@@ -110,6 +110,11 @@
 		"type": "positive",
 		"attributes": {}
 	},
+	{// Masquemonger
+		"code": "masquemonger",
+		"type": "positive",
+		"attributes": {}
+	},
 	{ // Special Stock
 		"code": "specialstock",
 		"type": "positive",

@@ -1,50 +1,202 @@
-{
-	"ingredientPattern": "SHS,NBN,PLC",
-	"requiresTrait": "packmule",
-	"ingredients": {
-		"S": {
-			"type": "item",
-			"code": "game:stick",
-			"quantity": 2
-		},
-		"H": {
-			"type": "block",
-			"code": "game:bed-hay-head-north"
-		},
-		"N": {
-			"type": "item",
-			"code": "game:metalnailsandstrips-gold"
-		},
-		"L": {
-			"type": "item",
-			"code": "game:leather-sturdy-plain",
-			"quantity": 4
-		},
-		"C": {
-			"type": "block",
-			"code": "game:claypot-burned"
-		},
-		"B": {
-			"type": "item",
-			"code": "game:backpack-sturdy"
-		},
-		"P": {
-			"type": "block",
-			"code": "game:lantern-up",
-			"attributes": {
-				"material": "brass",
-				"lining": "plain",
-				"glass": "quartz"
+[
+	{
+		"ingredientPattern": "SHS,NBN,PLC",
+		"requiresTrait": "packmule",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "game:stick",
+				"quantity": 2
 			},
+			"H": {
+				"type": "block",
+				"code": "game:bed-hay-head-north"
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-gold"
+			},
+			"L": {
+				"type": "item",
+				"code": "game:leather-sturdy-plain",
+				"quantity": 4
+			},
+			"C": {
+				"type": "block",
+				"code": "game:claypot-burned"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:backpack-sturdy"
+			},
+			"P": {
+				"type": "block",
+				"code": "game:lantern-up",
+				"attributes": {
+					"material": "brass",
+					"lining": "plain",
+					"glass": "quartz"
+				},
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:merchantsbackpack",
 			"quantity": 1
 		}
 	},
-	"width": 3,
-	"height": 3,
-	"shapeless": false,
-	"output": {
-		"type": "item",
-		"code": "gloomeclasses:merchantsbackpack",
-		"quantity": 1
+	{
+		"ingredientPattern": "CBT",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:plank-baldcypress",
+				"quantity": 3
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-malefactor-mask"
+		}
+	},
+	{
+		"ingredientPattern": "BQB,HC_",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:metalbit-tinbronze",
+				"quantity": 4
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"Q": {
+				"type": "item",
+				"code": "game:clearquartz",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-glasses"
+		}
+	},
+	{
+		"ingredientPattern": "BTB,HC_",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:bone",
+				"quantity": 5
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-sheepskull"
+		}
+	},
+	{
+		"ingredientPattern": "BTB,HC_",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:leather-normal-black",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-crow"
+		}
+	},
+	{
+		"ingredientPattern": "BTB,C__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:leather-normal-black",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:shear-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:cloth-black",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-hummingbird"
+		}
 	}
-}
+]
