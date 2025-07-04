@@ -58,7 +58,7 @@ namespace GloomeClasses.src.Alchemist {
             fuelBurnTime -= (float)amountRel / 10f;
 
             if (Api.World.Rand.NextDouble() < amountRel / 5f || fuelBurnTime <= 0) {
-                setBlockState("closed");
+                SetBlockState("closed");
                 canIgniteFuel = false;
                 fuelBurnTime = 0;
                 maxFuelBurnTime = 0;
@@ -126,7 +126,7 @@ namespace GloomeClasses.src.Alchemist {
                     fuelBurnTime = 0;
                     maxFuelBurnTime = 0;
                     if (Inventory.FuelSlot.Empty) {
-                        setBlockState("closed");
+                        SetBlockState("closed");
                     }
                     ((ICoreServerAPI)Api).Network.BroadcastBlockEntityPacket(Pos, 1002);
                 }
@@ -192,7 +192,7 @@ namespace GloomeClasses.src.Alchemist {
         }
 
         public void igniteFuel() {
-            igniteWithFuel(Inventory.FuelSlot.Itemstack);
+            IgniteWithFuel(Inventory.FuelSlot.Itemstack);
             Inventory.FuelSlot.Itemstack.StackSize -= 1;
             if (Inventory.FuelSlot.Itemstack.StackSize <= 0) {
                 Inventory.FuelSlot.Itemstack = null;
@@ -202,25 +202,39 @@ namespace GloomeClasses.src.Alchemist {
             }
         }
 
-        public void igniteWithFuel(IItemStack stack) {
+        public void IgniteWithFuel(IItemStack stack) {
             CombustibleProperties fuelCopts = stack.Collectible.CombustibleProps;
 
             maxFuelBurnTime = fuelBurnTime = fuelCopts.BurnDuration;
             maxTemperature = (int)(fuelCopts.BurnTemperature);
-            setBlockState("lit");
-            if (Api.Side.IsServer()) {
-                Api.World.PlaySoundAt(new AssetLocation("game:sounds/block/metaldoor.ogg"), Pos.X, Pos.Y, Pos.Z, null, true, 32f, 1f);
-            }
+            SetBlockState("lit");
             MarkDirty(true);
         }
 
-        public void setBlockState(string state) {
+        public void SetBlockState(string state) {
+            var curType = Block.Variant["type"];
+            if (curType != null && ShouldSlamDoor(curType, state) && Api.Side.IsServer()) {
+                Api.World.PlaySoundAt(new AssetLocation("game:sounds/block/metaldoor.ogg"), Pos.X, Pos.Y, Pos.Z, null, true, 32f, 1f);
+            }
+
             AssetLocation loc = Block.CodeWithVariant("type", state);
             Block block = Api.World.GetBlock(loc);
             if (block == null) return;
 
             Api.World.BlockAccessor.ExchangeBlock(block.Id, Pos);
             this.Block = block;
+        }
+
+        private bool ShouldSlamDoor(string curType, string setType) {
+            if (curType == "open" && (setType == "closed" || setType == "lit")) {
+                return true;
+            }
+
+            if (curType == "closed" && setType == "open") {
+                return true;
+            }
+
+            return false;
         }
 
         public override void OnBlockBroken(IPlayer byPlayer = null) {
