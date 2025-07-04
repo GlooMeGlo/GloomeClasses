@@ -76,7 +76,7 @@
 		},
 		"width": 3,
 		"height": 3,
-		"shapeless": false,
+		"shapeless": true,
 		"output": {
 			"type": "item",
 			"code": "gloomeclasses:primamateria",
