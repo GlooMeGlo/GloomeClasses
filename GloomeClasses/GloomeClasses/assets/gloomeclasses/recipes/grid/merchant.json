@@ -198,5 +198,381 @@
 			"type": "item",
 			"code": "game:clothes-face-hummingbird"
 		}
+	},
+	{
+		"ingredientPattern": "BMM,H__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"M": {
+				"type": "item",
+				"code": "game:metalplate-molybdochalkos",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"B": {
+				"type": "item",
+				"code": "game:metalbit-bismuthbronze",
+				"quantity": 10
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-corroded"
+		}
+	},
+	{
+		"ingredientPattern": "CBT,L__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:plank-baldcypress",
+				"quantity": 3
+			},
+			"L": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "game:powder-cinnabar",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-cat"
+		}
+	},
+	{
+		"ingredientPattern": "CBT",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:plank-pine",
+				"quantity": 3
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-festivecat"
+		}
+	},
+	{
+		"ingredientPattern": "ALH,TC_",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:plank-aged",
+				"quantity": 3
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"L": {
+				"type": "item",
+				"code": "game:powder-lapislazuli",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:powder-charcoal",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-marketeer"
+		}
+	},
+	{
+		"ingredientPattern": "ALT,C__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:plank-aged",
+				"quantity": 4
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"L": {
+				"type": "item",
+				"code": "game:powder-lapislazuli",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-rotwalker"
+		}
+	},
+	{
+		"ingredientPattern": "LAL,H__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:clearquartz",
+				"quantity": 2
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"L": {
+				"type": "item",
+				"code": "game:metalplate-blackbronze",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-surgeon"
+		}
+	},
+	{
+		"ingredientPattern": "AOB,H__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:clothes-face-surgeon",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:shears-*",
+				"isTool": true
+			},
+			"O": {
+				"type": "item",
+				"code": "game:cloth-orange",
+				"quantity": 1
+			},
+			"B": {
+				"type": "item",
+				"code": "game:cloth-brown",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-surgeonhood"
+		}
+	},
+	{
+		"ingredientPattern": "AH_",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:clothes-face-surgeonhood",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:shears-*",
+				"isTool": true
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-surgeon"
+		}
+	},
+	{
+		"ingredientPattern": "ALT,C__",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:metalplate-silver",
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:metalbit-gold",
+				"quantity": 34
+			},
+			"L": {
+				"type": "item",
+				"code": "game:powder-cinnabar",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-forgotten"
+		}
+	},
+	{
+		"ingredientPattern": "ACT",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:metalplate-silver",
+				"quantity": 4
+			},
+			"C": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:metalchain-silver",
+				"quantity": 4
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-rottenking"
+		}
+	},
+	{
+		"ingredientPattern": "ACT",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:rod-silver",
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-snow-goggles"
+		}
+	},
+	{
+		"ingredientPattern": "TAL,CS_",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:clearquartz",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true
+			},
+			"S": {
+				"type": "item",
+				"code": "game:shears-*",
+				"isTool": true
+			},
+			"L": {
+				"type": "item",
+				"code": "game:leather-sturdy-plain",
+				"quantity": 1
+			},
+			"T": {
+				"type": "item",
+				"code": "game:metalbit-tinbronze",
+				"quantity": 10
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-face-glasses-clockmaker"
+		}
+	},
+	{
+		"ingredientPattern": "A",
+		"requiresTrait": "masquemonger",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:flaxfibers",
+				"quantity": 1
+			}
+		},
+		"width": 1,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:clothes-nadiya-face-grain"
+		}
 	}
 ]
