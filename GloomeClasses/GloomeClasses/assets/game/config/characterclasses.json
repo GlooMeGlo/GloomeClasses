@@ -199,6 +199,17 @@
 		]
 	},
 	{
+		"code": "commoner",
+		"traits": [],
+		"gear": [
+			{ "type": "item", "code": "clothes-upperbody-commoner-shirt" },
+			{ "type": "item", "code": "clothes-upperbodyover-commoner-coat" },
+			{ "type": "item", "code": "clothes-lowerbody-commoner-trousers" },
+			{ "type": "item", "code": "clothes-foot-commoner-boots" },
+			{ "type": "item", "code": "clothes-hand-commoner-gloves" }
+		]
+	},
+	{
 		"code": "homesteader",
 		"traits": [
 			"pioneer",
