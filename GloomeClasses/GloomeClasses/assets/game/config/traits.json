@@ -71,7 +71,7 @@
 		"code": "claustrophobic",
 		"type": "negative",
 		"attributes": {
-			"caveStabilityLoss": -0.15
+			"caveStabilityLoss": 0.1
 		}
 	},
 
@@ -141,7 +141,7 @@
 		"code": "agoraphobia",
 		"type": "negative",
 		"attributes": {
-			"surfaceStabilityLoss": -0.25
+			"surfaceStabilityLoss": -0.008
 		}
 	},
 

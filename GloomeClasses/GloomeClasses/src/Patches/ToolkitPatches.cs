@@ -41,12 +41,16 @@ namespace GloomeClasses.src.Patches {
                 }
             }
 
+            if (toolkitSlot == null || toolkitSlot.Empty || repairedToolSlot == null || repairedToolSlot.Empty) {
+                return true;
+            }
+
             float toolMaxDurPenalty = 1f;
             if (repairedToolSlot.Itemstack.Attributes.HasAttribute(GloomeClassesModSystem.ToolkitRepairedAttribute)) {
                 toolMaxDurPenalty = repairedToolSlot.Itemstack.Attributes.GetFloat(GloomeClassesModSystem.ToolkitRepairedAttribute);
             }
 
-            var toolkitType = toolkitSlot.Itemstack.Collectible.Variant["type"];
+            var toolkitType = toolkitSlot.Itemstack?.Collectible?.Variant["type"];
             if (toolkitType != null) {
                 switch (toolkitType) {
                     case "basic":
@@ -67,8 +71,9 @@ namespace GloomeClasses.src.Patches {
                         break;
                 }
             } else {
-                GloomeClassesModSystem.Logger.Error("Somehow a Toolkit lacks a 'type' variant? Could not retreive one, so defaulting to the largest durability penalty.");
-                toolMaxDurPenalty -= GloomeClassesModSystem.lossPerBasicTkRepair;
+                GloomeClassesModSystem.Logger.Error("Somehow a Toolkit lacks a 'type' variant? Or somehow improperly detecting a Toolkit. Not applying penalty and just reverting to vanilla.");
+                //toolMaxDurPenalty -= GloomeClassesModSystem.lossPerBasicTkRepair;
+                return true;
             }
 
             outputSlot.Itemstack.Attributes.SetFloat(GloomeClassesModSystem.ToolkitRepairedAttribute, toolMaxDurPenalty);
