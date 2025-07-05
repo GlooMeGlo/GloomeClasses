@@ -55,6 +55,7 @@
 	"trait-crafty": "<font color=\"#84ff84\">• Crafty </font>",
 	"trait-locustlover": "<font color=\"#84ff84\">• Locust Lover </font>",
 	"trait-technical": "<font color=\"#84ff84\">• Technical </font>",
+	"trait-masquemonger": "<font color=\"#84ff84\">• MasqueMonger </font>",
 	"trait-stickyfingers": "<font color=\"#84ff84\">• Sticky Fingers </font>",
 	"trait-dread": "<font color=\"#ff8484\">• Dread </font>",
 	"trait-dreadslayer": "<font color=\"#84ff84\">• Dreadslayer </font>",
@@ -102,6 +103,7 @@
 	"traitname-scrounger": "Scrounger",
 	//Fleetfooted is defined in Vanilla's Lang
 	"traitname-fasting": "Fasting",
+	"traitname-masquemonger": "MasqueMonger",
 	//Weak is defined in Vanilla's Lang
 	"traitname-erroneousaim": "Erroneous Aim",
 	"traitname-artisan": "Artisan",
@@ -180,6 +182,7 @@
 	"traitdesc-packmule": "Exclusive craftable <a href=\"handbooksearch://peddler's pack\">peddler's pack</a>",
 	"traitdesc-specialstock": "Able to access an exclusive shop for each trader",
 	"traitdesc-silvertongue": "Cheaper prices for every trader",
+	"traitdesc-masquemonger": "Able to craft any mask",
 	"traitdesc-prospector": "Exclusive craftable <a href=\"handbooksearch://prospector's pack\">prospector's pack</a>, <a href=\"handbooksearch://tool kit\">toolkits</a>, <a href=\"handbooksearch://mining lantern\">mining lanterns</a>, <a href=\"handbooksearch://copper pan\">copper pan</a>, cheaper <a href=\"handbooksearch://blasting powder\">blasting powder</a> recipes, and cheaper <a href=\"handbooksearch://bomb\">bomb</a> recipes",
 	"traitdesc-shelteredstone": "No temporal stability loss whilst underground, no matter how deep.",
 	"traitdesc-mystic": "Exclusive craftable <a href=\"handbooksearch://crystal skull\">crystal skull</a>, craftable <a href=\"handbooksearch://prima materia\">prima materia</a>, and cheaper recipes for <a href=\"handbooksearch://parchment\">parchment</a>, and <a href=\"handbooksearch://pulp\">linen fiber pulp</a>",

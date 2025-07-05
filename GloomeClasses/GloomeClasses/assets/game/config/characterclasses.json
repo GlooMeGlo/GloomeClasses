@@ -428,6 +428,7 @@
 	{
 		"code": "merchant",
 		"traits": [
+			"masquemonger",
 			"packmule",
 			"specialstock",
 			"silvertongue",
