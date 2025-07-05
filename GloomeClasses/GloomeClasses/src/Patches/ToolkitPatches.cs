@@ -16,7 +16,7 @@ namespace GloomeClasses.src.Patches {
         [HarmonyPrefix]
         [HarmonyPatch(nameof(CollectibleObject.OnCreatedByCrafting))]
         public static bool ToolkitCreatedByCraftingPrefix(ItemSlot[] allInputslots, ItemSlot outputSlot, GridRecipe byRecipe) {
-            if (allInputslots == null || allInputslots.Length < 2 || outputSlot == null || outputSlot.Inventory.GetType() == typeof(DummyInventory) || outputSlot.Inventory.GetType() == typeof(CreativeInventoryTab)) {
+            if (allInputslots == null || allInputslots.Length < 2 || outputSlot == null || outputSlot.Inventory == null || outputSlot.Inventory.GetType() == typeof(DummyInventory) || outputSlot.Inventory.GetType() == typeof(CreativeInventoryTab)) {
                 return true; //Needs to have a length of 2 or more, since the inventory grid always returns the full 9 slots. If it doesn't have at least 2 slots, it can't possibly be a Toolkit Repair.
             }
             

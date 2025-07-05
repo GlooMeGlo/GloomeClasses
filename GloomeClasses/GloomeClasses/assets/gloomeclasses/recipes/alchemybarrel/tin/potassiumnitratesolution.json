@@ -2,7 +2,7 @@
 	"code": "potassiumnitratesolution",
 	"sealHours": 12,
 	"ingredients": [
-		{ "type": "item", "code": "gloomeclasses:solutionportion-nitraterich", "litres": 2, "consumeLitres": 2 },
+		{ "type": "item", "code": "gloomeclasses:solutionportion-nitraterich", "litres": 2 },
 		{ "type": "item", "code": "game:powder-charcoal", "quantity": 1 }
 	],
 	"output": { "type": "item", "code": "gloomeclasses:solutionportion-potassiumnitrate", "litres": 2 }
