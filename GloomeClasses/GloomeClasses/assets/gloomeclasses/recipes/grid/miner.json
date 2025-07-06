@@ -19,7 +19,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalpan-copper",
+			"code": "gloomeclasses:metalpan-copper",
 			"quantity": 1
 		}
 	},
@@ -526,6 +526,102 @@
 		"output": {
 			"type": "item",
 			"code": "gloomeclasses:miningbagsturdyreinforced",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-copper",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-copper",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:toolkit-basic",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-tinbronze",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-tinbronze",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:toolkit-simple",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-iron",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-iron",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:toolkit-standard",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-steel",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-steel",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:toolkit-advanced",
 			"quantity": 1
 		}
 	}
