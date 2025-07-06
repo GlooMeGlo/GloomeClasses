@@ -45,12 +45,18 @@
 		}
 	},
 	{
-		"ingredientPattern": "H__,G__,___",
+		"ingredientPattern": "HC_,G__,___",
 		"requiresTrait": "mystic",
 		"ingredients": {
 			"G": {
 				"type": "item",
 				"code": "game:gear-temporal"
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
 			},
 			"H": {
 				"type": "item",
