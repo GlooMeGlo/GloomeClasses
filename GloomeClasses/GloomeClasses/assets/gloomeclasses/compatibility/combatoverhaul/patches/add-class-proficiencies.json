@@ -1,0 +1,172 @@
+[
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/0/traits/-",
+		"value": [
+			"quarterstaffProficiency",
+			"firearmsProficiency"			
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/1/traits/-",
+		"value": [
+			"clubsProficiency",
+			"crossbowsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/2/traits/-",
+		"value": [
+			"oneHandedSwordsProficiency",
+			"twoHandedSwordsProficiency",
+			"spearsProficiency",
+			"macesProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/3/traits/-",
+		"value": [
+			"oneHandedSwordsProficiency",
+			"clubsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/4/traits/-",
+		"value": [
+			"spearsProficiency",
+			"macesProficiency",
+			"firearmsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/6/traits/-",
+		"value": [
+			"spearsProficiency",
+			"axesProficiency",
+			"crossbowsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/7/traits/-",
+		"value": [
+			"oneHandedSwordsProficiency",
+			"bowsProficiency",
+			"crossbowsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/8/traits/-",
+		"value": [
+			"axesProficiency",
+			"halberdsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/9/traits/-",
+		"value": [
+			"oneHandedSwordsProficiency",
+			"macesProficiency",
+			"bowsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/10/traits/-",
+		"value": [
+			"clubsProficiency",
+			"macesProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/11/traits/-",
+		"value": [
+			"quarterstaffProficiency",
+			"crossbowsProficiency",
+			"firearmsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/12/traits/-",
+		"value": [
+			"oneHandedSwordsProficiency",
+			"spearsProficiency",
+			"macesProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/13/traits/-",
+		"value": [
+			"macesProficiency",
+			"clubsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/14/traits/-",
+		"value": [
+			"macesProficiency",
+			"oneHandedSwordsProficiency",
+			"axesProficiency",
+			"crossbowsProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/15/traits/-",
+		"value": [
+			"oneHandedSwordsProficiency",
+			"macesProficiency"
+		]
+	},
+	{
+		"enabled": true,
+		"file": "game:config/characterclasses",
+		"op": "addeach",
+		"path": "/15/traits/-",
+		"value": [
+			"spearsProficiency",
+			"crossbowsProficiency"
+		]
+	}
+]

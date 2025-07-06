@@ -55,7 +55,7 @@
 	"trait-crafty": "<font color=\"#84ff84\">• Crafty </font>",
 	"trait-locustlover": "<font color=\"#84ff84\">• Locust Lover </font>",
 	"trait-technical": "<font color=\"#84ff84\">• Technical </font>",
-	"trait-masquemonger": "<font color=\"#84ff84\">• MasqueMonger </font>",
+	"trait-masquemonger": "<font color=\"#84ff84\">• Masquemonger </font>",
 	"trait-stickyfingers": "<font color=\"#84ff84\">• Sticky Fingers </font>",
 	"trait-dread": "<font color=\"#ff8484\">• Dread </font>",
 	"trait-dreadslayer": "<font color=\"#84ff84\">• Dreadslayer </font>",
@@ -103,7 +103,7 @@
 	"traitname-scrounger": "Scrounger",
 	//Fleetfooted is defined in Vanilla's Lang
 	"traitname-fasting": "Fasting",
-	"traitname-masquemonger": "MasqueMonger",
+	"traitname-masquemonger": "Masquemonger",
 	//Weak is defined in Vanilla's Lang
 	"traitname-erroneousaim": "Erroneous Aim",
 	"traitname-artisan": "Artisan",

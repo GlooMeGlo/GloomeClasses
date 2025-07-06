@@ -548,7 +548,7 @@
 		"height": 2,
 		"averageDurability": false,
 		"output": {
-			"type": "block",
+			"type": "item",
 			"code": "gloomeclasses:toolkit-basic",
 			"quantity": 1
 		}
@@ -572,7 +572,7 @@
 		"height": 2,
 		"averageDurability": false,
 		"output": {
-			"type": "block",
+			"type": "item",
 			"code": "gloomeclasses:toolkit-simple",
 			"quantity": 1
 		}
@@ -596,7 +596,7 @@
 		"height": 2,
 		"averageDurability": false,
 		"output": {
-			"type": "block",
+			"type": "item",
 			"code": "gloomeclasses:toolkit-standard",
 			"quantity": 1
 		}
@@ -620,7 +620,7 @@
 		"height": 2,
 		"averageDurability": false,
 		"output": {
-			"type": "block",
+			"type": "item",
 			"code": "gloomeclasses:toolkit-advanced",
 			"quantity": 1
 		}

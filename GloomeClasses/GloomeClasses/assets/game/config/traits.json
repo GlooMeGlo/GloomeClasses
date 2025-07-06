@@ -636,7 +636,7 @@
 	//Butcher is up on Chef!
 	{ // Petraphobia
 		"code": "petraphobia",
-		"type": "positive",
+		"type": "negative",
 		"attributes": {
 			"oreDropRate": -0.25,
 			"miningSpeedMul": -0.25
