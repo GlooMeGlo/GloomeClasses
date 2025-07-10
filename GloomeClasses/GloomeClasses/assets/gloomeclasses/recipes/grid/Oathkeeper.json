@@ -59,13 +59,19 @@
 		}
 	},
 	{
-		"ingredientPattern": "H__,G__,___",
+		"ingredientPattern": "HC_,G__,___",
 		"requiresTrait": "zealot",
 		"ingredients": {
 			"G": {
 				"type": "item",
 				"code": "game:gear-temporal",
 				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:chisel-*",
+				"isTool": true,
+				"toolDurabilityCost": 4
 			},
 			"H": {
 				"type": "item",

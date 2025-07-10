@@ -8,7 +8,7 @@
 	],
 	"attributes": {
 		"groundStorageTransform": {
-			"translation": { "x": 0, "y": -0.25, "z": 0.05 }
+			"translation": { "x": 0, "y": -0.49, "z": 0.05 }
 		}
 	},
 	"shapeByType": {
@@ -45,5 +45,6 @@
 		"rotation": { "x": 0, "y": 0, "z": 0 },
 		"origin": { "x": 0.5, "y": 0.5, "z": 0.5299 },
 		"scale": 4.5
-	}
+	},
+	
 }

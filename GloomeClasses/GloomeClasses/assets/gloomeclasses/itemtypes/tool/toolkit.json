@@ -8,7 +8,7 @@
 	],
 	"attributes": {
 		"groundStorageTransform": {
-			"translation": { "x": 0, "y": -0.25, "z": 0.05 }
+			"translation": { "x": 0, "y": -0.49, "z": 0.05 }
 		}
 	},
 	"shapeByType": {
