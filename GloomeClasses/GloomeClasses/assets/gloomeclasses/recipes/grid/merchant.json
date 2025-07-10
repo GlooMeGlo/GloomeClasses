@@ -183,7 +183,7 @@
 			},
 			"C": {
 				"type": "item",
-				"code": "game:shear-*",
+				"code": "game:shears-*",
 				"isTool": true
 			},
 			"T": {
