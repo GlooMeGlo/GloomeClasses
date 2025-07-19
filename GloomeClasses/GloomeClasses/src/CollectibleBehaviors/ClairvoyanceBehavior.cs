@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cairo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
 namespace GloomeClasses.src.CollectibleBehaviors {
@@ -122,46 +124,54 @@ namespace GloomeClasses.src.CollectibleBehaviors {
         }
 
         public void DivineTranslocator(ItemSlot slot, EntityAgent byEntity) {
-            if (slot != null && !slot.Empty) {
-                var poireg = byEntity.Api.ModLoader.GetModSystem<POIRegistry>();
-                var curCharge = slot.Itemstack.Attributes.GetInt(chargesAttribute);
-                if (poireg != null && curCharge > 0) {
-                    curCharge--;
-                    slot.Itemstack.Attributes.SetInt(chargesAttribute, curCharge);
+            if (slot == null || slot.Empty) return;
+
+            var poireg = byEntity.Api.ModLoader.GetModSystem<POIRegistry>();
+            var curCharge = slot.Itemstack.Attributes.GetInt(chargesAttribute);
+
+            if (poireg != null && curCharge > 0)
+            {
+                curCharge--;
+                slot.Itemstack.Attributes.SetInt(chargesAttribute, curCharge);
+                slot.MarkDirty();
+
+                if (byEntity.Api.Side.IsClient())
+                {
                     var nearPoi = poireg.GetNearestPoi(byEntity.Pos.XYZFloat.ToVec3d(), maxRange, (IPointOfInterest poi) => (poi.Type == "translocator"));
-                    if (nearPoi != null) {
-                        var distanceTo = byEntity.Pos.DistanceTo(nearPoi.Position);
-                        if (distanceTo > midRange) {
-                            if (byEntity.Api.Side.IsClient()) {
-                                (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationlongresult"));
-                            }
-                        } else if (distanceTo > closeRange) {
-                            if (byEntity.Api.Side.IsClient()) {
-                                (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationmidresult"));
-                            }
-                        } else if (distanceTo > nearby) {
-                            if (byEntity.Api.Side.IsClient()) {
-                                (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationcloseresult"));
-                            }
-                        } else {
-                            if (byEntity.Api.Side.IsClient()) {
-                                (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationnearresult"));
-                            }
-                        }
-                    } else {
-                        if (byEntity.Api.Side.IsClient()) {
-                            (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationnoresult"));
-                        }
-                    }
-                    slot.MarkDirty();
-                } else {
-                    if (curCharge <= 0) {
-                        if (byEntity.Api.Side.IsClient()) {
-                            (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationnocharge"));
-                        }
-                    }
+                    ShowDivinationResultChatMessage(byEntity.Api as ICoreClientAPI, nearPoi, byEntity.Pos.XYZ);
                 }
             }
+            else if (curCharge <= 0 && byEntity.Api.Side.IsClient())
+            {
+                (byEntity.Api as ICoreClientAPI).ShowChatMessage(Lang.Get("divinationnocharge"));
+            }
+        }
+
+        public void ShowDivinationResultChatMessage(ICoreClientAPI capi, IPointOfInterest poi, Vec3d fromPosition)
+        {
+            if (poi == null)
+            {
+                capi.ShowChatMessage(Lang.Get("divinationnoresult"));
+                return;
+            }
+
+            var translocator = capi.World.BlockAccessor.GetBlockEntity<BlockEntityStaticTranslocator>(poi.Position.AsBlockPos);
+            if (translocator != null && translocator.FullyRepaired)
+            {
+                capi.ShowChatMessage(Lang.Get("divinationnoresult"));
+                return;
+            }
+
+            double distanceTo = fromPosition.DistanceTo(poi.Position);
+            string divinationMessage = distanceTo switch
+            {
+                > midRange => Lang.Get("divinationlongresult"),
+                > closeRange => Lang.Get("divinationmidresult"),
+                > nearby => Lang.Get("divinationcloseresult"),
+                _ => Lang.Get("divinationnearresult")
+            };
+
+            capi.ShowChatMessage(divinationMessage);
         }
 
         public static bool CheckForRechargeMaterial(string itemPath) {
