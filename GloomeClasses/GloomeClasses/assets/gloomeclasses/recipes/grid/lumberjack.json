@@ -433,7 +433,7 @@
 		}
 	},
 	{
-		"ingredientPattern": "SP",
+		"ingredientPattern": "SPG",
 		"requiresTrait": "carpenter",
 		"ingredients": {
 			"S": {
@@ -446,9 +446,14 @@
 				"type": "item",
 				"code": "game:plank-aged",
 				"quantity": 5
+			},
+			"G": {
+				"type": "item",
+				"code": "game:resin",
+				"quantity": 1
 			}
 		},
-		"width": 2,
+		"width": 3,
 		"height": 1,
 		"recipeGroup": 2,
 		"shapeless": true,
