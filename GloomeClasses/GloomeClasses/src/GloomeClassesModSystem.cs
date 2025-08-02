@@ -36,6 +36,7 @@ namespace GloomeClasses.src {
         public const string SpecialStockPatchesCategory = "gloomeClassesSpecialStockPatchesCategory";
         //public const string ChefRosinPatchCategory = "gloomeClassesChefRosinPatchCategory";
         public const string BlockSchematicPatchCategory = "gloomeClassesBlockSchematicPatchCategory";
+        public const string StaticTranslocatorPatchesCategory = "gloomeClassesStaticTranslocatorBlockPatchCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -108,6 +109,7 @@ namespace GloomeClasses.src {
             harmony.PatchCategory(SpecialStockPatchesCategory);
             //harmony.PatchCategory(ChefRosinPatchCategory);
             harmony.PatchCategory(BlockSchematicPatchCategory);
+            harmony.PatchCategory(StaticTranslocatorPatchesCategory);
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 
