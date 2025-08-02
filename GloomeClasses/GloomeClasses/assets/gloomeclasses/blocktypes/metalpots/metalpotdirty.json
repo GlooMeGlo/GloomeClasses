@@ -33,7 +33,8 @@
 		"*-copper-*": {
 			"maxContainerSlotStackSize": 7,
 			"cookingSlotCapacityLitres": 7,
-			"servingCapacity": 7,
+      "servingCapacity": 7,
+      "maxServingSize": 7,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-copper-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-copper-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-copper-empty"
@@ -41,7 +42,8 @@
 		"*-tinbronze-*": {
 			"maxContainerSlotStackSize": 8,
 			"cookingSlotCapacityLitres": 8,
-			"servingCapacity": 8,
+      "servingCapacity": 8,
+      "maxServingSize": 8,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-tinbronze-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-tinbronze-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-tinbronze-empty"
@@ -49,7 +51,8 @@
 		"*-bismuthbronze-*": {
 			"maxContainerSlotStackSize": 8,
 			"cookingSlotCapacityLitres": 8,
-			"servingCapacity": 8,
+      "servingCapacity": 8,
+      "maxServingSize": 8,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-bismuthbronze-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-bismuthbronze-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-bismuthbronze-empty"
@@ -57,7 +60,8 @@
 		"*-blackbronze-*": {
 			"maxContainerSlotStackSize": 9,
 			"cookingSlotCapacityLitres": 9,
-			"servingCapacity": 9,
+      "servingCapacity": 9,
+      "maxServingSize": 9,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-blackbronze-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-blackbronze-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-blackbronze-empty"
@@ -65,7 +69,8 @@
 		"*-iron-*": {
 			"maxContainerSlotStackSize": 10,
 			"cookingSlotCapacityLitres": 10,
-			"servingCapacity": 10,
+      "servingCapacity": 10,
+      "maxServingSize": 10,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-iron-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-iron-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-iron-empty"
@@ -73,7 +78,8 @@
 		"*-meteoriciron-*": {
 			"maxContainerSlotStackSize": 11,
 			"cookingSlotCapacityLitres": 11,
-			"servingCapacity": 11,
+      "servingCapacity": 11,
+      "maxServingSize": 11,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-meteoriciron-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-meteoriciron-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-meteoriciron-empty"
@@ -81,7 +87,8 @@
 		"*-gold-*": {
 			"maxContainerSlotStackSize": 12,
 			"cookingSlotCapacityLitres": 12,
-			"servingCapacity": 12,
+      "servingCapacity": 12,
+      "maxServingSize": 12,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-gold-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-gold-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-gold-empty"
@@ -89,7 +96,8 @@
 		"*-silver-*": {
 			"maxContainerSlotStackSize": 12,
 			"cookingSlotCapacityLitres": 12,
-			"servingCapacity": 12,
+      "servingCapacity": 12,
+      "maxServingSize": 12,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-silver-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-silver-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-silver-empty"
@@ -97,7 +105,8 @@
 		"*-electrum-*": {
 			"maxContainerSlotStackSize": 12,
 			"cookingSlotCapacityLitres": 12,
-			"servingCapacity": 12,
+      "servingCapacity": 12,
+      "maxServingSize": 12,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-electrum-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-electrum-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-electrum-empty"
@@ -105,7 +114,8 @@
 		"*-steel-*": {
 			"maxContainerSlotStackSize": 13,
 			"cookingSlotCapacityLitres": 13,
-			"servingCapacity": 13,
+      "servingCapacity": 13,
+      "maxServingSize": 13,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-steel-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-steel-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-steel-empty"
@@ -113,7 +123,8 @@
 		"*-stainlesssteel-*": {
 			"maxContainerSlotStackSize": 14,
 			"cookingSlotCapacityLitres": 14,
-			"servingCapacity": 14,
+      "servingCapacity": 14,
+      "maxServingSize": 14,
 			"mealBlockCode": "gloomeclasses:metalpotdirty-stainlesssteel-cooked",
 			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-stainlesssteel-cooked",
 			"emptiedBlockCode": "gloomeclasses:metalpotdirty-stainlesssteel-empty"
