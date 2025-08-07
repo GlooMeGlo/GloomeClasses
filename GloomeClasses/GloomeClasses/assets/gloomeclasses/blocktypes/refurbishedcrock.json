@@ -8,7 +8,7 @@
 	"heldTpIdleAnimation": "holdbothhands",
 	"heldTpUseAnimation": "twohandplaceblock",
 	"class": "BlockRefurbishedCrock",
-	"entity": "Crock",
+	"entityClass": "Crock",
 	"variantgroups": [
 		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
 	],
