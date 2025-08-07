@@ -12,26 +12,26 @@
 	"variantgroups": [
 		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
 	],
-  "attributes": {
-    "shelvable": true,
-    "mealContainer": true,
-    "servingCapacity": 6,
-    "bowlContents": null,
-    "handleLiquidContainerInteract": true,
-    "handleCookingContainerInteract": true,
-    "tempGlowMode": 1,
-    "onTongTransform": {
+	"attributes": {
+		"shelvable": true,
+		"mealContainer": true,
+		"servingCapacity": 6,
+		"bowlContents": null,
+		"handleLiquidContainerInteract": true,
+		"handleCookingContainerInteract": true,
+		"tempGlowMode": 1,
+		"onTongTransform": {
 			"translation": { "x": -1.24, "y": -0.95, "z": -0.93 },
 			"rotation": { "x": 11, "y": -27, "z": -64 },
-      "scale": 0.9
-    }
-  },
-  "attributesByType": {
-    "refurbishedcrock-*": {
-      "mealBlockCode": "gloomeclasses:refurbishedcrock-{side}",
-      "emptiedBlockCode": "gloomeclasses:refurbishedcrock-{side}"
-    }
-  },
+			"scale": 0.9
+		}
+	},
+	"attributesByType": {
+		"refurbishedcrock-*": {
+			"mealBlockCode": "gloomeclasses:refurbishedcrock-{side}",
+			"emptiedBlockCode": "gloomeclasses:refurbishedcrock-{side}"
+		}
+	},
 	"shapeByType": {
 		"*-north": { "base": "block/clay/crock/base", "rotateY": 0 },
 		"*-east": { "base": "block/clay/crock/base", "rotateY": 270 },
