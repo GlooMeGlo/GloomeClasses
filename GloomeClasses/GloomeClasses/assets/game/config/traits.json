@@ -136,7 +136,7 @@
 		"code": "dummy19",
 		"type": "negative",
 		"attributes": {
-			"hungerrate": 0.3,
+			"hungerrate": 0.3
 		}
 	},
 	{
