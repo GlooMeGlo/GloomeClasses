@@ -440,7 +440,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:crock-*-burned-east"
+				"code": "game:crock-*-fired"
 			}
 		},
 		"width": 2,
