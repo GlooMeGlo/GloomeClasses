@@ -8,6 +8,6 @@
     "description": "A class mod focused on making each class desireable in their own right, with unique appeals for each.",
     "version": "1.0.7",
     "dependencies": {
-        "game": "1.21"
+        "game": "1.21.0"
     }
 }
