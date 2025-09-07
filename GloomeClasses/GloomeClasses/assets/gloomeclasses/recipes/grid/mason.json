@@ -364,7 +364,7 @@
 			},
 			"I": {
 				"type": "block",
-				"code": "game:ingotmold-burned",
+				"code": "game:ingotmold-*-fired",
 				"quantity": 8
 			}
 		},

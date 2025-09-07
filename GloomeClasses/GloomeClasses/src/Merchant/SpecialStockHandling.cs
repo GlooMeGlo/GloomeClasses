@@ -146,7 +146,7 @@ namespace GloomeClasses.src.Merchant {
         }
 
         public static void PutAwaySpecialStock(EntityTradingHumanoid trader) {
-            if (trader.tradingWithPlayer == null) {
+            if (trader.interactingWithPlayer == null || trader.interactingWithPlayer.Count == 0) {
                 if (trader.WatchedAttributes.HasAttribute(TempMainAttribute)) {
                     var specialStockTree = trader.WatchedAttributes.GetOrAddTreeAttribute(SpecialStockAttribute);
                     trader.Inventory.ToTreeAttributes(specialStockTree);

@@ -20,11 +20,14 @@
 		"storageType": 1,
 		"maxTemperature": 600,
 		"mealContainer": true,
+		"attachShape": { "base": "game:item/wearable/hooved/cookpot" },
+		"wearableAttachment": true,
+		"wearableCategoryCode": "frontrightside",
 		"attachableToEntity": {
 			"categoryCode": "utilities",
 			"attachedShapeBySlotCode": {
-				"frontrightside": { "base": "item/wearable/hooved/cookpotr-elk" },
-				"frontleftside": { "base": "item/wearable/hooved/cookpotl-elk" }
+				"frontrightside": { "base": "game:item/wearable/hooved/cookpotr-elk" },
+				"frontleftside": { "base": "game:item/wearable/hooved/cookpotl-elk" }
 			}
 		},
 		"attachmentArea": { "x1": 4, "y1": 0, "z1": 4, "x2": 11, "y2": 0, "z2": 11 },

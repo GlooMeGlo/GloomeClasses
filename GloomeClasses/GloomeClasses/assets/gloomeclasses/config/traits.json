@@ -1,0 +1,458 @@
+[
+	{
+		"code": "temporaltransmutation",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "artisan",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "frugalforming",
+		"type": "positive",
+		"attributes": {
+			"clayformingPoints": 5
+		}
+	},
+	{
+		"code": "culinary",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "shelflifesavant",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "locustlover",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "zealot",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "pioneer",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "claustrophobicgloo",
+		"type": "negative",
+		"attributes": {
+			"caveStabilityLoss": 0.1
+		}
+	},
+	{
+		"code": "carpenter",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "mason",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "packmule",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "masquemonger",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "specialstock",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "silvertongue",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "prospector",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "shelteredstone",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "agoraphobia",
+		"type": "negative",
+		"attributes": {
+			"surfaceStabilityLoss": -0.008
+		}
+	},
+	{
+		"code": "mystic",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "clairvoyance",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "smith",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "dragonskin",
+		"type": "positive",
+		"attributes": {
+			"fireDamage": -0.5
+		}
+	},
+	{
+		"code": "recycler",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "tallowtanner",
+		"type": "positive",
+		"attributes": {}
+	},
+	{
+		"code": "scrounger",
+		"type": "positive",
+		"attributes": {
+			"wildCropDropRate": 0.25,
+			"forageDropRate": 0.35
+		}
+	},
+	{
+		"code": "fleetfootedgloo",
+		"type": "positive",
+		"attributes": {
+			"walkspeed": 0.1
+		}
+	},
+	{
+		"code": "fasting",
+		"type": "positive",
+		"attributes": {
+			"hungerrate": -0.2
+		}
+	},
+	{
+		"code": "weakgloo",
+		"type": "negative",
+		"attributes": {
+			"maxhealthExtraPoints": -5
+		}
+	},
+	{
+		"code": "erroneousaim",
+		"type": "negative",
+		"attributes": {
+			"bowDrawingStrength": -0.2,
+			"rangedWeaponsAcc": -0.1,
+			"rangedWeaponsSpeed": 0.15
+		}
+	},
+	{
+		"code": "scavenger",
+		"type": "positive",
+		"attributes": {
+			"wildCropDropRate": 0.2,
+			"forageDropRate": 0.3
+		}
+	},
+	{
+		"code": "squeamish",
+		"type": "negative",
+		"attributes": {
+			"animalLootDropRate": -0.25,
+			"animalHarvestingTime": 0.1
+		}
+	},
+	{
+		"code": "soldiergloo",
+		"type": "positive",
+		"attributes": {
+			"meleeWeaponsDamage": 0.20,
+			"armorDurabilityLoss": -0.25,
+			"armorWalkSpeedAffectedness": -0.25
+		}
+	},
+	{
+		"code": "hardygloo",
+		"type": "positive",
+		"attributes": {
+			"maxhealthExtraPoints": 5
+		}
+	},
+	{
+		"code": "rockhound",
+		"type": "positive",
+		"attributes": {
+			"oreDropRate": 0.25,
+			"miningSpeedMul": 0.5
+		}
+	},
+	{
+		"code": "nearsightedgloo",
+		"type": "negative",
+		"attributes": {
+			"rangedWeaponsDamage": -0.35,
+			"bowDrawingStrength": -0.35,
+			"rangedWeaponsAcc": -0.2,
+			"rangedWeaponsSpeed": 0.3
+		}
+	},
+	{
+		"code": "heavyfooted",
+		"type": "negative",
+		"attributes": {
+			"animalSeekingRange": 0.2
+		}
+	},
+	{
+		"code": "butcher",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.25,
+			"animalHarvestingTime": -0.5,
+			"animalSeekingRange": -0.3
+		}
+	},
+	{
+		"code": "sluggish",
+		"type": "negative",
+		"attributes": {
+			"armorWalkSpeedAffectedness": 0.05
+		}
+	},
+	{
+		"code": "technicalgloo",
+		"type": "positive",
+		"attributes": {
+			"temporalGearTLRepairCost": -1,
+			"mechanicalsDamage": 0.25
+		}
+	},
+	{
+		"code": "furtivegloo",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.25
+		}
+	},
+	{
+		"code": "stickyfingers",
+		"type": "positive",
+		"attributes": {
+			"vesselContentsDropRate": 0.35,
+			"rustyGearDropRate": 1.0
+		}
+	},
+	{
+		"code": "civilgloo",
+		"type": "negative",
+		"attributes": {
+			"animalLootDropRate": -0.25,
+			"animalHarvestingTime": 0.15,
+			"forageDropRate": -0.15,
+			"wildCropDropRate": -0.15
+		}
+	},
+	{
+		"code": "dread",
+		"type": "negative",
+		"attributes": {
+			"rustedDamage": -0.1
+		}
+	},
+	{
+		"code": "dreadslayer",
+		"type": "positive",
+		"attributes": {
+			"rustedDamage": 0.35,
+			"armorDurabilityLoss": -0.15,
+			"armorWalkSpeedAffectedness": -0.15
+		}
+	},
+	{ 
+		"code": "greenshadow",
+		"type": "positive",
+		"attributes": {
+			"forageDropRate": 0.2,
+			"animalSeekingRange": -0.25
+		},
+	},
+	{
+		"code": "servosympathy",
+		"type": "negative",
+		"attributes": {
+			"mechanicalsDamage": -0.20
+		}
+	},
+	{
+		"code": "fanatic",
+		"type": "positive",
+		"attributes": {
+			"damageFromMechanicals": -0.05
+		}
+	},
+	{
+		"code": "glutton",
+		"type": "negative",
+		"attributes": {
+			"hungerrate": 0.2
+		}
+	},
+	{
+		"code": "careless",
+		"type": "negative",
+		"attributes": {
+			"oreDropRate": -0.25
+		}
+	},
+	{
+		"code": "farmer",
+		"type": "positive",
+		"attributes": {
+			"cropDropRate": 0.3,
+			"wildCropDropRate": 0.5
+		}
+	},
+	{
+		"code": "petraphobia",
+		"type": "negative",
+		"attributes": {
+			"oreDropRate": -0.25,
+			"miningSpeedMul": -0.25
+		}
+	},
+	{
+		"code": "sharpeye",
+		"type": "positive",
+		"attributes": {
+			"rangedWeaponsDamage": 0.7,
+			"bowDrawingStrength": 0.5,
+			"rangedWeaponsSpeed": -0.25
+		}
+	},
+	{
+		"code": "sneaky",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.60,
+			"walkspeed": 0.1
+		}
+	},
+	{
+		"code": "resourcefulgloo",
+		"type": "positive",
+		"attributes": {
+			"animalLootDropRate": 0.5,
+			"animalHarvestingTime": -0.75
+		}
+	},
+	{
+		"code": "farsightedgloo",
+		"type": "negative",
+		"attributes": {
+			"meleeWeaponsDamage": -0.20
+		}
+	},
+	{
+		"code": "forester",
+		"type": "positive",
+		"attributes": {
+			"logDropRate": 0.15,
+			"saplingDropRate": 3,
+			"stickDropRate": 0.5,
+			"forageDropRate": 0.5
+		}
+	},
+	{
+		"code": "rugged",
+		"type": "positive",
+		"attributes": {
+			"maxhealthExtraPoints": 2
+		}
+	},
+	{
+		"code": "defender",
+		"type": "positive",
+		"attributes": {
+			"meleeWeaponsDamage": 0.1,
+			"armorDurabilityLoss": -0.2,
+			"armorWalkSpeedAffectedness": -0.2
+		}
+	},
+	{
+		"code": "miner",
+		"type": "positive",
+		"attributes": {
+			"oreDropRate": 0.5,
+			"miningSpeedMul": 1.0
+		}
+	},
+	{
+		"code": "shrewd",
+		"type": "positive",
+		"attributes": {
+			"animalSeekingRange": -0.30,
+			"walkspeed": 0.15
+		}
+	},
+	{
+		"code": "rustbane",
+		"type": "positive",
+		"attributes": {
+			"rustedDamage": 0.15
+		}
+	},
+	{
+		"code": "bellshocked",
+		"type": "negative",
+		"attributes": {
+			"mechanicalsDamage": -0.25
+		}
+	},
+	{
+		"code": "burner",
+		"type": "positive",
+		"attributes": {
+			"charcoalDropRate": 0.35
+		}
+	},
+	{
+		"code": "unlikelyharvest",
+		"type": "positive",
+		"attributes": {
+			"flaxFiberChance": 0.1
+		}
+	},
+	{
+		"code": "fibrousfolly",
+		"type": "positive",
+		"attributes": {
+			"flaxDropRate": 0.2
+		}
+	},
+	{
+		"code": "changeyourclass",
+		"type": "negative",
+		"attributes": {
+			"maxhealthExtraPoints": -10
+		}
+	}
+]
