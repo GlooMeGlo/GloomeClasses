@@ -1,0 +1,38 @@
+[
+	{
+		"op": "replace",
+		"file": "game:config/characterclasses.json",
+		"path": "/0/enabled",
+		"value": false
+	},
+	{
+		"op": "replace",
+		"file": "game:config/characterclasses.json",
+		"path": "/1/enabled",
+		"value": false
+	},
+	{
+		"op": "replace",
+		"file": "game:config/characterclasses.json",
+		"path": "/2/enabled",
+		"value": false
+	},
+	{
+		"op": "replace",
+		"file": "game:config/characterclasses.json",
+		"path": "/3/enabled",
+		"value": false
+	},
+	{
+		"op": "replace",
+		"file": "game:config/characterclasses.json",
+		"path": "/4/enabled",
+		"value": false
+	},
+	{
+		"op": "replace",
+		"file": "game:config/characterclasses.json",
+		"path": "/5/enabled",
+		"value": false
+	}
+]

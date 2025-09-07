@@ -337,7 +337,7 @@
 		"shapeless": true,
 		"output": {
 			"type": "block",
-			"code": "game:woodenpath-ns",
+			"code": "game:woodenpath-*-ns",
 			"quantity": 2
 		}
 	},

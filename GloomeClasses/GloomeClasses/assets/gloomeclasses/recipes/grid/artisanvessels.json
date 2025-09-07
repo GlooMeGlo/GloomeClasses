@@ -27,7 +27,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "game:storagevessel-raw"
+			"code": "game:storagevessel-blue-raw"
 		}
 	},
 	{
@@ -40,7 +40,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -75,7 +75,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -110,7 +110,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -145,7 +145,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -180,7 +180,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -219,7 +219,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -258,7 +258,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -293,7 +293,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -328,7 +328,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -363,7 +363,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -398,7 +398,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -437,7 +437,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -476,7 +476,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -511,7 +511,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -546,7 +546,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -581,7 +581,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -620,7 +620,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -655,7 +655,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -694,7 +694,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -733,7 +733,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -768,7 +768,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -803,7 +803,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -838,7 +838,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -877,7 +877,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -916,7 +916,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-*-raw"
 			},
 			"A": {
 				"type": "item",

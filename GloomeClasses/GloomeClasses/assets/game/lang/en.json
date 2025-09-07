@@ -11,42 +11,47 @@
 	"characterclass-mystic": "Mystic",
 	"characterclass-oathkeeper": "Oathkeeper",
 	"characterclass-smith": "Smith",
+	
+	"characterclass-commonergloo": "Commoner",
+	"characterclass-huntergloo": "Hunter",
+	"characterclass-malefactorgloo": "Malefactor",
+	"characterclass-clockmakergloo": "Clockmaker",
+	"characterclass-blackguardgloo": "Blackguard",
+	"characterclass-tailorgloo": "Tailor",
 
 	"characterdesc-alchemist": "<font color=\"#99c9f9\"><i>Beneath the rust, rot, and fetid flesh lies potential. Raw, mutable, and waiting to be refined.</i></font><br><br>Alchemists are brilliant scholars that flourish in a laboratory. But, a sheltered life full of research brings inexperience in combat.",
 	"characterdesc-artisan": "<font color=\"#99c9f9\"><i>The world may crumble, but your work holds fast. Beauty is your defiance.</i></font><br><br>Artisans are talented individuals. Even when all hope is lost, they continue to create masterful works of art. But life as a kindhearted soul means that butchering animals is unthinkable.",
-	//"characterdesc-blackguard": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Blackguards are some of the strongest melee combattants. They can do more damage with melee weapons, and use armor more effectively for longer. On top of this, they are more healthy on average thanks to their training, and their strength lets them break rocks and ore faster and more efficiently. A Blackguard needs more food though to keep this up, and they are abysmal with bows. Being more accustom to the battlefield, they move with heavy steps that alert all animals around, and have trouble harvesting forage that's trampled.",
 	"characterdesc-chef": "<font color=\"#99c9f9\"><i>You’ve seen what hunger does. The hollow eyes, the shaking hands, the silence around a cold hearth. So you keep the pot full, and the fire lit. Because you know that a warm meal can be all that stands between someone and the end.</i></font><br><br>Chefs are both knowledgeable and resourceful. Old recipes and traditions live on through them, but a life of being the heart of the town means that their careful hands lack the speed for ranged combat, and heavy armor slows their practiced movements.",
-	//"characterdesc-clockmaker": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Clockmakers are the masters of the old technologies, the ones who see how things tick. They know their mechanics as a whole to be able to craft all sorts of wonders, along with being able to hack and convert a Locust to their side. They know where to hit to deal more damage against mechanicals and how to be more efficient repairing the broken forgotten machinery. Otherwise they don't know life outside of the township and it can be harsh on them to survive, and they have trouble combatting against the rust creatures given what they have seen.",
 	"characterdesc-oathkeeper": "<font color=\"#99c9f9\"><i>Scholar, knight, fanatic; titles you wore like armor. Into the Rot you marched, charms clinking, faith burning, chasing the shimmer of the Prima Materia.</i></font><br><br>Oathkeepers have sworn themselves to The Forlorn Hope Order, seeking realms and powers immaterial to ours. They have a deep faith in the machine, and the arcane alongside it. This also means that they'll be more adverse to harming their beloved machines.",
 	"characterdesc-homesteader": "<font color=\"#99c9f9\"><i>While others sought answers underground, you planted them in rows; letting the seasons decide what was worth keeping.</i></font><br><br>Homesteaders are masters of the harvest that excel with rotating crops, turning barren soil into fertile land, and butchering livestock. They struggle with the non-living minerals that reside under the surface of the earth, and despise the cramped tunnels that are associated with them.",
-	//"characterdesc-hunter": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-lumberjack": "<font color=\"#99c9f9\"><i>The trees there creak in a silent tongue. You never spoke back, only answered with clean cuts and lasting craft, turning their silence into structure.</i></font><br><br>Lumberjacks are skilled carpenters and arborists that are unrivaled in their particular set of skills and accompanying knowledge. Their knowledge doesn't extend much further than that however, leading to loss of ores and less damage against mechanicals.",
-	//"characterdesc-malefactor": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
 	"characterdesc-mason": "<font color=\"#99c9f9\"><i>We built walls to keep the cold out. We laid bricks to shelter against the storms. Clay, lime, ash, and time. That's all it takes to keep the darkness out.</i></font><br><br>Masons are skilled craftsmen specialized in the manipulation of stone, clay, and binding agents. With the continuous moving of heavy stones and repeated hard labor, comes a strength and hardyness unrivaled by many. Because of this though, they're far from sneaky.",
 	"characterdesc-merchant": "<font color=\"#99c9f9\"><i>The world may have changed, but people haven't. They might have swapped their gold for gears, but you still know how to play the system.</i></font><br><br>Merchants specialize in trading, buying, selling, and haggling. They also know how to spot something valuble, but they're not too keen on combat or killing.",
 	"characterdesc-miner": "<font color=\"#99c9f9\"><i>The snaking corridors and creaking hums are like a second home to you. The stone like a second skin. You make your way where most others fear to tread.</i></font><br><br>Miners mend tools in the field and spot ore others miss. The depths are home; the surface, unfamiliar.",
 	"characterdesc-mystic": "<font color=\"#99c9f9\"><i>You held fast to your faith when theirs were abandoned. They didn't believe you when you told them you could hear the gears ticking below the ground. You'll show them they were wrong.</i></font><br><br>Mystics initially swore off any use of the prima materia, but now that it's here for good, they've learned to harness it. They've used this knowledge to explore the world, and assisted others in finding what was once lost. This skill with the living also means a lack of skill with the mechanical, and their untrained eyes don't spot ores as easily.",
 	"characterdesc-smith": "<font color=\"#99c9f9\"><i>Copper or lead, bismuth or zinc, you have never met a metal you could not tame. You hear it sing in every hammer-blow. You feel it bloom with every stoke of the forge.</i></font><br><br>Smiths are talented laborers, capable of shaping metal into whatever they need. With calloused skin and rough hands, they don't burn easy. This also means their dexterity is rather low, and their stealth being practically nonexistant.",
-	//"characterdesc-tailor": "<font color=\"#99c9f9\"><i>Add Class's RP Flair Here</i></font><br><br>Add Class overview here!",
+
+	"characterdesc-commonergloo": "<font color=\"#99c9f9\"><i>Leave behind your old life. Crawl into the new world.</i></font><br><br>Commoners are generalists from a multitude of backgrounds. While they have no defining skills or strengths to speak of, they also lack the weaknesses of those who specialize.",
+	"characterdesc-huntergloo": "<font color=\"#99c9f9\"><i>Loose the arrow, kill the beast. Take it home to your dying child. Eventually your child will die and you’ll find yourself providing for someone else’s dying child.</i></font><br><br>Hunters are ranged specialists that excel in the wild forests, plains, and mountains. They struggle in the confined tunnels of the underground.",
+	"characterdesc-malefactorgloo": "<font color=\"#99c9f9\"><i>Terrible things are done in the heart of despair.<br>She is gone, but you remain.</i></font><br><br>Malefactors are tenacious survivors who can avoid unwanted attention and find loot that others might have missed. A heavy conscience leads to weakness in combat, however.",
+	"characterdesc-clockmakergloo": "<font color=\"#99c9f9\"><i>The machines never stop ticking down there. You’ve seen to that.<br>You can hear them in your sleep.</i></font><br><br>Clockmakers are masters of precision and systems. They can easily dismantle or repair machinery, but they have no stomach for violence.",
+	"characterdesc-blackguardgloo": "<font color=\"#99c9f9\"><i>Fight if you must. Kill if you must. Don’t look away.<br>A hard gaze on life will see you through.</i></font><br><br>Blackguards are fierce soldiers that thrive in a close-ranged skirmish, but a life of conflict has its downsides: They have no talent for delicate work and need more food to maintain their strength.",
+	"characterdesc-tailorgloo": "<font color=\"#99c9f9\"><i>Make a fitting garb, so we may walk with grace once more.</i></font><br><br>Tailors provide stylish clothes and clothing repairs to stay warm during the winter months. A lifetime spent in the city leaves them ill-prepared for some hardships of nature.",
 
 	"trait-temporaltransmutation": "<font color=\"#84ff84\">• Temporal Transmutation </font>",
 	"trait-scrounger": "<font color=\"#84ff84\">• Scrounger </font>",
-	//Fleetfooted is defined in Vanilla's Lang
+	"trait-fleetfootedgloo": "<font color=\"#84ff84\">• Fleetfooted </font>",
 	"trait-fasting": "<font color=\"#84ff84\">• Fasting </font>",
-	//Weak is defined in Vanilla's Lang
+	"trait-weakgloo": "<font color=\"#ff8484\">• Weak </font>",
 	"trait-erroneousaim": "<font color=\"#ff8484\">• Erroneous Aim </font>",
 	"trait-artisan": "<font color=\"#84ff84\">• Artisan </font>",
 	"trait-frugalforming": "<font color=\"#84ff84\">• Frugal Forming </font>",
 	"trait-scavenger": "<font color=\"#84ff84\">• Scavenger </font>",
 	"trait-squeamish": "<font color=\"#ff8484\">• Squeamish </font>",
-	//Merciless
-	//Soldier
-	//Hardy are all defined in Vanilla Lang
+	"trait-soldiergloo": "<font color=\"#84ff84\">• Soldier </font>",
+	"trait-hardygloo": "<font color=\"#84ff84\">• Hardy </font>",
 	"trait-rockhound": "<font color=\"#84ff84\">• Rockhound </font>",
-	//Ravenous
-	//Nearsighted are in Vanilla Land
 	"trait-heavyfooted": "<font color=\"#ff8484\">• Heavy-Footed </font>",
-	//Heavyhanded is in Vanilla's Lang!
 	"trait-culinary": "<font color=\"#84ff84\">• Culinary </font>",
 	"trait-shelflifesavant": "<font color=\"#84ff84\">• Shelf-Life Savant </font>",
 	"trait-greenshadow": "<font color=\"#84ff84\">• Greenshadow </font>",
@@ -54,7 +59,9 @@
 	"trait-sluggish": "<font color=\"#ff8484\">• Sluggish </font>",
 	"trait-crafty": "<font color=\"#84ff84\">• Crafty </font>",
 	"trait-locustlover": "<font color=\"#84ff84\">• Locust Lover </font>",
-	"trait-technical": "<font color=\"#84ff84\">• Technical </font>",
+	"trait-technicalgloo": "<font color=\"#84ff84\">• Technical </font>",
+	"trait-furtivegloo": "<font color=\"#84ff84\">• Furtive </font>",
+	"trait-civilgloo": "<font color=\"#ff8484\">• Civil </font>",
 	"trait-masquemonger": "<font color=\"#84ff84\">• Masquemonger </font>",
 	"trait-stickyfingers": "<font color=\"#84ff84\">• Sticky Fingers </font>",
 	"trait-dread": "<font color=\"#ff8484\">• Dread </font>",
@@ -64,14 +71,13 @@
 	"trait-servosympathy": "<font color=\"#ff8484\">• Servo-Sympathy </font>",
 	"trait-careless": "<font color=\"#ff8484\">• Careless </font>",
 	"trait-pioneer": "<font color=\"#84ff84\">• Pioneer </font>",
-	"trait-claustrophobic": "<font color=\"#ff8484\">• Claustrophobic </font>",
+	"trait-claustrophobicgloo": "<font color=\"#ff8484\">• Claustrophobic </font>",
 	"trait-farmer": "<font color=\"#84ff84\">• Farmer </font>",
 	"trait-petraphobia": "<font color=\"#ff8484\">• Petraphobia </font>",
-	//Bowyer is defined in Vanilla's Lang
 	"trait-sharpeye": "<font color=\"#84ff84\">• Sharpeye </font>",
 	"trait-sneaky": "<font color=\"#84ff84\">• Sneaky </font>",
-	//Resourceful
-	//Farsighted are defined in Vanilla's Lang
+	"trait-resourcefulgloo": "<font color=\"#84ff84\">• Resourceful </font>",
+	"trait-farsightedgloo": "<font color=\"#ff8484\">• Farsighted </font>",
 	"trait-carpenter": "<font color=\"#84ff84\">• Carpenter </font>",
 	"trait-forester": "<font color=\"#84ff84\">• Forester </font>",
 	"trait-rugged": "<font color=\"#84ff84\">• Rugged </font>",
@@ -84,6 +90,7 @@
 	"trait-shelteredstone": "<font color=\"#84ff84\">• Sheltered By Stone </font>",
 	"trait-agoraphobia": "<font color=\"#ff8484\">• Agoraphobia </font>",
 	"trait-miner": "<font color=\"#84ff84\">• Miner </font>",
+	"trait-nearsightedgloo": "<font color=\"#ff8484\">• Nearsighted </font>",
 	"trait-mystic": "<font color=\"#84ff84\">• Mystic </font>",
 	"trait-clairvoyance": "<font color=\"#84ff84\">• Clairvoyance </font>",
 	"trait-shrewd": "<font color=\"#84ff84\">• Shrewd </font>",
@@ -93,7 +100,6 @@
 	"trait-dragonskin": "<font color=\"#84ff84\">• Dragonskin </font>",
 	"trait-recycler": "<font color=\"#84ff84\">• Recycler </font>",
 	"trait-burner": "<font color=\"#84ff84\">• Burner </font>",
-	//Clothier
 	"trait-tallowtanner": "<font color=\"#84ff84\">• Tallow Tanner </font>",
 	"trait-unlikelyharvest": "<font color=\"#84ff84\">• Unlikely Harvest </font>",
 	"trait-fibrousfolly": "<font color=\"#84ff84\">• Fibrous Folly </font>",
@@ -101,31 +107,28 @@
 
 	"traitname-temporaltransmutation": "Temporal Transmutation",
 	"traitname-scrounger": "Scrounger",
-	//Fleetfooted is defined in Vanilla's Lang
+	"traitname-fleetfootedgloo": "Fleetfooted",
 	"traitname-fasting": "Fasting",
 	"traitname-masquemonger": "Masquemonger",
-	//Weak is defined in Vanilla's Lang
+	"traitname-weakgloo": "Weak",
 	"traitname-erroneousaim": "Erroneous Aim",
 	"traitname-artisan": "Artisan",
 	"traitname-frugalforming": "Frugal Forming",
 	"traitname-scavenger": "Scavenger",
 	"traitname-squeamish": "Squeamish",
-	//Merciless
-	//Soldier
-	//Hardy are all defined in Vanilla Lang
+	"traitname-soldiergloo": "Soldier",
+	"traitname-hardy": "Hardy",
 	"traitname-rockhound": "Rockhound",
-	//Ravenous
-	//Nearsighted are in Vanilla Land
 	"traitname-heavyfooted": "Heavy-Footed",
-	//Heavyhanded is in Vanilla's Lang!
 	"traitname-culinary": "Culinary",
 	"traitname-shelflifesavant": "Shelf-Life Savant",
 	"traitname-greenshadow": "Greenshadow",
 	"traitname-butcher": "Butcher",
 	"traitname-sluggish": "Sluggish",
-	"traitname-tinkerer": "Tinkerer",
 	"traitname-locustlover": "Locust Lover",
-	"traitname-technical": "Technical",
+	"traitname-technicalgloo": "Technical",
+	"traitname-furtivegloo": "Tinkerer",
+	"traitname-civilgloo": "Tinkerer",
 	"traitname-stickyfingers": "Sticky Fingers",
 	"traitname-dread": "Dread",
 	"traitname-dreadslayer": "Dreadslayer",
@@ -134,14 +137,13 @@
 	"traitname-servosympathy": "Servo-Sympathy",
 	"traitname-careless": "Careless",
 	"traitname-pioneer": "Pioneer",
-	"traitname-claustrophobic": "Claustrophobic",
+	"traitname-claustrophobicgloo": "Claustrophobic",
 	"traitname-farmer": "Farmer",
 	"traitname-petraphobia": "Petraphobia",
-	//Bowyer is defined in Vanilla's Lang
 	"traitname-sharpeye": "Sharpeye",
 	"traitname-sneaky": "Sneaky",
-	//Resourceful
-	//Farsighted are defined in Vanilla's Lang
+	"traitname-resourcefulgloo": "Resourceful",
+	"traitname-farsightedgloo": "Farsighted",
 	"traitname-carpenter": "Carpenter",
 	"traitname-forester": "Forester",
 	"traitname-rugged": "Rugged",
@@ -154,6 +156,7 @@
 	"traitname-shelteredstone": "Sheltered By Stone",
 	"traitname-agoraphobia": "Agoraphobia",
 	"traitname-miner": "Miner",
+	"traitname-nearsightedgloo": "Nearsighted",
 	"traitname-mystic": "Mystic",
 	"traitname-clairvoyance": "Clairvoyance",
 	"traitname-shrewd": "Shrewd",
@@ -163,7 +166,6 @@
 	"traitname-dragonskin": "Dragonskin",
 	"traitname-recycler": "Recycler",
 	"traitname-burner": "Burner",
-	//Clothier
 	"traitname-tallowtanner": "Tallow Tanner",
 	"traitname-unlikelyharvest": "Unlikely Harvest",
 	"traitname-fibrousfolly": "Fibrous Folly",

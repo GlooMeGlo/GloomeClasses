@@ -134,7 +134,7 @@
 		"*-cooked-*": "CookedContainer"
 	},
 	"shape": {
-		"base": "game:block/clay/pot-dirty-opened-empty"
+		"base": "game:block/clay/pot-opened-empty"
 	},
 	"doNotRenderAtLod2": true,
 	"blockmaterial": "Metal",

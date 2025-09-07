@@ -132,7 +132,7 @@ namespace GloomeClasses.src.Patches {
                 CodeInstruction.LoadArgument(1),
                 CodeInstruction.LoadArgument(2),
                 CodeInstruction.LoadLocal(0),
-                CodeInstruction.LoadLocal(20),
+                CodeInstruction.LoadLocal(21),
                 new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicStructurePatchesForClairvoyance), "TestAndInitTranslocatorBEFromBlock", new Type[4] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(Block) }))
             };
 

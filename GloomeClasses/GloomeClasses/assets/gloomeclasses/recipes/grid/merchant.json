@@ -23,7 +23,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			},
 			"B": {
 				"type": "item",

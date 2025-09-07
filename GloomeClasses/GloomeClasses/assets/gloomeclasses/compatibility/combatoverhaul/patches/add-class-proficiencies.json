@@ -1,7 +1,7 @@
 [
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/0/traits/-",
 		"value": [
@@ -11,7 +11,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/1/traits/-",
 		"value": [
@@ -21,7 +21,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/2/traits/-",
 		"value": [
@@ -33,7 +33,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/3/traits/-",
 		"value": [
@@ -43,7 +43,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/4/traits/-",
 		"value": [
@@ -54,7 +54,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/6/traits/-",
 		"value": [
@@ -65,7 +65,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/7/traits/-",
 		"value": [
@@ -76,7 +76,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/8/traits/-",
 		"value": [
@@ -86,7 +86,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/9/traits/-",
 		"value": [
@@ -97,7 +97,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/10/traits/-",
 		"value": [
@@ -107,7 +107,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/11/traits/-",
 		"value": [
@@ -118,7 +118,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/12/traits/-",
 		"value": [
@@ -129,7 +129,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/13/traits/-",
 		"value": [
@@ -139,7 +139,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/14/traits/-",
 		"value": [
@@ -151,7 +151,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/15/traits/-",
 		"value": [
@@ -161,7 +161,7 @@
 	},
 	{
 		"enabled": true,
-		"file": "game:config/characterclasses",
+		"file": "gloomeclasses:config/characterclasses.json",
 		"op": "addeach",
 		"path": "/15/traits/-",
 		"value": [

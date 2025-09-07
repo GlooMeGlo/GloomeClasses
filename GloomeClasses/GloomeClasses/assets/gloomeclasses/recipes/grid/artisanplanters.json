@@ -27,7 +27,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "game:clayplanter-raw"
+			"code": "game:clayplanter-blue-raw"
 		}
 	},
 	{
@@ -40,7 +40,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -75,7 +75,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -110,7 +110,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -145,7 +145,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -180,7 +180,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -215,7 +215,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -250,7 +250,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -285,7 +285,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -320,7 +320,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -359,7 +359,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
@@ -398,7 +398,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-*-raw"
 			},
 			"A": {
 				"type": "item",
