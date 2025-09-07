@@ -12,13 +12,36 @@
 	},
 	"behaviors": [ ],
 	"variantgroups": [
-		{ "code": "type", "states": ["amber", "boneash", "celadon", "copper", "earthern", "moss", "ochre", "rutile", "seasalt", "tenmoku"] }
+		{
+			"code": "color",
+			"states": [ "blue", "red", "fire" ]
+		},
+		{
+			"code": "type",
+			"states": [ "amber", "boneash", "celadon", "copper", "earthern", "moss", "ochre", "rutile", "seasalt", "tenmoku" ]
+		}
 	],
 	"shape": { "base": "game:block/clay/flowerpot/empty" },
 	"texturesByType": {
-		"*": { 
-			"sides": {  "base": "gloomeclasses:block/clay/flowerpotraw/sides/{type}" },
-			"topbottom": {  "base": "gloomeclasses:block/clay/flowerpotraw/topbottom/{type}" },
+		"*": {
+			"sides": {
+				"base": "game:block/clay/{color}clay",
+				"blendedOverlays": [
+					{
+						"base": "gloomeclasses:block/clay/flowerpotraw/sides/{type}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"topbottom": {
+				"base": "game:block/clay/{color}clay",
+				"blendedOverlays": [
+					{
+						"base": "gloomeclasses:block/clay/flowerpotraw/topbottom/{type}",
+						"blendMode": "Overlay"
+					}
+				]
+			}
 		}
 	},
 	"attributes": {

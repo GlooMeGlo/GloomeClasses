@@ -23,23 +23,87 @@
 		"sitHeight": 0.75
 	},
 	"variantgroups": [
-		{ "code": "variant", "states": ["ashforest", "chthonic", "copper", "earthen", "rain", "cowrie", "rime", "oxblood", "loam", "undergrowth", 
-									"beehive", "harvest", "honeydew", "rutile", "seasalt", "springflowers", "volcanic", "cloisonne", "cornflower", "talik",
-									"caveaurora", "collonade", "rattlesnake", "waves", "wintersea"
-		  ] }
+		{
+			"code": "color",
+			"states": [ "blue", "fire", "red" ]
+		},
+		{
+			"code": "variant",
+			"states": [
+				"ashforest",
+				"chthonic",
+				"copper",
+				"earthen",
+				"rain",
+				"cowrie",
+				"rime",
+				"oxblood",
+				"loam",
+				"undergrowth",
+				"beehive",
+				"harvest",
+				"honeydew",
+				"rutile",
+				"seasalt",
+				"springflowers",
+				"volcanic",
+				"cloisonne",
+				"cornflower",
+				"talik",
+				"caveaurora",
+				"collonade",
+				"rattlesnake",
+				"waves",
+				"wintersea"
+			]
+		}
 	],
 	"creativeinventory": { "general": ["*"], "decorative": ["*"] },
-  "shape": {
-    "base": "game:block/clay/storagevessel"
-  },
+	"shape": {
+		"base": "game:block/clay/storagevessel"
+	},
 	"texturesByType": {
 		"*": {
-			"ceramic": { "base": "game:block/clay/ceramic" },
+			"ceramic": {
+				"base": "game:block/clay/{color}clay"
+			},
+			"top": {
+				"base": "game:block/clay/{color}clay",
+				"blendedOverlays": [
+					{
+						"base": "gloomeclasses:block/clay/vesselraw/top/{variant}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"sides": {
+				"base": "game:block/clay/{color}clay",
+				"blendedOverlays": [
+					{
+						"base": "gloomeclasses:block/clay/vesselraw/sides/{variant}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"inside": {
+				"base": "game:block/clay/{color}clay",
+				"blendedOverlays": [
+					{
+						"base": "gloomeclasses:block/clay/vesselraw/inside/{variant}",
+						"blendMode": "Overlay"
+					}
+				]
+			}
+		}
+	},
+	/* "texturesByType": {
+		"*": {
+			"ceramic": { "base": "game:block/clay/{color}clay" },
 			"top": { "base": "gloomeclasses:block/clay/vesselraw/top/{variant}" },
 			"sides": { "base": "gloomeclasses:block/clay/vesselraw/sides/{variant}" },
 			"inside": { "base": "gloomeclasses:block/clay/vesselraw/inside/{variant}" },
 		}
-	},
+	}, */
 	"blockmaterial": "Ceramic",
 	"replaceable": 1000,
 	"resistance": 0.8,

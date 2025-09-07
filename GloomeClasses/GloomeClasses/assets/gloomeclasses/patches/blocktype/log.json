@@ -1,0 +1,9 @@
+[
+  {
+    "op": "add",
+    "path": "/drops/0/dropModbyStat",
+    "value": "logDropRate",
+    "file": "game:blocktypes/wood/woodtyped/log.json",
+    "side": "server"
+  }
+]

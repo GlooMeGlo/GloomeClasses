@@ -1,8 +1,0 @@
-[
-  {
-    "op": "addmerge",
-    "path": "/dropsByType/*-9/1/dropModbyStat",
-    "value": "cropDropRate",
-    "file": "game:blocktypes/plant/crop/spelt.json"
-  }
-]

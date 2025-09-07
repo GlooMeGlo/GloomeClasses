@@ -1,0 +1,32 @@
+{
+  "game:v1.21.0": [
+    "/bir remapq gloomeclasses:refurbishedcrock-blue gloomeclasses:refurbishedcrock-north force",
+    "/bir remapq gloomeclasses:refurbishedcrock-blue gloomeclasses:refurbishedcrock-east force",
+    "/bir remapq gloomeclasses:refurbishedcrock-blue gloomeclasses:refurbishedcrock-south force",
+    "/bir remapq gloomeclasses:refurbishedcrock-blue gloomeclasses:refurbishedcrock-west force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-ashforest gloomeclasses:rawdecovessel-ashforest force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-cthonic gloomeclasses:rawdecovessel-cthonic force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-copper gloomeclasses:rawdecovessel-copper force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-earthen gloomeclasses:rawdecovessel-earthen force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-rain gloomeclasses:rawdecovessel-rain force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-cowrie gloomeclasses:rawdecovessel-cowrie force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-rime gloomeclasses:rawdecovessel-oxblood force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-loam gloomeclasses:rawdecovessel-loam force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-undergrowth gloomeclasses:rawdecovessel-undergrowth force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-beehive gloomeclasses:rawdecovessel-beehive force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-harvest gloomeclasses:rawdecovessel-harvest force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-honeydew gloomeclasses:rawdecovessel-honeydew force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-rutile gloomeclasses:rawdecovessel-rutile force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-seasalt gloomeclasses:rawdecovessel-seasalt force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-springflowers gloomeclasses:rawdecovessel-springflowers force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-volcanic gloomeclasses:rawdecovessel-volcanic force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-cloisonne gloomeclasses:rawdecovessel-cloisonne force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-cornflower gloomeclasses:rawdecovessel-cornflower force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-talik gloomeclasses:rawdecovessel-talik force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-caveaurora gloomeclasses:rawdecovessel-caveaurora force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-collonade gloomeclasses:rawdecovessel-collonade force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-rattlesnake gloomeclasses:rawdecovessel-rattlesnake force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-waves gloomeclasses:rawdecovessel-waves force",
+    "/bir remapq gloomeclasses:rawdecovessel-blue-wintersnake gloomeclasses:rawdecovessel-wintersnake force"
+  ]
+}

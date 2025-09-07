@@ -16,16 +16,31 @@
 		"sitHeight": 0.75
 	},
 	"variantgroups": [
-		{ "code": "type", "states": ["amber", "ashforest", "copper", "cthonic", "earthern", "loam", "ochre", "rime", "seasalt", "tenmoku", "undergrowth"] }
+		{
+			"code": "color",
+			"states": [ "blue", "red", "fire" ]
+		},
+		{
+			"code": "type",
+			"states": [ "amber", "ashforest", "copper", "cthonic", "earthern", "loam", "ochre", "rime", "seasalt", "tenmoku", "undergrowth" ]
+		}
 	],
 	"creativeinventory": { "general": ["*"], "decorative": ["*"] },
 	"shapeByType": {
 		"*": { "base": "game:block/clay/planter/empty" }
 	},
 	"texturesByType": {
-		"*": { 
-			"ceramic": {  "base": "game:block/clay/blueclay" },
-			"sides": {  "base": "gloomeclasses:block/clay/planterraw/{type}" },
+		"*": {
+			"ceramic": { "base": "game:block/clay/{color}clay" },
+			"sides": {
+				"base": "game:block/clay/{color}clay",
+				"blendedOverlays": [
+					{
+						"base": "gloomeclasses:block/clay/planterraw/{type}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
 			"soil": { "base": "game:block/clay/planter/soil" }
 		},
 	},

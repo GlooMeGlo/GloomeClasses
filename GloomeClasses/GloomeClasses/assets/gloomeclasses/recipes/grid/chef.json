@@ -16,7 +16,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -45,7 +45,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -74,7 +74,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -103,7 +103,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -132,7 +132,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -161,7 +161,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -190,7 +190,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -219,7 +219,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -248,7 +248,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -277,7 +277,7 @@
 			},
 			"C": {
 				"type": "block",
-				"code": "game:claypot-burned"
+				"code": "game:claypot-*-fired"
 			}
 		},
 		"width": 1,
@@ -374,12 +374,12 @@
 	{
 		"ingredientPattern": "C,F",
 		"ingredients": {
-			"C": { "type": "block", "code": "refurbishedcrock-east" },
+			"C": { "type": "block", "code": "refurbishedcrock-*", "name": "color" },
 			"F": { "type": "item", "code": "gloomeclasses:rosin" }
 		},
 		"width": 1,
 		"height": 2,
 		"shapeless": true,
-		"output": { "type": "block", "code": "refurbishedcrock-east", "quantity": 1  }
+		"output": { "type": "block", "code": "refurbishedcrock-{color}", "quantity": 1  }
 	}
 ]

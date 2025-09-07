@@ -9,7 +9,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "rawdecovessel-*"
+				"code": "rawdecovessel-{color}-*"
 			}
 		},
 		"width": 2,
@@ -27,7 +27,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "game:storagevessel-raw"
+			"code": "game:storagevessel-{color}-raw"
 		}
 	},
 	{
@@ -40,7 +40,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -62,7 +62,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-ashforest"
+			"code": "rawdecovessel-{color}-ashforest"
 		}
 	},
 	{
@@ -75,7 +75,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -97,7 +97,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-beehive"
+			"code": "rawdecovessel-{color}-beehive"
 		}
 	},
 	{
@@ -110,7 +110,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -132,7 +132,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-caveaurora"
+			"code": "rawdecovessel-{color}-caveaurora"
 		}
 	},
 	{
@@ -145,7 +145,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -167,7 +167,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-chthonic"
+			"code": "rawdecovessel-{color}-chthonic"
 		}
 	},
 	{
@@ -180,7 +180,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -206,7 +206,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-cloisonne"
+			"code": "rawdecovessel-{color}-cloisonne"
 		}
 	},
 	{
@@ -219,7 +219,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -245,7 +245,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-collonade"
+			"code": "rawdecovessel-{color}-collonade"
 		}
 	},
 	{
@@ -258,7 +258,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -280,7 +280,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-copper"
+			"code": "rawdecovessel-{color}-copper"
 		}
 	},
 	{
@@ -293,7 +293,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -315,7 +315,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-cornflower"
+			"code": "rawdecovessel-{color}-cornflower"
 		}
 	},
 	{
@@ -328,7 +328,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -350,7 +350,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-cowrie"
+			"code": "rawdecovessel-{color}-cowrie"
 		}
 	},
 	{
@@ -363,7 +363,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -385,7 +385,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-earthen"
+			"code": "rawdecovessel-{color}-earthen"
 		}
 	},
 	{
@@ -398,7 +398,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -424,7 +424,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-harvest"
+			"code": "rawdecovessel-{color}-harvest"
 		}
 	},
 	{
@@ -437,7 +437,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -463,7 +463,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-honeydew"
+			"code": "rawdecovessel-{color}-honeydew"
 		}
 	},
 	{
@@ -476,7 +476,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -498,7 +498,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-loam"
+			"code": "rawdecovessel-{color}-loam"
 		}
 	},
 	{
@@ -511,7 +511,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -533,7 +533,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-oxblood"
+			"code": "rawdecovessel-{color}-oxblood"
 		}
 	},
 	{
@@ -546,7 +546,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -568,7 +568,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-rain"
+			"code": "rawdecovessel-{color}-rain"
 		}
 	},
 	{
@@ -581,7 +581,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -607,7 +607,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-rattlesnake"
+			"code": "rawdecovessel-{color}-rattlesnake"
 		}
 	},
 	{
@@ -620,7 +620,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -642,7 +642,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-rime"
+			"code": "rawdecovessel-{color}-rime"
 		}
 	},
 	{
@@ -655,7 +655,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -681,7 +681,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-rutile"
+			"code": "rawdecovessel-{color}-rutile"
 		}
 	},
 	{
@@ -694,7 +694,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -720,7 +720,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-seasalt"
+			"code": "rawdecovessel-{color}-seasalt"
 		}
 	},
 	{
@@ -733,7 +733,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -755,7 +755,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-springflowers"
+			"code": "rawdecovessel-{color}-springflowers"
 		}
 	},
 	{
@@ -768,7 +768,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -790,7 +790,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-talik"
+			"code": "rawdecovessel-{color}-talik"
 		}
 	},
 	{
@@ -803,7 +803,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -825,7 +825,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-undergrowth"
+			"code": "rawdecovessel-{color}-undergrowth"
 		}
 	},
 	{
@@ -838,7 +838,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -864,7 +864,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-volcanic"
+			"code": "rawdecovessel-{color}-volcanic"
 		}
 	},
 	{
@@ -877,7 +877,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -903,7 +903,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-waves"
+			"code": "rawdecovessel-{color}-waves"
 		}
 	},
 	{
@@ -916,7 +916,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:storagevessel-raw"
+				"code": "game:storagevessel-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -938,7 +938,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecovessel-wintersea"
+			"code": "rawdecovessel-{color}-wintersea"
 		}
 	}
 ]

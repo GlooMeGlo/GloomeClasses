@@ -1,0 +1,16 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-6/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/carrot.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-7/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/carrot.json",
+    "side": "server"
+  }
+]

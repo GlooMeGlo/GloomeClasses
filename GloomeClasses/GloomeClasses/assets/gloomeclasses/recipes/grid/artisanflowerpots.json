@@ -9,7 +9,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "rawdecoflowerpot-*"
+				"code": "rawdecoflowerpot-{color}-*"
 			}
 		},
 		"width": 2,
@@ -27,7 +27,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "game:flowerpot-raw"
+			"code": "game:flowerpot-{color}-raw"
 		}
 	},
 	{
@@ -40,7 +40,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -62,7 +62,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-amber"
+			"code": "rawdecoflowerpot-{color}-amber"
 		}
 	},
 	{
@@ -75,7 +75,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -97,7 +97,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-boneash"
+			"code": "rawdecoflowerpot-{color}-boneash"
 		}
 	},
 	{
@@ -110,7 +110,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -132,7 +132,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-celadon"
+			"code": "rawdecoflowerpot-{color}-celadon"
 		}
 	},
 	{
@@ -145,7 +145,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -167,7 +167,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-copper"
+			"code": "rawdecoflowerpot-{color}-copper"
 		}
 	},
 	{
@@ -180,7 +180,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -202,7 +202,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-earthern"
+			"code": "rawdecoflowerpot-{color}-earthern"
 		}
 	},
 	{
@@ -215,7 +215,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -241,7 +241,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-moss"
+			"code": "rawdecoflowerpot-{color}-moss"
 		}
 	},
 	{
@@ -254,7 +254,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -276,7 +276,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-ochre"
+			"code": "rawdecoflowerpot-{color}-ochre"
 		}
 	},
 	{
@@ -289,7 +289,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -315,7 +315,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-rutile"
+			"code": "rawdecoflowerpot-{color}-rutile"
 		}
 	},
 	{
@@ -328,7 +328,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -354,7 +354,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-seasalt"
+			"code": "rawdecoflowerpot-{color}-seasalt"
 		}
 	},
 	{
@@ -367,7 +367,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:flowerpot-raw"
+				"code": "game:flowerpot-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -393,7 +393,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoflowerpot-tenmoku"
+			"code": "rawdecoflowerpot-{color}-tenmoku"
 		}
 	}
 ]

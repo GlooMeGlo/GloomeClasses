@@ -1,0 +1,9 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType/*",
+    "value": [ { "name": "UnlikelyHarvestBehavior" } ],
+    "file": "game:blocktypes/plant/tallgrass.json",
+    "side": "server"
+  }
+]

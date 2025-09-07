@@ -1,0 +1,16 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/drops/0/quantityByType/dropModbyStat",
+    "value": "saplingDropRate",
+    "file": "game:blocktypes/plant/leaves/normal.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/drops/1/dropModbyStat",
+    "value": "stickDropRate",
+    "file": "game:blocktypes/plant/leaves/normal.json",
+    "side": "server"
+  }
+]

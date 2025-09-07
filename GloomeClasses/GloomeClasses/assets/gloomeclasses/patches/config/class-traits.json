@@ -1,0 +1,60 @@
+[
+  { // hunter
+    "op": "replace",
+    "path": "/1/traits",
+    "value": [
+      "bowyer",
+      "sharpeye",
+      "sneaky",
+      "fasting",
+      "resourceful",
+      "farsighted",
+      "careless",
+      "claustrophobic"
+    ],
+    "file": "game:config/characterclasses.json"
+  },
+  { // clockmaker
+    "op": "replace",
+    "path": "/3/traits",
+    "value": [
+      "tinkerer",
+      "locustlover",
+      "technical",
+      "fleetfooted",
+      "furtive",
+      "stickyfingers",
+      "civil",
+      "frail",
+      "dread"
+    ],
+    "file": "game:config/characterclasses.json"
+  },
+  { // blackguard
+    "op": "replace",
+    "path": "/4/traits",
+    "value": [
+      "merciless",
+      "soldier",
+      "hardy",
+      "rockhound",
+      "ravenous",
+      "heavyfooted",
+      "heavyhanded"
+    ],
+    "file": "game:config/characterclasses.json"
+  },
+  { // tailor
+    "op": "replace",
+    "path": "/5/traits",
+    "value": [
+      "clothier",
+      "tallowtanner",
+      "fasting",
+      "unlikelyharvest",
+      "fibrousfolly",
+      "frail"
+    ],
+    "file": "game:config/characterclasses.json"
+  }
+]

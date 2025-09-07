@@ -9,7 +9,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "rawdecoplanter-*"
+				"code": "rawdecoplanter-{color}-*"
 			}
 		},
 		"width": 2,
@@ -27,7 +27,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "game:clayplanter-raw"
+			"code": "game:clayplanter-{color}-raw"
 		}
 	},
 	{
@@ -40,7 +40,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -62,7 +62,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-amber"
+			"code": "rawdecoplanter-{color}-amber"
 		}
 	},
 	{
@@ -75,7 +75,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -97,7 +97,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-ashforest"
+			"code": "rawdecoplanter-{color}-ashforest"
 		}
 	},
 	{
@@ -110,7 +110,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -132,7 +132,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-copper"
+			"code": "rawdecoplanter-{color}-copper"
 		}
 	},
 	{
@@ -145,7 +145,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -167,7 +167,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-cthonic"
+			"code": "rawdecoplanter-{color}-cthonic"
 		}
 	},
 	{
@@ -180,7 +180,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -202,7 +202,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-earthern"
+			"code": "rawdecoplanter-{color}-earthern"
 		}
 	},
 	{
@@ -215,7 +215,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -237,7 +237,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-loam"
+			"code": "rawdecoplanter-{color}-loam"
 		}
 	},
 	{
@@ -250,7 +250,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -272,7 +272,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-ochre"
+			"code": "rawdecoplanter-{color}-ochre"
 		}
 	},
 	{
@@ -285,7 +285,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -307,7 +307,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-rime"
+			"code": "rawdecoplanter-{color}-rime"
 		}
 	},
 	{
@@ -320,7 +320,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -346,7 +346,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-seasalt"
+			"code": "rawdecoplanter-{color}-seasalt"
 		}
 	},
 	{
@@ -359,7 +359,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -385,7 +385,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-tenmoku"
+			"code": "rawdecoplanter-{color}-tenmoku"
 		}
 	},
 	{
@@ -398,7 +398,7 @@
 			},
 			"P": {
 				"type": "block",
-				"code": "game:clayplanter-raw"
+				"code": "game:clayplanter-{color}-raw"
 			},
 			"A": {
 				"type": "item",
@@ -420,7 +420,7 @@
 		"shapeless": false,
 		"output": {
 			"type": "block",
-			"code": "rawdecoplanter-undergrowth"
+			"code": "rawdecoplanter-{color}-undergrowth"
 		}
 	}
 ]

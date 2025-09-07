@@ -1,0 +1,30 @@
+[
+	{
+		"op": "addmerge",
+		"path": "/grindingPropsByType/*-lapislazuli",
+		"value": {
+			"groundStack": { "type": "item", "code": "powder-lapislazuli" }
+		},
+		"file": "game:itemtypes/resource/crushed/crushed.json",
+    "side": "server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/grindingPropsByType/*-cinnabar",
+		"value": {
+			"groundStack": { "type": "item", "code": "powder-cinnabar" }
+		},
+    "file": "game:itemtypes/resource/crushed/crushed.json",
+    "side": "server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/crushingPropsByType/*-peridotite",
+		"value": {
+			"crushedStack": { "type": "item", "code": "crushed-peridotite" },
+			"hardnessTier": 1
+		},
+    "file": "game:itemtypes/resource/stone.json",
+    "side": "server"
+	}
+]

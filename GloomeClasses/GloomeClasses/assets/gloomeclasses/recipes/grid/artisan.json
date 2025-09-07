@@ -439,8 +439,9 @@
 				"toolDurabilityCost": 5
 			},
 			"C": {
-				"type": "block",
-				"code": "game:crock-burned-east"
+        "type": "block",
+        "name": "color",
+				"code": "game:crock-*-fired"
 			}
 		},
 		"width": 2,
@@ -448,7 +449,7 @@
 		"shapeless": true,
 		"output": {
 			"type": "block",
-			"code": "gloomeclasses:refurbishedcrock-east",
+			"code": "gloomeclasses:refurbishedcrock-{color}",
 			"quantity": 1
 		}
 	}

@@ -1,0 +1,112 @@
+[
+  { // resourceful
+    "op": "addmerge",
+    "path": "/1/attributes",
+    "value": {
+      "animalLootDropRate": 0.5,
+      "animalHarvestingTime": -0.75
+    },
+    "file": "game:config/traits.json"
+  },
+  { // furtive
+    "op": "addmerge",
+    "path": "/6/attributes",
+    "value": {
+      "animalSeekingRange": -0.25
+    },
+    "file": "game:config/traits.json"
+  },
+  { // technical
+    "op": "addmerge",
+    "path": "/8/attributes",
+    "value": {
+      "mechanicalsDamage": 0.25
+    },
+    "file": "game:config/traits.json"
+  },
+  { // soldier
+    "op": "addmerge",
+    "path": "/9/attributes",
+    "value": {
+      "meleeWeaponsDamage": 0.2,
+      "armorDurabilityLoss": -0.25,
+      "armorWalkSpeedAffectedness": -0.25
+    },
+    "file": "game:config/traits.json"
+  },
+  { // hardy
+    "op": "addmerge",
+    "path": "/10/attributes",
+    "value": {
+      "maxhealthExtraPoints": 5,
+      "oreDropRate": 0.25
+    },
+    "file": "game:config/traits.json"
+  },
+  { // hardy
+    "op": "remove",
+    "path": "/10/attributes/miningSpeedMul",
+    "file": "game:config/traits.json"
+  },
+  { // farsighted
+    "op": "addmerge",
+    "path": "/14/attributes",
+    "value": {
+      "meleeWeaponsDamage": -0.2
+    },
+    "file": "game:config/traits.json"
+  },
+  { // claustrophobic
+    "op": "addmerge",
+    "path": "/15/attributes",
+    "value": {
+      "caveStabilityLoss": 0.1
+    },
+    "file": "game:config/traits.json"
+  },
+  { // claustrophobic
+    "op": "remove",
+    "path": "/15/attributes/oreDropRate",
+    "file": "game:config/traits.json"
+  },
+  { // claustrophobic
+    "op": "remove",
+    "path": "/15/attributes/miningSpeedMul",
+    "file": "game:config/traits.json"
+  },
+  { // nearsighted
+    "op": "addmerge",
+    "path": "/19/attributes",
+    "value": {
+      "rangedWeaponsDamage": -0.35,
+      "bowDrawingStrength": -0.35,
+      "rangedWeaponsAcc": -0.2,
+      "rangedWeaponsSpeed": 0.3
+    },
+    "file": "game:config/traits.json"
+  },
+  { // weak
+    "op": "addmerge",
+    "path": "/22/attributes",
+    "value": {
+      "maxHealthExtraPoints": -5
+    },
+    "file": "game:config/traits.json"
+  },
+  { // weak
+    "op": "remove",
+    "path": "/22/attributes/miningSpeedMul",
+    "file": "game:config/traits.json"
+  },
+  { // civil
+    "op": "addmerge",
+    "path": "/23/attributes",
+    "value": {
+      "forageDropRate": -0.15,
+      "animalLootDropRate": -0.25,
+      "animalHarvestingTime": 0.15,
+      "wildCropDropRate": -0.15
+    },
+    "file": "game:config/traits.json"
+  }
+]

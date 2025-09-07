@@ -1,0 +1,20 @@
+[
+  { // hunter
+    "op": "addmerge",
+    "path": "/1/gear/-",
+    "value": {
+      "type": "item",
+      "code": "game:clothes-waist-peasant-strap"
+    },
+    "file": "game:config/characterclasses.json",
+  },
+  { // clockmaker
+    "op": "addmerge",
+    "path": "/3/gear/-",
+    "value": {
+      "type": "item",
+      "code": "game:clothes-face-glasses-clockmaker"
+    },
+    "file": "game:config/characterclasses.json",
+  }
+]

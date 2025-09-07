@@ -7,24 +7,20 @@
 	],
 	"heldTpIdleAnimation": "holdbothhands",
 	"heldTpUseAnimation": "twohandplaceblock",
-	"classByType": {
-		"refurbishedcrock-*": "BlockRefurbishedCrock",
-	},
-	"entityClassByType": {
-		"refurbishedcrock-*": "Crock",
-	},
+	"class": "BlockRefurbishedCrock",
+	"entityClass": "Crock",
 	"variantgroups": [
-		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+    { "code": "color", "states": ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan"] },
 	],
 	"attributes": {
 		"shelvable": true,
 		"mealContainer": true,
-		"mealBlockCode": "refurbishedcrock-{side}",
+		"mealBlockCode": "refurbishedcrock-{color}",
 		"servingCapacity": 6,
 		"bowlContents": null,
 		"handleLiquidContainerInteract": true,
 		"handleCookingContainerInteract": true,
-		"emptiedBlockCode": "refurbishedcrock-{side}",
+		"emptiedBlockCode": "refurbishedcrock-{color}",
 		"tempGlowMode": 1,
 		"onTongTransform": {
 			"translation": { "x": -1.24, "y": -0.95, "z": -0.93 },
@@ -32,22 +28,18 @@
 			"scale": 0.9
 		}
 	},
-	"shapeByType": {
-		"*-north": { "base": "block/clay/crock/base", "rotateY": 0 },
-		"*-east": { "base": "block/clay/crock/base", "rotateY": 270 },
-		"*-west": { "base": "block/clay/crock/base", "rotateY": 90 },
-		"*-south": { "base": "block/clay/crock/base", "rotateY": 180 },
-	},
+  "shapeByType": { "base": "game:block/clay/crock/base" },
 	"doNotRenderAtLod2": true,
 	"blockmaterial": "Ceramic",
-	"creativeinventory": { "general": ["refurbishedcrock-east"], "decorative": ["refurbishedcrock-east"] },
+	"creativeinventory": { "general": ["refurbishedcrock-*"], "decorative": ["refurbishedcrock-*"] },
 	"replaceable": 400,
 	"resistance": 1.5,
 	"maxStackSize": 1,
 	"lightAbsorption": 0,
-	"textures": { 
-		"label": { "base": "game:block/clay/crock/label" }
-	},
+  "textures": {
+    "ceramic": { "base": "game:block/clay/hardened/{color}", "overlays": [ "block/clay/overlay/crock" ] },
+    "label": { "base": "game:block/clay/crock/label" }
+  },
 	"sounds": {
 		"walk": "game:walk/stone",
 	},

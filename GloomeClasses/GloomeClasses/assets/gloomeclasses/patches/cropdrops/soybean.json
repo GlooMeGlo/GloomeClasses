@@ -1,0 +1,16 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-10/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/soybean.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-11/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/soybean.json",
+    "side": "server"
+  }
+]

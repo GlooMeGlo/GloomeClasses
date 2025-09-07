@@ -1,0 +1,24 @@
+[
+  {
+    "op": "replace",
+    "path": "/server/behaviors/2/currenthealthByType",
+    "value": {
+      "*-bronze-*": 27,
+      "*-corrupt-*": 54,
+      "*-corrupt-sawblade-*": 210
+    },
+    "file": "game:entities/lore/locust-hacked.json",
+    "side": "server"
+  },
+  {
+    "op": "replace",
+    "path": "/server/behaviors/2/maxhealthByType",
+    "value": {
+      "*-bronze-*": 27,
+      "*-corrupt-*": 54,
+      "*-corrupt-sawblade-*": 210
+    },
+    "file": "game:entities/lore/locust-hacked.json",
+    "side": "server"
+  }
+]

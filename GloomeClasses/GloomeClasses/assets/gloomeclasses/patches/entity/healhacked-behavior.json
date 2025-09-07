@@ -1,0 +1,82 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/variantgroups/0/states/-",
+    "value": "corrupt-sawblade",
+    "file": "game:entities/lore/locust-hacked.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/attributes/hackedEntityByType/*-corrupt-sawblade",
+    "value": "locust-corrupt-sawblade-hacked",
+    "file": "game:entities/lore/locust.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType",
+    "value": {},
+    "file": "game:itemtypes/resource/metalbit.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType/*-tinbronze",
+    "value": [
+      { "name": "HealHackedBehavior", "properties": { "healthRestored": 2, "corruptedHealer": false }}
+    ],
+    "file": "game:itemtypes/resource/metalbit.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType/*-blackbronze",
+    "value": [
+      { "name": "HealHackedBehavior", "properties": { "healthRestored": 4, "corruptedHealer": true }}
+    ],
+    "file": "game:itemtypes/resource/metalbit.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType",
+    "value": {},
+    "file": "game:blocktypes/metal/metalpartsandscraps.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType/*-parts",
+    "value": [
+      { "name": "HealHackedBehavior", "properties": { "healthRestored": 7, "corruptedHealer": false }}
+    ],
+    "file": "game:blocktypes/metal/metalpartsandscraps.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType/*-scraps",
+    "value": [
+      { "name": "HealHackedBehavior", "properties": { "healthRestored": 8, "corruptedHealer": true }}
+    ],
+    "file": "game:blocktypes/metal/metalpartsandscraps.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType",
+    "value": {},
+    "file": "game:itemtypes/resource/gear.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/behaviorsByType/*-rusty",
+    "value": [
+      { "name": "HealHackedBehavior", "properties": { "healthRestored": 6, "corruptedHealer": true }}
+    ],
+    "file": "game:itemtypes/resource/gear.json",
+    "side": "server"
+  }
+]

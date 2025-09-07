@@ -1,0 +1,16 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-9/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/flax.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-9/2/dropModbyStat",
+    "value": "flaxDropRate",
+    "file": "game:blocktypes/plant/crop/flax.json",
+    "side": "server"
+  }
+]

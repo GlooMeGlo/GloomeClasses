@@ -1,0 +1,9 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-12/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/sunflower.json",
+    "side": "server"
+  }
+]

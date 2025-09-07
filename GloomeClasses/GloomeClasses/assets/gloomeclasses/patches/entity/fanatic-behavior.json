@@ -1,0 +1,9 @@
+﻿[
+  {
+    "file": "game:entities/humanoid/player.json",
+    "op": "addeach",
+    "path": "/server/behaviors/-",
+    "value": [ { "code": "EntityBehaviorFanatic" } ],
+    "side": "server"
+  }
+]

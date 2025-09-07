@@ -1,0 +1,86 @@
+[
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/trader.json",
+		"path": "/components/20/text/-",
+		"value": { "value": "Do you have anything special set aside?", "jumpTo": "merchanttalk", "condition": { "variable": "player.characterclass", "isValue": "merchant" } }
+	},
+  {
+    "op": "addmerge",
+    "file": "game:config/dialogue/trader.json",
+    "path": "/components/-",
+    "value": {
+      "code": "merchanttalk",
+      "owner": "trader",
+      "type": "talk",
+      "text": [
+        { "value": "Ah! A fellow merchant, I can share my finest goods with someone who also appreciates a good deal." }
+      ]
+    }
+  },
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/trader.json",
+		"path": "/components/-",
+		"value": {
+			"code": "merchanttalkresponse",
+			"owner": "player",
+			"type": "talk",
+			"text": [
+				{ "value": "Let's see what you have.", "jumpTo": "opensilvertonguetrade" }
+			]
+		}
+	},
+  {
+    "op": "addmerge",
+    "file": "game:config/dialogue/trader.json",
+    "path": "/components/-",
+    "value": {
+      "code": "opensilvertonguetrade",
+      "owner": "trader",
+      "trigger": "opensilvertonguetrade"
+    }
+  },
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/treasurehunter.json",
+		"path": "/components/20/text/-",
+		"value": { "value": "Do you have anything special set aside?", "jumpTo": "merchanttalk", "condition": { "variable": "player.characterclass", "isValue": "merchant" } }
+	},
+  {
+    "op": "addmerge",
+    "file": "game:config/dialogue/treasurehunter.json",
+    "path": "/components/-",
+    "value": {
+      "code": "merchanttalk",
+      "owner": "trader",
+      "type": "talk",
+      "text": [
+        { "value": "Ah! A fellow merchant, I can share my finest goods with someone who also appreciates a good deal." }
+      ]
+    }
+  },
+	{
+		"op": "addmerge",
+		"file": "game:config/dialogue/treasurehunter.json",
+		"path": "/components/-",
+		"value": {
+			"code": "merchanttalkresponse",
+			"owner": "player",
+			"type": "talk",
+			"text": [
+				{ "value": "Let's see what you have.", "jumpTo": "opensilvertonguetrade" }
+			]
+		}
+	},
+  {
+    "op": "addmerge",
+    "file": "game:config/dialogue/treasurehunter.json",
+    "path": "/components/-",
+    "value": {
+      "code": "opensilvertonguetrade",
+      "owner": "trader",
+      "trigger": "opensilvertonguetrade"
+    }
+  }
+]

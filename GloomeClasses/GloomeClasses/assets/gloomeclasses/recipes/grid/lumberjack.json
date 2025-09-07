@@ -328,7 +328,7 @@
 			},
 			"P": {
 				"type": "item",
-				"code": "game:plank-*"
+				"code": "game:plank-{wood}"
 			}
 		},
 		"width": 2,
@@ -337,7 +337,7 @@
 		"shapeless": true,
 		"output": {
 			"type": "block",
-			"code": "game:woodenpath-ns",
+			"code": "game:woodenpath-{wood}-ns",
 			"quantity": 2
 		}
 	},

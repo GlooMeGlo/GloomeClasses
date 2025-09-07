@@ -1,0 +1,16 @@
+[
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-11/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/cabbage.json",
+    "side": "server"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-12/1/dropModbyStat",
+    "value": "cropDropRate",
+    "file": "game:blocktypes/plant/crop/cabbage.json",
+    "side": "server"
+  }
+]
