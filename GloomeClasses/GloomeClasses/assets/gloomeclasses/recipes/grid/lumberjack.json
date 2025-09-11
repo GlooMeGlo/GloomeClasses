@@ -86,7 +86,7 @@
 			},
 			"L": {
 				"type": "block",
-				"code": "game:log-placed-*-ud",
+				"code": "game:log-*",
 				"allowedVariants": [
 					"aged",
 					"birch",
