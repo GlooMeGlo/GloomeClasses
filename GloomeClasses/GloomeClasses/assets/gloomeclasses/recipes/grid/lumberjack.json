@@ -28,6 +28,34 @@
 		}
 	},
 	{
+		"ingredientPattern": "AWS",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"A": {
+				"type": "item",
+				"code": "game:axe-*",
+				"isTool": true
+			},
+			"W": {
+				"type": "block",
+				"code": "game:logsection-placed-*-ne-ud"
+			},
+			"S": {
+				"type": "block",
+				"code": "game:logsection-placed-*-ne-ud"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"recipeGroup": 2,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "game:firewood",
+			"quantity": 12
+		}
+	},
+	{
 		"ingredientPattern": "WS",
 		"requiresTrait": "carpenter",
 		"ingredients": {
@@ -268,6 +296,33 @@
 		}
 	},
 	{
+		"ingredientPattern": "_PW,PYP,WP_",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:stick",
+				"quantity": 4
+			},
+			"Y": {
+				"type": "item",
+				"code": "game:metalplate-molybdochalkos"
+			},
+			"W": {
+				"type": "block",
+				"code": "game:logsection-*"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wagonwheels-spoked-longaxle-west",
+			"quantity": 4
+		}
+	},
+	{
 		"ingredientPattern": "_P_,PYP,_P_",
 		"requiresTrait": "carpenter",
 		"ingredients": {
@@ -306,6 +361,33 @@
 			"W": {
 				"type": "block",
 				"code": "game:log-*"
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "game:wagonwheels-solid-longaxle-west",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_PW,PYP,WP_",
+		"requiresTrait": "carpenter",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 4
+			},
+			"Y": {
+				"type": "item",
+				"code": "game:metalplate-molybdochalkos"
+			},
+			"W": {
+				"type": "block",
+				"code": "game:logsection-*"
 			}
 		},
 		"width": 3,
