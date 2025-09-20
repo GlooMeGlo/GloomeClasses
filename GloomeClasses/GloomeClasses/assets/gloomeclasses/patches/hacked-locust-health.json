@@ -7,7 +7,7 @@
 			"*-corrupt-*": 54,
 			"*-corrupt-sawblade-*": 210
 		},
-		"file": "game:entities/land/locust-hacked.json"
+		"file": "game:entities/lore/locust-hacked.json"
 	},
 	{
 		"op": "replace",
@@ -17,6 +17,6 @@
 			"*-corrupt-*": 54,
 			"*-corrupt-sawblade-*": 210
 		},
-		"file": "game:entities/land/locust-hacked.json"
+		"file": "game:entities/lore/locust-hacked.json"
 	}
 ]
