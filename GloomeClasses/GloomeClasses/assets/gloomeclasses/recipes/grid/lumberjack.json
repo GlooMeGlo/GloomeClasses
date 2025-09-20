@@ -318,30 +318,6 @@
 		}
 	},
 	{
-		"ingredientPattern": "SP",
-		"requiresTrait": "carpenter",
-		"ingredients": {
-			"S": {
-				"type": "item",
-				"code": "game:saw-*",
-				"isTool": true
-			},
-			"P": {
-				"type": "item",
-				"code": "game:plank-*"
-			}
-		},
-		"width": 2,
-		"height": 1,
-		"recipeGroup": 2,
-		"shapeless": true,
-		"output": {
-			"type": "block",
-			"code": "game:woodenpath-*-ns",
-			"quantity": 2
-		}
-	},
-	{
 		"ingredientPattern": "SRW,L__",
 		"requiresTrait": "carpenter",
 		"ingredients": {
