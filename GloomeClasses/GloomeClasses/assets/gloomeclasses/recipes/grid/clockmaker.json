@@ -95,6 +95,70 @@
 		}
 	},
 	{
+		"ingredientPattern": "H_,SF",
+		"requiresTrait": "tinkerer",
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"code": "game:saw-*",
+				"isTool": true
+			},
+			"S": {
+				"type": "block",
+				"code": "game:logsection-placed-*-ne-ud",
+				"name": "wood"
+			},
+			"F": {
+				"type": "item",
+				"code": "game:fat"
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"recipeGroup": 2,
+		"output": {
+			"type": "block",
+			"code": "game:woodenaxle-ud",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "PXP,RSF",
+		"requiresTrait": "tinkerer",
+		"ingredients": {
+			"X": {
+				"type": "item",
+				"code": "game:saw-*",
+				"isTool": true
+			},
+			"S": {
+				"type": "block",
+				"code": "game:logsection-placed-*-ne-ud",
+				"name": "wood"
+			},
+			"R": {
+				"type": "item",
+				"code": "game:resin"
+			},
+			"P": {
+				"type": "item",
+				"code": "game:stick"
+			},
+			"F": {
+				"type": "item",
+				"code": "game:fat"
+			}
+		},
+		"width": 3,
+		"height": 2,
+		"recipeGroup": 2,
+		"output": {
+			"type": "block",
+			"code": "game:angledgears-s",
+			"quantity": 2
+		}
+	},
+	{
 		"ingredientPattern": "C_C,_I_",
 		"requiresTrait": "tinkerer",
 		"ingredients": {

@@ -3,13 +3,13 @@
 		"op": "addmerge",
 		"path": "/variantgroups/0/states/-",
 		"value": "corrupt-sawblade",
-		"file": "game:entities/land/locust-hacked.json"
+		"file": "game:entities/lore/locust-hacked.json"
 	},
 	{
 		"op": "addmerge",
 		"path": "/attributes/hackedEntityByType/*-corrupt-sawblade",
 		"value": "locust-corrupt-sawblade-hacked",
-		"file": "game:entities/land/locust.json"
+		"file": "game:entities/lore/locust.json"
 	},
 	{
 		"op": "addmerge",

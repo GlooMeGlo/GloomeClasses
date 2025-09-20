@@ -15,25 +15,25 @@
 	},
 	{
 		"op": "remove",
-		"path": "/attributes/handbook/excludeByType/*-stainlessteel",
+		"path": "/attributes/handbook/excludeByType/*-stainlesssteel",
 		"file": "game:itemtypes/resource/ingot.json",
 		"side": "Server"
 	},
 	{
 		"op": "remove",
-		"path": "/attributes/handbook/excludeByType/*-stainlessteel",
+		"path": "/attributes/handbook/excludeByType/*-stainlesssteel",
 		"file": "game:itemtypes/resource/metalplate.json",
 		"side": "Server"
 	},
 	{
-		"op": "add",
+		"op": "addmerge",
 		"path": "/ingredient/allowedVariants/19",
 		"value": "stainlesssteel",
 		"file": "game:recipes/smithing/plate.json",
 		"side": "Server"
 	},
 	{
-		"op": "add",
+		"op": "addmerge",
 		"path": "/combustiblePropsByType/metalplate-stainlesssteel",
 		"value": {
 			"meltingPoint": 1390,

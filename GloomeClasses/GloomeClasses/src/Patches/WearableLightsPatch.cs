@@ -32,7 +32,7 @@ namespace GloomeClasses.src.Patches {
                 for (int i = 0; i < backpack.Count; i++) {
                     var backpackSlot = backpack[i];
 
-                    if (backpackSlot.Empty) {
+                    if (!(backpackSlot is ItemSlotBackpack) || backpackSlot.Empty) {
                         continue;
                     }
 
