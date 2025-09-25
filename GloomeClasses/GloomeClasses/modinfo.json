@@ -6,7 +6,7 @@
         "Gloomeglo", "JonR"
     ],
     "description": "A class mod focused on making each class desireable in their own right, with unique appeals for each.",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "dependencies": {
         "game": "1.21.0"
     }
