@@ -18,7 +18,7 @@ namespace GloomeClasses.src.EntityBehaviors {
 
         }
 
-        public override void OnEntityReceiveDamage(DamageSource damageSource, ref float damage) {
+        public void HandleFireDamage(DamageSource damageSource, ref float damage) {
             var dragonskinBlended = entity.Stats.GetBlended("fireDamage");
             if (dragonskinBlended < 1) {
                 entity.OnFireBeginTotalMs = 0;
