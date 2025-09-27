@@ -162,7 +162,7 @@
 		"attributes": {
 			"bowDrawingStrength": -0.2,
 			"rangedWeaponsAcc": -0.1,
-			"rangedWeaponsSpeed": 0.15
+			"rangedWeaponsSpeed": -0.15
 		}
 	},
 	{
@@ -212,7 +212,7 @@
 			"rangedWeaponsDamage": -0.35,
 			"bowDrawingStrength": -0.35,
 			"rangedWeaponsAcc": -0.2,
-			"rangedWeaponsSpeed": 0.3
+			"rangedWeaponsSpeed": -0.3
 		}
 	},
 	{
@@ -345,7 +345,7 @@
 		"attributes": {
 			"rangedWeaponsDamage": 0.7,
 			"bowDrawingStrength": 0.5,
-			"rangedWeaponsSpeed": -0.25
+			"rangedWeaponsSpeed": 0.25
 		}
 	},
 	{
