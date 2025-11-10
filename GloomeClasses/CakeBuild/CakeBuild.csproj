@@ -2,18 +2,30 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
   </PropertyGroup>
-  
+
+  <PropertyGroup>
+    <!-- allow override via VINTAGE_STORY environment variable -->
+    <GameDirectory Condition="'$(VINTAGE_STORY)' != ''">$(VINTAGE_STORY)</GameDirectory>
+    <!-- Vintage Story installation path. auto-detect for cross-platform compatibility. -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' == 'Windows_NT'">$(AppData)/Vintagestory</GameDirectory>
+    <!-- flatpak installation on Linux -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND Exists('/var/lib/flatpak/app/at.vintagestory.VintageStory')">/var/lib/flatpak/app/at.vintagestory.VintageStory/x86_64/stable/active/files/extra/vintagestory</GameDirectory>
+    <!-- standard Linux installation -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND !Exists('/var/lib/flatpak/app/at.vintagestory.VintageStory')">$(HOME)/.config/VintagestoryData</GameDirectory>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Cake.Frosting" Version="3.0.0" />
     <PackageReference Include="Cake.Json" Version="7.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Reference Include="VintagestoryAPI">
-      <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+      <HintPath>$(GameDirectory)/VintagestoryAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
