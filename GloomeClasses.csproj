@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- allow override via VINTAGE_STORY environment variable -->
+    <GameDirectory Condition="'$(VINTAGE_STORY)' != ''">$(VINTAGE_STORY)</GameDirectory>
+    <!-- Vintage Story installation path. auto-detect for cross-platform compatibility. -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' == 'Windows_NT'">$(AppData)/Vintagestory</GameDirectory>
+    <!-- flatpak installation on Linux -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND Exists('/var/lib/flatpak/app/at.vintagestory.VintageStory')">/var/lib/flatpak/app/at.vintagestory.VintageStory/x86_64/stable/active/files/extra/vintagestory</GameDirectory>
+    <!-- standard Linux installation -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND !Exists('/var/lib/flatpak/app/at.vintagestory.VintageStory')">$(HOME)/.config/VintagestoryData</GameDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- exclude build tools from compilation -->
+    <Compile Remove="build\**" />
+    <EmbeddedResource Remove="build\**" />
+    <None Remove="build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(GameDirectory)/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VSSurvivalMod">
+      <HintPath>$(GameDirectory)/Mods/VSSurvivalMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSEssentials">
+      <HintPath>$(GameDirectory)/Mods/VSEssentials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSCreativeMod">
+      <HintPath>$(GameDirectory)/Mods/VSCreativeMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(GameDirectory)/Lib/Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(GameDirectory)/Lib/0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VintagestoryLib">
+      <HintPath>$(GameDirectory)/VintagestoryLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>$(GameDirectory)/Lib/protobuf-net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="cairo-sharp">
+      <HintPath>$(GameDirectory)/Lib/cairo-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite">
+      <HintPath>$(GameDirectory)/Lib/Microsoft.Data.Sqlite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+<ItemGroup>
+  <Content Include="assets\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+  <Content Include="modinfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
+
+</Project>

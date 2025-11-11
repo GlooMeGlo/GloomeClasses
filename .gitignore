@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# local issue track
+ISSUES.md
+BUGS_TO_FIX.md

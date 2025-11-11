@@ -36,7 +36,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
             if (entPlayer != null && entitySel != null && entitySel.Entity != null && entitySel.Entity is EntityLocust && entitySel.Entity.Properties.Variant.ContainsKey("state") && slot.StackSize > 0) { //The only Locusts that have a 'State' variant are the hacked ones!
                 string classcode = entPlayer.WatchedAttributes.GetString("characterClass");
                 CharacterClass charclass = entPlayer.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
-                var hasLocustLover = charclass.Traits.Contains(LocustLoverCode);
+                var hasLocustLover = charclass != null && charclass.Traits.Contains(LocustLoverCode);
 
                 if (hasLocustLover && entitySel.Entity.Properties.Variant.TryGetValue("type", out string hackedType)) {
                     if (properties.corruptedHealer == false && hackedType == "bronze") {
