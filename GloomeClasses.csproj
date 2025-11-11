@@ -20,6 +20,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Exclude build tools from compilation -->
+    <Compile Remove="build\**" />
+    <EmbeddedResource Remove="build\**" />
+    <None Remove="build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(GameDirectory)/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>

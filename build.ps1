@@ -1,2 +1,2 @@
-dotnet run --project CakeBuild/CakeBuild.csproj -- $args
+dotnet run --project build/CakeBuild/CakeBuild.csproj -- $args
 exit $LASTEXITCODE;
