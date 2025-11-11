@@ -296,7 +296,7 @@ namespace GloomeClasses.src.Alchemist {
         protected void ToggleInventoryDialogClient(IPlayer byPlayer) {
             string classcode = byPlayer.Entity.WatchedAttributes.GetString("characterClass");
             CharacterClass charclass = byPlayer.Entity.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
-            OpenedByTT = charclass.Traits.Contains("temporaltransmutation");
+            OpenedByTT = charclass != null && charclass.Traits.Contains("temporaltransmutation");
 
             if (invDialog == null) {
                 ICoreClientAPI capi = Api as ICoreClientAPI;

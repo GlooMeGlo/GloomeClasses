@@ -59,7 +59,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
                 }
                 string classcode = player.WatchedAttributes.GetString("characterClass");
                 CharacterClass charclass = player.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
-                if (charclass.Traits.Contains("clairvoyance")) {
+                if (charclass != null && charclass.Traits.Contains("clairvoyance")) {
                     handHandling = EnumHandHandling.PreventDefault;
                     handling = EnumHandling.PreventSubsequent;
                     if (player.World.Side == EnumAppSide.Server) {
