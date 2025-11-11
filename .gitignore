@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 # vscode
 .vscode/
+ISSUES.md
+BUGS_TO_FIX.md
