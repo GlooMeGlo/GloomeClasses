@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Exclude build tools from compilation -->
+    <!-- exclude build tools from compilation -->
     <Compile Remove="build\**" />
     <EmbeddedResource Remove="build\**" />
     <None Remove="build\**" />
