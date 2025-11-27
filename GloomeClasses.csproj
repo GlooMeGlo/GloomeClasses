@@ -15,6 +15,8 @@
     <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' == 'Windows_NT'">$(AppData)/Vintagestory</GameDirectory>
     <!-- flatpak installation on Linux -->
     <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND Exists('/var/lib/flatpak/app/at.vintagestory.VintageStory')">/var/lib/flatpak/app/at.vintagestory.VintageStory/x86_64/stable/active/files/extra/vintagestory</GameDirectory>
+    <!-- AUR/system installation on Linux -->
+    <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND Exists('/opt/vintagestory')">/opt/vintagestory</GameDirectory>
     <!-- standard Linux installation -->
     <GameDirectory Condition="'$(GameDirectory)' == '' AND '$(OS)' != 'Windows_NT' AND !Exists('/var/lib/flatpak/app/at.vintagestory.VintageStory')">$(HOME)/.config/VintagestoryData</GameDirectory>
   </PropertyGroup>
