@@ -140,7 +140,7 @@
 		"averageDurability": false,
 		"output": {
 			"type": "block",
-			"code": "metalpot-iron-empty",
+			"code": "gloomeclasses:metalpot-meteoriciron-empty",
 			"quantity": 1
 		}
 	},
@@ -303,8 +303,8 @@
 				"code": "game:salt",
 				"quantity": 3
 			},
-			"W": { 
-				"type": "block", 
+			"W": {
+				"type": "block",
 				"code": "game:woodbucket"
 			}
 		},
@@ -372,14 +372,81 @@
 		}
 	},
 	{
-		"ingredientPattern": "C,F",
+		"ingredientPattern": "CR",
+		"requiresTrait": "culinary",
 		"ingredients": {
-			"C": { "type": "block", "code": "refurbishedcrock-east" },
-			"F": { "type": "item", "code": "gloomeclasses:rosin" }
+			"C": {
+				"type": "block",
+				"code": "gloomeclasses:refurbishedcrock-*"
+			},
+			"R": {
+				"type": "item",
+				"code": "gloomeclasses:rosin",
+				"quantity": 1
+			}
 		},
-		"width": 1,
-		"height": 2,
+		"width": 2,
+		"height": 1,
 		"shapeless": true,
-		"output": { "type": "block", "code": "refurbishedcrock-east", "quantity": 1  }
+		"copyAttributesFrom": "C",
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:refurbishedcrock-east",
+			"attributes": {
+				"sealed": true
+			}
+		}
+	},
+	{
+		"ingredientPattern": "CF",
+		"requiresTrait": "culinary",
+		"ingredients": {
+			"C": {
+				"type": "block",
+				"code": "gloomeclasses:refurbishedcrock-*"
+			},
+			"F": {
+				"type": "item",
+				"code": "game:fat",
+				"quantity": 1
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"copyAttributesFrom": "C",
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:refurbishedcrock-east",
+			"attributes": {
+				"sealed": true
+			}
+		}
+	},
+	{
+		"ingredientPattern": "CB",
+		"requiresTrait": "culinary",
+		"ingredients": {
+			"C": {
+				"type": "block",
+				"code": "gloomeclasses:refurbishedcrock-*"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:beeswax",
+				"quantity": 1
+			}
+		},
+		"width": 2,
+		"height": 1,
+		"shapeless": true,
+		"copyAttributesFrom": "C",
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:refurbishedcrock-east",
+			"attributes": {
+				"sealed": true
+			}
+		}
 	}
 ]

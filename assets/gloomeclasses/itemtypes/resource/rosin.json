@@ -1,41 +1,42 @@
 {
-	code: "rosin",
-	maxstacksize: 32,
-	behaviors: [
-		{ name: "GroundStorable", properties: { layout: 'Quadrants', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 } } }
+	"code": "rosin",
+	"maxstacksize": 32,
+	"behaviors": [
+		{ "name": "GroundStorable", "properties": { "layout": 'Quadrants', "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1 } } }
 	],
-	shape: { base: "item/resource/rosin" },
-	creativeinventory: { "general": ["*"], "items": ["*"] },
-	combustibleProps: {
-		burnTemperature: 900,
-		burnDuration: 6	
+	"shape": { "base": "item/resource/rosin" },
+	"creativeinventory": { "general": ["*"], "items": ["*"] },
+	"combustibleProps": {
+		"burnTemperature": 900,
+		"burnDuration": 6	
 	},
-	attributes: {
-		displaycaseable: true, 
-		shelvable: true
+	"attributes": {
+		"displaycaseable": true,
+		"shelvable": true,
+		"canSealCrock": true
 	},
-	materialDensity: 700,
-	guiTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 154, y: 20, z: -5 },
-		origin: { x: 0.48, y: 0.06, z: 0.5 },
-		scale: 3.55,
-		rotate:true
+	"materialDensity": 700,
+	"guiTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": 154, "y": 20, "z": -5 },
+		"origin": { "x": 0.48, "y": 0.06, "z": 0.5 },
+		"scale": 3.55,
+		"rotate":true
 	},
-	fpHandTransform: {
-		translation: { x: 0.0468, y: -0.15, z: 0 },
-		rotation: { x: 26, y: 135, z: -12 },
-		scale: 1.29
+	"fpHandTransform": {
+		"translation": { "x": 0.0468, "y": -0.15, "z": 0 },
+		"rotation": { "x": 26, "y": 135, "z": -12 },
+		"scale": 1.29
 	},
-	tpHandTransform: {
-		translation: { x: -1.1, y: -1.2, z: -1.5 },
-		rotation: { x: 90, y: -92, z: -180 },
-		scale: 0.43
+	"tpHandTransform": {
+		"translation": { "x": -1.1, "y": -1.2, "z": -1.5 },
+		"rotation": { "x": 90, "y": -92, "z": -180 },
+		"scale": 0.43
 	},
-	groundTransform: {
-		translation: { x: 0, y: 0.17, z: 0 },
-		rotation: { x: -1, y: 0, z: 0 },
-		origin: { x: 0.5, y: 0.33, z: 0.5299 },
-		scale: 4
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0.17, "z": 0 },
+		"rotation": { "x": -1, "y": 0, "z": 0 },
+		"origin": { "x": 0.5, "y": 0.33, "z": 0.5299 },
+		"scale": 4
 	}
 }

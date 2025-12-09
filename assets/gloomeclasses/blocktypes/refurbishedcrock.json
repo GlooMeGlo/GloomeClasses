@@ -13,6 +13,7 @@
 		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
 	],
 	"attributes": {
+		"displaycaseable": true,
 		"shelvable": true,
 		"mealContainer": true,
 		"servingCapacity": 6,
@@ -45,8 +46,9 @@
 	"resistance": 1.5,
 	"maxStackSize": 1,
 	"lightAbsorption": 0,
-	"textures": { 
-		"label": { "base": "game:block/clay/crock/label" }
+	"textures": {
+		"label": { "base": "game:block/clay/crock/label" },
+		"seal": { "base": "game:item/resource/ungraded/sulfur" }
 	},
 	"sounds": {
 		"walk": "game:walk/stone"
