@@ -78,17 +78,25 @@ export VINTAGE_STORY="/path/to/vintagestory"
 
 ---
 
-## Mod Compatibility
+## Diagnostic Features (v1.1.0+)
 
-### Compatible Mods
-- Most content mods
-- Other class mods (some trait overlap possible)
+GloomeClasses now includes comprehensive diagnostic logging to help troubleshoot mod conflicts and issues.
 
-### Known Conflicts
-- **SmithingPlus** - Bronze bits workable temperature conflict
+### Viewing Diagnostic Logs
+
+**Client-side**: Check `VintagestoryData/Logs/client-*.txt`
+**Server-side**: Check `VintagestoryData/Logs/server-*.txt`
+
+Look for messages with `[GloomeClasses]` prefix.
+
+### Reporting Bugs
+
+When reporting issues, please include:
+1. Full `[GloomeClasses]` log section from client-debug.txt or server-debug.txt
+2. List of other mods installed (especially character/class mods)
+3. Game version and whether singleplayer or multiplayer
+4. Exact steps to reproduce the issue
+
+The diagnostic logging is designed to help identify what's happening on your system.
 
 ---
-
-## License
-
-tbd
