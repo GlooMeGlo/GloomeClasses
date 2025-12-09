@@ -26,6 +26,10 @@
     <Compile Remove="build\**" />
     <EmbeddedResource Remove="build\**" />
     <None Remove="build\**" />
+    <!-- exclude GloomeClassesCompat... independent and now unused compat patch project -->
+    <Compile Remove="archive\**" />
+    <EmbeddedResource Remove="archive\**" />
+    <None Remove="archive\**" />
   </ItemGroup>
 
   <ItemGroup>
