@@ -1,7 +1,7 @@
 # GlooMeClasses
 
-[![Vintage Story Version](https://img.shields.io/badge/Vintage%20Story-1.21.0--1.21.1-green)](https://www.vintagestory.at/)
-[![Mod Version](https://img.shields.io/badge/Version-1.0.10-blue)](https://mods.vintagestory.at/gloomeclasses)
+[![Vintage Story Version](https://img.shields.io/badge/Vintage%20Story-1.21.5-green)](https://www.vintagestory.at/)
+[![Mod Version](https://img.shields.io/badge/Version-1.2.0-blue)](https://mods.vintagestory.at/gloomeclasses)
 [![Downloads](https://img.shields.io/badge/Downloads-15k%2B-brightgreen)](https://mods.vintagestory.at/gloomeclasses)
 
 A standalone class mod focused on making each class desireable in their own right, with unique appeals for each.
