@@ -127,7 +127,7 @@
 		}
 	},
 	{
-		"ingredientPattern": "PW",
+		"ingredientPattern": "PPP,PWP,PPP",
 		"requiresTrait": "zealot",
 		"ingredients": {
 			"P": {
@@ -136,18 +136,29 @@
 				"quantity": 6
 			},
 			"W": {
-				"type": "item",
-				"code": "game:glueportion-pitch-hot",
-				"quantity": 2
+				"type": "block",
+				"code": "game:woodbucket"
 			}
 		},
-		"width": 2,
-		"height": 1,
+		"width": 3,
+		"height": 3,
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": {
+					"type": "item",
+					"code": "glueportion-pitch-hot"
+				},
+
+				"requiresLitres": 0.6
+			}
+		},
 		"shapeless": true,
 		"output": {
 			"type": "item",
 			"code": "gloomeclasses:gem-temporal",
-			"quantity": 1
-		}
+			"quantity": 6
+		},
+
+		"comment": "FIXED: Requires 0.6 litres of hot pitch glue (0.1 per prima materia) to properly coat all 6 materials. The bucket is returned empty after crafting."
 	}
 ]

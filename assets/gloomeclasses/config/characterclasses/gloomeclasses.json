@@ -1,5 +1,41 @@
 [
 	{
+		"enabled": false,
+		"code": "commoner",
+		"traits": [],
+		"gear": []
+	},
+	{
+		"enabled": false,
+		"code": "hunter",
+		"traits": [],
+		"gear": []
+	},
+	{
+		"enabled": false,
+		"code": "malefactor",
+		"traits": [],
+		"gear": []
+	},
+	{
+		"enabled": false,
+		"code": "clockmaker",
+		"traits": [],
+		"gear": []
+	},
+	{
+		"enabled": false,
+		"code": "blackguard",
+		"traits": [],
+		"gear": []
+	},
+	{
+		"enabled": false,
+		"code": "tailor",
+		"traits": [],
+		"gear": []
+	},
+	{
 		"enabled": true,
 		"code": "alchemist",
 		"traits": [
