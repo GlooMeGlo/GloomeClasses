@@ -94,6 +94,7 @@
 	"game:blockhelp-gassifier-closedoor": "Закрити двері",
 	"game:blockhelp-gassifier-refuel": "Додати паливо",
 	"game:blockhelp-gassifier-ignite": "Запалити газогенератор",
+	"game:blockhelp-crock-sealwithrosin": "Запечатати каніфоллю для покращеного зберігання",
 
 	"blockdesc-metalpan-copper": "Правильний лоток для промивання дозволяє знаходити корисні копалини та збільшує шанси знайти самородки.",
 	"blockdesc-metalpot-copper-empty": "<font color=\"#99c9f9\"><i>Вміщує 7 порцій</i></font>",

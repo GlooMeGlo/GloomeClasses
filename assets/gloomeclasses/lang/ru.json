@@ -92,6 +92,7 @@
 "game:blockhelp-gassifier-closedoor": "Закрыть дверь",
 "game:blockhelp-gassifier-refuel": "Добавить топливо",
 "game:blockhelp-gassifier-ignite": "Поджечь газификатор",
+"game:blockhelp-crock-sealwithrosin": "Запечатать канифолью для улучшенной сохранности",
 "blockdesc-metalpan-copper": "Настоящая промывочная чаша искателя, может находить минералы и повышает шанс найти самородки",
 "blockdesc-metalpot-copper-empty": "<font color=\"#99c9f9\"><i>Вмещает 7 порций</i></font>",
 "blockdesc-metalpot-tinbronze-empty": "<font color=\"#99c9f9\"><i>Вмещает 8 порций</i></font>",

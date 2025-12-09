@@ -93,7 +93,8 @@
 	"game:blockhelp-gassifier-opendoor": "Open the door",
 	"game:blockhelp-gassifier-closedoor": "Close the door",
 	"game:blockhelp-gassifier-refuel": "Add fuel",
-	"game:blockhelp-gassifier-ignite": "Ignite the Gassifier",
+	"game:blockhelp-gassifier-ignite": "Ignite the Gasifier",
+	"game:blockhelp-crock-sealwithrosin": "Seal with rosin for enhanced preservation",
 
 	"blockdesc-metalpan-copper": "A proper prospectors pan, can find minerals and has an increased chance to find nuggets",
 	"blockdesc-metalpot-copper-empty": "<font color=\"#99c9f9\"><i>Can hold 7 servings</i></font>",
