@@ -306,7 +306,7 @@
 			"W": { 
 				"type": "block", 
 				"code": "game:woodbucket"
-			},
+			}
 		},
 		"width": 3,
 		"height": 1,

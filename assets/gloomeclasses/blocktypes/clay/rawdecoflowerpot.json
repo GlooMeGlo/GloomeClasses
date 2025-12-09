@@ -1,14 +1,14 @@
 {
 	"code": "rawdecoflowerpot",
 	"classByType": {
-		"*": "Block",
+		"*": "Block"
 	},
 	"behaviorsByType": {
 		"*": [
 			{ "name": "GroundStorable", "properties": { "layout": "Quadrants", "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.4375, "z2": 1 } } },
 			{ "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" },
 			{ "name": "RightClickPickup"} 
-		],
+		]
 	},
 	"behaviors": [ ],
 	"variantgroups": [
@@ -18,7 +18,7 @@
 	"texturesByType": {
 		"*": { 
 			"sides": {  "base": "gloomeclasses:block/clay/flowerpotraw/sides/{type}" },
-			"topbottom": {  "base": "gloomeclasses:block/clay/flowerpotraw/topbottom/{type}" },
+			"topbottom": {  "base": "gloomeclasses:block/clay/flowerpotraw/topbottom/{type}" }
 		}
 	},
 	"attributes": {

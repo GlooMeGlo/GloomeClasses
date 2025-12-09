@@ -152,7 +152,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-copper-empty",
 			"servingCapacity": 7,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-tinbronze-empty": {
 			"maxContainerSlotStackSize": 8,
@@ -167,7 +167,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-tinbronze-empty",
 			"servingCapacity": 8,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-bismuthbronze-empty": {
 			"maxContainerSlotStackSize": 8,
@@ -182,7 +182,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-bismuthbronze-empty",
 			"servingCapacity": 8,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-blackbronze-empty": {
 			"maxContainerSlotStackSize": 9,
@@ -197,7 +197,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-blackbronze-empty",
 			"servingCapacity": 9,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-iron-empty": {
 			"maxContainerSlotStackSize": 10,
@@ -212,7 +212,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-iron-empty",
 			"servingCapacity": 10,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-meteoriciron-empty": {
 			"maxContainerSlotStackSize": 11,
@@ -227,7 +227,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-meteoriciron-empty",
 			"servingCapacity": 11,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-gold-empty": {
 			"maxContainerSlotStackSize": 12,
@@ -242,7 +242,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-gold-empty",
 			"servingCapacity": 12,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-silver-empty": {
 			"maxContainerSlotStackSize": 12,
@@ -257,7 +257,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-silver-empty",
 			"servingCapacity": 12,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-electrum-empty": {
 			"maxContainerSlotStackSize": 12,
@@ -272,7 +272,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-electrum-empty",
 			"servingCapacity": 12,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-steel-empty": {
 			"maxContainerSlotStackSize": 13,
@@ -287,7 +287,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-steel-empty",
 			"servingCapacity": 13,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		},
 		"*-stainlesssteel-empty": {
 			"maxContainerSlotStackSize": 14,
@@ -302,7 +302,7 @@
 			"emptiedBlockcode": "gloomeclasses:metalpot-stainlesssteel-empty",
 			"servingCapacity": 14,
 			"allowHeating": true,
-			"handleCookingContainerInteract": true,
+			"handleCookingContainerInteract": true
 		}
 	},
 	"entityclassByType": {

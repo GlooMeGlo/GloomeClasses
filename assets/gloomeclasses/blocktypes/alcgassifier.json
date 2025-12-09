@@ -71,7 +71,7 @@
 	"resistance": 2,
 	"lightAbsorption": 0,
 	"lightHsvByType": {
-		"*-lit-*": [7, 7, 16],
+		"*-lit-*": [7, 7, 16]
 	},
 	"sounds": {
 		"place": "game:block/planks",
