@@ -12,13 +12,9 @@ using Vintagestory.GameContent;
 
 namespace GloomeClasses.src.BlockBehaviors {
 
-    public class TranslocatorTrackerBlockEntityBehavior : BlockEntityBehavior {
+    public class TranslocatorTrackerBlockEntityBehavior(BlockEntity blockentity) : BlockEntityBehavior(blockentity) {
 
         GenericPOI poi;
-
-        public TranslocatorTrackerBlockEntityBehavior(BlockEntity blockentity) : base(blockentity) {
-            
-        }
 
         public override void Initialize(ICoreAPI api, JsonObject properties) {
             base.Initialize(api, properties);

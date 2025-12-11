@@ -14,6 +14,8 @@ namespace GloomeClasses.src.Alchemist {
 
     public class GuiDialogMetalBarrel : GuiDialogBlockEntity {
 
+        private const double MaxInteractionDistance = 15.0;
+        private long distanceCheckTimerId;
         private EnumPosFlag screenPos;
         private ElementBounds inputSlotBounds;
         protected override double FloatyDialogPosition => 0.6;
@@ -39,15 +41,15 @@ namespace GloomeClasses.src.Alchemist {
             base.SingleComposer = capi.Gui.CreateCompo("blockentitymetalbarrel" + base.BlockEntityPosition, bounds).AddShadedDialogBG(elementBounds4).AddDialogTitleBar(DialogTitle, OnTitleBarClose)
                 .BeginChildElements(elementBounds4)
                 .AddItemSlotGrid(base.Inventory, SendInvPacket, 1, new int[1], inputSlotBounds, "inputSlot")
-                .AddSmallButton(Lang.Get("barrel-seal"), onSealClick, ElementBounds.Fixed(0.0, 100.0, 80.0, 25.0))
+                .AddSmallButton(Lang.Get("barrel-seal"), OnSealClick, ElementBounds.Fixed(0.0, 100.0, 80.0, 25.0))
                 .AddInset(elementBounds3.ForkBoundingParent(2.0, 2.0, 2.0, 2.0), 2)
-                .AddDynamicCustomDraw(elementBounds3, fullnessMeterDraw, "liquidBar")
-                .AddDynamicText(getContentsText(), CairoFont.WhiteDetailText(), elementBounds2, "contentText")
+                .AddDynamicCustomDraw(elementBounds3, FullnessMeterDraw, "liquidBar")
+                .AddDynamicText(GetContentsText(), CairoFont.WhiteDetailText(), elementBounds2, "contentText")
                 .EndChildElements()
                 .Compose();
         }
 
-        private string getContentsText() {
+        private string GetContentsText() {
             string text = Lang.Get("Contents:");
             if (base.Inventory[0].Empty && base.Inventory[1].Empty) {
                 text = text + "\n" + Lang.Get("nobarrelcontents");
@@ -68,8 +70,7 @@ namespace GloomeClasses.src.Alchemist {
                     text = text + "\n" + Lang.Get("barrelcontents-items", itemstack2.StackSize, itemstack2.GetName());
                 }
 
-                BlockEntityMetalBarrel blockEntityBarrel = capi.World.BlockAccessor.GetBlockEntity(base.BlockEntityPosition) as BlockEntityMetalBarrel;
-                if (blockEntityBarrel.CurrentRecipe != null) {
+                if (capi.World.BlockAccessor.GetBlockEntity(base.BlockEntityPosition) is BlockEntityMetalBarrel blockEntityBarrel && blockEntityBarrel.CurrentRecipe != null) {
                     ItemStack resolvedItemstack = blockEntityBarrel.CurrentRecipe.Output.ResolvedItemstack;
                     WaterTightContainableProps containableProps2 = BlockLiquidContainerBase.GetContainableProps(resolvedItemstack);
                     string text3 = ((blockEntityBarrel.CurrentRecipe.SealHours > 24.0) ? Lang.Get("{0} days", Math.Round(blockEntityBarrel.CurrentRecipe.SealHours / (double)capi.World.Calendar.HoursPerDay, 1)) : Lang.Get("{0} hours", blockEntityBarrel.CurrentRecipe.SealHours));
@@ -88,13 +89,14 @@ namespace GloomeClasses.src.Alchemist {
 
         public void UpdateContents() {
             base.SingleComposer.GetCustomDraw("liquidBar").Redraw();
-            base.SingleComposer.GetDynamicText("contentText").SetNewText(getContentsText());
+            base.SingleComposer.GetDynamicText("contentText").SetNewText(GetContentsText());
         }
 
-        private void fullnessMeterDraw(Context ctx, ImageSurface surface, ElementBounds currentBounds) {
+        private void FullnessMeterDraw(Context ctx, ImageSurface surface, ElementBounds currentBounds) {
             ItemSlot itemSlot = base.Inventory[1];
             if (!itemSlot.Empty) {
-                BlockEntityMetalBarrel obj = capi.World.BlockAccessor.GetBlockEntity(base.BlockEntityPosition) as BlockEntityMetalBarrel;
+                if (capi.World.BlockAccessor.GetBlockEntity(base.BlockEntityPosition) is not BlockEntityMetalBarrel obj) return; // Block entity no longer exists (chunk unloaded)
+
                 float num = 1f;
                 int num2 = obj.CapacityLitres;
                 WaterTightContainableProps containableProps = BlockLiquidContainerBase.GetContainableProps(itemSlot.Itemstack);
@@ -119,7 +121,7 @@ namespace GloomeClasses.src.Alchemist {
             }
         }
 
-        private bool onSealClick() {
+        private bool OnSealClick() {
             if (!(capi.World.BlockAccessor.GetBlockEntity(base.BlockEntityPosition) is BlockEntityMetalBarrel { Sealed: false } blockEntityBarrel)) {
                 return true;
             }
@@ -143,17 +145,38 @@ namespace GloomeClasses.src.Alchemist {
             TryClose();
         }
 
+        private void CheckDistance(float dt) {
+            if (capi?.World?.Player?.Entity == null) {
+                TryClose();
+                return;
+            }
+
+            Vec3d playerPos = capi.World.Player.Entity.Pos.XYZ;
+            Vec3d blockPos = new(BlockEntityPosition.X + 0.5, BlockEntityPosition.Y + 0.5, BlockEntityPosition.Z + 0.5);
+            double distance = playerPos.DistanceTo(blockPos);
+
+            if (distance > MaxInteractionDistance) {
+                TryClose();
+            }
+        }
+
         public override void OnGuiOpened() {
             base.OnGuiOpened();
             screenPos = GetFreePos("smallblockgui");
             OccupyPos("smallblockgui", screenPos);
             SetupDialog();
+
+            // register distance checker (runs every 500ms)
+            distanceCheckTimerId = capi.Event.RegisterGameTickListener(CheckDistance, 500);
         }
 
         public override void OnGuiClosed() {
             base.SingleComposer.GetSlotGrid("inputSlot").OnGuiClosed(capi);
             base.OnGuiClosed();
             FreePos("smallblockgui", screenPos);
+
+            // unregister distance checker
+            capi.Event.UnregisterGameTickListener(distanceCheckTimerId);
         }
     }
 }

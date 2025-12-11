@@ -12,15 +12,16 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
+using GloomeClasses.src.Utils;
 
 namespace GloomeClasses.src.Alchemist {
     public class BlockMetalBarrel : BlockLiquidContainerBase {
         public override bool AllowHeldLiquidTransfer => false;
-        public AssetLocation emptyShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/empty");
-        public AssetLocation sealedShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/closed");
-        public AssetLocation contentsShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/contents");
-        public AssetLocation opaqueLiquidContentsShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/opaqueliquidcontents");
-        public AssetLocation liquidContentsShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/liquidcontents");
+        public AssetLocation EmptyShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/empty");
+        public AssetLocation SealedShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/closed");
+        public AssetLocation ContentsShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/contents");
+        public AssetLocation OpaqueLiquidContentsShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/opaqueliquidcontents");
+        public AssetLocation LiquidContentsShape { get; protected set; } = AssetLocation.Create("block/wood/barrel/liquidcontents");
 
         public override int GetContainerSlotId(BlockPos pos) {
             return 1;
@@ -31,35 +32,57 @@ namespace GloomeClasses.src.Alchemist {
         }
 
         public override void OnBeforeRender(ICoreClientAPI capi, ItemStack itemstack, EnumItemRenderTarget target, ref ItemRenderInfo renderinfo) {
-            object value;
-            Dictionary<string, MultiTextureMeshRef> dictionary2 = (Dictionary<string, MultiTextureMeshRef>)(capi.ObjectCache.TryGetValue("barrelMeshRefs" + Code, out value) ? (value as Dictionary<string, MultiTextureMeshRef>) : (capi.ObjectCache["barrelMeshRefs" + Code] = new Dictionary<string, MultiTextureMeshRef>()));
+            string cacheKey = "barrelMeshRefs" + Code;
+            Dictionary<string, MultiTextureMeshRef> meshCache = (Dictionary<string, MultiTextureMeshRef>)(capi.ObjectCache.TryGetValue(cacheKey, out object value) ? (value as Dictionary<string, MultiTextureMeshRef>) : (capi.ObjectCache[cacheKey] = new Dictionary<string, MultiTextureMeshRef>()));
+
             ItemStack[] contents = GetContents(capi.World, itemstack);
             if (contents != null && contents.Length != 0) {
-                bool @bool = itemstack.Attributes.GetBool("sealed");
-                string barrelMeshkey = GetBarrelMeshkey(contents[0], (contents.Length > 1) ? contents[1] : null);
-                if (!dictionary2.TryGetValue(barrelMeshkey, out var value2)) {
-                    MeshData data = GenMesh(contents[0], (contents.Length > 1) ? contents[1] : null, @bool);
-                    value2 = (dictionary2[barrelMeshkey] = capi.Render.UploadMultiTextureMesh(data));
+                bool isSealed = itemstack.Attributes.GetBool("sealed");
+                string meshKey = GetBarrelMeshkey(contents[0], (contents.Length > 1) ? contents[1] : null, isSealed);
+
+                if (!meshCache.TryGetValue(meshKey, out var meshRef)) {
+                    // cache miss - generate new mesh
+                    MeshDiagnostics.RecordCacheMiss("BlockMetalBarrel");
+                    MeshData data = GenMesh(contents[0], (contents.Length > 1) ? contents[1] : null, isSealed);
+                    MeshDiagnostics.RecordMeshGeneration("BlockMetalBarrel", data?.VerticesCount ?? 0);
+                    meshRef = meshCache[meshKey] = capi.Render.UploadMultiTextureMesh(data);
+                } else {
+                    // cache hit - reusing existing mesh
+                    MeshDiagnostics.RecordCacheHit("BlockMetalBarrel");
                 }
 
-                renderinfo.ModelRef = value2;
+                renderinfo.ModelRef = meshRef;
             }
         }
 
-        public string GetBarrelMeshkey(ItemStack contentStack, ItemStack liquidStack) {
-            return string.Concat(contentStack?.StackSize + "x" + contentStack?.GetHashCode(), (liquidStack?.StackSize).ToString(), "x", (liquidStack?.GetHashCode()).ToString());
+        public string GetBarrelMeshkey(ItemStack contentStack, ItemStack liquidStack, bool isSealed) {
+            // use stable identifiers instead of GetHashCode() which can vary
+            string contentKey = contentStack != null
+                ? $"{contentStack.Collectible.Code}:{contentStack.StackSize}"
+                : "empty";
+            string liquidKey = liquidStack != null
+                ? $"{liquidStack.Collectible.Code}:{liquidStack.StackSize}"
+                : "empty";
+
+            return $"{contentKey}|{liquidKey}|{(isSealed ? "sealed" : "open")}";
         }
 
         public override void OnUnloaded(ICoreAPI api) {
-            if (!(api is ICoreClientAPI coreClientAPI) || !coreClientAPI.ObjectCache.TryGetValue("barrelMeshRefs", out var value)) {
+            if (api is not ICoreClientAPI coreClientAPI) {
                 return;
             }
 
-            foreach (KeyValuePair<int, MultiTextureMeshRef> item in value as Dictionary<int, MultiTextureMeshRef>) {
-                item.Value.Dispose();
+            string cacheKey = "barrelMeshRefs" + Code;
+            if (!coreClientAPI.ObjectCache.TryGetValue(cacheKey, out var value)) {
+                return;
             }
 
-            coreClientAPI.ObjectCache.Remove("barrelMeshRefs");
+            // properly dispose of all cached meshes
+            foreach (KeyValuePair<string, MultiTextureMeshRef> item in value as Dictionary<string, MultiTextureMeshRef>) {
+                item.Value?.Dispose();
+            }
+
+            coreClientAPI.ObjectCache.Remove(cacheKey);
         }
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f) {
@@ -82,10 +105,10 @@ namespace GloomeClasses.src.Alchemist {
             }
 
             if (world.Side == EnumAppSide.Server && (byPlayer == null || byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)) {
-                ItemStack[] array = new ItemStack[1]
-                {
+                ItemStack[] array =
+                [
                 new ItemStack(this)
-                };
+                ];
                 for (int j = 0; j < array.Length; j++) {
                     world.SpawnItemEntity(array[j], pos);
                 }
@@ -113,11 +136,11 @@ namespace GloomeClasses.src.Alchemist {
 
         public MeshData GenMesh(ItemStack contentStack, ItemStack liquidContentStack, bool issealed, BlockPos forBlockPos = null) {
             ICoreClientAPI obj = api as ICoreClientAPI;
-            Shape shape = Vintagestory.API.Common.Shape.TryGet(obj, issealed ? sealedShape : emptyShape);
+            Shape shape = Vintagestory.API.Common.Shape.TryGet(obj, issealed ? SealedShape : EmptyShape);
             obj.Tesselator.TesselateShape(this, shape, out var modeldata);
             if (!issealed) {
                 JsonObject containerProps = liquidContentStack?.ItemAttributes?["waterTightContainerProps"];
-                MeshData meshData = getContentMeshFromAttributes(contentStack, liquidContentStack, forBlockPos) ?? getContentMeshLiquids(contentStack, liquidContentStack, forBlockPos, containerProps) ?? getContentMesh(contentStack, forBlockPos, contentsShape);
+                MeshData meshData = GetContentMeshFromAttributes(contentStack, liquidContentStack, forBlockPos) ?? GetContentMeshLiquids(contentStack, liquidContentStack, forBlockPos, containerProps) ?? GetContentMesh(contentStack, forBlockPos, ContentsShape);
                 if (meshData != null) {
                     modeldata.AddMeshData(meshData);
                 }
@@ -126,39 +149,41 @@ namespace GloomeClasses.src.Alchemist {
                     modeldata.CustomInts = new CustomMeshDataPartInt(modeldata.FlagsCount);
                     modeldata.CustomInts.Values.Fill(67108864);
                     modeldata.CustomInts.Count = modeldata.FlagsCount;
-                    modeldata.CustomFloats = new CustomMeshDataPartFloat(modeldata.FlagsCount * 2);
-                    modeldata.CustomFloats.Count = modeldata.FlagsCount * 2;
+                    modeldata.CustomFloats = new CustomMeshDataPartFloat(modeldata.FlagsCount * 2)
+                    {
+                        Count = modeldata.FlagsCount * 2
+                    };
                 }
             }
 
             return modeldata;
         }
 
-        private MeshData getContentMeshLiquids(ItemStack contentStack, ItemStack liquidContentStack, BlockPos forBlockPos, JsonObject containerProps) {
+        private MeshData GetContentMeshLiquids(ItemStack contentStack, ItemStack liquidContentStack, BlockPos forBlockPos, JsonObject containerProps) {
             bool flag = containerProps?["isopaque"].AsBool() ?? false;
             bool flag2 = containerProps?.Exists ?? false;
             if (liquidContentStack != null && (flag2 || contentStack == null)) {
-                AssetLocation shapefilepath = contentsShape;
+                AssetLocation shapefilepath = ContentsShape;
                 if (flag2) {
-                    shapefilepath = (flag ? opaqueLiquidContentsShape : liquidContentsShape);
+                    shapefilepath = (flag ? OpaqueLiquidContentsShape : LiquidContentsShape);
                 }
 
-                return getContentMesh(liquidContentStack, forBlockPos, shapefilepath);
+                return GetContentMesh(liquidContentStack, forBlockPos, shapefilepath);
             }
 
             return null;
         }
 
-        private MeshData getContentMeshFromAttributes(ItemStack contentStack, ItemStack liquidContentStack, BlockPos forBlockPos) {
+        private MeshData GetContentMeshFromAttributes(ItemStack contentStack, ItemStack liquidContentStack, BlockPos forBlockPos) {
             if (liquidContentStack != null && (liquidContentStack.ItemAttributes?["inBarrelShape"].Exists).GetValueOrDefault()) {
                 AssetLocation shapefilepath = AssetLocation.Create(liquidContentStack.ItemAttributes?["inBarrelShape"].AsString(), contentStack.Collectible.Code.Domain).WithPathPrefixOnce("shapes").WithPathAppendixOnce(".json");
-                return getContentMesh(contentStack, forBlockPos, shapefilepath);
+                return GetContentMesh(contentStack, forBlockPos, shapefilepath);
             }
 
             return null;
         }
 
-        protected MeshData getContentMesh(ItemStack stack, BlockPos forBlockPos, AssetLocation shapefilepath) {
+        protected MeshData GetContentMesh(ItemStack stack, BlockPos forBlockPos, AssetLocation shapefilepath) {
             ICoreClientAPI coreClientAPI = api as ICoreClientAPI;
             WaterTightContainableProps containableProps = BlockLiquidContainerBase.GetContainableProps(stack);
             ITexPositionSource texPositionSource;
@@ -171,7 +196,7 @@ namespace GloomeClasses.src.Alchemist {
                 texPositionSource = new ContainerTextureSource(coreClientAPI, stack, containableProps.Texture);
                 fillHeight = GameMath.Min(1f, (float)stack.StackSize / containableProps.ItemsPerLitre / (float)Math.Max(50, containableProps.MaxStackSize)) * 10f / 16f;
             } else {
-                texPositionSource = getContentTexture(coreClientAPI, stack, out fillHeight);
+                texPositionSource = GetContentTexture(coreClientAPI, stack, out fillHeight);
             }
 
             if (stack != null && texPositionSource != null) {
@@ -201,7 +226,7 @@ namespace GloomeClasses.src.Alchemist {
             return null;
         }
 
-        public static ITexPositionSource getContentTexture(ICoreClientAPI capi, ItemStack stack, out float fillHeight) {
+        public static ITexPositionSource GetContentTexture(ICoreClientAPI capi, ItemStack stack, out float fillHeight) {
             ITexPositionSource result = null;
             fillHeight = 0f;
             JsonObject jsonObject = stack?.ItemAttributes?["inContainerTexture"];
@@ -233,41 +258,41 @@ namespace GloomeClasses.src.Alchemist {
         }
 
         public override WorldInteraction[] GetHeldInteractionHelp(ItemSlot inSlot) {
-            return new WorldInteraction[1]
-            {
+            return
+            [
             new WorldInteraction
             {
                 ActionLangCode = "heldhelp-place",
                 HotKeyCode = "shift",
                 MouseButton = EnumMouseButton.Right,
-                ShouldApply = (WorldInteraction wi, BlockSelection bs, EntitySelection es) => true
+                ShouldApply = (wi, bs, es) => true
             }
-            };
+            ];
         }
 
         public override void OnLoaded(ICoreAPI api) {
             base.OnLoaded(api);
             if (Attributes != null) {
                 capacityLitresFromAttributes = Attributes["capacityLitres"].AsInt(50);
-                emptyShape = AssetLocation.Create(Attributes["emptyShape"].AsString(emptyShape), Code.Domain);
-                sealedShape = AssetLocation.Create(Attributes["sealedShape"].AsString(sealedShape), Code.Domain);
-                contentsShape = AssetLocation.Create(Attributes["contentsShape"].AsString(contentsShape), Code.Domain);
-                opaqueLiquidContentsShape = AssetLocation.Create(Attributes["opaqueLiquidContentsShape"].AsString(opaqueLiquidContentsShape), Code.Domain);
-                liquidContentsShape = AssetLocation.Create(Attributes["liquidContentsShape"].AsString(liquidContentsShape), Code.Domain);
+                EmptyShape = AssetLocation.Create(Attributes["emptyShape"].AsString(EmptyShape), Code.Domain);
+                SealedShape = AssetLocation.Create(Attributes["sealedShape"].AsString(SealedShape), Code.Domain);
+                ContentsShape = AssetLocation.Create(Attributes["contentsShape"].AsString(ContentsShape), Code.Domain);
+                OpaqueLiquidContentsShape = AssetLocation.Create(Attributes["opaqueLiquidContentsShape"].AsString(OpaqueLiquidContentsShape), Code.Domain);
+                LiquidContentsShape = AssetLocation.Create(Attributes["liquidContentsShape"].AsString(LiquidContentsShape), Code.Domain);
             }
 
-            emptyShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
-            sealedShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
-            contentsShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
-            opaqueLiquidContentsShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
-            liquidContentsShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
+            EmptyShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
+            SealedShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
+            ContentsShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
+            OpaqueLiquidContentsShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
+            LiquidContentsShape.WithPathPrefixOnce("shapes/").WithPathAppendixOnce(".json");
             if (api.Side != EnumAppSide.Client) {
                 return;
             }
 
             ICoreClientAPI capi = api as ICoreClientAPI;
             interactions = ObjectCacheUtil.GetOrCreate(api, "liquidContainerBase", delegate {
-                List<ItemStack> list = new List<ItemStack>();
+                List<ItemStack> list = [];
                 foreach (CollectibleObject collectible in api.World.Collectibles) {
                     if (collectible is ILiquidSource || collectible is ILiquidSink || collectible is BlockWateringCan) {
                         List<ItemStack> handBookStacks = collectible.GetHandBookStacks(capi);
@@ -277,31 +302,28 @@ namespace GloomeClasses.src.Alchemist {
                     }
                 }
 
-                ItemStack[] lstacks = list.ToArray();
-                ItemStack[] linenStack = new ItemStack[1]
-                {
+                ItemStack[] lstacks = [.. list];
+                ItemStack[] linenStack =
+                [
                 new ItemStack(api.World.GetBlock(new AssetLocation("linen-normal-down")))
-                };
+                ];
                 return new WorldInteraction[2]
                 {
-                new WorldInteraction
-                {
+                new() {
                     ActionLangCode = "blockhelp-bucket-rightclick",
                     MouseButton = EnumMouseButton.Right,
                     Itemstacks = lstacks,
                     GetMatchingStacks = delegate(WorldInteraction wi, BlockSelection bs, EntitySelection ws)
                     {
-                        BlockEntityMetalBarrel obj = api.World.BlockAccessor.GetBlockEntity(bs.Position) as BlockEntityMetalBarrel;
-                        return (obj == null || obj.Sealed) ? null : lstacks;
+                        return (api.World.BlockAccessor.GetBlockEntity(bs.Position) is not BlockEntityMetalBarrel obj || obj.Sealed) ? null : lstacks;
                     }
                 },
-                new WorldInteraction
-                {
+                new() {
                     ActionLangCode = "blockhelp-barrel-takecottagecheese",
                     MouseButton = EnumMouseButton.Right,
                     HotKeyCode = "shift",
                     Itemstacks = linenStack,
-                    GetMatchingStacks = (WorldInteraction wi, BlockSelection bs, EntitySelection ws) => ((api.World.BlockAccessor.GetBlockEntity(bs.Position) as BlockEntityMetalBarrel)?.Inventory[1].Itemstack?.Item?.Code?.Path == "cottagecheeseportion") ? linenStack : null
+                    GetMatchingStacks = (wi, bs, ws) => ((api.World.BlockAccessor.GetBlockEntity(bs.Position) as BlockEntityMetalBarrel)?.Inventory[1].Itemstack?.Item?.Code?.Path == "cottagecheeseportion") ? linenStack : null
                 }
                 };
             });
@@ -314,7 +336,7 @@ namespace GloomeClasses.src.Alchemist {
             }
 
             if (blockEntityBarrel != null && blockEntityBarrel.Sealed) {
-                return new WorldInteraction[0];
+                return [];
             }
 
             return base.GetPlacedBlockInteractionHelp(world, blockSel, forPlayer);
@@ -351,7 +373,7 @@ namespace GloomeClasses.src.Alchemist {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
             ItemStack[] contents = GetContents(world, inSlot.Itemstack);
             if (contents != null && contents.Length != 0) {
-                ItemStack itemStack = ((contents[0] == null) ? contents[1] : contents[0]);
+                ItemStack itemStack = (contents[0] ?? contents[1]);
                 if (itemStack != null) {
                     dsc.Append(", " + Lang.Get("{0}x {1}", itemStack.StackSize, itemStack.GetName()));
                 }
@@ -363,8 +385,8 @@ namespace GloomeClasses.src.Alchemist {
             string text2 = "";
             int num = text.IndexOfOrdinal(Environment.NewLine + Environment.NewLine);
             if (num > 0) {
-                text2 = text.Substring(num);
-                text = text.Substring(0, num);
+                text2 = text[num..];
+                text = text[..num];
             }
 
             if (GetCurrentLitres(pos) <= 0f) {
