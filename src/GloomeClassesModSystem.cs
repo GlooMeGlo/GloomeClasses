@@ -1,9 +1,11 @@
+using GloomeClasses.src.Diagnostics;
 using GloomeClasses.src.Alchemist;
 using GloomeClasses.src.BlockBehaviors;
 using GloomeClasses.src.Chef;
 using GloomeClasses.src.CollectibleBehaviors;
 using GloomeClasses.src.EntityBehaviors;
 using GloomeClasses.src.Smith;
+using GloomeClasses.src.Utils;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
@@ -21,6 +23,7 @@ using Vintagestory.API.Util;
 using Vintagestory.Client.NoObf;
 using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
+using GloomeClasses.src.Diagnostics.Patches;
 
 
 namespace GloomeClasses.src {
@@ -38,6 +41,7 @@ namespace GloomeClasses.src {
         public const string BlockSchematicPatchCategory = "gloomeClassesBlockSchematicPatchCategory";
         public const string StaticTranslocatorPatchesCategory = "gloomeClassesStaticTranslocatorBlockPatchCategory";
         public const string DragonskinPatchCategory = "gloomeClassesDragonskinPatchCategory";
+        public const string DiagnosticPatchCategory = "gloomeClassesDiagnosticsPatchCategory";
 
         public static ICoreAPI Api;
         public static ICoreClientAPI CApi;
@@ -59,6 +63,10 @@ namespace GloomeClasses.src {
             Api = api;
             Logger = Mod.Logger;
             ModID = Mod.Info.ModID;
+
+            // Initialize diagnostic systems
+            DiagnosticLogger.Initialize(api, Logger);
+            MeshDiagnostics.Initialize(api);
         }
 
         public override void Start(ICoreAPI api) {
@@ -82,6 +90,22 @@ namespace GloomeClasses.src {
             api.RegisterBlockEntityClass("BlockEntityGassifier", typeof(BlockEntityGassifier));
 
             ApplyPatches();
+
+            // log startup diagnostics
+            Logger.Notification("═══════════════════════════════════════════");
+            Logger.Notification("GloomeClasses v{0}", Mod.Info.Version);
+            Logger.Notification("═══════════════════════════════════════════");
+            Logger.Notification("");
+            Logger.Notification("Diagnostic Features:");
+            Logger.Notification("  • Mod compatibility detection");
+            Logger.Notification("  • Character/trait system monitoring");
+            Logger.Notification("  • Environment detection logging");
+            Logger.Notification("");
+
+            // run diagnostic checks
+            DiagnosticLogger.LogModLoadOrder(api);
+            DiagnosticLogger.LogThirdPartyModPresence(api);
+            DiagnosticLogger.LogCharselCommandNote();
         }
 
         public override void StartServerSide(ICoreServerAPI api) {
@@ -90,10 +114,21 @@ namespace GloomeClasses.src {
 
         public override void StartClientSide(ICoreClientAPI api) {
             CApi = api;
+
+            // register mesh diagnostics command
+            api.ChatCommands.Create("meshdiag")
+                .WithDescription("Display mesh generation diagnostics")
+                .RequiresPrivilege(Privilege.controlserver)
+                .HandleWith(args => {
+                    MeshDiagnostics.GenerateReport();
+                    return TextCommandResult.Success("Mesh diagnostics report generated. Check logs.");
+                });
         }
 
         public override void AssetsLoaded(ICoreAPI api) {
-            
+            // verify character system state after assets load
+            DiagnosticLogger.LogCharacterSystemState(api);
+            DiagnosticLogger.LogAvailableCharacterClasses(api);
         }
 
         private static void ApplyPatches() {
@@ -112,6 +147,23 @@ namespace GloomeClasses.src {
             harmony.PatchCategory(BlockSchematicPatchCategory);
             harmony.PatchCategory(StaticTranslocatorPatchesCategory);
             harmony.PatchCategory(DragonskinPatchCategory);
+
+            // apply diagnostic patches
+            TraitSystemDiagnostics.ApplyTraitSystemPatches(harmony);
+
+            // apply CharacterSystem diagnostic patches (uses Harmony attributes)
+            try
+            {
+                harmony.CreateClassProcessor(typeof(CharacterSystemDiagnosticPatches)).Patch();
+                Logger.VerboseDebug("[GloomeClasses] CharacterSystem diagnostic patches applied");
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("[GloomeClasses] Failed to apply CharacterSystem diagnostic patches: {0}", ex.Message);
+            }
+
+            Logger.VerboseDebug("[GloomeClasses] Diagnostic patches applied");
+
             Logger.VerboseDebug("Finished patching for Trait purposes.");
         }
 
