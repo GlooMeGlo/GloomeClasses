@@ -46,11 +46,11 @@ namespace GloomeClasses.src.Patches {
                 }
             }
 
-            var putAwaySpecialStockMethod = AccessTools.Method(typeof(SpecialStockHandling), "PutAwaySpecialStock", new Type[1] { typeof(EntityTradingHumanoid) });
+            var putAwaySpecialStockMethod = AccessTools.Method(typeof(SpecialStockHandling), "PutAwaySpecialStock", [typeof(EntityTradingHumanoid)]);
 
             var injectPutAwaySpecialStock = new List<CodeInstruction> {
                 CodeInstruction.LoadArgument(0),
-                new CodeInstruction(OpCodes.Call, putAwaySpecialStockMethod)
+                new(OpCodes.Call, putAwaySpecialStockMethod)
             };
 
             if (indexOfAttemptCloseSpecialStock > -1) {

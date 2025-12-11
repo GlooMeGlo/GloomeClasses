@@ -19,7 +19,7 @@ namespace GloomeClasses.src.Patches {
     public class BlockSchematicPatchForClairvoyance {
 
         public static MethodBase TargetMethod() {
-            var method = AccessTools.Method(typeof(BlockSchematic), "Place", new Type[5] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(EnumReplaceMode), typeof(bool) });
+            var method = AccessTools.Method(typeof(BlockSchematic), "Place", [typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(EnumReplaceMode), typeof(bool)]);
             return method;
         }
 
@@ -46,7 +46,7 @@ namespace GloomeClasses.src.Patches {
                 CodeInstruction.LoadArgument(2),
                 CodeInstruction.LoadLocal(0),
                 CodeInstruction.LoadLocal(11),
-                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicPatchForClairvoyance), "TestAndInitTranslocatorBE", new Type[4] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(AssetLocation) }))
+                new(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicPatchForClairvoyance), "TestAndInitTranslocatorBE", [typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(AssetLocation)]))
             };
 
             if (indexOfPlaceIncrement > -1) {
@@ -67,7 +67,7 @@ namespace GloomeClasses.src.Patches {
                     //GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + block.EntityClass);
                     blockAccess.SpawnBlockEntity(block.EntityClass, curPos);
                     var be = blockAccess.GetBlockEntity(curPos);
-                    be.OnPlacementBySchematic(world.Api as ICoreServerAPI, blockAccess, curPos, new Dictionary<int, Dictionary<int, int>>(), 0, null, true);
+                    be.OnPlacementBySchematic(world.Api as ICoreServerAPI, blockAccess, curPos, [], 0, null, true);
                 }
             }
         }
@@ -101,7 +101,7 @@ namespace GloomeClasses.src.Patches {
                 CodeInstruction.LoadArgument(2),
                 CodeInstruction.LoadLocal(0),
                 CodeInstruction.LoadLocal(13),
-                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicPatchForClairvoyance), "TestAndInitTranslocatorBE", new Type[4] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(AssetLocation) }))
+                new(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicPatchForClairvoyance), "TestAndInitTranslocatorBE", [typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(AssetLocation)]))
             };
 
             if (indexOfPlaceIncrement > -1) {
@@ -133,7 +133,7 @@ namespace GloomeClasses.src.Patches {
                 CodeInstruction.LoadArgument(2),
                 CodeInstruction.LoadLocal(0),
                 CodeInstruction.LoadLocal(21),
-                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicStructurePatchesForClairvoyance), "TestAndInitTranslocatorBEFromBlock", new Type[4] { typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(Block) }))
+                new(OpCodes.Call, AccessTools.Method(typeof(BlockSchematicStructurePatchesForClairvoyance), "TestAndInitTranslocatorBEFromBlock", [typeof(IBlockAccessor), typeof(IWorldAccessor), typeof(BlockPos), typeof(Block)]))
             };
 
             if (indexOfPlaceIncrement > -1) {
@@ -154,7 +154,7 @@ namespace GloomeClasses.src.Patches {
                     //GloomeClassesModSystem.Logger.Warning("It has the entityClass of " + existingBlock.EntityClass);
                     blockAccess.SpawnBlockEntity(existingBlock.EntityClass, curPos);
                     var be = blockAccess.GetBlockEntity(curPos);
-                    be.OnPlacementBySchematic(world.Api as ICoreServerAPI, blockAccess, curPos, new Dictionary<int, Dictionary<int, int>>(), 0, null, true);
+                    be.OnPlacementBySchematic(world.Api as ICoreServerAPI, blockAccess, curPos, [], 0, null, true);
                 }
             }
         }

@@ -14,13 +14,13 @@ namespace GloomeClasses.src.Patches {
         [HarmonyPrefix]
         [HarmonyPatch(nameof(ItemClay.OnHeldInteractStop))]
         private static bool AdditionalClayVoxelsStatPrefix(ItemClay __instance, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel) {
-            if (blockSel == null || !(byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is BlockClayForm) || !(byEntity.World.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityClayForm blockEntityClayForm)) {
+            if (blockSel == null || byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is not BlockClayForm || byEntity.World.BlockAccessor.GetBlockEntity(blockSel.Position) is not BlockEntityClayForm blockEntityClayForm) {
                 return true;
             }
 
             IPlayer player = null;
-            if (byEntity is EntityPlayer) {
-                player = byEntity.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID);
+            if (byEntity is EntityPlayer player1) {
+                player = byEntity.World.PlayerByUid(player1.PlayerUID);
             }
 
             var bonusPointsStats = player.Entity.Stats.Where(stats => stats.Key == GloomeClassesModSystem.BonusClayVoxelsStat);

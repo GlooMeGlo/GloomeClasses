@@ -23,8 +23,8 @@ namespace GloomeClasses.src.Smith {
 
             ICoreClientAPI capi = api as ICoreClientAPI;
             interactions = ObjectCacheUtil.GetOrCreate(api, "advBloomeryBlockInteractions", delegate {
-                List<ItemStack> smeltables = new List<ItemStack>();
-                List<ItemStack> fuels = new List<ItemStack>();
+                List<ItemStack> smeltables = [];
+                List<ItemStack> fuels = [];
                 List<ItemStack> ingiters = BlockBehaviorCanIgnite.CanIgniteStacks(api, withFirestarter: false);
                 foreach (CollectibleObject collectible in api.World.Collectibles) {
                     if (collectible.CombustibleProps != null) {
@@ -49,48 +49,44 @@ namespace GloomeClasses.src.Smith {
 
                 return new WorldInteraction[4]
                 {
-                new WorldInteraction
-                {
+                new() {
                     ActionLangCode = "blockhelp-bloomery-heatable",
                     HotKeyCode = null,
                     MouseButton = EnumMouseButton.Right,
-                    Itemstacks = smeltables.ToArray(),
-                    GetMatchingStacks = getMatchingStacks
+                    Itemstacks = [.. smeltables],
+                    GetMatchingStacks = GetMatchingStacks
                 },
-                new WorldInteraction
-                {
+                new() {
                     ActionLangCode = "blockhelp-bloomery-heatablex4",
                     HotKeyCode = "ctrl",
                     MouseButton = EnumMouseButton.Right,
-                    Itemstacks = smeltables.ToArray(),
-                    GetMatchingStacks = getMatchingStacks
+                    Itemstacks = [.. smeltables],
+                    GetMatchingStacks = GetMatchingStacks
                 },
-                new WorldInteraction
-                {
+                new() {
                     ActionLangCode = "blockhelp-bloomery-fuel",
                     HotKeyCode = null,
                     MouseButton = EnumMouseButton.Right,
-                    Itemstacks = fuels.ToArray(),
-                    GetMatchingStacks = getMatchingStacks
+                    Itemstacks = [.. fuels],
+                    GetMatchingStacks = GetMatchingStacks
                 },
-                new WorldInteraction
-                {
+                new() {
                     ActionLangCode = "blockhelp-bloomery-ignite",
                     HotKeyCode = "shift",
                     MouseButton = EnumMouseButton.Right,
-                    Itemstacks = ingiters.ToArray(),
-                    GetMatchingStacks = (WorldInteraction wi, BlockSelection bs, EntitySelection es) => (api.World.BlockAccessor.GetBlockEntity(bs.Position) is BlockEntityAdvancedBloomery blockEntityAdvBloomery && blockEntityAdvBloomery.CanIgnite() && !blockEntityAdvBloomery.IsBurning && api.World.BlockAccessor.GetBlock(bs.Position.UpCopy()).Code.Path.Contains("bloomerychimneyadvanced")) ? wi.Itemstacks : null
+                    Itemstacks = [.. ingiters],
+                    GetMatchingStacks = (wi, bs, es) => (api.World.BlockAccessor.GetBlockEntity(bs.Position) is BlockEntityAdvancedBloomery blockEntityAdvBloomery && blockEntityAdvBloomery.CanIgnite() && !blockEntityAdvBloomery.IsBurning && api.World.BlockAccessor.GetBlock(bs.Position.UpCopy()).Code.Path.Contains("bloomerychimneyadvanced")) ? wi.Itemstacks : null
                 }
                 };
             });
         }
 
-        private ItemStack[] getMatchingStacks(WorldInteraction wi, BlockSelection blockSelection, EntitySelection entitySelection) {
-            if (!(api.World.BlockAccessor.GetBlockEntity(blockSelection.Position) is BlockEntityAdvancedBloomery blockEntityAdvBloomery) || wi.Itemstacks.Length == 0) {
+        private ItemStack[] GetMatchingStacks(WorldInteraction wi, BlockSelection blockSelection, EntitySelection entitySelection) {
+            if (api.World.BlockAccessor.GetBlockEntity(blockSelection.Position) is not BlockEntityAdvancedBloomery blockEntityAdvBloomery || wi.Itemstacks.Length == 0) {
                 return null;
             }
 
-            List<ItemStack> list = new List<ItemStack>();
+            List<ItemStack> list = [];
             ItemStack[] itemstacks = wi.Itemstacks;
             foreach (ItemStack itemStack in itemstacks) {
                 if (blockEntityAdvBloomery.CanAdd(itemStack)) {
@@ -98,7 +94,7 @@ namespace GloomeClasses.src.Smith {
                 }
             }
 
-            return list.ToArray();
+            return [.. list];
         }
 
         EnumIgniteState IIgnitable.OnTryIgniteStack(EntityAgent byEntity, BlockPos pos, ItemSlot slot, float secondsIgniting) {
@@ -166,7 +162,7 @@ namespace GloomeClasses.src.Smith {
         }
 
         public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f) {
-            List<ItemStack> list = new List<ItemStack>();
+            List<ItemStack> list = [];
             for (int i = 0; i < Drops.Length; i++) {
                 if (Drops[i].Tool.HasValue && (byPlayer == null || Drops[i].Tool != byPlayer.InventoryManager.ActiveTool)) {
                     continue;
@@ -181,7 +177,7 @@ namespace GloomeClasses.src.Smith {
                 }
             }
 
-            return list.ToArray();
+            return [.. list];
         }
 
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer) {

@@ -10,13 +10,9 @@ using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace GloomeClasses.src.EntityBehaviors {
-    public class DragonskinTraitBehavior : EntityBehavior {
+    public class DragonskinTraitBehavior(Entity entity) : EntityBehavior(entity) {
 
         public override string PropertyName() => "gcDragonskinTraitBehavior";
-
-        public DragonskinTraitBehavior(Entity entity) : base(entity) {
-
-        }
 
         public void HandleFireDamage(DamageSource damageSource, ref float damage) {
             var dragonskinBlended = entity.Stats.GetBlended("fireDamage");

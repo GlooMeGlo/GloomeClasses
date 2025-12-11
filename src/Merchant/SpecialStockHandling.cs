@@ -61,8 +61,8 @@ namespace GloomeClasses.src.Merchant {
             // Slots 36..39: Selling cart
             // Slot 40: Money slot
 
-            Stack<TradeItem> newBuyItems = new Stack<TradeItem>();
-            Stack<TradeItem> newsellItems = new Stack<TradeItem>();
+            Stack<TradeItem> newBuyItems = new();
+            Stack<TradeItem> newsellItems = new();
 
             ItemSlotTrade[] sellingSlots = specialStock.SellingSlots;
             ItemSlotTrade[] buyingSlots = specialStock.BuyingSlots;
@@ -98,8 +98,8 @@ namespace GloomeClasses.src.Merchant {
             }
             #endregion
 
-            replaceSpecialStockItems(newBuyItems, buyingSlots, buyingQuantity, EnumTradeDirection.Buy, trader);
-            replaceSpecialStockItems(newsellItems, sellingSlots, sellingQuantity, EnumTradeDirection.Sell, trader);
+            ReplaceSpecialStockItems(newBuyItems, buyingSlots, buyingQuantity, EnumTradeDirection.Buy, trader);
+            ReplaceSpecialStockItems(newsellItems, sellingSlots, sellingQuantity, EnumTradeDirection.Sell, trader);
 
             ITreeAttribute tree = trader.WatchedAttributes.GetOrAddTreeAttribute(SpecialStockAttribute);
             specialStock.ToTreeAttributes(tree);
@@ -107,8 +107,8 @@ namespace GloomeClasses.src.Merchant {
             trader.WatchedAttributes.MarkAllDirty();
         }
 
-        private static void replaceSpecialStockItems(Stack<TradeItem> newItems, ItemSlotTrade[] slots, int quantity, EnumTradeDirection tradeDir, EntityTradingHumanoid trader) {
-            HashSet<int> refreshedSlots = new HashSet<int>();
+        private static void ReplaceSpecialStockItems(Stack<TradeItem> newItems, ItemSlotTrade[] slots, int quantity, EnumTradeDirection tradeDir, EntityTradingHumanoid trader) {
+            HashSet<int> refreshedSlots = [];
 
             for (int i = 0; i < quantity; i++) {
                 if (newItems.Count == 0) break;

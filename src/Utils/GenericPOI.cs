@@ -12,8 +12,8 @@ namespace GloomeClasses.src.Utils {
         public Vec3d Position => pos;
         public string Type => type;
 
-        private string type;
-        private Vec3d pos;
+        private readonly string type;
+        private readonly Vec3d pos;
 
         public GenericPOI(Vec3d vec, string type) {
             pos = vec;

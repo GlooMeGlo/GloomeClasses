@@ -30,17 +30,17 @@ namespace GloomeClasses.src.Patches {
                 }
             }
 
-            var applySilverTonguedCostCall = AccessTools.Method(typeof(SilverTonguePatch), "ApplySilverTonguedTraitCost", new Type[2] { typeof(IPlayer), typeof(int) });
-            var applySilverTonguedGainCall = AccessTools.Method(typeof(SilverTonguePatch), "ApplySilverTonguedTraitGain", new Type[2] { typeof(IPlayer), typeof(int) });
+            var applySilverTonguedCostCall = AccessTools.Method(typeof(SilverTonguePatch), "ApplySilverTonguedTraitCost", [typeof(IPlayer), typeof(int)]);
+            var applySilverTonguedGainCall = AccessTools.Method(typeof(SilverTonguePatch), "ApplySilverTonguedTraitGain", [typeof(IPlayer), typeof(int)]);
 
             var applySilverTonguedTrait = new List<CodeInstruction> {
                 CodeInstruction.LoadArgument(1),
                 CodeInstruction.LoadLocal(1),
-                new CodeInstruction(OpCodes.Call, applySilverTonguedCostCall),
+                new(OpCodes.Call, applySilverTonguedCostCall),
                 CodeInstruction.StoreLocal(1),
                 CodeInstruction.LoadArgument(1),
                 CodeInstruction.LoadLocal(2),
-                new CodeInstruction(OpCodes.Call, applySilverTonguedGainCall),
+                new(OpCodes.Call, applySilverTonguedGainCall),
                 CodeInstruction.StoreLocal(2)
             };
 
@@ -87,14 +87,14 @@ namespace GloomeClasses.src.Patches {
         public static IEnumerable<CodeInstruction> SilverTongueGuiTraderTranspiler(IEnumerable<CodeInstruction> instructions) {
             var codes = new List<CodeInstruction>(instructions);
 
-            var adjustCostMethod = AccessTools.Method(typeof(SilverTongueGuiPatch), "AdjustSilverTongueCost", new Type[1] { typeof(int) });
-            var adjustGainMethod = AccessTools.Method(typeof(SilverTongueGuiPatch), "AdjustSilverTongueGain", new Type[1] { typeof(int) });
+            var adjustCostMethod = AccessTools.Method(typeof(SilverTongueGuiPatch), "AdjustSilverTongueCost", [typeof(int)]);
+            var adjustGainMethod = AccessTools.Method(typeof(SilverTongueGuiPatch), "AdjustSilverTongueGain", [typeof(int)]);
             var handleSilverTongueVisuals = new List<CodeInstruction> {
                 CodeInstruction.LoadLocal(0),
-                new CodeInstruction(OpCodes.Call, adjustCostMethod),
+                new(OpCodes.Call, adjustCostMethod),
                 CodeInstruction.StoreLocal(0),
                 CodeInstruction.LoadLocal(1),
-                new CodeInstruction(OpCodes.Call, adjustGainMethod),
+                new(OpCodes.Call, adjustGainMethod),
                 CodeInstruction.StoreLocal(1)
             };
 

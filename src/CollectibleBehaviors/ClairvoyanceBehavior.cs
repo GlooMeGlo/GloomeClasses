@@ -14,7 +14,7 @@ using Vintagestory.GameContent;
 
 namespace GloomeClasses.src.CollectibleBehaviors {
 
-    public class ClairvoyanceBehavior : CollectibleBehavior {
+    public class ClairvoyanceBehavior(CollectibleObject collObj) : CollectibleBehavior(collObj) {
 
         private bool divining = false;
         private const float timeToDivine = 2.0f;
@@ -25,10 +25,6 @@ namespace GloomeClasses.src.CollectibleBehaviors {
         private const int softCapCharges = 30;
         private const int chargesPerGear = 10;
         private const string chargesAttribute = "skullCharges";
-        
-        public ClairvoyanceBehavior(CollectibleObject collObj) : base(collObj) {
-
-        }
 
         public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo) {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
@@ -137,7 +133,7 @@ namespace GloomeClasses.src.CollectibleBehaviors {
 
                 if (byEntity.Api.Side.IsClient())
                 {
-                    var nearPoi = poireg.GetNearestPoi(byEntity.Pos.XYZFloat.ToVec3d(), maxRange, (IPointOfInterest poi) => (poi.Type == "translocator"));
+                    var nearPoi = poireg.GetNearestPoi(byEntity.Pos.XYZFloat.ToVec3d(), maxRange, poi => (poi.Type == "translocator"));
                     ShowDivinationResultChatMessage(byEntity.Api as ICoreClientAPI, nearPoi, byEntity.Pos.XYZ);
                 }
             }

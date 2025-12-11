@@ -32,7 +32,7 @@ namespace GloomeClasses.src.Patches {
                 for (int i = 0; i < backpack.Count; i++) {
                     var backpackSlot = backpack[i];
 
-                    if (!(backpackSlot is ItemSlotBackpack) || backpackSlot.Empty) {
+                    if (backpackSlot is not ItemSlotBackpack || backpackSlot.Empty) {
                         continue;
                     }
 
@@ -51,11 +51,11 @@ namespace GloomeClasses.src.Patches {
                     float number = backpackHsv[2] / totalVal;
 
                     // Calculate weighted average of light values
-                    lightBytes = new byte[] {
+                    lightBytes = [
                         (byte)(backpackHsv[0] * number + lightBytes[0] * (1 - number)),
                         (byte)(backpackHsv[1] * number + lightBytes[1] * (1 - number)),
                         Math.Max(backpackHsv[2], lightBytes[2])
-                    };
+                    ];
                 }
             }
         }

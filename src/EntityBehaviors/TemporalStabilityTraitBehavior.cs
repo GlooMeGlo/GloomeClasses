@@ -13,7 +13,7 @@ using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace GloomeClasses.src.EntityBehaviors {
-    public class TemporalStabilityTraitBehavior : EntityBehavior {
+    public class TemporalStabilityTraitBehavior(Entity entity) : EntityBehavior(entity) {
 
         protected bool hasLocatedClass = false;
         protected float timeSinceLastUpdate = 0.0f;
@@ -33,10 +33,6 @@ namespace GloomeClasses.src.EntityBehaviors {
         protected EntityBehaviorTemporalStabilityAffected TemporalAffected => entity.GetBehavior<EntityBehaviorTemporalStabilityAffected>();
 
         public override string PropertyName() => "gcTemporalStabilityTraitBehavior";
-
-        public TemporalStabilityTraitBehavior(Entity entity) : base(entity) {
-
-        }
 
         public override void Initialize(EntityProperties properties, JsonObject attributes) {
             base.Initialize(properties, attributes);

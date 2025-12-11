@@ -17,9 +17,9 @@ namespace GloomeClasses.src.Smith {
     public class BlockEntityAdvancedBloomery : BlockEntity, IHeatSource {
         private ILoadedSound ambientSound;
         private BloomeryContentsRenderer renderer;
-        private static SimpleParticleProperties breakSparks;
-        private static SimpleParticleProperties smallMetalSparks;
-        private static SimpleParticleProperties smoke;
+        private static readonly SimpleParticleProperties breakSparks;
+        private static readonly SimpleParticleProperties smallMetalSparks;
+        private static readonly SimpleParticleProperties smoke;
         private BlockFacing ownFacing;
         internal InventoryGeneric bloomeryInv;
         private bool burning;
@@ -27,8 +27,8 @@ namespace GloomeClasses.src.Smith {
         private double burningStartTotalDays;
         private const int FuelCapacity = 4;
 
-        public AssetLocation FuelSoundLocation => new AssetLocation("sounds/block/charcoal");
-        public AssetLocation OreSoundLocation => new AssetLocation("sounds/block/loosestone");
+        public AssetLocation FuelSoundLocation => new("sounds/block/charcoal");
+        public AssetLocation OreSoundLocation => new("sounds/block/loosestone");
 
         public bool IsBurning => burning;
         private ItemSlot FuelSlot => bloomeryInv[0];
@@ -48,9 +48,11 @@ namespace GloomeClasses.src.Smith {
         }
 
         static BlockEntityAdvancedBloomery() {
-            smallMetalSparks = new SimpleParticleProperties(2f, 5f, ColorUtil.ToRgba(255, 255, 233, 83), new Vec3d(), new Vec3d(), new Vec3f(-3f, 8f, -3f), new Vec3f(3f, 12f, 3f), 0.1f, 1f, 0.25f, 0.25f, EnumParticleModel.Quad);
-            smallMetalSparks.WithTerrainCollision = false;
-            smallMetalSparks.VertexFlags = 128;
+            smallMetalSparks = new SimpleParticleProperties(2f, 5f, ColorUtil.ToRgba(255, 255, 233, 83), new Vec3d(), new Vec3d(), new Vec3f(-3f, 8f, -3f), new Vec3f(3f, 12f, 3f), 0.1f, 1f, 0.25f, 0.25f, EnumParticleModel.Quad)
+            {
+                WithTerrainCollision = false,
+                VertexFlags = 128
+            };
             smallMetalSparks.AddPos.Set(0.0625, 0.0, 0.0625);
             smallMetalSparks.SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.QUADRATIC, -0.5f);
             smallMetalSparks.AddPos.Set(0.25, 0.1875, 0.25);
@@ -61,14 +63,18 @@ namespace GloomeClasses.src.Smith {
             smallMetalSparks.MinSize = 0.2f;
             smallMetalSparks.MaxSize = 0.2f;
             smallMetalSparks.GravityEffect = 0f;
-            breakSparks = new SimpleParticleProperties(40f, 80f, ColorUtil.ToRgba(255, 255, 233, 83), new Vec3d(), new Vec3d(), new Vec3f(-1f, 0.5f, -1f), new Vec3f(2f, 1.5f, 2f), 0.5f, 1f, 0.25f, 0.25f);
-            breakSparks.VertexFlags = 128;
+            breakSparks = new SimpleParticleProperties(40f, 80f, ColorUtil.ToRgba(255, 255, 233, 83), new Vec3d(), new Vec3d(), new Vec3f(-1f, 0.5f, -1f), new Vec3f(2f, 1.5f, 2f), 0.5f, 1f, 0.25f, 0.25f)
+            {
+                VertexFlags = 128
+            };
             breakSparks.AddPos.Set(0.25, 0.25, 0.25);
             breakSparks.SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -0.25f);
-            smoke = new SimpleParticleProperties(1f, 1f, ColorUtil.ToRgba(128, 110, 110, 110), new Vec3d(), new Vec3d(), new Vec3f(-0.2f, 0.3f, -0.2f), new Vec3f(0.2f, 0.3f, 0.2f), 2f, 0f, 0.5f, 1f, EnumParticleModel.Quad);
-            smoke.SelfPropelled = true;
-            smoke.OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -255f);
-            smoke.SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, 2f);
+            smoke = new SimpleParticleProperties(1f, 1f, ColorUtil.ToRgba(128, 110, 110, 110), new Vec3d(), new Vec3d(), new Vec3f(-0.2f, 0.3f, -0.2f), new Vec3f(0.2f, 0.3f, 0.2f), 2f, 0f, 0.5f, 1f, EnumParticleModel.Quad)
+            {
+                SelfPropelled = true,
+                OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -255f),
+                SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, 2f)
+            };
         }
 
         public BlockEntityAdvancedBloomery() {
@@ -79,7 +85,7 @@ namespace GloomeClasses.src.Smith {
             base.Initialize(api);
             bloomeryInv.LateInitialize("advbloomery-1", api);
             RegisterGameTickListener(OnGameTick, 100);
-            updateSoundState();
+            UpdateSoundState();
             if (api.Side == EnumAppSide.Client) {
                 ICoreClientAPI coreClientAPI = (ICoreClientAPI)api;
                 coreClientAPI.Event.RegisterRenderer(renderer = new BloomeryContentsRenderer(Pos, coreClientAPI), EnumRenderStage.Opaque, "advbloomery");
@@ -98,15 +104,15 @@ namespace GloomeClasses.src.Smith {
             renderer.glowLevel = (burning ? ((int)num) : 0);
         }
 
-        public void updateSoundState() {
+        public void UpdateSoundState() {
             if (burning) {
-                startSound();
+                StartSound();
             } else {
-                stopSound();
+                StopSound();
             }
         }
 
-        public void startSound() {
+        public void StartSound() {
             if (ambientSound == null) {
                 ICoreAPI api = Api;
                 if (api != null && api.Side == EnumAppSide.Client) {
@@ -123,7 +129,7 @@ namespace GloomeClasses.src.Smith {
             }
         }
 
-        public void stopSound() {
+        public void StopSound() {
             if (ambientSound != null) {
                 ambientSound.Stop();
                 ambientSound.Dispose();
@@ -304,7 +310,7 @@ namespace GloomeClasses.src.Smith {
             burningUntilTotalDays = Api.World.Calendar.TotalDays + 5.0 / 12.0;
             burningStartTotalDays = Api.World.Calendar.TotalDays;
             MarkDirty();
-            updateSoundState();
+            UpdateSoundState();
             return true;
         }
 
@@ -345,7 +351,7 @@ namespace GloomeClasses.src.Smith {
             burning = tree.GetInt("burning") > 0;
             burningUntilTotalDays = tree.GetDouble("burningUntilTotalDays");
             burningStartTotalDays = tree.GetDouble("burningStartTotalDays");
-            updateSoundState();
+            UpdateSoundState();
         }
 
         public override void ToTreeAttributes(ITreeAttribute tree) {
