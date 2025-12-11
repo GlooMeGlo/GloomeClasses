@@ -14,7 +14,10 @@ namespace GloomeClasses.src.Alchemist {
 
     public class BlockEntityGassifier : BlockEntity, ITemperatureSensitive {
 
-        protected InventoryGassifier inventory { get; private set; }
+        private InventoryGassifier _inventory;
+
+        // TODO: visual fuel rendering could be added in the future
+        // would require a custom renderer similar to BEFirepit to display fuel mesh inside the gassifier
 
         public float prevFurnaceTemperature = 20;
         public float furnaceTemperature = 20;
@@ -29,16 +32,20 @@ namespace GloomeClasses.src.Alchemist {
         public bool IsHot => IsBurning;
 
         public InventoryGassifier Inventory {
-            get { return inventory; }
+            get { return _inventory; }
         }
 
         public override void Initialize(ICoreAPI api) {
             base.Initialize(api);
-            inventory ??= new InventoryGassifier(Api, Pos);
+            _inventory ??= new InventoryGassifier(Api, Pos);
+
             RegisterGameTickListener(OnBurnTick, 100);
             RegisterGameTickListener(On500msTick, 500);
-            if (Api.Side.IsClient() && IsBurning) {
-                ToggleBurningSound(true);
+
+            if (Api.Side.IsClient()) {
+                if (IsBurning) {
+                    ToggleBurningSound(true);
+                }
             }
         }
 
@@ -49,7 +56,7 @@ namespace GloomeClasses.src.Alchemist {
             }
         }
 
-        public virtual int enviromentTemperature() {
+        public virtual int EnviromentTemperature() {
             return 20;
         }
 
@@ -104,12 +111,11 @@ namespace GloomeClasses.src.Alchemist {
             prevFurnaceTemperature = furnaceTemperature;
 
             if (Api is ICoreServerAPI) {
-                var blockEntAbove = Api.World.BlockAccessor.GetBlockEntity(Pos.UpCopy()) as BlockEntityMetalBarrel;
-                if (blockEntAbove != null) {
+                if (Api.World.BlockAccessor.GetBlockEntity(Pos.UpCopy()) is BlockEntityMetalBarrel blockEntAbove)
+                {
                     blockEntAbove.GassifierUpdateTemp(furnaceTemperature);
-                    if (IsBurning) {
-                        blockEntAbove.MarkDirty();
-                    }
+                    // always mark dirty when temperature changes to ensure barrel persists temperature
+                    blockEntAbove.MarkDirty();
                 }
             }
         }
@@ -133,15 +139,16 @@ namespace GloomeClasses.src.Alchemist {
             }
 
             if (IsBurning) {
-                furnaceTemperature = changeTemperature(furnaceTemperature, maxTemperature, dt);
+                furnaceTemperature = ChangeTemperature(furnaceTemperature, maxTemperature, dt);
             }
 
-            if (!IsBurning && canIgniteFuel && !Inventory.FuelSlot.Empty) {
-                igniteFuel();
+            // only auto-ignite if door is closed, this prevents immediate ignition when refueling hot gassifier
+            if (!IsBurning && canIgniteFuel && !Inventory.FuelSlot.Empty && !IsOpen()) {
+                IgniteFuel();
             }
 
             if (!IsBurning) {
-                furnaceTemperature = changeTemperature(furnaceTemperature, enviromentTemperature(), dt);
+                furnaceTemperature = ChangeTemperature(furnaceTemperature, EnviromentTemperature(), dt);
             }
         }
 
@@ -172,9 +179,9 @@ namespace GloomeClasses.src.Alchemist {
             }
         }
 
-        public float changeTemperature(float fromTemp, float toTemp, float dt) {
+        public float ChangeTemperature(float fromTemp, float toTemp, float dt) {
             float diff = Math.Abs(fromTemp - toTemp);
-            dt = dt + dt * (diff / 28);
+            dt += dt * (diff / 28);
 
             if (diff < dt) {
                 return toTemp;
@@ -191,7 +198,7 @@ namespace GloomeClasses.src.Alchemist {
             return fromTemp + dt;
         }
 
-        public void igniteFuel() {
+        public void IgniteFuel() {
             IgniteWithFuel(Inventory.FuelSlot.Itemstack);
             Inventory.FuelSlot.Itemstack.StackSize -= 1;
             if (Inventory.FuelSlot.Itemstack.StackSize <= 0) {
@@ -264,8 +271,8 @@ namespace GloomeClasses.src.Alchemist {
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve) {
             base.FromTreeAttributes(tree, worldAccessForResolve);
 
-            inventory = new InventoryGassifier(worldAccessForResolve.Api, Pos);
-            inventory.FromTreeAttributes(tree);
+            _inventory = new InventoryGassifier(worldAccessForResolve.Api, Pos);
+            _inventory.FromTreeAttributes(tree);
             furnaceTemperature = tree.GetFloat("furnaceTemperature");
             maxTemperature = tree.GetInt("maxTemperature");
             fuelBurnTime = tree.GetFloat("fuelBurnTime");
@@ -277,7 +284,7 @@ namespace GloomeClasses.src.Alchemist {
         public override void ToTreeAttributes(ITreeAttribute tree) {
             base.ToTreeAttributes(tree);
 
-            inventory.ToTreeAttributes(tree);
+            _inventory.ToTreeAttributes(tree);
             tree.SetFloat("furnaceTemperature", furnaceTemperature);
             tree.SetInt("maxTemperature", maxTemperature);
             tree.SetFloat("fuelBurnTime", fuelBurnTime);
