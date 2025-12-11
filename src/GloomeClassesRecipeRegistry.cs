@@ -13,9 +13,9 @@ namespace GloomeClasses.src {
 
     public class GloomeClassesRecipeRegistry : ModSystem {
 
-        public List<AlchemyBarrelRecipe> AlchemistSteelBarrelRecipes = new List<AlchemyBarrelRecipe>();
-        public List<AlchemyBarrelRecipe> AlchemistTinBarrelRecipes = new List<AlchemyBarrelRecipe>();
-        public List<AlchemyBarrelRecipe> AlchemistBarrelRecipes = new List<AlchemyBarrelRecipe>();
+        public List<AlchemyBarrelRecipe> AlchemistSteelBarrelRecipes = [];
+        public List<AlchemyBarrelRecipe> AlchemistTinBarrelRecipes = [];
+        public List<AlchemyBarrelRecipe> AlchemistBarrelRecipes = [];
 
         public override double ExecuteOrder() {
             return 0.6;
@@ -28,15 +28,17 @@ namespace GloomeClasses.src {
         }
 
         public override void AssetsLoaded(ICoreAPI api) {
-            if (!(api is ICoreServerAPI coreServerAPI)) {
+            if (api is not ICoreServerAPI) {
                 return;
             }
 
-            ICoreServerAPI sapi = api as ICoreServerAPI;
-            if (sapi != null) {
+            if (api is ICoreServerAPI sapi)
+            {
                 Dictionary<AssetLocation, AlchemyBarrelRecipe> many = sapi.Assets.GetMany<AlchemyBarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/stainlesssteel");
-                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many) {
-                    if (item.Value.Enabled) {
+                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many)
+                {
+                    if (item.Value.Enabled)
+                    {
                         item.Value.Resolve(api.World, "stainlesssteel barrel recipe " + item.Key);
                         RegisterStainlessSteelBarrelRecipe(item.Value);
                     }
@@ -44,8 +46,10 @@ namespace GloomeClasses.src {
 
                 many.Clear();
                 many = sapi.Assets.GetMany<AlchemyBarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/tin");
-                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many) {
-                    if (item.Value.Enabled) {
+                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many)
+                {
+                    if (item.Value.Enabled)
+                    {
                         item.Value.Resolve(api.World, "tin barrel recipe " + item.Key);
                         RegisterTinBarrelRecipe(item.Value);
                     }
@@ -53,8 +57,10 @@ namespace GloomeClasses.src {
 
                 many.Clear();
                 many = sapi.Assets.GetMany<AlchemyBarrelRecipe>(sapi.Server.Logger, "recipes/alchemybarrel/any");
-                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many) {
-                    if (item.Value.Enabled) {
+                foreach (KeyValuePair<AssetLocation, AlchemyBarrelRecipe> item in many)
+                {
+                    if (item.Value.Enabled)
+                    {
                         item.Value.Resolve(api.World, "any alchemist barrel recipe " + item.Key);
                         RegisterAlchemistBarrelRecipe(item.Value);
                     }
