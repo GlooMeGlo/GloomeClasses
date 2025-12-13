@@ -1,0 +1,425 @@
+{
+	"code": "metalpot",
+	"variantgroups": [
+		{ "code": "metal", "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "gold", "silver", "electrum", "steel", "stainlesssteel"] },
+		{ "code": "type", "states": ["empty", "cooked"] }
+	],
+	"behaviors": [
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants", "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.4375, "z2": 1 } } },
+		{ "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" }
+	],
+	"classByType": {
+		"metalpot-*-empty": "BlockCookingContainer",
+		"metalpot-*-cooked": "BlockCookedContainer"
+	},
+	"heldTpIdleAnimation": "holdbothhands",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"attributes": {
+		"shelvable": true,
+		"cookingContainerSlots": 4,
+		"storageType": 1,
+		"maxTemperature": 200,
+		"temperatureDissipationRate": 5,
+		"mealContainer": true,
+		"attachShape": { "base": "game:item/wearable/hooved/cookpot" },
+		"wearableAttachment": true,
+		"wearableCategoryCode": "frontrightside",
+		"attachableToEntity": {
+			"categoryCode": "utilities",
+			"attachedShapeBySlotCode": {
+				"frontrightside": { "base": "game:item/wearable/hooved/cookpotr-elk" },
+				"frontleftside": { "base": "game:item/wearable/hooved/cookpotl-elk" }
+			}
+		},
+		"attachmentArea": { "x1": 4, "y1": 0, "z1": 4, "x2": 11, "y2": 0, "z2": 11 },
+		"inFirePitProps": {
+			"transform": {
+				"translation": { "x": 0, "y": 0.125, "z": 0 }
+			},
+			"useFirepitModel": "Wide"
+		},
+		"onTongTransform": {
+			"translation": { "x": -0.63, "y": -0.95, "z": -0.77 },
+			"rotation": { "x": 2, "y": -2, "z": 6 }
+		},
+		"textureMapping": {
+			"grain-flax": ["grain", "group1"],
+			"vegetable-carrot": ["vegetable", "group1"],
+			"pickledvegetable-carrot": ["vegetable", "group1"],
+			"fruit-blueberry": ["fruit", "group1"],
+			"fruit-saguaro": ["fruit", "group2"],
+			"waterportion": ["water", "group2"],
+			"grain-millet": ["grain", "group3"],
+			"fruit-cranberry": ["fruit", "group3"],
+			"grain-rice": ["grain", "group4"],
+			"vegetable-parsnip": ["vegetable", "group4"],
+			"pickledvegetable-parsnip": ["vegetable", "group4"],
+			"fruit-whitecurrant": ["fruit", "group4"],
+			"cheese-blue-1slice": ["cheese", "group4"],
+			"fish-raw": ["meat", "group4"],
+			"grain-rye": ["grain", "group5"],
+			"vegetable-turnip": ["vegetable", "group5"],
+			"pickledvegetable-turnip": ["vegetable", "group5"],
+			"fruit-blackcurrant": ["fruit", "group5"],
+			"cheese-cheddar-1slice": ["dairyoregg", "group5"],
+			"poultry-raw": ["meat", "group5"],
+			"poultry-cured": ["meat", "group5"],
+			"grain-spelt": ["grain", "group6"],
+			"vegetable-onion": ["vegetable", "group6"],
+			"pickledvegetable-onion": ["vegetable", "group6"],
+			"fruit-redcurrant": ["fruit", "group6"],
+			"redmeat-raw": ["meat", "group6"],
+			"redmeat-cured": ["meat", "group6"],
+			"egg-chicken-raw": ["egg", "group6"],
+			"fruit-pineapple": ["fruit", "group7"],
+			"grain-amaranth": ["grain", "group8"],
+			"pumpkin-fruit-4": ["vegetable", "group8"],
+			"vegetable-pumpkin": ["vegetable", "group8"],
+			"vegetable-bellpepper": ["fruit", "group8"],
+			"pickledvegetable-bellpepper": ["fruit", "group8"],
+			"pickledvegetable-pumpkin": ["vegetable", "group8"],
+			"grain-sunflower": ["grain", "group9"],
+			"legume-soybean": ["vegetable", "group9"],
+			"pickledlegume-soybean": ["vegetable", "group9"],
+			"vegetable-cabbage": ["vegetable", "group10"],
+			"pickledvegetable-cabbage": ["vegetable", "group10"],
+			"vegetable-cassava": ["vegetable", "group11"],
+			"honeyportion": ["topping", "honey"],
+			"jamhoneyportion": ["topping", "honey"],
+			"milkportion": ["liquid", "milkportion"],
+			"cottagecheeseportion": ["liquid", "cottagecheeseportion"],
+			"fruit-pomegranate": ["fruit", "fruit-pomegranate"],
+			"fruit-lychee": ["fruit", "fruit-lychee"],
+			"fruit-breadfruit": ["fruit", "fill-breadfruit"],
+			"fruit-redapple": ["fruit", "fruit-redapple"],
+			"fruit-pinkapple": ["fruit", "fruit-pinkapple"],
+			"fruit-yellowapple": ["fruit", "fruit-yellowapple"],
+			"fruit-cherry": ["fruit", "fruit-cherry"],
+			"fruit-olive": ["fruit", "fruit-olive"],
+			"fruit-peach": ["fruit", "fruit-peach"],
+			"fruit-pear": ["fruit", "fruit-pear"],
+			"fruit-orange": ["fruit", "fruit-orange"],
+			"fruit-mango": ["fruit", "fruit-mango"],
+			"mushroom-fieldmushroom-normal": ["vegetable", "group7"],
+			"mushroom-flyagaric-normal": ["vegetable", "group2"],
+			"mushroom-kingbolete-normal": ["vegetable", "group3"],
+			"mushroom-almondmushroom-normal": ["vegetable", "group3"],
+			"mushroom-beardedtooth-normal-north": ["vegetable", "group7"],
+			"mushroom-bitterbolete-normal": ["vegetable", "group3"],
+			"mushroom-blacktrumpet-normal": ["vegetable", "group3"],
+			"mushroom-chanterelle-normal": ["vegetable", "group3"],
+			"mushroom-chickenofthewoods-normal-north": ["vegetable", "group3"],
+			"mushroom-commonmorel-normal": ["vegetable", "group3"],
+			"mushroom-deathcap-normal": ["vegetable", "group7"],
+			"mushroom-devilstooth-normal": ["vegetable", "group3"],
+			"mushroom-devilbolete-normal": ["vegetable", "group3"],
+			"mushroom-dryadsaddle-normal-north": ["vegetable", "group3"],
+			"mushroom-earthball-normal": ["vegetable", "group7"],
+			"mushroom-elfinsaddle-normal": ["vegetable", "group3"],
+			"mushroom-golddropmilkcap-normal": ["vegetable", "group3"],
+			"mushroom-greencrackedrussula-normal": ["vegetable", "group3"],
+			"mushroom-indigomilkcap-normal": ["vegetable", "group3"],
+			"mushroom-jackolantern-normal": ["vegetable", "group3"],
+			"mushroom-lobster-normal": ["vegetable", "group3"],
+			"mushroom-orangeoakbolete-normal": ["vegetable", "group3"],
+			"mushroom-paddystraw-normal": ["vegetable", "group7"],
+			"mushroom-pinkoyster-normal-north": ["vegetable", "group7"],
+			"mushroom-puffball-normal": ["vegetable", "group7"],
+			"mushroom-redwinecap-normal": ["vegetable", "group3"],
+			"mushroom-saffronmilkcap-normal": ["vegetable", "group3"],
+			"mushroom-tinderhoof-normal-north": ["vegetable", "group7"],
+			"mushroom-violetwebcap-normal": ["vegetable", "group3"],
+			"mushroom-whiteoyster-normal-north": ["vegetable", "group7"],
+			"mushroom-reishi-normal-north": ["vegetable", "group7"],
+			"mushroom-funeralbell-normal-north": ["vegetable", "group7"],
+			"mushroom-deerear-normal-north": ["vegetable", "group7"],
+			"mushroom-livermushroom-normal-north": ["vegetable", "group7"],
+			"mushroom-pinkbonnet-normal-north": ["vegetable", "group7"],
+			"mushroom-shiitake-normal-north": ["vegetable", "group7"],
+			"mushroom-witchhat-normal": ["vegetable", "group7"]
+		}
+	},
+	"attributesByType": {
+		"*-copper-empty": {
+			"maxContainerSlotStackSize": 7,
+			"cookingSlotCapacityLitres": 7,
+			"servingCapacity": 7,
+			"maxServingSize": 7,
+			"mealBlockcode": "gloomeclasses:metalpot-copper-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-copper-cooked"
+		},
+		"*-copper-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-copper-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-copper-empty",
+			"servingCapacity": 7,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-tinbronze-empty": {
+			"maxContainerSlotStackSize": 8,
+			"cookingSlotCapacityLitres": 8,
+			"servingCapacity": 8,
+			"maxServingSize": 8,
+			"mealBlockcode": "gloomeclasses:metalpot-tinbronze-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-tinbronze-cooked"
+		},
+		"*-tinbronze-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-tinbronze-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-tinbronze-empty",
+			"servingCapacity": 8,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-bismuthbronze-empty": {
+			"maxContainerSlotStackSize": 8,
+			"cookingSlotCapacityLitres": 8,
+			"servingCapacity": 8,
+			"maxServingSize": 8,
+			"mealBlockcode": "gloomeclasses:metalpot-bismuthbronze-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-bismuthbronze-cooked"
+		},
+		"*-bismuthbronze-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-bismuthbronze-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-bismuthbronze-empty",
+			"servingCapacity": 8,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-blackbronze-empty": {
+			"maxContainerSlotStackSize": 9,
+			"cookingSlotCapacityLitres": 9,
+			"servingCapacity": 9,
+			"maxServingSize": 9,
+			"mealBlockcode": "gloomeclasses:metalpot-blackbronze-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-blackbronze-cooked"
+		},
+		"*-blackbronze-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-blackbronze-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-blackbronze-empty",
+			"servingCapacity": 9,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-iron-empty": {
+			"maxContainerSlotStackSize": 10,
+			"cookingSlotCapacityLitres": 10,
+			"servingCapacity": 10,
+			"maxServingSize": 10,
+			"mealBlockcode": "gloomeclasses:metalpot-iron-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-iron-cooked"
+		},
+		"*-iron-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-iron-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-iron-empty",
+			"servingCapacity": 10,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-meteoriciron-empty": {
+			"maxContainerSlotStackSize": 11,
+			"cookingSlotCapacityLitres": 11,
+			"servingCapacity": 11,
+			"maxServingSize": 11,
+			"mealBlockcode": "gloomeclasses:metalpot-meteoriciron-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-meteoriciron-cooked"
+		},
+		"*-meteoriciron-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-meteoriciron-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-meteoriciron-empty",
+			"servingCapacity": 11,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-gold-empty": {
+			"maxContainerSlotStackSize": 12,
+			"cookingSlotCapacityLitres": 12,
+			"servingCapacity": 12,
+			"maxServingSize": 12,
+			"mealBlockcode": "gloomeclasses:metalpot-gold-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-gold-cooked"
+		},
+		"*-gold-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-gold-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-gold-empty",
+			"servingCapacity": 12,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-silver-empty": {
+			"maxContainerSlotStackSize": 12,
+			"cookingSlotCapacityLitres": 12,
+			"servingCapacity": 12,
+			"maxServingSize": 12,
+			"mealBlockcode": "gloomeclasses:metalpot-silver-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-silver-cooked"
+		},
+		"*-silver-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-silver-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-silver-empty",
+			"servingCapacity": 12,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-electrum-empty": {
+			"maxContainerSlotStackSize": 12,
+			"cookingSlotCapacityLitres": 12,
+			"servingCapacity": 12,
+			"maxServingSize": 12,
+			"mealBlockcode": "gloomeclasses:metalpot-electrum-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-electrum-cooked"
+		},
+		"*-electrum-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-electrum-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-electrum-empty",
+			"servingCapacity": 12,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-steel-empty": {
+			"maxContainerSlotStackSize": 13,
+			"cookingSlotCapacityLitres": 13,
+			"servingCapacity": 13,
+			"maxServingSize": 13,
+			"mealBlockcode": "gloomeclasses:metalpot-steel-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-steel-cooked"
+		},
+		"*-steel-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-steel-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-steel-empty",
+			"servingCapacity": 13,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		},
+		"*-stainlesssteel-empty": {
+			"maxContainerSlotStackSize": 14,
+			"cookingSlotCapacityLitres": 14,
+			"servingCapacity": 14,
+			"maxServingSize": 14,
+			"mealBlockcode": "gloomeclasses:metalpot-stainlesssteel-cooked",
+			"dirtiedBlockCode": "gloomeclasses:metalpotdirty-stainlesssteel-cooked"
+		},
+		"*-stainlesssteel-cooked": {
+			"mealBlockcode": "gloomeclasses:metalpot-stainlesssteel-cooked",
+			"emptiedBlockcode": "gloomeclasses:metalpot-stainlesssteel-empty",
+			"servingCapacity": 14,
+			"allowHeating": true,
+			"handleCookingContainerInteract": true
+		}
+	},
+	"entityclassByType": {
+		"*-cooked": "CookedContainer"
+	},
+	"shape": { "base": "game:block/clay/pot-opened-empty" },
+	"doNotRenderAtLod2": true,
+	"blockmaterial": "Metal",
+	"creativeinventory": {
+		"general": ["metalpot-*-empty"],
+		"decorative": ["metalpot-*-empty"]
+	},
+	"replaceable": 400,
+	"resistance": 1.5,
+	"maxStackSizeByType": {
+		"*-cooked": 1,
+		"*": 8
+	},
+	"lightAbsorption": 0,
+	"textures": {
+		"transparent": { "base": "game:block/transparent" },
+		"lid": { "base": "game:block/clay/pot-lid" },
+		
+		"group1": { "base": "game:block/food/meal/group1-flax-carrot-blueberry-cottagecheese-fish" },
+		"group2": { "base": "game:block/food/meal/group2-soup-flyagaric-cactifruit-redmeat" },
+		"group3": { "base": "game:block/food/meal/group3-millet-bolete-cranberry-poultry" },
+		"group4": { "base": "game:block/food/meal/group4-rice-parsnip-whitecurrant-bluecheese-fishstew" },
+		"group5": { "base": "game:block/food/meal/group5-rye-turnip-blackcurrant-cheddarcheese-poultrystew" },
+		"group6": { "base": "game:block/food/meal/group6-spelt-onion-redcurrant-egg-redmeatstew" },
+		"group7": { "base": "game:block/food/meal/group7-honey-fieldmushroom-pineapple-scrambledegg-bushmeat" },
+		"group8": { "base": "game:block/food/meal/group8-amaranth-pumpkin-bellpepper-bushmeatstew" },
+		"group9": { "base": "game:block/food/meal/group9-sunflower-soya" },
+		"group10": { "base": "game:block/food/meal/group10-cabbage" },
+		"group11": { "base": "game:block/food/meal/group11-cassava" },
+		"group12": { "base": "game:block/food/meal/group12-peanut" },
+		"group13": { "base": "game:block/food/meal/group13-aubergine" },
+		"group14": { "base": "game:block/food/meal/group14-tomato" },
+		"group15": { "base": "game:block/food/meal/group15-walnut" },
+		"group17": { "base": "game:block/food/meal/group17-olive" },
+		"honey": { "base": "game:block/liquid/honey" },
+		
+		"fruit-redapple": { "base": "game:block/food/pie/fill-apple" },
+		"fruit-pinkapple": { "base": "game:block/food/pie/fill-apple" },
+		"fruit-yellowapple": { "base": "game:block/food/pie/fill-apple" },
+		"fruit-cherry": { "base": "game:block/food/pie/fill-cherry" },
+		"fruit-peach": { "base": "game:block/food/pie/fill-peach" },
+		"fruit-pear": { "base": "game:block/food/pie/fill-pear" },
+		"fruit-orange": { "base": "game:block/food/pie/fill-orange" },
+		"fruit-mango": { "base": "game:block/food/pie/fill-mango" },
+		"fruit-pomegranate": { "base": "game:block/food/pie/fill-pomegranate" },
+		"fruit-lychee": { "base": "game:block/food/pie/fill-lychee" },
+		"fruit-breadfruit": { "base": "game:block/food/pie/fill-breadfruit" },
+		
+		"rot-solids": { "base": "game:item/resource/rot/rot-solids" },
+		"rot-spill": { "base": "game:item/resource/rot/rot-spill" },
+		
+		"milkportion": { "base": "game:block/food/dairy/milk" },
+		"cottagecheeseportion": { "base": "game:block/food/dairy/cottagecheese" },
+		"glue-hot": { "base": "game:block/liquid/glue-hot" },
+		"glue-cold": { "base": "game:block/liquid/glue-cold" }
+	},
+	"texturesByType": {
+		"*-copper-*": {
+			"ceramic": { "base": "game:block/metal/ingot/copper" }
+		},
+		"*-tinbronze-*": {
+			"ceramic": { "base": "game:block/metal/ingot/tinbronze" }
+		},
+		"*-bismuthbronze-*": {
+			"ceramic": { "base": "game:block/metal/ingot/bismuthbronze" }
+		},
+		"*-blackbronze-*": {
+			"ceramic": { "base": "game:block/metal/ingot/blackbronze" }
+		},
+		"*-iron-*": {
+			"ceramic": { "base": "game:block/metal/ingot/iron" }
+		},
+		"*-meteoriciron-*": {
+			"ceramic": { "base": "game:block/metal/ingot/meteoriciron" }
+		},
+		"*-gold-*": {
+			"ceramic": { "base": "game:block/metal/ingot/gold" }
+		},
+		"*-silver-*": {
+			"ceramic": { "base": "game:block/metal/ingot/silver" }
+		},
+		"*-electrum-*": {
+			"ceramic": { "base": "game:block/metal/ingot/electrum" }
+		},
+		"*-steel-*": {
+			"ceramic": { "base": "game:block/metal/ingot/steel" }
+		},
+		"*-stainlesssteel-*": {
+			"ceramic": { "base": "game:block/metal/ingot/stainlesssteel" }
+		}
+	},
+	"sounds": { "walk": "game:walk/stone" },
+	"sideopaque": { "all": false },
+	"sidesolid": { "all": false },
+	"collisionBox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.35, "z2": 0.72 },
+	"selectionbox": { "x1": 0.28, "y1": 0, "z1": 0.28, "x2": 0.72, "y2": 0.35, "z2": 0.72 },
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
+		"scale": 2
+	},
+	"groundTransform": {
+		"scale": 3
+	},
+	"fpHandTransform": {
+		"translation": { "x": 0, "y": 0.1, "z": 0.5 },
+		"scale": 2
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.67, "y": 0.06, "z": -0.5 },
+		"rotation": { "x": -52, "y": 20, "z": -110 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 0.76
+	}
+}

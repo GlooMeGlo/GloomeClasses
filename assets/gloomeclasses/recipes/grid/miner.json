@@ -1,0 +1,628 @@
+[
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-copper",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-*",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "block",
+			"code": "gloomeclasses:metalpan-copper",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "_B_,WFT,_P_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:bone",
+				"quantity": 1
+			},
+			"W": {
+				"type": "item",
+				"code": "game:firewood",
+				"quantity": 4
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "game:fat",
+				"quantity": 2
+			},
+			"P": {
+				"type": "block",
+				"code": "game:flowerpot-*-fired",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "primitivemininglantern-south",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "B_,FT,M_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:metalplate-brass",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"code": "game:metalplate-molybdochalkos",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "game:fat",
+				"quantity": 2
+			},
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 2,
+		"height": 3,
+		"shapeless": false,
+		"output": {
+			"type": "block",
+			"code": "metalmininglantern-south",
+			"quantity": 1
+		}
+	},
+	{
+		"code": "blastingpowder",
+		"requiresTrait": "prospector",
+		"ingredientPattern": "BSP",
+		"shapeless": false,
+		"ingredients": {
+			"B": {
+				"type": "item",
+				"code": "game:powder-charcoal",
+				"quantity": 3
+			},
+			"S": {
+				"type": "item",
+				"code": "game:powder-sulfur",
+				"quantity": 3
+			},
+			"P": {
+				"type": "item",
+				"code": "game:saltpeter"
+			}
+		},
+		"width": 3,
+		"height": 1,
+		"output": {
+			"type": "item",
+			"code": "game:blastingpowder",
+			"quantity": 7
+		}
+	},
+	{
+		"ingredientPattern": "_T_,BPB,_B_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:flaxtwine"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 4
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-ore",
+			"quantity": 8
+		}
+	},
+	{
+		"ingredientPattern": "_T_,CPC,_C_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:drygrass",
+				"quantity": 2
+			},
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-ore",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_T_,CPC,_C_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-stone",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "_T_,CPC,_C_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 4
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-stone",
+			"quantity": 8
+		}
+	},
+	{
+		"ingredientPattern": "NTN,CPC,GC_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-*",
+				"quantity": 4
+			},
+			"G": {
+				"type": "item",
+				"code": "game:drygrass",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 5,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-scrap",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "NTS,CPC,GC_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-*",
+				"quantity": 4
+			},
+			"G": {
+				"type": "item",
+				"code": "game:drygrass",
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "game:metal-scraps",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 4,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-scrap",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "STS,CPC,GC_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:clay-*",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			},
+			"G": {
+				"type": "item",
+				"code": "game:drygrass",
+				"quantity": 2
+			},
+			"S": {
+				"type": "block",
+				"code": "game:metal-scraps",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 3,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-scrap",
+			"quantity": 4
+		}
+	},
+	{
+		"ingredientPattern": "NTN,CPC,GC_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 4
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-*",
+				"quantity": 4
+			},
+			"G": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 5,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-scrap",
+			"quantity": 8
+		}
+	},
+	{
+		"ingredientPattern": "NTS,CPC,GC_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 4
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-*",
+				"quantity": 4
+			},
+			"G": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "game:metal-scraps",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 4,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-scrap",
+			"quantity": 8
+		}
+	},
+	{
+		"ingredientPattern": "STS,CPC,GC_",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"T": {
+				"type": "item",
+				"code": "game:powder-iron-oxide",
+				"quantity": 8
+			},
+			"C": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 4
+			},
+			"P": {
+				"type": "item",
+				"code": "game:blastingpowder",
+				"quantity": 4
+			},
+			"G": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"S": {
+				"type": "block",
+				"code": "game:metal-scraps",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 3,
+		"output": {
+			"type": "block",
+			"code": "game:bomb-scrap",
+			"quantity": 8
+		}
+	},
+	{
+		"ingredientPattern": "_FC,RMR,NPN",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"R": {
+				"type": "item",
+				"code": "game:rod-iron",
+				"quantity": 2
+			},
+			"P": {
+				"type": "item",
+				"code": "game:metalplate-iron",
+				"quantity": 1
+			},
+			"M": {
+				"type": "item",
+				"code": "game:miningbagsturdy",
+				"quantity": 1
+			},
+			"F": {
+				"type": "item",
+				"code": "game:flaxtwine",
+				"quantity": 1
+			},
+			"C": {
+				"type": "item",
+				"code": "game:candle",
+				"quantity": 3
+			},
+			"N": {
+				"type": "item",
+				"code": "game:metalnailsandstrips-tinbronze",
+				"quantity": 2
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"recipeGroup": 2,
+		"shapeless": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:miningbagsturdyreinforced",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-copper",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-copper",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:toolkit-basic",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-tinbronze",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-tinbronze",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:toolkit-simple",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-iron",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-iron",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:toolkit-standard",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "H,P",
+		"requiresTrait": "prospector",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:ingot-steel",
+				"quantity": 1
+			},
+			"H": {
+				"type": "item",
+				"code": "game:hammer-steel",
+				"isTool": true
+			}
+		},
+		"width": 1,
+		"height": 2,
+		"averageDurability": false,
+		"output": {
+			"type": "item",
+			"code": "gloomeclasses:toolkit-advanced",
+			"quantity": 1
+		}
+	}
+]
