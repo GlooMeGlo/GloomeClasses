@@ -127,38 +127,24 @@
 		}
 	},
 	{
-		"ingredientPattern": "PPP,PWP,PPP",
+		"ingredientPattern": "HQ,GW",
+		"shapeless": true,
 		"requiresTrait": "zealot",
+		"recipeGroup": 1,
+        "width": 2,
+        "height": 2,
 		"ingredients": {
-			"P": {
-				"type": "item",
-				"code": "gloomeclasses:primamateria",
-				"quantity": 6
-			},
-			"W": {
-				"type": "block",
-				"code": "game:woodbucket"
-			}
+			"H": { "type": "item", "code": "game:chisel-*", "isTool": true, "toolDurabilityCost": 5 },
+			"Q": { "type": "item", "code": "game:clearquartz", "quantity": 1 },
+			"G": { "type": "item", "code": "gloomeclasses:primamateria", "quantity": 1 },
+			"W": { "type": "block", "code": "game:woodbucket" }
 		},
-		"width": 3,
-		"height": 3,
 		"attributes": {
 			"liquidContainerProps": {
-				"requiresContent": {
-					"type": "item",
-					"code": "glueportion-pitch-hot"
-				},
-
-				"requiresLitres": 0.6
+				"requiresContent": { "type": "item", "code": "glueportion-pitch-hot" },
+				"requiresLitres": 0.2
 			}
 		},
-		"shapeless": true,
-		"output": {
-			"type": "item",
-			"code": "gloomeclasses:gem-temporal",
-			"quantity": 6
-		},
-
-		"comment": "FIXED: Requires 0.6 litres of hot pitch glue (0.1 per prima materia) to properly coat all 6 materials. The bucket is returned empty after crafting."
+		"output": { "type": "item", "code": "gloomeclasses:gem-temporal", "quantity": 1 }
 	}
 ]
