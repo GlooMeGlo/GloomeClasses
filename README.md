@@ -7,8 +7,7 @@
 
 A standalone class mod focused on making each class desireable in their own right, with unique appeals for each.
 
-[Join the Official GlooMeClasses Discord Server for bug reporting and community assistance!](https://discord.gg/kP5tEreuMD)
-
+Join the [Official GlooMeClasses Discord Server](https://discord.gg/kP5tEreuMD) for bug reporting and community assistance!
 
 ---
 
