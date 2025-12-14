@@ -3,8 +3,11 @@
 [![Vintage Story Version](https://img.shields.io/badge/Vintage%20Story-1.21.5-green)](https://www.vintagestory.at/)
 [![Mod Version](https://img.shields.io/badge/Version-1.2.0-blue)](https://mods.vintagestory.at/gloomeclasses)
 [![Downloads](https://img.shields.io/badge/Downloads-15k%2B-brightgreen)](https://mods.vintagestory.at/gloomeclasses)
+![Discord](https://img.shields.io/discord/1410023876993482879)
 
 A standalone class mod focused on making each class desireable in their own right, with unique appeals for each.
+
+Join the [Official GlooMeClasses Discord Server](https://discord.gg/kP5tEreuMD) for bug reporting and community assistance!
 
 ---
 
@@ -18,8 +21,8 @@ A standalone class mod focused on making each class desireable in their own righ
 ### For Players
 
 1. Download the latest release from the [Vintage Story Mod DB](https://mods.vintagestory.at/gloomeclasses)
-2. Place the `.zip` file in your `Mods` folder
-3. Launch Vintage Story
+3. Place the `.zip` file in your `Mods` folder
+4. Launch Vintage Story
 
 ### For Devs
 

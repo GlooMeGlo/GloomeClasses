@@ -64,7 +64,8 @@ all notable changes to GloomeClasses since the previous release (v1.0.10).
   - better recipe handling and validation
 
 - **Chef Class Fixes**
-  - refurbished crock no longer burns players
+  - metal pots no longer burn players
+  - refurbished crocks can now be sealed properly, as originally intended
 
 - **Recipe & Localization Fixes**
   - fixed trailing comma issues in JSON files
