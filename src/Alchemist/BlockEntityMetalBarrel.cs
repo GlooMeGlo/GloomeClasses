@@ -26,6 +26,7 @@ namespace GloomeClasses.src.Alchemist {
         public int CurrentOutSize;
         private bool ignoreChange;
         private bool OpenedByTT;
+        private bool AlchemistBarrel; // true if an alchemist has opened this barrel
         private float heatedTemp = 20;
         protected string Type;
         private double lastCheckedTotalHours;
@@ -39,6 +40,11 @@ namespace GloomeClasses.src.Alchemist {
             get {
                 FindMatchingRecipe();
                 if (CurrentRecipe != null && CurrentRecipe.SealHours > 0.0) {
+                    // if it's an alchemy recipe, only allow sealing if this is an alchemist's barrel
+                    if (CurrentAlcRecipe != null) {
+                        return AlchemistBarrel;
+                    }
+                    // vanilla recipes can be sealed by anyone still!
                     return true;
                 }
 
@@ -108,6 +114,12 @@ namespace GloomeClasses.src.Alchemist {
 
         private void Inventory_SlotModified(int slotId) {
             if (!ignoreChange && (slotId == 0 || slotId == 1)) {
+                // check if barrel is now empty, reset alchemist mode if so
+                if (inventory[0].Empty && inventory[1].Empty && AlchemistBarrel) {
+                    AlchemistBarrel = false;
+                    Api.Logger.Debug("[MetalBarrel] Barrel emptied - disabled alchemy mode at {0}", Pos);
+                }
+
                 invDialog?.UpdateContents();
                 ICoreAPI api = Api;
                 if (api != null && api.Side == EnumAppSide.Client) {
@@ -127,22 +139,22 @@ namespace GloomeClasses.src.Alchemist {
             CurrentRecipe = null;
             CurrentAlcRecipe = null;
 
-            Api.Logger.Debug("[MetalBarrel] FindMatchingRecipe called at {0} (OpenedByTT: {1}, SealedByTT: {2})",
-                Pos, OpenedByTT, SealedByTT);
+            Api.Logger.Debug("[MetalBarrel] FindMatchingRecipe called at {0} (AlchemistBarrel: {1}, SealedByTT: {2})",
+                Pos, AlchemistBarrel, SealedByTT);
 
             var recipes = new List<BarrelRecipe>();
             var alcRecipes = new List<AlchemyBarrelRecipe>();
             recipes.Clear();
             recipes.AddRange(Api.GetBarrelRecipes());
-            if (OpenedByTT || SealedByTT) {
+
+            // load alchemy recipes if this is an alchemist's barrel
+            if (AlchemistBarrel) {
                 var glooRecipeLoader = Api.ModLoader.GetModSystem<GloomeClassesRecipeRegistry>();
                 if (glooRecipeLoader != null) {
                     alcRecipes.AddRange(glooRecipeLoader.GetAlchemistBarrelRecipes(Type));
                     Api.Logger.Debug("[MetalBarrel] Loaded {0} alchemy recipes for {1} barrel at {2}",
                         alcRecipes.Count, Type, Pos);
                 }
-            } else {
-                Api.Logger.Debug("[MetalBarrel] Alchemy recipes NOT loaded (no TT access) at {0}", Pos);
             }
 
             foreach (BarrelRecipe recipe in recipes) {
@@ -175,6 +187,7 @@ namespace GloomeClasses.src.Alchemist {
                 break;
             }
 
+            // check alchemy recipes, but only allow them to be used if sealed by an alchemist
             if (CurrentRecipe == null && alcRecipes.Count > 0) {
                 foreach (AlchemyBarrelRecipe recipe in alcRecipes) {
                     if (!recipe.Matches(array, out var outputStackSize)) {
@@ -183,12 +196,14 @@ namespace GloomeClasses.src.Alchemist {
 
                     ignoreChange = true;
                     if (recipe.SealHours > 0.0) {
+                        // store the recipe match, but only set it if opened/sealed by alchemist
                         CurrentAlcRecipe = recipe;
                         CurrentRecipe = recipe;
                         CurrentOutSize = outputStackSize;
                         Api.Logger.Debug("[MetalBarrel] Matched alchemy recipe: {0} (temp req: {1}) at {2}",
                             recipe.Code, recipe.TempRequired, Pos);
                     } else {
+                        // instant recipes can be used by everyone
                         ICoreAPI api = Api;
                         if (api != null && api.Side == EnumAppSide.Server) {
                             recipe.TryCraftNow(Api, 0.0, array);
@@ -229,6 +244,7 @@ namespace GloomeClasses.src.Alchemist {
                 Heated = false;
             }
 
+            // vanilla barrel recipes work for everyone
             if (CurrentRecipe != null && CurrentAlcRecipe == null) {
                 if (Sealed && CurrentRecipe.TryCraftNow(Api, currentTotalHours - SealedSinceTotalHours,
                 [
@@ -240,8 +256,10 @@ namespace GloomeClasses.src.Alchemist {
                     Sealed = false;
                     SealedByTT = false;
                 }
-            } else if (CurrentAlcRecipe != null && CurrentAlcRecipe.TempRequired < 0) {
-                if (SealedByTT && CurrentAlcRecipe.TryCraftNow(Api, currentTotalHours - SealedSinceTotalHours, heatedTemp,
+            }
+            // alchemy recipes that don't require heat: only work if this is an alchemist's barrel AND sealed
+            else if (CurrentAlcRecipe != null && CurrentAlcRecipe.TempRequired < 0) {
+                if (AlchemistBarrel && Sealed && CurrentAlcRecipe.TryCraftNow(Api, currentTotalHours - SealedSinceTotalHours, heatedTemp,
                 [
                 inventory[0],
                 inventory[1]
@@ -251,19 +269,22 @@ namespace GloomeClasses.src.Alchemist {
                     Sealed = false;
                     SealedByTT = false;
                 }
-            } else if (CurrentAlcRecipe != null && CurrentAlcRecipe.TempRequired > 0) {
+            }
+            // alchemy recipes that require heat: only work if this is an alchemist's barrel AND heated
+            else if (CurrentAlcRecipe != null && CurrentAlcRecipe.TempRequired > 0) {
                 if (!Heated && heatedTemp > 0) {
                     Heated = true;
                     SealedSinceTotalHours = currentTotalHours;
-                    Api.Logger.Debug("[MetalBarrel] Heating started for recipe {0} at {1} (temp: {2})",
-                        CurrentAlcRecipe.Code, Pos, heatedTemp);
+                    Api.Logger.Debug("[MetalBarrel] Heating started at {0} (temp: {1}, alchemist barrel: {2})",
+                        Pos, heatedTemp, AlchemistBarrel);
                 }
-                if (Heated && CurrentAlcRecipe.TryCraftNow(Api, currentTotalHours - SealedSinceTotalHours, heatedTemp,
+                // only process heated alchemy recipes if this is an alchemist's barrel
+                if (Heated && AlchemistBarrel && CurrentAlcRecipe.TryCraftNow(Api, currentTotalHours - SealedSinceTotalHours, heatedTemp,
                 [
                 inventory[0],
                 inventory[1]
                 ])) {
-                    Api.Logger.Debug("[MetalBarrel] Recipe {0} completed at {1}!", CurrentAlcRecipe.Code, Pos);
+                    Api.Logger.Debug("[MetalBarrel] Alchemy recipe {0} completed at {1}!", CurrentAlcRecipe.Code, Pos);
                     MarkDirty(redrawOnClient: true);
                     Api.World.BlockAccessor.MarkBlockEntityDirty(Pos);
                     Sealed = false;
@@ -279,6 +300,11 @@ namespace GloomeClasses.src.Alchemist {
 
         public void GassifierUpdateTemp(float temp) {
             heatedTemp = temp;
+
+            // when gasifier starts heating, just update the temp
+            // alchemy recipes are checked automatically in FindMatchingRecipe
+            // and will only complete if SealedByTT is true
+            Api.Logger.VerboseDebug("[MetalBarrel] Temperature updated to {0} at {1}", heatedTemp, Pos);
         }
 
         public override void OnBlockPlaced(ItemStack byItemStack = null) {
@@ -299,15 +325,49 @@ namespace GloomeClasses.src.Alchemist {
             invDialog = null;
         }
 
-        public void SealBarrel() {
+        public void SealBarrel(IPlayer player = null) {
             if (!Sealed) {
-                if (OpenedByTT) {
+                // check if the sealing player is an alchemist
+                if (player != null) {
+                    string classcode = player.Entity.WatchedAttributes.GetString("characterClass");
+                    var charclass = player.Entity.Api.ModLoader.GetModSystem<CharacterSystem>()
+                        .characterClasses.FirstOrDefault(c => c.Code == classcode);
+                    SealedByTT = charclass != null && charclass.Traits.Contains("temporaltransmutation");
+
+                    Api.Logger.Debug("[MetalBarrel] Sealed by {0} (class: {1}, is alchemist: {2}) at {3}",
+                        player.PlayerName, classcode ?? "none", SealedByTT, Pos);
+                } else if (OpenedByTT) {
+                    // fallback for programmatic sealing (if opened by TT before)
                     SealedByTT = true;
                 }
+
                 Sealed = true;
                 SealedSinceTotalHours = Api.World.Calendar.TotalHours;
                 MarkDirty(redrawOnClient: true);
             }
+        }
+
+        public void CheckAndSetAlchemistPlayer(IPlayer player) {
+            // server-side check: mark barrel as alchemist mode if an alchemist interacts
+            if (Api?.Side != EnumAppSide.Server || AlchemistBarrel) {
+                return; // already marked or not on server
+            }
+
+            string classcode = player.Entity.WatchedAttributes.GetString("characterClass");
+            var charclass = player.Entity.Api.ModLoader.GetModSystem<CharacterSystem>()
+                .characterClasses.FirstOrDefault(c => c.Code == classcode);
+
+            if (charclass != null && charclass.Traits.Contains("temporaltransmutation")) {
+                AlchemistBarrel = true;
+                MarkDirty(redrawOnClient: true);
+                Api.Logger.Debug("[MetalBarrel] Alchemist {0} interacted - enabled alchemy mode at {1}",
+                    player.PlayerName, Pos);
+            }
+        }
+
+        public void TriggerRecipeCheck() {
+            // public method to trigger recipe matching from external sources (like gasifier)
+            FindMatchingRecipe();
         }
 
         public void OnPlayerRightClick(IPlayer byPlayer) {
@@ -320,36 +380,36 @@ namespace GloomeClasses.src.Alchemist {
         }
 
         protected void ToggleInventoryDialogClient(IPlayer byPlayer) {
+            // check if player is an alchemist
             string classcode = byPlayer.Entity.WatchedAttributes.GetString("characterClass");
-            CharacterClass charclass = byPlayer.Entity.Api.ModLoader.GetModSystem<CharacterSystem>().characterClasses.FirstOrDefault(c => c.Code == classcode);
-            OpenedByTT = charclass != null && charclass.Traits.Contains("temporaltransmutation");
+            CharacterClass charclass = byPlayer.Entity.Api.ModLoader.GetModSystem<CharacterSystem>()
+                .characterClasses.FirstOrDefault(c => c.Code == classcode);
+            bool isAlchemist = charclass != null && charclass.Traits.Contains("temporaltransmutation");
 
-            Api.Logger.Debug("[MetalBarrel] GUI opened by {0} (class: {1}, has TT trait: {2}) at {3}",
-                byPlayer.PlayerName, classcode ?? "none", OpenedByTT, Pos);
+            Api.Logger.Debug("[MetalBarrel] GUI opened by {0} (class: {1}, is alchemist: {2}) at {3}",
+                byPlayer.PlayerName, classcode ?? "none", isAlchemist, Pos);
 
             if (invDialog == null) {
                 ICoreClientAPI capi = Api as ICoreClientAPI;
                 invDialog = new GuiDialogMetalBarrel(Lang.Get("Barrel"), Inventory, Pos, Api as ICoreClientAPI);
+
                 invDialog.OnClosed += delegate {
                     invDialog = null;
                     capi.Network.SendBlockEntityPacket(Pos, 1001);
-                    // don't send 1003 (TT=false) when GUI closes!!! preserve OpenedByTT state
                     capi.Network.SendPacketClient(Inventory.Close(byPlayer));
                 };
+
                 invDialog.OpenSound = AssetLocation.Create("game:sounds/block/barrelopen", base.Block.Code.Domain);
                 invDialog.CloseSound = AssetLocation.Create("game:sounds/block/barrelclose", base.Block.Code.Domain);
                 invDialog.TryOpen();
                 capi.Network.SendPacketClient(Inventory.Open(byPlayer));
                 capi.Network.SendBlockEntityPacket(Pos, 1000);
-                if (OpenedByTT) {
+
+                // send alchemist status to server. this marks the barrel as "alchemist mode"
+                if (isAlchemist) {
                     capi.Network.SendBlockEntityPacket(Pos, 1002);
-                } else {
-                    capi.Network.SendBlockEntityPacket(Pos, 1003);
                 }
             } else {
-                ICoreClientAPI capi = Api as ICoreClientAPI;
-                capi.Network.SendBlockEntityPacket(Pos, 1003);
-                OpenedByTT = false;
                 invDialog.TryClose();
             }
         }
@@ -364,6 +424,7 @@ namespace GloomeClasses.src.Alchemist {
 
             if (packetid == 1001) {
                 player.InventoryManager?.CloseInventory(Inventory);
+                OpenedByTT = false;  // reset temporary flag when GUI closes
             }
 
             if (packetid == 1000) {
@@ -371,17 +432,17 @@ namespace GloomeClasses.src.Alchemist {
             }
 
             if (packetid == 1002) {
+                // mark that an alchemist opened this barrel - this persists!
                 OpenedByTT = true;
-                Api.Logger.Debug("[MetalBarrel] Server received TT=true packet from {0} at {1}", player.PlayerName, Pos);
-            }
-
-            if (packetid == 1003) {
-                OpenedByTT = false;
-                Api.Logger.Debug("[MetalBarrel] Server received TT=false packet from {0} at {1}", player.PlayerName, Pos);
+                AlchemistBarrel = true;
+                MarkDirty(redrawOnClient: true);
+                Api.Logger.Debug("[MetalBarrel] Alchemist {0} opened barrel - enabled alchemy mode at {1}",
+                    player.PlayerName, Pos);
             }
 
             if (packetid == 1337) {
-                SealBarrel();
+                // seal barrel, pass the player who sealed it
+                SealBarrel(player);
             }
         }
 
@@ -401,9 +462,10 @@ namespace GloomeClasses.src.Alchemist {
             Sealed = tree.GetBool("sealed");
             SealedByTT = tree.GetBool("sealedByTT");
             OpenedByTT = tree.GetBool("openedByTT");
+            AlchemistBarrel = tree.GetBool("alchemistBarrel");
 
-            Api?.Logger.Debug("[MetalBarrel] Loaded from save at {0}: OpenedByTT={1}, SealedByTT={2}, Sealed={3}, Heated={4}",
-                Pos, OpenedByTT, SealedByTT, Sealed, tree.GetBool("heated"));
+            Api?.Logger.Debug("[MetalBarrel] Loaded from save at {0}: AlchemistBarrel={1}, SealedByTT={2}, Sealed={3}, Heated={4}",
+                Pos, AlchemistBarrel, SealedByTT, Sealed, tree.GetBool("heated"));
 
             ICoreAPI api = Api;
             if (api != null && api.Side == EnumAppSide.Client) {
@@ -426,13 +488,14 @@ namespace GloomeClasses.src.Alchemist {
             tree.SetBool("sealed", Sealed);
             tree.SetBool("sealedByTT", SealedByTT);
             tree.SetBool("openedByTT", OpenedByTT);
+            tree.SetBool("alchemistBarrel", AlchemistBarrel);
             tree.SetDouble("sealedSinceTotalHours", SealedSinceTotalHours);
             tree.SetDouble("lastCheckedTotalHours", lastCheckedTotalHours);
             tree.SetFloat("heatedTemp", heatedTemp);
             tree.SetBool("heated", Heated);
 
-            Api?.Logger.Debug("[MetalBarrel] Saved to disk at {0}: OpenedByTT={1}, SealedByTT={2}, Sealed={3}, Heated={4}",
-                Pos, OpenedByTT, SealedByTT, Sealed, Heated);
+            Api?.Logger.Debug("[MetalBarrel] Saved to disk at {0}: AlchemistBarrel={1}, SealedByTT={2}, Sealed={3}, Heated={4}",
+                Pos, AlchemistBarrel, SealedByTT, Sealed, Heated);
         }
 
         internal MeshData GenMesh() {
@@ -440,15 +503,20 @@ namespace GloomeClasses.src.Alchemist {
                 return null;
             }
 
-            MeshData meshData = ownBlock.GenMesh(inventory[0].Itemstack, inventory[1].Itemstack, Sealed, Pos);
-            if (meshData.CustomInts != null) {
-                for (int i = 0; i < meshData.CustomInts.Count; i++) {
-                    meshData.CustomInts.Values[i] |= 134217728;
-                    meshData.CustomInts.Values[i] |= 67108864;
+            MeshData mesh = ownBlock.GenMesh(inventory[0].Itemstack, inventory[1].Itemstack, Sealed, Pos);
+
+            // apply vertex flags to enable liquid rendering effects
+            if (mesh.CustomInts != null) {
+                int[] CustomInts = mesh.CustomInts.Values;
+                int count = mesh.CustomInts.Count;
+                for (int i = 0; i < CustomInts.Length; i++) {
+                    if (i >= count) break;
+                    CustomInts[i] |= VertexFlags.LiquidWeakWaveBitMask   // enable weak water wavy
+                                    | VertexFlags.LiquidWeakFoamBitMask;  // enable weak foam
                 }
             }
 
-            return meshData;
+            return mesh;
         }
 
         public override void OnBlockUnloaded() {

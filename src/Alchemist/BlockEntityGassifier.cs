@@ -111,11 +111,17 @@ namespace GloomeClasses.src.Alchemist {
             prevFurnaceTemperature = furnaceTemperature;
 
             if (Api is ICoreServerAPI) {
-                if (Api.World.BlockAccessor.GetBlockEntity(Pos.UpCopy()) is BlockEntityMetalBarrel blockEntAbove)
+                if (Api.World.BlockAccessor.GetBlockEntity(Pos.UpCopy()) is BlockEntityMetalBarrel metalBarrel)
                 {
-                    blockEntAbove.GassifierUpdateTemp(furnaceTemperature);
+                    metalBarrel.GassifierUpdateTemp(furnaceTemperature);
+
+                    // when gasifier starts heating, trigger recipe check in case ingredients were added without opening GUI
+                    if (furnaceTemperature > 20 && metalBarrel.CurrentRecipe == null && metalBarrel.CurrentAlcRecipe == null) {
+                        metalBarrel.TriggerRecipeCheck();
+                    }
+
                     // always mark dirty when temperature changes to ensure barrel persists temperature
-                    blockEntAbove.MarkDirty();
+                    metalBarrel.MarkDirty();
                 }
             }
         }
@@ -131,8 +137,8 @@ namespace GloomeClasses.src.Alchemist {
                 if (fuelBurnTime <= 0) {
                     fuelBurnTime = 0;
                     maxFuelBurnTime = 0;
-                    if (Inventory.FuelSlot.Empty) {
-                        SetBlockState("closed");
+                    if (Block?.Variant["type"] == "lit" && Inventory.FuelSlot.Empty) {
+                        SetBlockState("open");
                     }
                     ((ICoreServerAPI)Api).Network.BroadcastBlockEntityPacket(Pos, 1002);
                 }
@@ -142,7 +148,7 @@ namespace GloomeClasses.src.Alchemist {
                 furnaceTemperature = ChangeTemperature(furnaceTemperature, maxTemperature, dt);
             }
 
-            // only auto-ignite if door is closed, this prevents immediate ignition when refueling hot gassifier
+            // only auto-ignite when door is closed, matching vanilla firepit behavior
             if (!IsBurning && canIgniteFuel && !Inventory.FuelSlot.Empty && !IsOpen()) {
                 IgniteFuel();
             }

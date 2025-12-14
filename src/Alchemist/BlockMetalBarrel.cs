@@ -138,21 +138,23 @@ namespace GloomeClasses.src.Alchemist {
             ICoreClientAPI obj = api as ICoreClientAPI;
             Shape shape = Vintagestory.API.Common.Shape.TryGet(obj, issealed ? SealedShape : EmptyShape);
             obj.Tesselator.TesselateShape(this, shape, out var modeldata);
+
             if (!issealed) {
                 JsonObject containerProps = liquidContentStack?.ItemAttributes?["waterTightContainerProps"];
                 MeshData meshData = GetContentMeshFromAttributes(contentStack, liquidContentStack, forBlockPos) ?? GetContentMeshLiquids(contentStack, liquidContentStack, forBlockPos, containerProps) ?? GetContentMesh(contentStack, forBlockPos, ContentsShape);
                 if (meshData != null) {
+                    modeldata = modeldata.Clone();
                     modeldata.AddMeshData(meshData);
-                }
 
-                if (forBlockPos != null) {
-                    modeldata.CustomInts = new CustomMeshDataPartInt(modeldata.FlagsCount);
-                    modeldata.CustomInts.Values.Fill(67108864);
-                    modeldata.CustomInts.Count = modeldata.FlagsCount;
-                    modeldata.CustomFloats = new CustomMeshDataPartFloat(modeldata.FlagsCount * 2)
-                    {
-                        Count = modeldata.FlagsCount * 2
-                    };
+                    if (forBlockPos != null) {
+                        modeldata.CustomInts = new CustomMeshDataPartInt(modeldata.FlagsCount);
+                        modeldata.CustomInts.Values.Fill(VertexFlags.LiquidWeakFoamBitMask);
+                        modeldata.CustomInts.Count = modeldata.FlagsCount;
+                        modeldata.CustomFloats = new CustomMeshDataPartFloat(modeldata.FlagsCount * 2)
+                        {
+                            Count = modeldata.FlagsCount * 2
+                        };
+                    }
                 }
             }
 
@@ -208,15 +210,27 @@ namespace GloomeClasses.src.Alchemist {
 
                 coreClientAPI.Tesselator.TesselateShape("barrel", shape, out var modeldata, texPositionSource, new Vec3f(Shape.rotateX, Shape.rotateY, Shape.rotateZ), containableProps?.GlowLevel ?? 0, 0, 0);
                 modeldata.Translate(0f, fillHeight, 0f);
-                if (containableProps != null && containableProps.ClimateColorMap != null) {
-                    int color = coreClientAPI.World.ApplyColorMapOnRgba(containableProps.ClimateColorMap, null, -1, 196, 128, flipRb: false);
+
+                if (containableProps?.ClimateColorMap != null) {
+                    int col;
                     if (forBlockPos != null) {
-                        color = coreClientAPI.World.ApplyColorMapOnRgba(containableProps.ClimateColorMap, null, -1, forBlockPos.X, forBlockPos.Y, forBlockPos.Z, flipRb: false);
+                        col = coreClientAPI.World.ApplyColorMapOnRgba(containableProps.ClimateColorMap, null, ColorUtil.WhiteArgb, forBlockPos.X, forBlockPos.Y, forBlockPos.Z, false);
+                    } else {
+                        col = coreClientAPI.World.ApplyColorMapOnRgba(containableProps.ClimateColorMap, null, ColorUtil.WhiteArgb, 196, 128, false);
                     }
 
-                    byte[] array = ColorUtil.ToBGRABytes(color);
-                    for (int i = 0; i < modeldata.Rgba.Length; i++) {
-                        modeldata.Rgba[i] = (byte)(modeldata.Rgba[i] * array[i % 4] / 255);
+                    byte[] rgba = ColorUtil.ToBGRABytes(col);
+                    byte rgba0 = rgba[0];
+                    byte rgba1 = rgba[1];
+                    byte rgba2 = rgba[2];
+                    byte rgba3 = rgba[3];
+
+                    var meshRgba = modeldata.Rgba;
+                    for (int i = 0; i < meshRgba.Length; i += 4) {
+                        meshRgba[i + 0] = (byte)((meshRgba[i + 0] * rgba0) / 255);
+                        meshRgba[i + 1] = (byte)((meshRgba[i + 1] * rgba1) / 255);
+                        meshRgba[i + 2] = (byte)((meshRgba[i + 2] * rgba2) / 255);
+                        meshRgba[i + 3] = (byte)((meshRgba[i + 3] * rgba3) / 255);
                     }
                 }
 
@@ -360,8 +374,14 @@ namespace GloomeClasses.src.Alchemist {
                 return true;
             }
 
+            // check if player is an alchemist and mark the barrel before any interaction
+            if (blockEntityBarrel != null && world.Side == EnumAppSide.Server) {
+                blockEntityBarrel.CheckAndSetAlchemistPlayer(byPlayer);
+            }
+
             bool flag = base.OnBlockInteractStart(world, byPlayer, blockSel);
             if (!flag && !byPlayer.WorldData.EntityControls.ShiftKey && blockSel.Position != null) {
+                // pass player info so barrel can track if they're an alchemist
                 blockEntityBarrel?.OnPlayerRightClick(byPlayer);
                 return true;
             }
