@@ -127,6 +127,7 @@
 		}
 	},
 	{
+		"code": "temporalgem1",
 		"ingredientPattern": "HQ,GW",
 		"shapeless": true,
 		"requiresTrait": "zealot",
@@ -135,7 +136,57 @@
         "height": 2,
 		"ingredients": {
 			"H": { "type": "item", "code": "game:chisel-*", "isTool": true, "toolDurabilityCost": 5 },
-			"Q": { "type": "item", "code": "game:clearquartz", "quantity": 1 },
+			"Q": {"type": "block", "code": "game:crystal-*-small1-up", "allowedVariants": [ "milkyquartz", "rosequartz", "smokyquartz" ],
+				"name": "quartz"
+			},
+			"G": { "type": "item", "code": "gloomeclasses:primamateria", "quantity": 1 },
+			"W": { "type": "block", "code": "game:woodbucket" }
+		},
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": { "type": "item", "code": "glueportion-pitch-hot" },
+				"requiresLitres": 0.2
+			}
+		},
+		"output": { "type": "item", "code": "gloomeclasses:gem-temporal", "quantity": 1 }
+	},
+	{
+		"code": "temporalgem2",
+		"ingredientPattern": "HQ,GW",
+		"shapeless": true,
+		"requiresTrait": "zealot",
+		"recipeGroup": 1,
+        "width": 2,
+        "height": 2,
+		"ingredients": {
+			"H": { "type": "item", "code": "game:chisel-*", "isTool": true, "toolDurabilityCost": 5 },
+			"Q": {"type": "block", "code": "game:crystal-*-small2-up", "allowedVariants": [ "milkyquartz", "rosequartz", "smokyquartz" ],
+				"name": "quartz"
+			},
+			"G": { "type": "item", "code": "gloomeclasses:primamateria", "quantity": 1 },
+			"W": { "type": "block", "code": "game:woodbucket" }
+		},
+		"attributes": {
+			"liquidContainerProps": {
+				"requiresContent": { "type": "item", "code": "glueportion-pitch-hot" },
+				"requiresLitres": 0.2
+			}
+		},
+		"output": { "type": "item", "code": "gloomeclasses:gem-temporal", "quantity": 1 }
+	},
+	{
+		"code": "temporalgem3",
+		"ingredientPattern": "HQ,GW",
+		"shapeless": true,
+		"requiresTrait": "zealot",
+		"recipeGroup": 1,
+        "width": 2,
+        "height": 2,
+		"ingredients": {
+			"H": { "type": "item", "code": "game:chisel-*", "isTool": true, "toolDurabilityCost": 5 },
+			"Q": {"type": "block", "code": "game:crystal-*-small3-up", "allowedVariants": [ "milkyquartz", "rosequartz", "smokyquartz" ],
+				"name": "quartz"
+			},
 			"G": { "type": "item", "code": "gloomeclasses:primamateria", "quantity": 1 },
 			"W": { "type": "block", "code": "game:woodbucket" }
 		},
