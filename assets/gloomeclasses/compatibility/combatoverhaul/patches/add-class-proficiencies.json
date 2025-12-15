@@ -3,7 +3,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/0/traits/-",
+		"path": "/6/traits/-",
 		"value": [
 			"quarterstaffProficiency",
 			"firearmsProficiency"			
@@ -13,7 +13,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/1/traits/-",
+		"path": "/7/traits/-",
 		"value": [
 			"clubsProficiency",
 			"crossbowsProficiency"
@@ -23,7 +23,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/2/traits/-",
+		"path": "/8/traits/-",
 		"value": [
 			"oneHandedSwordsProficiency",
 			"twoHandedSwordsProficiency",
@@ -35,7 +35,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/3/traits/-",
+		"path": "/9/traits/-",
 		"value": [
 			"oneHandedSwordsProficiency",
 			"clubsProficiency"
@@ -45,7 +45,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/4/traits/-",
+		"path": "/10/traits/-",
 		"value": [
 			"spearsProficiency",
 			"macesProficiency",
@@ -56,7 +56,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/6/traits/-",
+		"path": "/11/traits/-",
 		"value": [
 			"spearsProficiency",
 			"axesProficiency",
@@ -67,7 +67,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/7/traits/-",
+		"path": "/12/traits/-",
 		"value": [
 			"oneHandedSwordsProficiency",
 			"bowsProficiency",
@@ -78,7 +78,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/8/traits/-",
+		"path": "/13/traits/-",
 		"value": [
 			"axesProficiency",
 			"halberdsProficiency"
@@ -88,7 +88,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/9/traits/-",
+		"path": "/14/traits/-",
 		"value": [
 			"oneHandedSwordsProficiency",
 			"macesProficiency",
@@ -99,7 +99,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/10/traits/-",
+		"path": "/16/traits/-",
 		"value": [
 			"clubsProficiency",
 			"macesProficiency"
@@ -109,7 +109,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/11/traits/-",
+		"path": "/17/traits/-",
 		"value": [
 			"quarterstaffProficiency",
 			"crossbowsProficiency",
@@ -120,7 +120,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/12/traits/-",
+		"path": "/18/traits/-",
 		"value": [
 			"oneHandedSwordsProficiency",
 			"spearsProficiency",
@@ -131,7 +131,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/13/traits/-",
+		"path": "/19/traits/-",
 		"value": [
 			"macesProficiency",
 			"clubsProficiency"
@@ -141,7 +141,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/14/traits/-",
+		"path": "/20/traits/-",
 		"value": [
 			"macesProficiency",
 			"oneHandedSwordsProficiency",
@@ -153,7 +153,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/15/traits/-",
+		"path": "/21/traits/-",
 		"value": [
 			"oneHandedSwordsProficiency",
 			"macesProficiency"
@@ -163,7 +163,7 @@
 		"enabled": true,
 		"file": "gloomeclasses:config/characterclasses/gloomeclasses.json",
 		"op": "addeach",
-		"path": "/15/traits/-",
+		"path": "/22/traits/-",
 		"value": [
 			"spearsProficiency",
 			"crossbowsProficiency"
