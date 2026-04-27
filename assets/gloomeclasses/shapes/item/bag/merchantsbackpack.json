@@ -38,8 +38,8 @@
 		"lore-marked": "game:item/lore/lore-marked",
 		"scrolls-rotten": "game:item/lore/scrolls-rotten",
 		"rope": "game:item/resource/rope",
-		"handle": "game:item/tool/material/handle",
-		"material": "game:item/tool/material/iron"
+		"handle": "game:item/tool/handle",
+		"material": "game:block/metal/ingot/iron"
 	},
 	"elements": [
 		{

@@ -90,7 +90,7 @@ namespace GloomeClasses.src.Alchemist {
             BlockBehavior[] blockBehaviors = BlockBehaviors;
             foreach (BlockBehavior obj in blockBehaviors) {
                 EnumHandling handling = EnumHandling.PassThrough;
-                obj.OnBlockBroken(world, pos, byPlayer, ref handling);
+                obj.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier, ref handling);
                 if (handling == EnumHandling.PreventDefault) {
                     flag = true;
                 }

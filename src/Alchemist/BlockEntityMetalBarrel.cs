@@ -400,8 +400,8 @@ namespace GloomeClasses.src.Alchemist {
                     capi.Network.SendPacketClient(Inventory.Close(byPlayer));
                 };
 
-                invDialog.OpenSound = AssetLocation.Create("game:sounds/block/barrelopen", base.Block.Code.Domain);
-                invDialog.CloseSound = AssetLocation.Create("game:sounds/block/barrelclose", base.Block.Code.Domain);
+                invDialog.OpenSound = new SoundAttributes(AssetLocation.Create("game:sounds/block/barrelopen", base.Block.Code.Domain), false);
+                invDialog.CloseSound = new SoundAttributes(AssetLocation.Create("game:sounds/block/barrelclose", base.Block.Code.Domain), false);
                 invDialog.TryOpen();
                 capi.Network.SendPacketClient(Inventory.Open(byPlayer));
                 capi.Network.SendBlockEntityPacket(Pos, 1000);
@@ -465,9 +465,6 @@ namespace GloomeClasses.src.Alchemist {
             OpenedByTT = tree.GetBool("openedByTT");
             AlchemistBarrel = tree.GetBool("alchemistBarrel");
 
-            Log.Debug(Api, "MetalBarrel", "loaded from save at {0}: AlchemistBarrel={1}, SealedByTT={2}, Sealed={3}, Heated={4}",
-                Pos, AlchemistBarrel, SealedByTT, Sealed, tree.GetBool("heated"));
-
             ICoreAPI api = Api;
             if (api != null && api.Side == EnumAppSide.Client) {
                 currentMesh = GenMesh();
@@ -494,9 +491,6 @@ namespace GloomeClasses.src.Alchemist {
             tree.SetDouble("lastCheckedTotalHours", lastCheckedTotalHours);
             tree.SetFloat("heatedTemp", heatedTemp);
             tree.SetBool("heated", Heated);
-
-            Log.Debug(Api, "MetalBarrel", "saved to disk at {0}: AlchemistBarrel={1}, SealedByTT={2}, Sealed={3}, Heated={4}",
-                Pos, AlchemistBarrel, SealedByTT, Sealed, Heated);
         }
 
         internal MeshData GenMesh() {

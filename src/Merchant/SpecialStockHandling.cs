@@ -29,7 +29,13 @@ namespace GloomeClasses.src.Merchant {
         public const string SpecialStockAttribute = "specialStockInventory";
         public const string TempMainAttribute = "tempMainInventory";
 
-        public static void LoadAndOpenSpecialStock(ref string value, EntityTradingHumanoid trader) {
+        public static void LoadAndOpenSpecialStock(EntityTradingHumanoid trader) {
+            // already in special stock mode, current inventory is the special stock
+            if (trader.WatchedAttributes.HasAttribute(TempMainAttribute)) {
+                return;
+            }
+
+            // entering special stock mode, save main inventory
             ITreeAttribute tree = new TreeAttribute();
             trader.Inventory.ToTreeAttributes(tree);
             trader.WatchedAttributes[TempMainAttribute] = tree;
@@ -40,8 +46,6 @@ namespace GloomeClasses.src.Merchant {
             } else {
                 RefreshSpecialStock(trader, trader.Inventory);
             }
-
-            value = "opentrade";
         }
 
         //Copied over from EntityTradingHumanoid's RefreshBuyingSellingInventory! Will need updating if that ever changes.

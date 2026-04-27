@@ -15,23 +15,23 @@ namespace GloomeClasses.src.Patches {
 
         [HarmonyPrefix]
         [HarmonyPatch(nameof(CollectibleObject.OnCreatedByCrafting))]
-        public static bool ToolkitCreatedByCraftingPrefix(ItemSlot[] allInputslots, ItemSlot outputSlot, GridRecipe byRecipe) {
-            if (allInputslots == null || allInputslots.Length < 2 || outputSlot == null || outputSlot.Inventory == null || outputSlot.Inventory.GetType() == typeof(DummyInventory) || outputSlot.Inventory.GetType() == typeof(CreativeInventoryTab)) {
+        public static bool ToolkitCreatedByCraftingPrefix(ItemSlot[] allInputSlots, ItemSlot outputSlot, IRecipeBase byRecipe) {
+            if (allInputSlots == null || allInputSlots.Length < 2 || outputSlot == null || outputSlot.Inventory == null || outputSlot.Inventory.GetType() == typeof(DummyInventory) || outputSlot.Inventory.GetType() == typeof(CreativeInventoryTab)) {
                 return true; //Needs to have a length of 2 or more, since the inventory grid always returns the full 9 slots. If it doesn't have at least 2 slots, it can't possibly be a Toolkit Repair.
             }
-            
+
             ItemSlot toolkitSlot = null;
             ItemSlot repairedToolSlot = null;
 
-            for (int i = 0; i < allInputslots.Length; i++) {
-                if (allInputslots[i] == null || allInputslots[i].Empty) {
+            for (int i = 0; i < allInputSlots.Length; i++) {
+                if (allInputSlots[i] == null || allInputSlots[i].Empty) {
                     continue;
                 }
 
-                if (allInputslots[i].Itemstack.Collectible.Code.FirstCodePart() == "toolkit") {
-                    toolkitSlot = allInputslots[i];
-                } else if (repairedToolSlot == null && allInputslots[i].Itemstack.Collectible.GetMaxDurability(allInputslots[i].Itemstack) > 1) {
-                    repairedToolSlot = allInputslots[i];
+                if (allInputSlots[i].Itemstack.Collectible.Code.FirstCodePart() == "toolkit") {
+                    toolkitSlot = allInputSlots[i];
+                } else if (repairedToolSlot == null && allInputSlots[i].Itemstack.Collectible.GetMaxDurability(allInputSlots[i].Itemstack) > 1) {
+                    repairedToolSlot = allInputSlots[i];
                 } else {
                     return true; //If it checks 2 items and neither are a Toolkit, then this isn't a recipe to care about, let it continue on.
                 }

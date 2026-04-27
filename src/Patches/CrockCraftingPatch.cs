@@ -6,18 +6,20 @@ using GloomeClasses.src.Chef;
 namespace GloomeClasses.src.Patches {
 
     // allows vanilla crocks to be used in recipes that output refurbished crocks
-    [HarmonyPatch(typeof(BlockCrock))]
+    // patching CollectibleObject because BlockCrock no longer overrides MatchesForCrafting in VS 1.22
+    [HarmonyPatch(typeof(CollectibleObject))]
     [HarmonyPatchCategory(GloomeClassesModSystem.CrockCraftingPatchCategory)]
     public class CrockCraftingPatch {
 
         [HarmonyPrefix]
-        [HarmonyPatch(nameof(BlockCrock.MatchesForCrafting))]
-        private static bool MatchesForCraftingPrefix(ItemStack inputStack, GridRecipe gridRecipe, CraftingRecipeIngredient ingredient, ref bool __result) {
-            // allow conversion recipes that output refurbished crocks
-            if (gridRecipe.Output.ResolvedItemstack?.Collectible is BlockRefurbishedCrock) {
+        [HarmonyPatch(nameof(CollectibleObject.MatchesForCrafting))]
+        private static bool MatchesForCraftingPrefix(CollectibleObject __instance, ItemStack inputStack, IRecipeBase recipe, IRecipeIngredient ingredient, ref bool __result) {
+            if (__instance is not BlockCrock) return true;
+            if (recipe is not GridRecipe gr) return true;
+            if (gr.Output.ResolvedItemStack?.Collectible is BlockRefurbishedCrock) {
                 bool hasSealingIngredient = false;
-                for (int i = 0; i < gridRecipe.resolvedIngredients.Length; i++) {
-                    var stack = gridRecipe.resolvedIngredients[i]?.ResolvedItemstack;
+                for (int i = 0; i < gr.ResolvedIngredients.Length; i++) {
+                    var stack = gr.ResolvedIngredients[i]?.ResolvedItemStack;
                     if (stack?.ItemAttributes?["canSealCrock"]?.AsBool(false) == true) {
                         hasSealingIngredient = true;
                         break;

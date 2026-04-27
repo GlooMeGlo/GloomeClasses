@@ -14,7 +14,7 @@ namespace GloomeClasses.src.Chef {
         // refurbished crocks provide better preservation than vanilla crocks
         // rosin sealing provides even better preservation than fat/beeswax sealing
 
-        public override void OnCreatedByCrafting(ItemSlot[] allInputslots, ItemSlot outputSlot, GridRecipe byRecipe) {
+        public override void OnCreatedByCrafting(ItemSlot[] allInputslots, ItemSlot outputSlot, IRecipeBase byRecipe) {
             if (outputSlot.Itemstack == null) return;
 
             // check if this is a sealing recipe (has a sealing ingredient)

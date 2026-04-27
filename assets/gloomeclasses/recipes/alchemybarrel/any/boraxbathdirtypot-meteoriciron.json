@@ -1,0 +1,9 @@
+{
+	"code": "boraxbathdirtypot-meteoriciron",
+	"sealHours": 1,
+	"ingredients": [
+		{ "type": "item", "code": "game:dilutedboraxportion", "litres": 1, "consumeLitres": 1 },
+		{ "type": "block", "code": "gloomeclasses:metalpotdirty-meteoriciron-empty", "quantity": 1 }
+	],
+	"output": { "type": "block", "code": "gloomeclasses:metalpot-meteoriciron-empty", "stackSize": 1 }
+}

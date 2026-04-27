@@ -1,0 +1,9 @@
+{
+	"code": "boraxbathdirtypot-silver",
+	"sealHours": 1,
+	"ingredients": [
+		{ "type": "item", "code": "game:dilutedboraxportion", "litres": 1, "consumeLitres": 1 },
+		{ "type": "block", "code": "gloomeclasses:metalpotdirty-silver-empty", "quantity": 1 }
+	],
+	"output": { "type": "block", "code": "gloomeclasses:metalpot-silver-empty", "stackSize": 1 }
+}

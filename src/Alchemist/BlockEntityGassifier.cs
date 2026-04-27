@@ -60,7 +60,7 @@ namespace GloomeClasses.src.Alchemist {
             return 20;
         }
 
-        public void CoolNow(float amountRel) {
+        public void CoolNow(float amountRel, OnStackToCool onComplete = null) {
             Api.World.PlaySoundAt(new AssetLocation("sounds/effect/extinguish"), Pos, -0.5, null, false, 16);
             fuelBurnTime -= (float)amountRel / 10f;
 

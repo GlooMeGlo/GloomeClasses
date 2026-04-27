@@ -1,56 +1,49 @@
-# GlooMeClasses v1.2.3 Changelog
+## GlooMeClasses v1.2.4 Changelog
 
-an update has been released for GlooMeClasses! I appreciate everyone's patience and willingness to help me with debugging and fixing their experiences :>
-
-## Fixed
-
-### Refurbished Crock System
-- **Rosin Sealing**: refurbished crocks can now be sealed as intended
-  - added 3D seal model ([assets/gloomeclasses/shapes/block/clay/crock/seal.json](assets/gloomeclasses/shapes/block/clay/crock/seal.json))
-  - rosin provides better preservation than fat/beeswax sealing
-  - recipe updated to support `rosinSealed` attribute
-  - `OnCreatedByCrafting` method handles sealing attributes and copies crock contents properly
-  - **Attribute Handling**: fixed attribute handling when crafting sealed crocks
-    - properly copies attributes from input crock to output
-    - correctly sets `sealed` and `rosinSealed` attributes based on sealing ingredient
-
-- **Crock Crafting Patch**: new Harmony patch to allow vanilla crocks in refurbished crock conversion recipes
-  - you can craft from vanilla to refurbished crocks using a knife as intended
-  - properly handles sealing ingredient detection
-
-### Class System
-- **Class Migration System**: automatic migration from vanilla classes to GloomeClasses
-  - migrates players who had vanilla classes before installing the mod
-  - players receive in-game notification when their class is migrated
-  - migration events are logged to diagnostics
-  - new `LogClassMigration` method tracks player class migrations
-
-- **`.charsel` Crash Prevention**: using `.charsel` in certain conditions should no longer crash your game
-  - added validation in [CharacterSystemDiagnosticPatches.cs](src/Diagnostics/Patches/CharacterSystemDiagnosticPatches.cs#L29) to detect invalid/disabled class codes
-  - prevents crashes when players have classes that no longer exist
-  - provides clear warning messages and diagnostic logging
-  - common when adding GloomeClasses to existing saves with vanilla classes
-  - prefix patch now returns `false` to skip original method when class is invalid
-
-### Class-Specific Fixes
-- **Locust Lover: Metalbit Healing Refactor**: fixes issues with tin bronze metal bits becoming unworkable due to a conflict with SmithingPlus
-  - metalbit healing now uses runtime configuration instead of JSON patches
-  - simplified [apply-healhacked-behavior-patch.json](assets/gloomeclasses/patches/apply-healhacked-behavior-patch.json) to single behavior entry
-  - healing values determined by metalbit variant at runtime:
-    - tin bronze: 2 HP (non-corrupted healer)
-    - black bronze: 4 HP (corrupted healer)
-  - more maintainable and extensible architecture
-
-### System Improvements
-- **Logging System Overhaul**:
-  - all debug logging in [BlockEntityMetalBarrel.cs](src/Alchemist/BlockEntityMetalBarrel.cs) converted to use `Log` utility
-  - debug output now respects enable/disable flags:
-    - server debug logging disabled by default (reduces spam)
-    - client debug logging enabled by default
-
-- **Diagnostics System Improvements**:
-  - string comparisons now use `StringComparison.CurrentCultureIgnoreCase` instead of `.ToLower()`
-  - more efficient and proper case-insensitive string matching in [DiagnosticLogger.cs](src/Diagnostics/DiagnosticLogger.cs)
-  - better detection of mod conflicts and class mods
+a compatibility update for Vintage Story 1.22 has been released! thank you for your patience while we worked through all the API changes this update brought :>
 
 ---
+
+### Updated
+**Vintage Story 1.22 Compatibility**
+- updated game dependency from `1.21.5` → `1.22.0`
+- updated .NET target framework from `net8.0` → `net10.0` to match VS 1.22's runtime
+
+---
+
+### Fixed
+
+**MetalBarrel Debug Spam**
+- removed excessive server debug logging from `BlockEntityMetalBarrel`'s save/load methods
+    - `ToTreeAttributes` and `FromTreeAttributes` are called on every autosave tick, causing log spam at a rate of ~2 messages/second per barrel
+    - these log calls have been removed entirely as they produced no actionable information
+
+**Crafting System (VS 1.22 API Changes)**
+- `CrockCraftingPatch`: VS 1.22 removed `BlockCrock`'s override of `MatchesForCrafting` — it now inherits directly from `CollectibleObject`
+    - patch now targets `CollectibleObject.MatchesForCrafting` with an instance guard instead of `BlockCrock`
+    - updated parameter types: `GridRecipe` → `IRecipeBase`, `CraftingRecipeIngredient` → `IRecipeIngredient`
+- `ToolkitPatches`: Harmony patch for `OnCreatedByCrafting` was failing due to a parameter name change
+    - VS 1.22 renamed `allInputslots` → `allInputSlots` (capital S) on `CollectibleObject`
+    - updated parameter type from `GridRecipe` → `IRecipeBase` to match new signature
+- `GridRecipe` API renames applied across codebase:
+    - `resolvedIngredients` → `ResolvedIngredients`
+    - `ResolvedItemstack` → `ResolvedItemStack`
+
+**Sound API (VS 1.22 API Changes)**
+- `BlockSounds.Place` (and similar sound properties) now returns `SoundAttributes` instead of `AssetLocation`
+    - `BlockAdvancedBloomery`: updated `PlaySoundAt` call to use `Sounds?.Place.Location`
+    - `BlockEntityMetalBarrel`: `OpenSound` and `CloseSound` on the barrel GUI dialog now wrapped in `new SoundAttributes(...)`
+
+**Interface Changes (VS 1.22 API Changes)**
+- `BlockRefurbishedCrock.OnCreatedByCrafting`: updated override signature from `GridRecipe` → `IRecipeBase`
+- `BlockEntityGassifier`: `ITemperatureSensitive.CoolNow` now requires a second `OnStackToCool` callback parameter
+- `BlockMetalBarrel`: updated behavior `OnBlockBroken` call to pass `dropQuantityMultiplier` through (resolves deprecation warning)
+
+**Assets**
+- `merchantsbackpack` recipe: ingredient `game:lantern-up` → `game:lantern-*-up`
+    - VS 1.22 added a `size` variant to lanterns (small/large), making the bare `lantern-up` code unresolvable
+- `merchantsbackpack` shape: fixed missing texture warnings
+    - `game:item/tool/material/handle` → `game:item/tool/handle` (VS 1.22 removed the `material/` subdirectory)
+    - `game:item/tool/material/iron` → `game:block/metal/ingot/iron`
+- `show-wallpaper-in-handbook.json`: changed JSON patch `op` from `replace` to `add`
+    - VS 1.22's wallpaper blocktype no longer has a `handbook` key, causing the replace to fail silently

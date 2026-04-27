@@ -126,7 +126,7 @@ namespace GloomeClasses.src.Smith {
                         Position = blockSel.Position.UpCopy(),
                         Face = BlockFacing.UP
                     }, itemstack);
-                    world.PlaySoundAt(Sounds?.Place, blockSel.Position, 0.5, byPlayer, randomizePitch: true, 16f);
+                    world.PlaySoundAt(Sounds?.Place.Location, blockSel.Position, 0.5, byPlayer, randomizePitch: true, 16f);
                     if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative) {
                         byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
                     }

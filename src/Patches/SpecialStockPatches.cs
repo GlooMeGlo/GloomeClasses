@@ -18,9 +18,19 @@ namespace GloomeClasses.src.Patches {
 
         [HarmonyPrefix]
         [HarmonyPatch("Dialog_DialogTriggers")]
-        public static bool HandleSpecialStockOpenPrefix(EntityAgent triggeringEntity, ref string value, JsonObject data, EntityTradingHumanoid __instance) {
+        public static bool HandleSpecialStockOpenPrefix(EntityAgent triggeringEntity, string value, JsonObject data, EntityTradingHumanoid __instance, ref int __result) {
             if (value == "opensilvertonguetrade") {
-                SpecialStockHandling.LoadAndOpenSpecialStock(ref value, __instance);
+                SpecialStockHandling.LoadAndOpenSpecialStock(__instance);
+
+                // re-trigger as opentrade via the controller
+                var conversableBh = __instance.GetBehavior<EntityBehaviorConversable>();
+                if (conversableBh != null) {
+                    var controller = conversableBh.ControllerByPlayer.Values.FirstOrDefault();
+                    if (controller != null) {
+                        __result = controller.Trigger(triggeringEntity, "opentrade", data);
+                        return false;
+                    }
+                }
             }
 
             return true;
