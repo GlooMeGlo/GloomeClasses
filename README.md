@@ -1,7 +1,7 @@
 # GlooMeClasses
 
-[![Vintage Story Version](https://img.shields.io/badge/Vintage%20Story-1.21.6-green)](https://www.vintagestory.at/)
-[![Mod Version](https://img.shields.io/badge/Version-1.2.3-blue)](https://mods.vintagestory.at/gloomeclasses)
+[![Vintage Story Version](https://img.shields.io/badge/Vintage%20Story-1.22-green)](https://www.vintagestory.at/)
+[![Mod Version](https://img.shields.io/badge/Version-1.2.4-blue)](https://mods.vintagestory.at/gloomeclasses)
 [![Downloads](https://img.shields.io/badge/Downloads-15k%2B-brightgreen)](https://mods.vintagestory.at/gloomeclasses)
 ![Discord](https://img.shields.io/discord/1410023876993482879)
 
